@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>96f7</objectGroupId>
+	<objectId>96f7c4e6-98de-d1bf-165f-ebb24b2808aa</objectId>
+	<file-name>darpa-funded-program-may-help-future-soldiers.xml</file-name>
+	<folder-name/>
+	<internal-name>DARPA-funded program may help future Soldiers</internal-name>
+	<title_s tokenized="true">DARPA-funded program may help future Soldiers</title_s>
+	<author>U.S. Army</author>
+	<summary_s>The Warrior Web program, funded by DARPA, is coming to an end; however, Army researchers hope to find future collaborators to expand on its potential.</summary_s>
+	<categories>	<item>	<key>science</key>
+	<value_smv>Science &amp; Technology</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></categories>
+	<featured>true</featured>
+	<thumbnail>/static-assets/images/videos/96f7c4e6-98de-d1bf-165f-ebb24b2808aa//DARPA-funded program may help future Soldier.jpg</thumbnail>
+	<video>	<item>	<job_id>1507233983709-y0vmzh</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>DARPA-funded program may help future Soldier/1c36c802-74c7-4ef9-aaa5-167643c353c4</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;The Warrior Web program, funded by DARPA, is coming to an end; however, Army researchers hope to find future collaborators to expand on its potential.&lt;/p&gt;</description_html>
+	<date_dt>2017-07-13T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-11T20:21:31.000Z</createdDate>
+	<createdDate_dt>2017-9-11T20:21:31.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T20:5:57.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T20:5:57.000Z</lastModifiedDate_dt>
+	<tags>	<item>	<value_smv>US Army</value_smv>
+	</item>	<item>	<value_smv>DARPA</value_smv>
+	</item>	<item>	<value_smv>Warrior Web</value_smv>
+	</item>	<item>	<value_smv>Engineering</value_smv>
+	</item>	<item>	<value_smv>Science</value_smv>
+	</item></tags>
+</component>

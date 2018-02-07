@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/login</content-type>	<display-template>/templates/web/pages/login.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>5545</objectGroupId>
+	<objectId>5545b867-f6a2-33f9-1c6c-5abe4055b9ce</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>login</folder-name>
+	<internal-name>Login Page</internal-name>
+	<heroTitle>Login</heroTitle>
+	<formTitle>Login</formTitle>
+	<formLabel>Login Now</formLabel>
+	<formAction>/crafter-security-login</formAction>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<heroText>&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;</heroText>
+	<createdDate>2017-9-19T16:51:37.000Z</createdDate>
+	<createdDate_dt>2017-9-19T16:51:37.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-19T16:52:38.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-19T16:52:38.000Z</lastModifiedDate_dt>
+	<heroText_html>&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;</heroText_html>
+</page>

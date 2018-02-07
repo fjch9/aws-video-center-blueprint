@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/all-videos</content-type>	<display-template>/templates/web/pages/video-list.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>f1c2</objectGroupId>
+	<objectId>f1c29795-525d-fa67-8498-2d73f4cc16f9</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>all-videos</folder-name>
+	<internal-name>All Videos</internal-name>
+	<videoLandingUrl>/video</videoLandingUrl>
+	<videoPageSize>6</videoPageSize>
+	<placeInNav>true</placeInNav>
+	<orderDefault_f>2000</orderDefault_f>
+	<header/>
+	<footer/>
+	<rightRail/>
+	<createdDate>2017-9-12T15:23:57.000Z</createdDate>
+	<createdDate_dt>2017-9-12T15:23:57.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-15T14:7:55.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-15T14:7:55.000Z</lastModifiedDate_dt>
+	<title>All Videos</title>
+	<navIcon>fa-film</navIcon>
+</page>

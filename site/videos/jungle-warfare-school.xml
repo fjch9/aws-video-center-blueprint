@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>0a4f</objectGroupId>
+	<objectId>0a4fbd5f-d0ed-7351-eb00-0375deb3aa01</objectId>
+	<file-name>jungle-warfare-school.xml</file-name>
+	<folder-name/>
+	<internal-name>Jungle Warfare School</internal-name>
+	<title_s tokenized="true">Jungle Warfare School</title_s>
+	<author>U.S. Army</author>
+	<summary_s>United Accord 2017 is an annual, combined, joint military exercise that brings together the Economic Community of West African States (ECOWAS) member states, partner nations and U.S. forces to foster security cooperation while improving operational planning and mission command capabilities.</summary_s>
+	<categories>	<item>	<key>people</key>
+	<value_smv>People</value_smv>
+	</item></categories>
+	<featured>true</featured>
+	<thumbnail>/static-assets/images/videos/0a4fbd5f-d0ed-7351-eb00-0375deb3aa01//Jungle Warfare School.jpg</thumbnail>
+	<video>	<item>	<job_id>1507234314446-mmepds</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>Jungle Warfare School/2c92abc8-6577-471b-9def-4ec29d784446</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;United Accord 2017 is an annual, combined, joint military exercise that brings together the Economic Community of West African States (ECOWAS) member states, partner nations and U.S. forces to foster security cooperation while improving operational planning and mission command capabilities.&lt;/p&gt;</description_html>
+	<date_dt>2017-06-05T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-11T20:57:11.000Z</createdDate>
+	<createdDate_dt>2017-9-11T20:57:11.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T20:11:29.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T20:11:29.000Z</lastModifiedDate_dt>
+	<tags>	<item>	<value_smv>Jungle</value_smv>
+	</item>	<item>	<value_smv>Exercise</value_smv>
+	</item>	<item>	<value_smv>Warfare</value_smv>
+	</item>	<item>	<value_smv>School</value_smv>
+	</item>	<item>	<value_smv>Africa</value_smv>
+	</item>	<item>	<value_smv>US Army</value_smv>
+	</item></tags>
+</component>

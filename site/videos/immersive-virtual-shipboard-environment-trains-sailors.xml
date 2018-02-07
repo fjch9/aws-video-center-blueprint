@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>844d</objectGroupId>
+	<objectId>844db908-c0ff-675f-3832-271030e34140</objectId>
+	<file-name>immersive-virtual-shipboard-environment-trains-sailors.xml</file-name>
+	<folder-name/>
+	<internal-name>Immersive Virtual Shipboard Environment Trains Sailors</internal-name>
+	<title_s tokenized="true">Immersive Virtual Shipboard Environment Trains Sailors</title_s>
+	<author>U.S. Navy</author>
+	<summary_s>Surface Warfare Officers School (SWOS) prepares students for their demanding shipboard responsibilities.</summary_s>
+	<categories>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item>	<item>	<key>science</key>
+	<value_smv>Science &amp; Technology</value_smv>
+	</item></categories>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/844db908-c0ff-675f-3832-271030e34140//Immersive Virtual Shipboard Environment Trains Sailors.jpg</thumbnail>
+	<video>	<item>	<job_id>1507234037297-5h30wj</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>Immersive Virtual Shipboard Environment Trains Sailors/cb1b1b85-5b07-43a2-947c-2d6b8af62a76</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;Surface Warfare Officers School (SWOS) prepares students for their demanding shipboard responsibilities. At Center for Surface Combat System&amp;#39;s Littoral Combat Ship (LCS) Training Facility at SWOS Learning Site San Diego, prospective engineering plant technicians learn how to do their jobs through blended classroom review and a highly advanced Integrated Virtual Shipboard Environment (IVSE), a 3-dimensional, interactive, LCS simulator, complete with voice controls and ultra-realistic sound effects. (U.S. Navy video/Released)&lt;/p&gt;</description_html>
+	<date_dt>2017-07-26T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-11T20:35:55.000Z</createdDate>
+	<createdDate_dt>2017-9-11T20:35:55.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T20:6:30.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T20:6:30.000Z</lastModifiedDate_dt>
+	<tags>	<item>	<value_smv>Engineering</value_smv>
+	</item>	<item>	<value_smv>Virtual</value_smv>
+	</item>	<item>	<value_smv>Simulator</value_smv>
+	</item>	<item>	<value_smv>US Navy</value_smv>
+	</item></tags>
+</component>

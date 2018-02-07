@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/categories</content-type>	<display-template>/templates/web/components/categories.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>208a</objectGroupId>
+	<objectId>208a04e2-d478-6019-14ff-5d8e8f51be05</objectId>
+	<file-name>global-categories.xml</file-name>
+	<folder-name/>
+	<internal-name>Global Categories</internal-name>
+	<landingPageUrl>/category</landingPageUrl>
+	<createdDate>2017-8-31T16:32:51.000Z</createdDate>
+	<createdDate_dt>2017-8-31T16:32:51.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-15T16:35:11.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-15T16:35:11.000Z</lastModifiedDate_dt>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item>	<item>	<key>science</key>
+	<value_smv>Science &amp; Technology</value_smv>
+	</item>	<item>	<key>people</key>
+	<value_smv>People</value_smv>
+	</item>	<item>	<key>sports</key>
+	<value_smv>Sports</value_smv>
+	</item>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></categories>
+</component>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/generic</content-type>	<display-template>/templates/web/pages/generic.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>5f45</objectGroupId>
+	<objectId>5f452501-f7cd-45bd-43b2-a76b0ebde2f5</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>terms-and-conditions</folder-name>
+	<internal-name>Terms &amp; Conditions</internal-name>
+	<navLabel>Terms &amp; Conditions</navLabel>
+	<title_s>Terms &amp; Conditions</title_s>
+	<placeInNav>true</placeInNav>
+	<orderDefault_f>9000</orderDefault_f>
+	<body_html>&lt;p&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+&lt;h3&gt;1 Nibh Commodo Vehicula&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/li&gt;
+&lt;li&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;2&amp;nbsp;Dapibus Justo&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.&lt;/li&gt;
+&lt;/ol&gt;</body_html>
+	<createdDate>2017-9-11T21:43:37.000Z</createdDate>
+	<createdDate_dt>2017-9-11T21:43:37.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-13T19:49:58.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-13T19:49:58.000Z</lastModifiedDate_dt>
+	<icon>fa-pencil-square-o</icon>
+	<navIcon>fa-pencil-square-o</navIcon>
+</page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>9689</objectGroupId>
+	<objectId>9689975d-f44c-595c-60de-03c709edc152</objectId>
+	<file-name>bastille-day.xml</file-name>
+	<folder-name/>
+	<internal-name>Bastille Day</internal-name>
+	<title_s tokenized="true">Bastille Day</title_s>
+	<categories>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></categories>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/9689975d-f44c-595c-60de-03c709edc152//Bastille Day .jpg</thumbnail>
+	<video>	<item>	<job_id>1507232691423-jsv7pf</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>Bastille Day /e64841cc-d8b9-4bd4-8489-db8750c82b89</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;The Bastille Day celebration held annually, July 14, in Paris commemorates the storming of the Bastille, the turning point of the French Revolution. Bastille Day features the oldest and largest military parade in Europe. This year&amp;#39;s centennial commemoration of World War I will feature a U.S. military contingent that will lead the Bastille Day parade down the Champs-&amp;Eacute;lys&amp;eacute;es.&lt;/p&gt;</description_html>
+	<date_dt>2017-07-14T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T23:11:40.000Z</createdDate>
+	<createdDate_dt>2017-9-5T23:11:40.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-31T15:26:17.994Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-31T15:26:17.994Z</lastModifiedDate_dt>
+	<summary_s>The Bastille Day celebration held annually, July 14, in Paris commemorates the storming of the Bastille, the turning point of the French Revolution.</summary_s>
+	<tags>	<item>	<value_smv>Bastille</value_smv>
+	</item>	<item>	<value_smv>Paris</value_smv>
+	</item>	<item>	<value_smv>French Revolution</value_smv>
+	</item>	<item>	<value_smv>Parade</value_smv>
+	</item>	<item>	<value_smv>US Army</value_smv>
+	</item></tags>
+</component>

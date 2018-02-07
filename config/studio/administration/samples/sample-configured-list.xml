@@ -1,0 +1,12 @@
+<list>
+    <values>
+        <item>
+            <key>key1</key>
+            <value>value1</value>
+        </item>
+        <item>
+            <key>key1</key>
+            <value>value2</value>
+        </item>
+    </values>
+</list>

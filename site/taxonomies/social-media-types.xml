@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/taxonomy</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>2882</objectGroupId>
+	<objectId>28828937-ef7b-f7ab-cfe9-a672f91dd946</objectId>
+	<items>	<item>	<key>fa-facebook</key>
+	<value>Facebook</value>
+	</item>	<item>	<key>fa-twitter</key>
+	<value>Twitter</value>
+	</item>	<item>	<key>fa-google-plus</key>
+	<value>Google Plus</value>
+	</item>	<item>	<key>fa-instagram</key>
+	<value>Instagram</value>
+	</item>	<item>	<key>fa-linkedin</key>
+	<value>LinkedIn</value>
+	</item></items>
+	<file-name>social-media-types.xml</file-name>
+	<folder-name/>
+	<internal-name>Social Media Types</internal-name>
+	<createdDate>2017-8-24T17:43:16.000Z</createdDate>
+	<createdDate_dt>2017-8-24T17:43:16.000Z</createdDate_dt>
+	<lastModifiedDate>2017-8-31T16:28:7.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-8-31T16:28:7.000Z</lastModifiedDate_dt>
+</component>

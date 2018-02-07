@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/account</content-type>	<display-template>/templates/web/pages/profile.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>a89f</objectGroupId>
+	<objectId>a89f8490-dff5-e6d6-1068-078237ddd72a</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>account</folder-name>
+	<internal-name>Account Page</internal-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<createdDate>2017-9-19T17:20:23.000Z</createdDate>
+	<createdDate_dt>2017-9-19T17:20:23.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-19T17:20:23.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-19T17:20:23.000Z</lastModifiedDate_dt>
+</page>

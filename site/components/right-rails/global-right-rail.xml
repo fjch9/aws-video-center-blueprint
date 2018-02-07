@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/right-rail</content-type>	<display-template>/templates/web/components/right-rail.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>5f2d</objectGroupId>
+	<objectId>5f2d98d2-6bc3-9c9d-c02b-72a48ef9819c</objectId>
+	<file-name>global-right-rail.xml</file-name>
+	<folder-name/>
+	<internal-name>Global Right Rail</internal-name>
+	<categories>	<item>	<key>/site/components/categories/global-categories.xml</key>
+	<value>Global Categories</value>
+	<include>/site/components/categories/global-categories.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></categories>
+	<tags>	<item>	<key>/site/components/tags/global-tags.xml</key>
+	<value>Global Tags</value>
+	<include>/site/components/tags/global-tags.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></tags>
+	<createdDate>2017-8-25T19:32:56.000Z</createdDate>
+	<createdDate_dt>2017-8-25T19:32:56.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-13T22:54:7.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-13T22:54:7.000Z</lastModifiedDate_dt>
+	<whiteBackground>true</whiteBackground>
+	<recentVideosWidget>	<item>	<key>/site/components/video-widgets/recent-videos-widget.xml</key>
+	<value>Recent Videos Widget</value>
+	<include>/site/components/video-widgets/recent-videos-widget.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></recentVideosWidget>
+</component>

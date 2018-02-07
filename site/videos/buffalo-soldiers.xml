@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>820f</objectGroupId>
+	<objectId>820f727d-a082-c442-e2c5-e059da6bea20</objectId>
+	<file-name>buffalo-soldiers.xml</file-name>
+	<folder-name/>
+	<internal-name>Buffalo Soldiers</internal-name>
+	<title_s tokenized="true">Buffalo Soldiers</title_s>
+	<author>U.S. Army</author>
+	<categories>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item></categories>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/820f727d-a082-c442-e2c5-e059da6bea20//Buffalo Soldiers.jpg</thumbnail>
+	<video>	<item>	<job_id>1507232765853-l4fjb1</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>Buffalo Soldiers/44719783-751a-4160-84d8-c7744ab0ab2c</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;Buffalo Soldiers Day is celebrated on July 28. Learn more at: African-Americans in the U.S. Army https://www.army.mil/africanamericans/index.html&lt;/p&gt;</description_html>
+	<date_dt>2017-07-28T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T23:34:42.000Z</createdDate>
+	<createdDate_dt>2017-9-5T23:34:42.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:45:43.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:45:43.000Z</lastModifiedDate_dt>
+	<summary_s>Buffalo Soldiers Day is celebrated on July 28.</summary_s>
+	<tags>	<item>	<value_smv>African-Americans</value_smv>
+	</item>	<item>	<value_smv>Buffalo Soldiers</value_smv>
+	</item>	<item>	<value_smv>US Army</value_smv>
+	</item></tags>
+</component>

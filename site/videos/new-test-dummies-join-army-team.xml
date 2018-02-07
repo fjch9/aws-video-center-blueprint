@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>811b</objectGroupId>
+	<objectId>811bc11d-9519-2ae6-a139-d4f01aa85aec</objectId>
+	<file-name>new-test-dummies-join-army-team.xml</file-name>
+	<folder-name/>
+	<internal-name>Making Soldiers Safer with Crash Test Dummies</internal-name>
+	<title_s tokenized="true">Making Soldiers Safer with Crash Test Dummies</title_s>
+	<summary_s>The Army has joined forces with industry and universities to develop, design and acquire the next generation of crash test dummies to make its Soldiers safer. Video by U.S. Army Research Laboratory.</summary_s>
+	<categories>	<item>	<key>science</key>
+	<value_smv>Science &amp; Technology</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></categories>
+	<featured>true</featured>
+	<thumbnail>/static-assets/images/videos/811bc11d-9519-2ae6-a139-d4f01aa85aec//New test dummies join Army team.jpg</thumbnail>
+	<video>	<item>	<job_id>1507234391197-38i7tb</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>New test dummies join Army team/712966a7-ff62-4637-bf06-387a80a9c760</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;The Army has joined forces with industry and universities to develop, design and acquire the next generation of crash test dummies to make its Soldiers safer. Video by U.S. Army Research Laboratory.&lt;/p&gt;</description_html>
+	<date_dt>2017-08-14T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-11T21:7:34.000Z</createdDate>
+	<createdDate_dt>2017-9-11T21:7:34.000Z</createdDate_dt>
+	<lastModifiedDate>2018-02-06T23:21:08.843Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-02-06T23:21:08.843Z</lastModifiedDate_dt>
+	<tags>	<item>	<value_smv>Research</value_smv>
+	</item>	<item>	<value_smv>Soldiers</value_smv>
+	</item>	<item>	<value_smv>US Army</value_smv>
+	</item>	<item>	<value_smv>Safetry</value_smv>
+	</item></tags>
+</component>

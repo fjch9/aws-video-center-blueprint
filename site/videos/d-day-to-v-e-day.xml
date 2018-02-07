@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>3fc6</objectGroupId>
+	<objectId>3fc660f7-4f81-92a1-c94e-f21d97d4cef9</objectId>
+	<file-name>d-day-to-v-e-day.xml</file-name>
+	<folder-name/>
+	<internal-name>D-Day to V-E Day</internal-name>
+	<title_s tokenized="true">D-Day to V-E Day</title_s>
+	<author>U.S. Army</author>
+	<summary_s>World War II continued for almost 11 months after the successful Normandy landings in France on June 6, 1944, commonly known as D-Day. Here are some of the key moments that led to Victory in Europe Day on May 8, 1945.</summary_s>
+	<categories>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item></categories>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/3fc660f7-4f81-92a1-c94e-f21d97d4cef9//D-Day to V-E Day.jpg</thumbnail>
+	<video>	<item>	<job_id>1507233349497-pebjxp</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>D-Day to V-E Day/f02ab470-e217-4cf0-8e12-94f0d9f31dc3</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;World War II continued for almost 11 months after the successful Normandy landings in France on June 6, 1944, commonly known as D-Day. Here are some of the key moments that led to Victory in Europe Day on May 8, 1945.&lt;/p&gt;</description_html>
+	<date_dt>2017-06-06T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-11T20:27:45.000Z</createdDate>
+	<createdDate_dt>2017-9-11T20:27:45.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:55:9.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:55:9.000Z</lastModifiedDate_dt>
+	<tags>	<item>	<value_smv>World War II</value_smv>
+	</item>	<item>	<value_smv>Normandy</value_smv>
+	</item>	<item>	<value_smv>D-Day</value_smv>
+	</item>	<item>	<value_smv>US Army</value_smv>
+	</item></tags>
+</component>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/home</content-type>	<display-template>/templates/web/pages/home.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<placeInNav>false</placeInNav>
+	<file-name>index.xml</file-name>
+	<internal-name>Home</internal-name>
+	<orderDefault_f>-1</orderDefault_f>
+	<objectGroupId>8d7f</objectGroupId>
+	<objectId>8d7f21fa-5e09-00aa-8340-853b7db302da</objectId>
+	<folder-name/>
+	<createdDate>2017-1-31T16:18:14.000Z</createdDate>
+	<createdDate_dt>2017-1-31T16:18:14.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-18T0:3:32.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-18T0:3:32.000Z</lastModifiedDate_dt>
+	<header/>
+	<footer/>
+	<rightRail>	<item>	<key>/site/components/right-rails/home-right-rail.xml</key>
+	<value>Home Right Rail</value>
+	<include>/site/components/right-rails/home-right-rail.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></rightRail>
+	<videoSections>	<item>	<key>/site/components/video-sections/newest-videos-section.xml</key>
+	<value>Newest Videos Section</value>
+	<include>/site/components/video-sections/newest-videos-section.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item>	<item>	<key>/site/components/video-sections/most-viewed-videos-section.xml</key>
+	<value>Most Viewed Videos Section</value>
+	<include>/site/components/video-sections/most-viewed-videos-section.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></videoSections>
+	<navLabel>Home</navLabel>
+	<navIcon>fa-home</navIcon>
+	<videoCarousel>	<item>	<key>/site/components/carousels/featured-videos-carousel.xml</key>
+	<value>Featured Videos Carousel</value>
+	<include>/site/components/carousels/featured-videos-carousel.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></videoCarousel>
+</page>

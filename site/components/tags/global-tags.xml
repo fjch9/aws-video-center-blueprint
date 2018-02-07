@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/tags</content-type>	<display-template>/templates/web/components/tags.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>c50d</objectGroupId>
+	<objectId>c50dbeb2-e1b9-37b4-66a7-4288ff13574b</objectId>
+	<file-name>global-tags.xml</file-name>
+	<folder-name/>
+	<internal-name>Global Tags</internal-name>
+	<landingPageUrl>/tag</landingPageUrl>
+	<createdDate>2017-8-31T16:31:29.000Z</createdDate>
+	<createdDate_dt>2017-8-31T16:31:29.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-15T16:35:25.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-15T16:35:25.000Z</lastModifiedDate_dt>
+</component>

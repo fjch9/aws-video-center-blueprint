@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video-section</content-type>	<display-template>/templates/web/components/video-section.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>3f54</objectGroupId>
+	<objectId>3f54eb65-3e07-cd58-03a4-582a3f6d8b1b</objectId>
+	<file-name>newest-videos-section.xml</file-name>
+	<folder-name/>
+	<internal-name>Newest Videos Section</internal-name>
+	<title_s>Newest Videos</title_s>
+	<maxVideosToDisplay>4</maxVideosToDisplay>
+	<videoLandingUrl>/video</videoLandingUrl>
+	<scripts>	<item>	<key>/scripts/components/recent-videos.groovy</key>
+	<value>recent-videos.groovy</value>
+	</item></scripts>
+	<createdDate>2017-9-6T21:32:58.000Z</createdDate>
+	<createdDate_dt>2017-9-6T21:32:58.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-13T22:13:49.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-13T22:13:49.000Z</lastModifiedDate_dt>
+	<allVideosUrl>/all-videos</allVideosUrl>
+</component>

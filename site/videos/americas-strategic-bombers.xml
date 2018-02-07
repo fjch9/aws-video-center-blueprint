@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>5ab5</objectGroupId>
+	<objectId>5ab5c9e9-f09e-8d49-efc2-a81db35ba8e2</objectId>
+	<file-name>americas-strategic-bombers.xml</file-name>
+	<folder-name/>
+	<internal-name>America's Strategic Bombers</internal-name>
+	<title_s tokenized="true">America's Strategic Bombers</title_s>
+	<author>U.S. Airforce</author>
+	<categories>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item>	<item>	<key>science</key>
+	<value_smv>Science &amp; Technology</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></categories>
+	<tags>	<item>	<value_smv>ASC16</value_smv>
+	</item>	<item>	<value_smv>B21</value_smv>
+	</item>	<item>	<value_smv>Bomber</value_smv>
+	</item>	<item>	<value_smv>US Air Force</value_smv>
+	</item></tags>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/5ab5c9e9-f09e-8d49-efc2-a81db35ba8e2//America's Strategic Bombers.jpg</thumbnail>
+	<video>	<item>	<job_id>1507232451280-keydeb</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>America's Strategic Bombers/49d9d742-42fc-4423-8288-c90ab32ca025</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;The Air Force&amp;rsquo;s long-range strike bomber has officially been named the B-21 Raider.&lt;/p&gt;
+&lt;p&gt;Air Force Secretary Deborah Lee James announced the results of the Air Force Global Strike Command led naming contest alongside selected members during her remarks at the Air Force Association&amp;rsquo;s Air, Space and Cyber Conference here Sept. 19, 2016.&lt;/p&gt;</description_html>
+	<date_dt>2017-09-19T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T22:45:41.000Z</createdDate>
+	<createdDate_dt>2017-9-5T22:45:41.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:29:9.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:29:9.000Z</lastModifiedDate_dt>
+	<summary_s>The Air Force’s long-range strike bomber has officially been named the B-21 Raider.</summary_s>
+</component>

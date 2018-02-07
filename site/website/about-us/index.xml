@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/generic</content-type>	<display-template>/templates/web/pages/generic.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>8a24</objectGroupId>
+	<objectId>8a245b20-179f-62a0-48b7-2c864829ac7c</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>about-us</folder-name>
+	<internal-name>About Us</internal-name>
+	<navLabel>About Us</navLabel>
+	<title_s>About Video Center</title_s>
+	<placeInNav>true</placeInNav>
+	<orderDefault_f>5000</orderDefault_f>
+	<body_html>&lt;p&gt;Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cras Nullam&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/li&gt;
+&lt;li&gt;Aenean eu leo quam.&lt;/li&gt;
+&lt;li&gt;Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/li&gt;
+&lt;li&gt;Curabitur blandit tempus porttito&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.&lt;/p&gt;</body_html>
+	<createdDate>2017-9-11T21:50:20.000Z</createdDate>
+	<createdDate_dt>2017-9-11T21:50:20.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-17T17:11:21.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-17T17:11:21.000Z</lastModifiedDate_dt>
+	<icon>fa-user</icon>
+	<navIcon>fa-user</navIcon>
+</page>

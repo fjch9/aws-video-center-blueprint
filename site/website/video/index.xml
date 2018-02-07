@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/video</content-type>	<display-template>/templates/web/pages/video.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>9513</objectGroupId>
+	<objectId>9513b591-c186-e9b2-2f9b-c10fb7a98960</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>video</folder-name>
+	<internal-name>Video</internal-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header/>
+	<footer/>
+	<rightRail/>
+	<createdDate>2017-8-30T21:14:1.000Z</createdDate>
+	<createdDate_dt>2017-8-30T21:14:1.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-10T3:52:25.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-10T3:52:25.000Z</lastModifiedDate_dt>
+	<maxRelatedVideosToDisplay>6</maxRelatedVideosToDisplay>
+</page>

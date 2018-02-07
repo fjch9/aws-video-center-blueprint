@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/tag-landing</content-type>	<display-template>/templates/web/pages/video-list.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>6bb6</objectGroupId>
+	<objectId>6bb63fd8-a750-9a16-eea7-c4a5f5132991</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>tag</folder-name>
+	<internal-name>Tag Landing</internal-name>
+	<videoLandingUrl>/video</videoLandingUrl>
+	<videoPageSize>6</videoPageSize>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header/>
+	<footer/>
+	<rightRail/>
+	<createdDate>2017-9-15T18:51:48.000Z</createdDate>
+	<createdDate_dt>2017-9-15T18:51:48.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-15T18:52:32.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-15T18:52:32.000Z</lastModifiedDate_dt>
+</page>

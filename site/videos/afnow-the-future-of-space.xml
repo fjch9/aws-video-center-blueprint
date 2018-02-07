@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>ba5e</objectGroupId>
+	<objectId>ba5e4927-bec6-cc24-1cc7-2c4c301e7c5f</objectId>
+	<file-name>afnow-the-future-of-space.xml</file-name>
+	<folder-name/>
+	<internal-name>AFNow the Future of Space</internal-name>
+	<title_s tokenized="true">AFNow the Future of Space</title_s>
+	<author>U.S. Air Force</author>
+	<categories>	<item>	<key>science</key>
+	<value_smv>Science &amp; Technology</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></categories>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/ba5e4927-bec6-cc24-1cc7-2c4c301e7c5f//AFNow the Future of Space.jpg</thumbnail>
+	<video>	<item>	<job_id>1507231300122-h5xxjb</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>AFNow The Future of Space/587b0f2c-f822-4987-9bfb-99a78be4748d</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;The Air Force has been the nation&amp;rsquo;s steward of space since 1954. In the future, we will continue to lead the space architecture to be more flexible and resilient in order to outpace adversary space capabilities, and ensure this unique American asymmetric advantage is provided 24/7 to the warfighter.&lt;/p&gt;</description_html>
+	<date_dt>2017-06-16T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T22:39:46.000Z</createdDate>
+	<createdDate_dt>2017-9-5T22:39:46.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:19:55.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:19:55.000Z</lastModifiedDate_dt>
+	<summary_s>The Air Force has been the nation’s steward of space since 1954.</summary_s>
+	<tags>	<item>	<value_smv>AFNow</value_smv>
+	</item>	<item>	<value_smv>Future</value_smv>
+	</item>	<item>	<value_smv>Space</value_smv>
+	</item>	<item>	<value_smv>US Air Force</value_smv>
+	</item></tags>
+</component>

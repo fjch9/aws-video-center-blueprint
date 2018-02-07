@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>29a9</objectGroupId>
+	<objectId>29a909a1-652a-64f9-dfe1-3defddff8a26</objectId>
+	<file-name>2017-mcas-miramar-air-show--blue-angels.xml</file-name>
+	<folder-name/>
+	<internal-name>2017 MCAS Miramar Air Show- Blue Angels</internal-name>
+	<title_s tokenized="true">2017 MCAS Miramar Air Show- Blue Angels</title_s>
+	<author>U.S. Navy</author>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<featured>true</featured>
+	<thumbnail>/static-assets/images/videos/29a909a1-652a-64f9-dfe1-3defddff8a26//2017 MCAS Miramar Air Show- Blue Angels.jpg</thumbnail>
+	<video>	<item>	<job_id>1507230927131-aw9igh</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>2017 MCAS Miramar Air Show- Blue Angels/55ef8302-810c-4fab-9dbc-825fdd3c7418</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;During the 2017 Marine Corps Air Station Miramar Air Show, pilots with the Navy&amp;#39;s Blue Angels demonstrate the capabilities of the F/A-18 Super Hornet. (U.S. Marine Corps video by Lance Cpl. Jake McClung and Lance Cpl. Liah Smuin/Released).&lt;/p&gt;</description_html>
+	<date_dt>2017-08-16T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T22:7:1.000Z</createdDate>
+	<createdDate_dt>2017-9-5T22:7:1.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:14:57.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:14:57.000Z</lastModifiedDate_dt>
+	<summary_s>During the 2017 Marine Corps Air Station Miramar Air Show, pilots with the Navy's Blue Angels demonstrate the capabilities of the F/A-18 Super Hornet. </summary_s>
+	<tags>	<item>	<value_smv>Marine Corps</value_smv>
+	</item>	<item>	<value_smv>Miramar</value_smv>
+	</item>	<item>	<value_smv>Air Show</value_smv>
+	</item>	<item>	<value_smv>Blue Angels</value_smv>
+	</item>	<item>	<value_smv>Super Hornet</value_smv>
+	</item>	<item>	<value_smv>US Navy</value_smv>
+	</item></tags>
+</component>

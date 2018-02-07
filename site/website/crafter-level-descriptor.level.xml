@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/level-descriptor</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>d418</objectGroupId>
+	<objectId>d418b4c7-bf31-ea7c-337f-f6e121cb1923</objectId>
+	<file-name>crafter-level-descriptor.level.xml</file-name>
+	<folder-name/>
+	<header>	<item>	<key>/site/components/headers/global-header.xml</key>
+	<value>Global Header</value>
+	<include>/site/components/headers/global-header.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></header>
+	<footer>	<item>	<key>/site/components/footers/global-footer.xml</key>
+	<value>Global Footer</value>
+	<include>/site/components/footers/global-footer.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></footer>
+	<rightRail>	<item>	<key>/site/components/right-rails/global-right-rail.xml</key>
+	<value>Global Right Rail</value>
+	<include>/site/components/right-rails/global-right-rail.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></rightRail>
+	<createdDate>2017-8-25T20:37:50.000Z</createdDate>
+	<createdDate_dt>2017-8-25T20:37:50.000Z</createdDate_dt>
+	<lastModifiedDate>2017-11-07T00:00:10.566Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-11-07T00:00:10.566Z</lastModifiedDate_dt>
+	<mobileNavigation>	<item>	<key>/site/components/headers/mobile-navigation.xml</key>
+	<value>Mobile Navigation</value>
+	<include>/site/components/headers/mobile-navigation.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></mobileNavigation>
+	<videoLandingURL>/video</videoLandingURL>
+	<trackingId>UA-108108926-1</trackingId>
+	<backLink>http://craftertv.craftercloud.io</backLink>
+</component>

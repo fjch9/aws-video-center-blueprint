@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>a81c</objectGroupId>
+	<objectId>a81c34fd-98c4-4c67-5bf0-66b74673d276</objectId>
+	<file-name>afnow-hurricane-harvey.xml</file-name>
+	<folder-name/>
+	<internal-name>AFNow Hurricane Harvey</internal-name>
+	<title_s tokenized="true">AFNow Hurricane Harvey</title_s>
+	<author>U.S. Air Force</author>
+	<categories>	<item>	<key>people</key>
+	<value_smv>People</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></categories>
+	<featured>true</featured>
+	<thumbnail>/static-assets/images/videos/a81c34fd-98c4-4c67-5bf0-66b74673d276//AFNow Hurricane Harvey.jpg</thumbnail>
+	<video>	<item>	<job_id>1507231174415-3sxwct</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>AFNow Hurricane Harvey/0ddf5de6-a981-4ace-8709-c1f0e7dedaa2</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;Active duty, Reserve and Air National Guard Airmen are assisting with Hurricane Harvey rescue and recovery efforts.&lt;/p&gt;</description_html>
+	<date_dt>2017-08-30T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T22:26:30.000Z</createdDate>
+	<createdDate_dt>2017-9-5T22:26:30.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:19:13.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:19:13.000Z</lastModifiedDate_dt>
+	<summary_s>Active duty, Reserve and Air National Guard Airmen are assisting with Hurricane Harvey rescue and recovery efforts.</summary_s>
+	<tags>	<item>	<value_smv>AFNow</value_smv>
+	</item>	<item>	<value_smv>Hurricane Harvey</value_smv>
+	</item>	<item>	<value_smv>Reserve</value_smv>
+	</item>	<item>	<value_smv>Air National Guard</value_smv>
+	</item>	<item>	<value_smv>US Air Force</value_smv>
+	</item></tags>
+</component>

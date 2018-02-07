@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/search</content-type>	<display-template>/templates/web/pages/search.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>005c</objectGroupId>
+	<objectId>005ca6f8-0c60-e07e-98c1-8c09eb7ba550</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>search</folder-name>
+	<internal-name>Search</internal-name>
+	<navLabel>Search</navLabel>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<createdDate>2017-9-8T17:21:25.000Z</createdDate>
+	<createdDate_dt>2017-9-8T17:21:25.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-13T0:15:17.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-13T0:15:17.000Z</lastModifiedDate_dt>
+	<maxVideosToDisplay>5</maxVideosToDisplay>
+	<videoLandingURL>/video</videoLandingURL>
+</page>

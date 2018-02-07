@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/register</content-type>	<display-template>/templates/web/pages/register.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>63b6</objectGroupId>
+	<objectId>63b6e7f3-9d15-2235-5fb3-b9e891dfed21</objectId>
+	<internal-name>Register Page</internal-name>
+	<heroTitle>User Registration</heroTitle>
+	<formTitle>Create your Account</formTitle>
+	<formLabel>Register Now</formLabel>
+	<formAction>/api/1/profile/register.json</formAction>
+	<file-name>index.xml</file-name>
+	<folder-name>register</folder-name>
+	<heroText_html>&lt;p&gt;Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;</heroText_html>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<createdDate>2017-9-19T16:24:27.000Z</createdDate>
+	<createdDate_dt>2017-9-19T16:24:27.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T21:58:24.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T21:58:24.000Z</lastModifiedDate_dt>
+</page>

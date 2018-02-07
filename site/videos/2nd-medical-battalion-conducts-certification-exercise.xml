@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>a000</objectGroupId>
+	<objectId>a00067ab-5a1a-fc8b-55a6-2b2091869672</objectId>
+	<internal-name>2nd Medical Battalion conducts certification exercise</internal-name>
+	<title_s tokenized="true">2nd Medical Battalion conducts certification exercise</title_s>
+	<author>U.S. Navy</author>
+	<file-name>2nd-medical-battalion-conducts-certification-exercise.xml</file-name>
+	<folder-name/>
+	<categories>	<item>	<key>people</key>
+	<value_smv>People</value_smv>
+	</item></categories>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/a00067ab-5a1a-fc8b-55a6-2b2091869672//2nd Medical Battalion conducts certification exercise.jpg</thumbnail>
+	<video>	<item>	<job_id>1507231067927-ub6ogj</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>2nd Medical Battalion conducts certification exercise/aeb3e574-03b9-41e6-b6e0-0ae4eff47dfe</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;U.S. Navy corpsmen applied first responder care to simulated casualties during a certification exercise at Camp Lejeune, N.C., June 28, 2017. The corpsmen conducted their CERTEX to highlight proper medical procedures and to maintain readiness in preparation for an upcoming deployment. The corpsmen are with the 2nd Medical Battalion, 2nd Marine Logistics Group. (U.S. Marine Corps video by Lance Cpl. Gloria Lepko).&lt;/p&gt;</description_html>
+	<date_dt>2017-06-30T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T21:28:21.000Z</createdDate>
+	<createdDate_dt>2017-9-5T21:28:21.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:17:19.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:17:19.000Z</lastModifiedDate_dt>
+	<summary_s>U.S. Navy corpsmen applied first responder care to simulated casualties during a certification exercise at Camp Lejeune, N.C., June 28, 2017. </summary_s>
+	<tags>	<item>	<value_smv>US Navy</value_smv>
+	</item>	<item>	<value_smv>First Responder</value_smv>
+	</item>	<item>	<value_smv>Certification</value_smv>
+	</item>	<item>	<value_smv>Exercise</value_smv>
+	</item>	<item>	<value_smv>Medical</value_smv>
+	</item>	<item>	<value_smv>Camp Lejeune</value_smv>
+	</item></tags>
+</component>

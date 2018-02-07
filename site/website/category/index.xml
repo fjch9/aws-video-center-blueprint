@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/category-landing</content-type>	<display-template>/templates/web/pages/video-list.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>3ac1</objectGroupId>
+	<objectId>3ac1ceef-0f7e-f181-4ddf-c01abe7af08f</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>category</folder-name>
+	<internal-name>Category Landing</internal-name>
+	<videoPageSize>6</videoPageSize>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header/>
+	<footer/>
+	<rightRail/>
+	<supportedCategories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item>	<item>	<key>science</key>
+	<value_smv>Science &amp; Technology</value_smv>
+	</item>	<item>	<key>people</key>
+	<value_smv>People</value_smv>
+	</item>	<item>	<key>sports</key>
+	<value_smv>Sports</value_smv>
+	</item>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item>	<item>	<key>news</key>
+	<value_smv>News</value_smv>
+	</item></supportedCategories>
+	<createdDate>2017-9-11T18:46:29.000Z</createdDate>
+	<createdDate_dt>2017-9-11T18:46:29.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-15T18:40:43.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-15T18:40:43.000Z</lastModifiedDate_dt>
+	<videoLandingUrl>/video</videoLandingUrl>
+</page>

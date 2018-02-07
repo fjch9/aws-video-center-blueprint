@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/taxonomy</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>68cd</objectGroupId>
+	<objectId>68cdcacb-8baf-5afa-2374-40e058c77c64</objectId>
+	<items>	<item>	<key>entertainment</key>
+	<value>Entertainment</value>
+	</item>	<item>	<key>science</key>
+	<value>Science &amp; Technology</value>
+	</item>	<item>	<key>people</key>
+	<value>People</value>
+	</item>	<item>	<key>sports</key>
+	<value>Sports</value>
+	</item>	<item>	<key>historical</key>
+	<value>Historical</value>
+	</item>	<item>	<key>news</key>
+	<value>News</value>
+	</item></items>
+	<file-name>categories.xml</file-name>
+	<folder-name/>
+	<internal-name>Categories</internal-name>
+	<createdDate>2017-8-25T16:11:38.000Z</createdDate>
+	<createdDate_dt>2017-8-25T16:11:38.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-5T22:28:45.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-5T22:28:45.000Z</lastModifiedDate_dt>
+</component>

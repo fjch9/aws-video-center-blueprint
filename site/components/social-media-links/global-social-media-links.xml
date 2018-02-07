@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/social-media-links</content-type>	<display-template>/templates/web/components/social-medial-links.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>c346</objectGroupId>
+	<objectId>c3469284-3bfe-05d9-5a67-c6d38595d757</objectId>
+	<file-name>global-social-media-links.xml</file-name>
+	<folder-name/>
+	<internal-name>Global Social Media Links</internal-name>
+	<socialMediaLinks>	<item>	<url>https://www.facebook.com/CrafterSoftware</url>
+	<socialMedia>fa-facebook</socialMedia>
+	</item>	<item>	<socialMedia>fa-twitter</socialMedia>
+	<url>https://twitter.com/craftersoftware</url>
+	</item>	<item>	<socialMedia>fa-linkedin</socialMedia>
+	<url>https://www.linkedin.com/company/3112839</url>
+	</item></socialMediaLinks>
+	<createdDate>2017-8-31T16:25:6.000Z</createdDate>
+	<createdDate_dt>2017-8-31T16:25:6.000Z</createdDate_dt>
+	<lastModifiedDate>2017-8-31T16:30:58.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-8-31T16:30:58.000Z</lastModifiedDate_dt>
+</component>

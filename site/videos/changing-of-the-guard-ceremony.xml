@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>fcef</objectGroupId>
+	<objectId>fcef6742-dbda-f71f-3f92-fb62bf99155b</objectId>
+	<file-name>changing-of-the-guard-ceremony.xml</file-name>
+	<folder-name/>
+	<internal-name>Changing of the Guard Ceremony</internal-name>
+	<title_s tokenized="true">Changing of the Guard Ceremony</title_s>
+	<summary_s>The Changing of the Guard Ceremony is an elaborate ritual that occurs at the Tomb of the Unknown Soldier and is one of the most popular attractions in Arlington National Cemetery.</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item></categories>
+	<featured>true</featured>
+	<thumbnail>/static-assets/images/videos/fcef6742-dbda-f71f-3f92-fb62bf99155b/Changing of the Guard Ceremony.jpg</thumbnail>
+	<video>	<item>	<job_id>1507232836648-sbp1b5</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>Changing of the Guard Ceremony/38619991-0c8b-493e-9caa-eb3c529b53d3</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;The Changing of the Guard Ceremony is an elaborate ritual that occurs at the Tomb of the Unknown Soldier and is one of the most popular attractions in Arlington National Cemetery. During The Changing of the Guard an impeccably uniformed relief commander conducts a detailed white-glove inspection of the incoming Sentinel&amp;#39;s weapon, carefully checking each part of the fully functional M14 rifle once. U.S. Army video by Sgt. George Huley and Pfc. Gabriel Silva&lt;/p&gt;</description_html>
+	<date_dt>2017-08-29T04:00:00.000Z</date_dt>
+	<createdDate>2017-9-11T20:16:6.000Z</createdDate>
+	<createdDate_dt>2017-9-11T20:16:6.000Z</createdDate_dt>
+	<lastModifiedDate>2017-11-07T01:44:07.518Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-11-07T01:44:07.518Z</lastModifiedDate_dt>
+	<tags>	<item>	<value_smv>Arlington National Cemetery</value_smv>
+	</item>	<item>	<value_smv>Tomb of the Unknown Soldier </value_smv>
+	</item>	<item>	<value_smv>Guard Ceremony </value_smv>
+	</item>	<item>	<value_smv>US Army</value_smv>
+	</item></tags>
+</component>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/footer</content-type>	<display-template>/templates/web/components/footer.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>bb79</objectGroupId>
+	<objectId>bb795c12-ac9e-4081-6ec2-8edd46074bbc</objectId>
+	<file-name>global-footer.xml</file-name>
+	<folder-name/>
+	<internal-name>Global Footer</internal-name>
+	<tags>	<item>	<key>/site/components/tags/global-tags.xml</key>
+	<value>Global Tags</value>
+	<include>/site/components/tags/global-tags.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></tags>
+	<socialMediaLinks>	<item>	<key>/site/components/social-media-links/global-social-media-links.xml</key>
+	<value>Global Social Media Links</value>
+	<include>/site/components/social-media-links/global-social-media-links.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></socialMediaLinks>
+	<createdDate>2017-8-25T19:1:5.000Z</createdDate>
+	<createdDate_dt>2017-8-25T19:1:5.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-25T19:26:52.052Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-25T19:26:52.052Z</lastModifiedDate_dt>
+	<aboutText>Crafter Video Center on AWS is a demo site built using Crafter CMS and Amazon Web Services including EC2, S3, Elemental and CloudFront.</aboutText>
+	<recentVideosWidget>	<item>	<key>/site/components/video-widgets/recent-videos-widget.xml</key>
+	<value>Recent Videos Widget</value>
+	<include>/site/components/video-widgets/recent-videos-widget.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></recentVideosWidget>
+	<logoAltText>footer logo</logoAltText>
+	<copyrightText>2017 © Crafter Software Corporation</copyrightText>
+	<logo>/static-assets/images/footerlogo.png</logo>
+	<aboutTitle>About Crafter Video Center</aboutTitle>
+</component>

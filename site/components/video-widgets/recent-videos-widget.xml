@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video-widget</content-type>	<display-template>/templates/web/components/video-widget.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>c60a</objectGroupId>
+	<objectId>c60a119d-5988-ae04-e83f-2ff5d142747c</objectId>
+	<file-name>recent-videos-widget.xml</file-name>
+	<folder-name/>
+	<internal-name>Recent Videos Widget</internal-name>
+	<title_s>Recent Videos</title_s>
+	<maxVideosToDisplay>4</maxVideosToDisplay>
+	<createdDate>2017-9-13T22:9:24.000Z</createdDate>
+	<createdDate_dt>2017-9-13T22:9:24.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-13T22:29:34.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-13T22:29:34.000Z</lastModifiedDate_dt>
+	<scripts>	<item>	<key>/scripts/components/recent-videos.groovy</key>
+	<value>recent-videos.groovy</value>
+	<disableFlattening>false</disableFlattening>
+	</item></scripts>
+	<videoLandingUrl>/video</videoLandingUrl>
+</component>
