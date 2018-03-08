@@ -92,6 +92,14 @@
 			<api>
 				<accessTokenId>b4d44030-d0af-11e3-9c1a-0800200c9a66</accessTokenId>
 			</api>
+			<verification>
+				<url>/verifyacct</url>
+				<email>
+					<address>noreply@example.com</address>
+					<subject>Verify Account</subject>
+					<template>/templates/mail/verify-account.ftl</template>
+				</email>
+			</verification>
 		</profile>
 		<aws>
 			<region>US_EAST_1</region>
@@ -99,4 +107,16 @@
 			<secretKey>n/6X3vjqf20hb+fRWIKvywRofTtgrpwAXqGB5LnP</secretKey>
 			<urlExpiration>60</urlExpiration>
 		</aws>
+		<mongo>
+			<db>aws-video-center</db>
+			<url>mongodb://localhost:27020/aws-video-center</url>
+		</mongo>
+		<mail>
+			<host>localhost</host>
+			<port>25</port>
+			<protocol>smtp</protocol>
+			<encoding>UTF-8</encoding>
+			<auth>false</auth>
+			<secure>false</secure>
+		</mail>
 </site>

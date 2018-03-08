@@ -1,3 +1,4 @@
+<#import "/templates/system/common/cstudio-support.ftl" as studio />
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -34,5 +35,6 @@
 	</div><!--end off canvas wrapper-->
 	<!-- script files -->
 	<#include "/templates/web/components/scripts.ftl" />
+	<@studio.toolSupport />
 </body>
 </html>

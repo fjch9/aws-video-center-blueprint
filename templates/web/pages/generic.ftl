@@ -1,3 +1,4 @@
+<#import "/templates/system/common/cstudio-support.ftl" as studio />
 <#import "/templates/web/lib/macros.ftl" as macros />
 
 <!doctype html>
@@ -50,5 +51,6 @@
   </div><!--end off canvas wrapper-->
   <!-- script files -->
   <#include "/templates/web/components/scripts.ftl" />
+  <@studio.toolSupport />
 </body>
 </html>

@@ -1,5 +1,4 @@
 import org.craftercms.engine.exception.HttpStatusCodeException
-import org.craftercms.site.videocenter.utils.VideoUtils
 
 def categoryId = params.id
 if (!categoryId) {

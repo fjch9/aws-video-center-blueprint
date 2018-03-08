@@ -1,3 +1,4 @@
+<#import "/templates/system/common/cstudio-support.ftl" as studio />
 <#import "/templates/web/lib/macros.ftl" as macros />
 
 <#assign favoriteVideos = (profile.attributes.favoriteVideos)![] />
@@ -284,5 +285,6 @@
         });
     });
 </script>
+<@studio.toolSupport />
 </body>
 </html>
