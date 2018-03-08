@@ -11,3 +11,6 @@
 <script src="/static-assets/js/inewsticker.js" type="text/javascript"></script>
 <script src="/static-assets/js/jquery.kyco.easyshare.js" type="text/javascript"></script>
 <script src="/static-assets/js/jquery.matchHeight.js" type="text/javascript"></script>
+<script src="/static-assets/js/flipclock.min.js" type="text/javascript"></script>
+<script src="/static-assets/videojs/video.js"></script>
+<script src="/static-assets/videojs/videojs-contrib-hls.js"></script>
