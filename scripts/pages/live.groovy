@@ -8,15 +8,19 @@ def videoId = params.id
 def video = null
 
 if (videoId) {
-    video = siteItemService.getSiteItem("/site/videos/${videoId}.xml")
+    video = siteItemService.getSiteItem("/site/streams/${videoId}.xml")
     if (video) {
-    	templateModel.video = video
+      templateModel.video = video
+      templateModel.endpoints = video.endpoints.item.collect { siteItemService.getSiteItem(it.key.text) }
     } else {
-    	throw new HttpStatusCodeException(404, "Video ${videoPath} not found")
+    	throw new HttpStatusCodeException(404, "Video ${videoId} not found")
     }
 } else {
 	throw new HttpStatusCodeException(400, "No param 'id' provided in request")
 }
+
+
+templateModel.streamStatus = videoService.getStreamStatus(video)
 
 def views = videoService.updateVideoViewCount(videoId)
 if (views) {
@@ -27,8 +31,6 @@ def socialCounts = videoService.getVideoSocialCounts(videoId)
 templateModel.likeCount = socialCounts.liked
 templateModel.dislikeCount = socialCounts.disliked
 
-templateModel.videoUrl = applicationContext.s3Service.getUrl(request, video.video.item)
-
 // Get related videos
 def rows = contentModel.maxRelatedVideosToDisplay.text as int
 templateModel.relatedVideos = videoService.searchRelatedVideos(video, rows)
@@ -36,7 +38,7 @@ templateModel.relatedVideos = videoService.searchRelatedVideos(video, rows)
 templateModel.breadcrumbs = [
 	[url: "/", label: "Home"],
 	[url: "/all-videos", label: "Videos"],
-	[url: "/video?id=${videoId}", label: video.title_s]
+	[url: "/live?id=${videoId}", label: video.title_s]
 ]
 
 if(profile) {

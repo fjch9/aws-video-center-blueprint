@@ -67,7 +67,7 @@ class VideoService {
     query.query = q
     query.rows = rows
     query.fieldsToReturn = fieldsToReturn
-    query.addParam("sort", "date_dt desc")
+    query.addParam("sort", "score desc, date_dt desc")
     
     return query
   }
@@ -103,7 +103,8 @@ class VideoService {
   }
     
   def searchFeaturedVideos(rows) {
-    def q = 'content-type:"/component/video" AND featured:"true"'
+    def q = '(content-type:"/component/video" AND featured:"true") OR ' +
+      '(content-type:"/component/stream" AND startDate_dt:[* TO NOW] AND endDate_dt:[NOW TO *])^100'
     def query = buildSolrQuery(q, rows)
     
     def results = searchService.search(query)
@@ -158,6 +159,7 @@ class VideoService {
     video.summary_s = videoItem.summary_s
     video.categories = videoItem.queryValues("categories/item/value_smv")
     video.tags = videoItem.queryValues("tags/item/value_smv")
+    video.type = videoItem["content-type"].text.equals("/component/video") ? "video" : "stream"
     
     def views = db.videoViews.findOne(videoId: video.id)
     if (views) {
@@ -171,5 +173,16 @@ class VideoService {
     
     return video
   }
-    
+  
+  def getStreamStatus(video) {
+    def now = new Date()
+    if(video.startDate_dt > now) {
+      return "waiting"
+    } else if(video.endDate_dt < now) {
+      return "finished"
+    } else {
+      return "live"
+    }
+  }
+  
 }
