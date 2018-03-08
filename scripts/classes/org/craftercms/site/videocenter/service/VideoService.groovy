@@ -52,7 +52,7 @@ class VideoService {
           def video = [:]
           videos << processItem(videoItem)
           }	else {
-            log.warn("Video ${url} not found")
+            log.warn("Video ${videoPath} not found")
           }
       }
     }

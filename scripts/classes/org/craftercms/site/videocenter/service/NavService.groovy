@@ -5,7 +5,7 @@ class NavService {
   def urlTransformationService
   def siteItemService
   
-  def getNavIcon = { item ->
+  def getNavIcon(item) {
     def storeUrl = urlTransformationService.transform("renderUrlToStoreUrl", item.url)
     def siteItem = siteItemService.getSiteItem(storeUrl)
     if(siteItem) {
