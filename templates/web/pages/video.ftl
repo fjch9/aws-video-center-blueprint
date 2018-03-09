@@ -1,3 +1,4 @@
+<#import "/templates/system/common/cstudio-support.ftl" as studio />
 <#import "/templates/web/lib/macros.ftl" as macros />
 
 <!doctype html>
@@ -216,5 +217,6 @@
         <#include "/templates/web/components/analytics.ftl"/>
 	});
 </script>
+<@studio.toolSupport />
 </body>
 </html>

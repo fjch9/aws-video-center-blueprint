@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/live</content-type>	<display-template>/templates/web/pages/live.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>384f5368</objectGroupId>
+	<objectId>384f5368-311c-4c13-991a-a0789b4a64d2</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>live</folder-name>
+	<internal-name>Live</internal-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<header/>
+	<footer/>
+	<rightRail/>
+	<createdDate>2017-8-30T21:14:1.000Z</createdDate>
+	<createdDate_dt>2017-8-30T21:14:1.000Z</createdDate_dt>
+	<lastModifiedDate>2018-02-07T04:11:12.133Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-02-07T04:11:12.133Z</lastModifiedDate_dt>
+	<maxRelatedVideosToDisplay>6</maxRelatedVideosToDisplay>
+</page>

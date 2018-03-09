@@ -10,13 +10,12 @@
 			<div class="medium-6 columns">
 				<div class="top-button">
 					<ul class="menu float-right">
-                    	<!--
 						<#if !profile??>
 						<li>
 							<a href="/register">Register</a>
 						</li>
 						<li>
-							<a href="/login">login</a>
+							<a href="/login">Login</a>
 						</li>
 						<#else>
 						<li>
@@ -26,7 +25,6 @@
 							<a href="/crafter-security-logout">Logout</a>
 						</li>
 						</#if>
-                        -->
 					</ul>
 				</div>
 			</div>
@@ -62,15 +60,15 @@
 							<div class="top-bar-right">
 								<ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
 									<li <#if request.requestURI == "/">class="active"</#if>>
-										<a href="${navItems.url}"><i class="fa ${getNavIcon.call(navItems)}"></i>${navItems.label}</a>
+										<a href="${navItems.url}"><i class="fa ${navService.getNavIcon(navItems)}"></i>${navItems.label}</a>
 									</li>
                   <#list navItems.subItems as item>
                     <li class="<#if item.subItems?has_content>has-submenu</#if> <#if item.active>active</#if>">
-                      <a href="${item.url}"><i class="fa ${getNavIcon.call(item)}"></i>${item.label}</a>
+                      <a href="${item.url}"><i class="fa ${navService.getNavIcon(item)}"></i>${item.label}</a>
                       <#if item.subItems?has_content>
                       <ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
                         <#list item.subItems as child>
-                        <li><a href="${child.url}"><i class="fa ${getNavIcon.call(child)}"></i>${child.label}</a></li>
+                        <li><a href="${child.url}"><i class="fa ${navService.getNavIcon(child)}"></i>${child.label}</a></li>
                         </#list>
                       </ul>
                       </#if>

@@ -76,9 +76,21 @@
                                     <params>
                                         <label>Videos</label>
                                         <path>/site/videos</path>
+                                        <path>/site/streams</path>
                                         <showRootItem>true</showRootItem>
                                     </params>
-                                </modulehook>                                
+                                </modulehook>
+                                
+                                <!-- Endpoints -->
+                                <modulehook>
+                                    <name>wcm-root-folder</name>
+                                    <showDivider>true</showDivider>
+                                    <params>
+                                        <label>Endpoints</label>
+                                        <path>/site/endpoints</path>
+                                        <showRootItem>true</showRootItem>
+                                    </params>
+                                </modulehook>
                                 
                                 <!-- Taxonomies -->
                                 <modulehook>

@@ -24,4 +24,6 @@
 		<link rel="stylesheet" href="/static-assets/css/owl.carousel.min.css">
 		<link rel="stylesheet" href="/static-assets/css/owl.theme.default.min.css">
 		<link rel="stylesheet" href="/static-assets/css/responsive.css">
+		<link rel="stylesheet" href="/static-assets/css/flipclock.css">
+		<link rel="stylesheet" href="/static-assets/videojs/video-js.css">
 </head>

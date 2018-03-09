@@ -13,10 +13,6 @@ updates.displayName = params.displayName
 updates.bio = params.bio
 updates.phone = params.phone
 
-profileService.updateAttributes(profileId, updates)
-
-if(params.password) {
-	profileService.updateProfile(profileId, null, params.password, null, null, null, null)
-}
+applicationContext.userService.updateProfile(profileId, updates, params.password)
 
 response.sendRedirect("/account")

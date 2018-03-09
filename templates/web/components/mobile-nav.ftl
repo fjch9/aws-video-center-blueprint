@@ -6,15 +6,15 @@
     </div>
     <ul class="vertical menu off-menu" data-responsive-menu="drilldown">
         <li>
-          <a href="${navItems.url}"><i class="fa ${getNavIcon.call(navItems)}"></i>${navItems.label}</a>
+          <a href="${navItems.url}"><i class="fa ${navService.getNavIcon(navItems)}"></i>${navItems.label}</a>
         </li>
         <#list navItems.subItems as item>
         <li <#if item.subItems?has_content>class="has-submenu"</#if>>
-            <a href="${item.url}"><i class="fa ${getNavIcon.call(item)}"></i>${item.label}</a>
+            <a href="${item.url}"><i class="fa ${navService.getNavIcon(item)}"></i>${item.label}</a>
             <#if item.subItems?has_content>
             <ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
                 <#list item.subItems as child>
-                <li><a href="${child.url}"><i class="fa ${getNavIcon.call(child)}"></i>${child.label}</a></li>
+                <li><a href="${child.url}"><i class="fa ${navService.getNavIcon(child)}"></i>${child.label}</a></li>
                 </#list>
             </ul>
             </#if>

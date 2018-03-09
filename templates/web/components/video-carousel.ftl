@@ -12,13 +12,19 @@
 						</div>
 				</div>
 		</div>
-		<div id="owl-demo" class="owl-carousel carousel" data-car-length="4" data-items="4" data-loop="true" data-nav="false" data-autoplay="true" data-autoplay-timeout="3000" data-dots="false" data-auto-width="false" data-responsive-small="1" data-responsive-medium="2" data-responsive-xlarge="5">
+		<div id="owl-demo" class="owl-carousel carousel" data-car-length="4" data-items="4" data-loop="true" data-nav="false" data-autoplay="false" data-autoplay-timeout="3000" data-dots="false" data-auto-width="false" data-responsive-small="1" data-responsive-medium="2" data-responsive-xlarge="5">
 				<#list videos as video>
-				<#assign videoUrl = "${contentModel.videoLandingUrl}?id=${video.id}" />
+				<#assign isLive = video.type = "stream"/>
+				<#if isLive>
+					<#assign videoUrl = "live?id=${video.id}" />
+				<#else>
+					<#assign videoUrl = "${contentModel.videoLandingUrl}?id=${video.id}" />
+				</#if>
 				<div class="item">
 						<figure class="premium-img">
 								<img src="${video.thumbnail}" alt="carousel">
 								<figcaption>
+										<#if isLive><h4 class="badge alert">Live Now</h4></#if>
 										<h5>${video.title_s}</h5>
 										<p>${video.categories?join(", ")}</p>
 								</figcaption>
