@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>20ed7bcb</objectGroupId>
+	<objectId>20ed7bcb-5dbf-40b3-8912-f69f90afa135</objectId>
+	<file-name>army-combatives-program-b554610c.xml</file-name>
+	<folder-name>videos</folder-name>
+	<internal-name>Army Combatives Program b554610c</internal-name>
+	<title_s tokenized="true">Army Combatives Program</title_s>
+	<author>U.S. Army</author>
+	<categories>	<item>	<key>people</key>
+	<value_smv>People</value_smv>
+	</item>	<item>	<key>sports</key>
+	<value_smv>Sports</value_smv>
+	</item></categories>
+	<featured>false</featured>
+	<thumbnail>/static-assets/images/videos/e2b71846-73e5-93ed-05b7-e1c9e6a3bdaa//Army Combatives Program.jpg</thumbnail>
+	<video>	<item>	<job_id>1507232513568-kv40xb</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>Army Combatives Program/4ac63f9d-97fe-4d86-a986-8cd72a00866e</base_key>
+	</item></video>
+	<description_html>&lt;p&gt;The Modern Army Combatives Program, or MACP, give Soldiers the skills they need to survive on the battlefield.&lt;/p&gt;
+&lt;p&gt;Video by Soldiers Broadcasting, Defense Media Activity&lt;/p&gt;</description_html>
+	<date_dt>2017-02-01T05:00:00.000Z</date_dt>
+	<createdDate>2017-9-5T22:57:19.000Z</createdDate>
+	<createdDate_dt>2017-9-5T22:57:19.000Z</createdDate_dt>
+	<lastModifiedDate>2017-10-5T19:41:32.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-10-5T19:41:32.000Z</lastModifiedDate_dt>
+	<summary_s>The Modern Army Combatives Program, or MACP, give Soldiers the skills they need to survive on the battlefield.</summary_s>
+	<tags>	<item>	<value_smv>MACP</value_smv>
+	</item>	<item>	<value_smv>Soldiers</value_smv>
+	</item>	<item>	<value_smv>US Army</value_smv>
+	</item>	<item>	<value_smv>Combat</value_smv>
+	</item></tags>
+</component>
