@@ -25,10 +25,12 @@
 	<value_smv>Historical</value_smv>
 	</item>	<item>	<key>news</key>
 	<value_smv>News</value_smv>
+	</item>	<item>	<key>live</key>
+	<value_smv>Live</value_smv>
 	</item></supportedCategories>
 	<createdDate>2017-9-11T18:46:29.000Z</createdDate>
 	<createdDate_dt>2017-9-11T18:46:29.000Z</createdDate_dt>
-	<lastModifiedDate>2017-9-15T18:40:43.000Z</lastModifiedDate>
-	<lastModifiedDate_dt>2017-9-15T18:40:43.000Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-12T19:05:58.415Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-12T19:05:58.415Z</lastModifiedDate_dt>
 	<videoLandingUrl>/video</videoLandingUrl>
 </page>
