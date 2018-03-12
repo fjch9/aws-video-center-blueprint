@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video-section</content-type>	<display-template>/templates/web/components/video-section.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>ae59b6e0</objectGroupId>
+	<objectId>ae59b6e0-3935-4dc9-a6ce-a783fd1a2b75</objectId>
+	<file-name>most-viewed-videos-section-b946e3f7.xml</file-name>
+	<folder-name>video-sections</folder-name>
+	<internal-name>Most Viewed Videos Section b946e3f7</internal-name>
+	<title_s>Most Viewed Videos</title_s>
+	<maxVideosToDisplay>4</maxVideosToDisplay>
+	<videoLandingUrl>/video</videoLandingUrl>
+	<scripts>	<item>	<key>/scripts/components/most-viewed-videos.groovy</key>
+	<value>most-viewed-videos.groovy</value>
+	</item></scripts>
+	<createdDate>2017-9-7T0:19:38.000Z</createdDate>
+	<createdDate_dt>2017-9-7T0:19:38.000Z</createdDate_dt>
+	<lastModifiedDate>2017-9-13T22:14:10.000Z</lastModifiedDate>
+	<lastModifiedDate_dt>2017-9-13T22:14:10.000Z</lastModifiedDate_dt>
+	<allVideosUrl>/all-videos</allVideosUrl>
+</component>
