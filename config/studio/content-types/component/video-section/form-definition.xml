@@ -207,7 +207,7 @@
 						</constraint>
 						<constraint>
 							<name>pattern</name>
-							<value><![CDATA[[1-9][0-9]*]]></value>
+							<value><![CDATA[^[1-9][0-9]*$]]></value>
 							<type>string</type>
 						</constraint>
 					</constraints>
