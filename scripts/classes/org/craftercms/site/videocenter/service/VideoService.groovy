@@ -122,6 +122,15 @@ class VideoService {
     
     return resolveVideosFromSearchResults(results)
   }
+
+  def searchStreams(rows) {
+    def query = buildSolrQuery("content-type:\"/component/stream\" AND endDate_dt:[NOW TO *]", rows)
+    query.addParam("sort", "startDate_dt")
+    
+    def results = searchService.search(query)
+    
+    return resolveVideosFromSearchResults(results)
+  }
     
   def resolveVideosFromSearchResults(searchResults) {
     def documents = searchResults.response.documents
