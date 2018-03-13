@@ -6,6 +6,7 @@ import java.util.TimeZone
 class DateUtils {
 
 	private static def SHORT_DISPLAY_DATE_FORMAT = "MM/dd/yy"
+  private static def ISO_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ssZ"
 
 	private DateUtils() {
 
@@ -18,5 +19,9 @@ class DateUtils {
 
 		return outputDate
 	}
+
+  static def toIsoString(date) {
+    date.format(ISO_DATE_FORMAT, TimeZone.getTimeZone("UTC"))
+  }
 
 }
