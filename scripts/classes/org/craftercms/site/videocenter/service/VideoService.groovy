@@ -169,6 +169,10 @@ class VideoService {
     video.categories = videoItem.queryValues("categories/item/value_smv")
     video.tags = videoItem.queryValues("tags/item/value_smv")
     video.type = videoItem["content-type"].text.equals("/component/video") ? "video" : "stream"
+    if(video.type == "stream") {
+      video.startDate_dt = DateUtils.toIsoString(videoItem.startDate_dt)
+      video.endDate_dt = DateUtils.toIsoString(videoItem.endDate_dt)
+    }
     
     def views = db.videoViews.findOne(videoId: video.id)
     if (views) {
