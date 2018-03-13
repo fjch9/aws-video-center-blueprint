@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>cecd</objectGroupId>
+	<objectId>cecd2455-6713-bf62-28fd-0cdc461908ff</objectId>
+	<file-name>cecd2455-6713-bf62-28fd-0cdc461908ff.xml</file-name>
+	<internal-name>Future Event</internal-name>
+	<title_s tokenized="true">Future Event</title_s>
+	<summary_s>Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla.</summary_s>
+	<categories>	<item>	<key>live</key>
+	<value_smv>Live</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</key>
+	<value>Testing Stream</value>
+	<include>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/9689975d-f44c-595c-60de-03c709edc152/Bastille Day .jpg</thumbnail>
+	<description_html>&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-20T13:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-20T14:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-13T14:22:59.750Z</createdDate>
+	<createdDate_dt>2018-03-13T14:22:59.750Z</createdDate_dt>
+	<lastModifiedDate>2018-03-13T14:22:59.750Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-13T14:22:59.750Z</lastModifiedDate_dt>
+	<date_dt>2018-03-13T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT</endDate_dt_tz>
+</component>
