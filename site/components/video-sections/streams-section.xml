@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video-section</content-type>	<display-template>/templates/web/components/video-section.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>ae59b6e0</objectGroupId>
+	<objectId>ae59b6e0-3935-4dc9-a6ce-a783fd1a2b75</objectId>
+	<file-name>streams-section.xml</file-name>
+	<folder-name/>
+	<internal-name>Streams Section</internal-name>
+	<title_s>Live Events</title_s>
+	<maxVideosToDisplay>4</maxVideosToDisplay>
+	<videoLandingUrl>/video</videoLandingUrl>
+	<scripts>	<item>	<key>/scripts/components/streams.groovy</key>
+	<value>streams.groovy</value>
+	<disableFlattening>false</disableFlattening>
+	</item></scripts>
+	<createdDate>2017-9-7T0:19:38.000Z</createdDate>
+	<createdDate_dt>2017-9-7T0:19:38.000Z</createdDate_dt>
+	<lastModifiedDate>2018-03-12T21:26:51.628Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-12T21:26:51.628Z</lastModifiedDate_dt>
+	<allVideosUrl>/all-videos</allVideosUrl>
+	<refreshUrl>/api/1/streams.json</refreshUrl>
+</component>
