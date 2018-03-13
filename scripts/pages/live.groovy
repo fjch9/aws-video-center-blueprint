@@ -11,7 +11,7 @@ if (videoId) {
     video = siteItemService.getSiteItem("/site/streams/${videoId}.xml")
     if (video) {
       templateModel.video = video
-      templateModel.endpoints = video.endpoints.item.collect { siteItemService.getSiteItem(it.key.text) }
+      templateModel.endpoints = video.endpoint.item.collect { siteItemService.getSiteItem(it.key.text) }
     } else {
     	throw new HttpStatusCodeException(404, "Video ${videoId} not found")
     }
