@@ -6,7 +6,7 @@
 	<objectId>f1c29795-525d-fa67-8498-2d73f4cc16f9</objectId>
 	<file-name>index.xml</file-name>
 	<folder-name>all-videos</folder-name>
-	<internal-name>All </internal-name>
+	<internal-name>View All </internal-name>
 	<videoLandingUrl>/video</videoLandingUrl>
 	<videoPageSize>6</videoPageSize>
 	<placeInNav>true</placeInNav>
@@ -16,8 +16,8 @@
 	<rightRail/>
 	<createdDate>2017-9-12T15:23:57.000Z</createdDate>
 	<createdDate_dt>2017-9-12T15:23:57.000Z</createdDate_dt>
-	<lastModifiedDate>2018-03-13T19:28:19.751Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-13T19:28:19.751Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-13T19:34:16.780Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-13T19:34:16.780Z</lastModifiedDate_dt>
 	<title>All Videos</title>
 	<navIcon>fa-film</navIcon>
 </page>
