@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>c0f9</objectGroupId>
+	<objectId>c0f9aaab-83b0-11a6-7ff1-18c015abee6f</objectId>
+	<file-name>c0f9aaab-83b0-11a6-7ff1-18c015abee6f.xml</file-name>
+	<internal-name>video test 3</internal-name>
+	<title_s tokenized="true">Video test 3</title_s>
+	<summary_s>video test 3</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/8f360552-b766-5997-786e-416f982602e2.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/8f360552-b766-5997-786e-416f982602e2.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/e2b71846-73e5-93ed-05b7-e1c9e6a3bdaa/Army Combatives Program.jpg</thumbnail>
+	<description_html>&lt;p&gt;video test 3&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-13T19:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-14T21:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-13T21:41:15.630Z</createdDate>
+	<createdDate_dt>2018-03-13T21:41:15.630Z</createdDate_dt>
+	<lastModifiedDate>2018-03-13T21:41:15.630Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-13T21:41:15.630Z</lastModifiedDate_dt>
+	<date_dt>2018-03-13T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>America/New_York</startDate_dt_tz>
+	<endDate_dt_tz>America/New_York</endDate_dt_tz>
+</component>
