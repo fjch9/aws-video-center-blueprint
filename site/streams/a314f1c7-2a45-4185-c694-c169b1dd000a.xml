@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>a314</objectGroupId>
+	<objectId>a314f1c7-2a45-4185-c694-c169b1dd000a</objectId>
+	<file-name>a314f1c7-2a45-4185-c694-c169b1dd000a.xml</file-name>
+	<internal-name>Current Event</internal-name>
+	<title_s tokenized="true">Current Event</title_s>
+	<summary_s>Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper.</summary_s>
+	<categories>	<item>	<key>live</key>
+	<value_smv>Live</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</key>
+	<value>Testing Stream</value>
+	<include>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/08aab291-432d-b1a8-fcc6-4a49743897c5/Leadership Short - Secretary of The Air Force - A Bomber For The 21st Century.jpg</thumbnail>
+	<description_html>&lt;p&gt;Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-13T01:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-20T01:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-13T14:06:00.068Z</createdDate>
+	<createdDate_dt>2018-03-13T14:06:00.068Z</createdDate_dt>
+	<lastModifiedDate>2018-03-13T14:06:00.068Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-13T14:06:00.068Z</lastModifiedDate_dt>
+	<date_dt>2018-03-13T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT</endDate_dt_tz>
+</component>
