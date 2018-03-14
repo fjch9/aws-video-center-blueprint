@@ -60,14 +60,14 @@ class VideoService {
     return videos
   }
     
-  def buildSolrQuery(q, rows) {
+  def buildSolrQuery(q, rows, sort = "score desc, date_dt desc") {
     def fieldsToReturn = [ "localId" ] as String[]
     
     def query = searchService.createQuery()
     query.query = q
     query.rows = rows
     query.fieldsToReturn = fieldsToReturn
-    query.addParam("sort", "score desc, date_dt desc")
+    query.addParam("sort", sort)
     
     return query
   }
@@ -124,8 +124,8 @@ class VideoService {
   }
 
   def searchStreams(rows) {
-    def query = buildSolrQuery("content-type:\"/component/stream\" AND endDate_dt:[NOW TO *]", rows)
-    query.addParam("sort", "startDate_dt")
+    def query = buildSolrQuery("content-type:\"/component/stream\" AND endDate_dt:[NOW TO *]",
+                                rows, "startDate_dt asc")
     
     def results = searchService.search(query)
     
