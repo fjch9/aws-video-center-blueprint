@@ -173,7 +173,7 @@ class VideoService {
       video.startDate_dt = DateUtils.toIsoString(videoItem.startDate_dt)
       video.endDate_dt = DateUtils.toIsoString(videoItem.endDate_dt)
       def now = new Date()
-      video.liveNow = videoItem.startDate_dt < now && videoItem.endDate_dt
+      video.liveNow = videoItem.startDate_dt < now && now < videoItem.endDate_dt
     }
     
     def views = db.videoViews.findOne(videoId: video.id)
