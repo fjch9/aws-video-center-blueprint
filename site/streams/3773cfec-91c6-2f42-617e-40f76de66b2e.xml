@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>3773</objectGroupId>
+	<objectId>3773cfec-91c6-2f42-617e-40f76de66b2e</objectId>
+	<file-name>3773cfec-91c6-2f42-617e-40f76de66b2e.xml</file-name>
+	<internal-name>video test 4</internal-name>
+	<title_s tokenized="true">Video test 4</title_s>
+	<summary_s>Video test 4</summary_s>
+	<categories>	<item>	<key>sports</key>
+	<value_smv>Sports</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/8f360552-b766-5997-786e-416f982602e2.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/8f360552-b766-5997-786e-416f982602e2.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/9689975d-f44c-595c-60de-03c709edc152/Bastille Day .jpg</thumbnail>
+	<description_html>&lt;p&gt;Video test 4&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-14T20:30:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-15T10:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-14T21:11:35.823Z</createdDate>
+	<createdDate_dt>2018-03-14T21:11:35.823Z</createdDate_dt>
+	<lastModifiedDate>2018-03-14T21:11:35.823Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-14T21:11:35.823Z</lastModifiedDate_dt>
+	<date_dt>2018-03-14T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>America/New_York</startDate_dt_tz>
+	<endDate_dt_tz>America/New_York</endDate_dt_tz>
+</component>
