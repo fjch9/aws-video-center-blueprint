@@ -8,7 +8,7 @@
 			<div class="large-12 medium-7 medium-centered columns">
 				<div class="widgetBox">
 					<div class="widgetTitle">
-						<h5>Search Videos</h5>
+						<h5>Search</h5>
 					</div>
 					<form id="searchform" action="/search" method="get" role="search">
 						<div class="input-group">

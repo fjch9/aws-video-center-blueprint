@@ -153,3 +153,72 @@ jQuery(document).ready(function(jQuery){
 	});
 
 });
+
+var renderVideoItem = function(video){
+	var url = `/live?id=${video.id}`;
+	//hover-posts
+	return `  
+	<div id="video-${video.id}" class="item large-4 medium-6 columns grid-medium">
+			<div class="post thumb-border">
+				<div class="post-thumb">
+					<img src="${video.thumbnail}">
+					<div class="tag-live hide">
+						<figcaption>
+						<img class="icon-broadcast" src='/static-assets/images/broadcast.png'>
+						</figcaption>
+					</div>
+					<a href="${url}" class="hover-play">
+						<span><i class="fa fa-play-circle"></i></span>
+					</a>
+				</div>
+			<div class="post-des">
+				<h6><a href="${url}">${video.title_s}</a></h6>
+				<div class="post-stats clearfix">
+				<p class="pull-left">
+					<span><i class="fa fa-clock-o"></i> Start time: ${new Date(video.startDate_dt)}</span> <br>
+					<span><i class="fa fa-clock-o"></i> Start end: ${new Date(video.endDate_dt)}</span> <br>
+				</p>
+				<p class="pull-left">
+					<i class="fa fa-eye"></i>
+					<span>${video.viewCount}</span>
+				</p>
+				<p class="pull-left">
+					<i class="fa fa-thumbs-o-up"></i>
+					<span>${video.likeCount}</span>
+				</p>
+				<p class="pull-left">
+					<i class="fa fa-thumbs-o-down"></i>
+					<span>${video.dislikeCount}</span>
+				</p>
+			</div>
+			<div class="post-summary">
+				<p>${video.summary_s}</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	`
+}
+
+var loadVideos = function(){
+	jQuery.ajax({
+        url: "/api/1/streams.json?limit=5",
+        dataType: "json",
+        success: function(data){
+        	jQuery('.video-list').empty();
+        	jQuery.each(data, function(index, element) {
+            jQuery('.video-list').append(renderVideoItem(element));
+            	if(element.liveNow){
+            		jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
+	            }
+        	});
+        }
+    });
+};
+
+jQuery(document).ready(function() {
+    loadVideos();
+    // window.setInterval(function(){
+    //     loadVideos();	
+    // },5000);
+});
