@@ -3657,5 +3657,14 @@ article.page-content {
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75); }
+.post-thumb #hover-circle {
+  text-align: right;
+  top: 35%;
+  right: 10px;
+  width: 10%;
+  height: 100%; }
+.post-thumb #icon-circle {
+  font-size: 32px !important;
+  color: white !important; }
 
 /*# sourceMappingURL=theme.css.map */

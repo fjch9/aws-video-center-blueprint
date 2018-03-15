@@ -167,8 +167,8 @@ var renderVideoItem = function(video){
 						<img class="icon-broadcast" src='/static-assets/images/broadcast.png'>
 						</figcaption>
 					</div>
-					<a href="${url}" class="hover-play">
-						<span><i class="fa fa-play-circle"></i></span>
+					<a href="${url}" id="hover-circle" class="hover-posts">
+						<span><i id="icon-circle" class="fa fa-play-circle"></i></span>
 					</a>
 				</div>
 			<div class="post-des">
@@ -218,7 +218,7 @@ var loadVideos = function(){
 
 jQuery(document).ready(function() {
     loadVideos();
-    // window.setInterval(function(){
-    //     loadVideos();	
-    // },5000);
+    window.setInterval(function(){
+        loadVideos();	
+    },5000);
 });
