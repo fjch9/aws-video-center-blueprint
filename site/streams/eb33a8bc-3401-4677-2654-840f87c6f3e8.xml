@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>eb33</objectGroupId>
+	<objectId>eb33a8bc-3401-4677-2654-840f87c6f3e8</objectId>
+	<file-name>eb33a8bc-3401-4677-2654-840f87c6f3e8.xml</file-name>
+	<internal-name>Lorem</internal-name>
+	<title_s tokenized="true">Lorem</title_s>
+	<summary_s>Lorem</summary_s>
+	<categories>	<item>	<key>historical</key>
+	<value_smv>Historical</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/5ab5c9e9-f09e-8d49-efc2-a81db35ba8e2/America's Strategic Bombers.jpg</thumbnail>
+	<description_html>&lt;p&gt;Lorem&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-15T14:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-16T05:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-15T15:03:46.413Z</createdDate>
+	<createdDate_dt>2018-03-15T15:03:46.413Z</createdDate_dt>
+	<lastModifiedDate>2018-03-15T15:03:46.413Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-15T15:03:46.413Z</lastModifiedDate_dt>
+	<date_dt>2018-03-15T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>America/Guatemala</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT+12</endDate_dt_tz>
+</component>
