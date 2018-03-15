@@ -19,7 +19,7 @@
 
 			<!-- full width Video -->
 			<#if streamStatus = "live">
-				<#assign videoSource = "${endpoints[0].url}"/>
+				<#assign videoSource = "${endpoints[0].url}?start=${startTimestamp?c}"/>
 				<#assign videoType = "${endpoints[0].encoding}"/>
 				<section class="fullwidth-single-video">
 						<!-- The site theme is breaking videojs styles -->
