@@ -93,7 +93,7 @@
 									<p>{{:summary_s}}</p>
 								</div>
 								<div class="post-button">
-									<a href="{{:~videoUrl(id)}}" class="secondary-button"><i class="fa fa-play-circle"></i>watch video</a>
+									<a href="{{:~videoUrl(id)}}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
 								</div>
 							</div>
 						</div>
