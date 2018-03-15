@@ -1,6 +1,12 @@
 /* ==========================================================================
+	Variables   
+   ========================================================================== */
+/* ==========================================================================
+	Mixins
+   ========================================================================== */
+/* ==========================================================================
 	Roadmap
-   ==========================================================================
+   ========================================================================== 
 1- General Theme Settings
 2- Radio and Checkbox
 3- Home Page V1
@@ -13,19 +19,19 @@
 7- movie Section
 8- footer
 9- sidebar
-10-carousel slider
-11-off canvas menu
-12- open heading
-13-Random media
-14- vertical thumb slider
-15- Single Video Post
-16- Profile Page
-17- submit post page
-18- login-register
-19- pagination
-20- page content
-21- blog
-22- 404 error page
+10-off canvas menu
+11- open heading
+12-Random media
+13- vertical thumb slider
+14- Single Video Post
+15- Profile Page
+16- submit post page
+16.1- login-register
+17- pagination
+17.1- page content
+18- blog
+19- 404 error page
+20- Live video
 */
 /* ==========================================================================
 	1- General Theme Settings
@@ -35,14 +41,12 @@
   padding: 0; }
 
 body {
-  background-color: #f0f0f0; }
+  background-color: #f6f6f6; }
 
 img {
   object-fit: cover;
   -o-object-fit: cover; }
-.padding-right-remove{
-  padding-right: 0;
-}
+
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   border-style: none !important; }
 
@@ -51,7 +55,7 @@ img {
 
 .off-canvas-content,
 .off-canvas-content {
-  background: #f0f0f0; }
+  background: #f6f6f6; }
 
 .object-fit_fill {
   -o-object-fit: fill;
@@ -72,10 +76,8 @@ img {
 .object-fit_scale-down {
   -o-object-fit: scale-down;
   object-fit: scale-down; }
-p{
-	color: #6c6c6c !important;
-}
-.transition, .secondary-button, .secondary-button i, .hover-posts, .topBar .socialLinks a, .topBar .socialLinks a i, .top-button .menu li a, .top-button .menu li.dropdown-login .login-form input[type="submit"], .top-button .menu li.dropdown-login .login-form p a.newaccount, #navBar .top-bar .search-btn li.search i, #navBar .top-bar .search-btn li.upl-btn a, #navBar .topbar-full .search-bar-full .icon-btn i, #navBar .navBlack .topbar-light-dark .search-btn li.search i, #navBar .navBlack .topbar-light-dark .search-btn li.upl-btn a, #navBar .middleNav .search-btns li.search i, #navBar .middleNav .search-btns li.upl-btn a, #navBar .middleNav .search-btns li.login a, #premium .owl-carousel .item, #premium .owl-carousel .item figure.premium-img figcaption, .content .post .post-thumb .video-stats, .content .main-heading .tabs li.tabs-title a, .content .main-heading .tabs li.tabs-title:last-of-type a, footer .widgetBox .tagcloud a, footer .widgetBox .widgetContent form button[type="submit"], footer .widgetBox .widgetContent .secondary-button, .sidebar .widgetBox .widgetContent .profile-overview li a, .sidebar .widgetBox .tagcloud a, #carouselSlider .item .inner-item .item-title, .light-off-menu .off-social a, .light-off-menu .off-social a i, .dark-off-menu .top-button .menu li:first-of-type a, #breadcrumb .breadcrumbs li a, .SinglePostStats .media-object .author-des .subscribe button, .SinglePostStats .media-object .social-share .post-like-btn form button, .SinglePostStats .media-object .social-share .post-like-btn form button i, .singlePostDescription .description .inner-btn, .showmore_trigger span, .comments .comment-box .media-object .comment-textarea input[type="submit"], .main-comment .media-object .comment-desc .comment-btns span a, .main-comment .media-object .comment-desc .comment-btns span a i, .followers .follower button, .profile-inner .show-more-inner .show-more-btn, .profile-inner .profile-videos .profile-video .media-object .video-btns a.video-btn, .profile-inner .profile-videos .profile-video .media-object .video-btns a.video-btn i, .profile-inner .profile-videos .profile-video .media-object .video-btns button[type="submit"], .profile-inner .profile-videos .profile-video .media-object .video-btns button[type="submit"] i, .pagination a, .blog-post .blog-post-content a.blog-post-btn, .blog-post .blog-post-content .blog-post-extras .extras a, .blog-post .blog-post-content .blog-post-extras .extras .easy-share button[data-easyshare-button], .blog-post .blog-post-content .blog-post-extras .extras .easy-share button[data-easyshare-button] span, .blog-post .blog-post-content .blog-pagination a, .blog-post .blog-post-content .blog-pagination a i {
+
+.transition, .secondary-button, .secondary-button i, .hover-posts, .topBar .socialLinks a, .topBar .socialLinks a i, .top-button .menu li a, .top-button .menu li.dropdown-login .login-form input[type="submit"], .top-button .menu li.dropdown-login .login-form p a.newaccount, #navBar .top-bar .search-btn li.search i, #navBar .top-bar .search-btn li.upl-btn a, #navBar .topbar-full .search-bar-full .icon-btn i, #navBar .navBlack .topbar-light-dark .search-btn li.search i, #navBar .navBlack .topbar-light-dark .search-btn li.upl-btn a, #navBar .middleNav .search-btns li.search i, #navBar .middleNav .search-btns li.upl-btn a, #navBar .middleNav .search-btns li.login a, #premium .owl-carousel .item, #premium .owl-carousel .item figure.premium-img figcaption, .content .post .post-thumb .video-stats, .content .main-heading .tabs li.tabs-title a, .content .main-heading .tabs li.tabs-title:last-of-type a, footer .widgetBox .tagcloud a, footer .widgetBox .widgetContent form button[type="submit"], footer .widgetBox .widgetContent .secondary-button, .sidebar .widgetBox .widgetContent .profile-overview li a, .sidebar .widgetBox .tagcloud a, .light-off-menu .off-social a, .light-off-menu .off-social a i, .dark-off-menu .top-button .menu li:first-of-type a, #breadcrumb .breadcrumbs li a, .SinglePostStats .media-object .author-des .subscribe button, .SinglePostStats .media-object .social-share .post-like-btn form button, .SinglePostStats .media-object .social-share .post-like-btn form button i, .singlePostDescription .description .inner-btn, .showmore_trigger span, .comments .comment-box .media-object .comment-textarea input[type="submit"], .main-comment .media-object .comment-desc .comment-btns span a, .main-comment .media-object .comment-desc .comment-btns span a i, .followers .follower button, .profile-inner .show-more-inner .show-more-btn, .profile-inner .profile-videos .profile-video .media-object .video-btns a.video-btn, .profile-inner .profile-videos .profile-video .media-object .video-btns a.video-btn i, .profile-inner .profile-videos .profile-video .media-object .video-btns button[type="submit"], .profile-inner .profile-videos .profile-video .media-object .video-btns button[type="submit"] i, .pagination a, .blog-post .blog-post-content a.blog-post-btn, .blog-post .blog-post-content .blog-post-extras .extras a, .blog-post .blog-post-content .blog-post-extras .extras .easy-share button[data-easyshare-button], .blog-post .blog-post-content .blog-post-extras .extras .easy-share button[data-easyshare-button] span, .blog-post .blog-post-content .blog-pagination a, .blog-post .blog-post-content .blog-pagination a i {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease; }
 
@@ -121,7 +123,6 @@ p{
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   z-index: 5;
   top: 0;
@@ -176,8 +177,7 @@ p{
   padding-bottom: 30px; }
 
 .whiteBg {
-  background: #fff;
-  border-bottom: 1px solid #ececec; }
+  background: #fff; }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #444444 !important; }
@@ -266,7 +266,7 @@ input[type=checkbox]:checked + .customLabel:before {
 .topBar {
   border-bottom: 1px solid #ececec;
   padding: 5px 0;
-  background: #f0f0f0; }
+  background: #f6f6f6; }
   .topBar .socialLinks a {
     display: inline-block;
     width: 30px;
@@ -436,7 +436,7 @@ input[type=checkbox]:checked + .customLabel:before {
   #navBar .top-bar {
     padding: 0; }
     #navBar .top-bar .menu-text {
-      padding: 10px 0 !important;
+      padding: 20px 0 !important;
       margin: 0 !important; }
     #navBar .top-bar .menu > li {
       padding-left: 30px; }
@@ -867,26 +867,15 @@ input[type=checkbox]:checked + .customLabel:before {
 	4- Premium Videos
    ========================================================================== */
 .premium-v4 {
-  margin-top: 0 !important; }
+  margin-top: 10px; }
 
 #premium {
-    background: #fff none repeat scroll 0 0;
-    border-bottom: 1px solid #ececec;
-    border-top: 1px solid #ececec;
-    /*margin-bottom: 30px;
-    margin-top: 30px;*/
-}
+  background: #fff;
+  margin-bottom: 50px; }
   #premium .heading {
     padding: 18px 0; }
-    #premium .heading h4 {
-      margin: 0;
-  		}
-  		#premium .heading h4 i{
-  			display: inline-block;
-  			margin-right: 11px;
-  			color: #e96969;
-  			font-size: 18px;
-  		}
+    #premium .heading h3 {
+      margin: 0; }
     #premium .heading .navText {
       margin-top: 3px; }
   #premium .owl-carousel .item {
@@ -911,8 +900,7 @@ input[type=checkbox]:checked + .customLabel:before {
         background: rgba(0, 0, 0, 0.6);
         width: 100%;
         padding: 20px;
-        background: url("/static-assets/images/gradient.png") repeat-x; 
-        background-position: bottom; }
+        background: url("../images/gradient.png") repeat-x; }
         #premium .owl-carousel .item figure.premium-img figcaption h5 {
           color: #fff;
           margin-bottom: 0;
@@ -988,7 +976,7 @@ input[type=checkbox]:checked + .customLabel:before {
     top: 0;
     height: 100%;
     width: 100vw;
-    background: #f0f0f0;
+    background: #f6f6f6;
     z-index: 1; }
 
 .mainContentLanding {
@@ -1054,9 +1042,8 @@ input[type=checkbox]:checked + .customLabel:before {
     font-weight: normal;
     line-height: 13px; }
     .content .post .post-des h6 a {
-      color: #444444 !important;
-      font-size: 13px;
-  	font-weight: 600;}
+      color: #444444;
+      font-size: 13px; }
       .content .post .post-des h6 a:hover {
         color: #222222; }
   .content .post .post-des .post-stats {
@@ -1141,9 +1128,7 @@ input[type=checkbox]:checked + .customLabel:before {
   padding: 14px 0;
   margin-bottom: 30px; }
   .content .head-text p {
-    margin: 0;
-    font-size: 14px;
-    color: #6c6c6c; }
+    margin: 0; }
     .content .head-text p span {
       color: #aaaaaa;
       font-size: 12px; }
@@ -1174,14 +1159,13 @@ input[type=checkbox]:checked + .customLabel:before {
   .content .list-group .grid-medium .post-des h6 {
     margin-bottom: 15px !important; }
     .content .list-group .grid-medium .post-des h6 a {
-      font-size: 15px !important;
-  	font-weight: 600;}
+      font-size: 15px !important; }
   .content .list-group .grid-medium .post-des .post-stats p {
     margin-bottom: 15px !important; }
   .content .list-group .grid-medium .post-des .post-summary {
     display: block !important; }
     .content .list-group .grid-medium .post-des .post-summary p {
-      color: #6c6c6c;
+      color: #aaaaaa;
       font-size: 13px;
       overflow: hidden;
       height: 3em; }
@@ -1218,7 +1202,7 @@ input[type=checkbox]:checked + .customLabel:before {
       .content .list-group .list .post .post-des .post-summary {
         display: block !important; }
         .content .list-group .list .post .post-des .post-summary p {
-          color: #6c6c6c;
+          color: #aaaaaa;
           font-size: 13px; }
       .content .list-group .list .post .post-des .post-button {
         display: block !important; }
@@ -1384,7 +1368,7 @@ footer {
     footer .widgetBox .widgetTitle h5 {
       color: #ececec;
       margin: 0;
-      text-transform: capitalize; }
+      text-transform: uppercase; }
   footer .widgetBox .textwidget {
     color: #aaaaaa;
     font-size: 13px; }
@@ -1404,7 +1388,7 @@ footer {
   footer .widgetBox .widgetContent h5 {
     color: #ececec;
     margin: 0;
-    text-transform: capitalize; }
+    text-transform: uppercase; }
   footer .widgetBox .widgetContent .media-object {
     margin-bottom: 0; }
     footer .widgetBox .widgetContent .media-object .media-object-section .recent-img {
@@ -1545,7 +1529,7 @@ footer {
     top: 0;
     height: 100%;
     width: 100vw;
-    background: #f0f0f0;
+    background: #f6f6f6;
     z-index: -1; }
   .sidebar .widgetBox {
     margin-bottom: 40px;
@@ -1553,7 +1537,7 @@ footer {
     .sidebar .widgetBox .widgetTitle h5 {
       margin-bottom: 20px;
       padding-bottom: 24px;
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid #ececec;
       text-transform: capitalize;
       line-height: 16px; }
     .sidebar .widgetBox #searchform input {
@@ -1609,8 +1593,7 @@ footer {
       .sidebar .widgetBox .widgetContent .accordion .accordion-content ul li:last-of-type a {
         border-bottom: none; }
     .sidebar .widgetBox .widgetContent .video-box {
-      margin-bottom: 20px;
-      background: #fff; }
+      margin-bottom: 20px; }
       .sidebar .widgetBox .widgetContent .video-box .video-img-thumb {
         border-bottom: 1px solid #ececec;
         height: 190px;
@@ -1631,7 +1614,7 @@ footer {
           font-size: 13px;
           font-weight: normal;
           margin-bottom: 15px;
-          color: #444444 !important; }
+          color: #444444; }
           .sidebar .widgetBox .widgetContent .video-box .video-box-content h6 a:hover {
             color: #222222; }
         .sidebar .widgetBox .widgetContent .video-box .video-box-content p span {
@@ -1823,9 +1806,6 @@ footer {
       .sidebar .widgetBox .widgetContent a.button i {
         display: inline-block;
         margin-right: 13px; }
-        .sidebar .widgetBox .widgetContent a.button:hover{
-			background: #79d255;
-        }
     .sidebar .widgetBox .tagcloud a {
       display: inline-block;
       background: #6c6c6c;
@@ -1840,7 +1820,7 @@ footer {
         background: #e96969;
         color: #fff; }
     .sidebar .widgetBox .newsLetter {
-      background: url("/static-assets/images/sidebar-news-letter.png") repeat-x;
+      background: url("../images/sidebar-news-letter.png") repeat-x;
       padding: 35px 15px; }
       .sidebar .widgetBox .newsLetter h3 {
         color: #fff;
@@ -1910,59 +1890,7 @@ footer {
         transform: scale(1); }
 
 /* ==========================================================================
-	10- carousel Slider
-   ========================================================================== */
-#carouselSlider .item {
-  background: #4dc7a0 none repeat scroll 0 0;
-  height: 400px;
-  overflow: hidden;
-  position: relative; }
-  #carouselSlider .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    -o-object-fit: cover; }
-  #carouselSlider .item .inner-item-big {
-    height: 400px !important; }
-  #carouselSlider .item .inner-item {
-    height: 200px;
-    background: #303030;
-    position: relative;
-    overflow: hidden; }
-    #carouselSlider .item .inner-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      -o-object-fit: cover; }
-    #carouselSlider .item .inner-item .item-title {
-      padding: 18px 0 10px 0;
-      background: rgba(0, 0, 0, 0.3);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%; }
-      #carouselSlider .item .inner-item .item-title h6 {
-        color: #fff;
-        font-weight: 600;
-        padding-left: 12px;
-        line-height: 14px; }
-      #carouselSlider .item .inner-item .item-title span {
-        position: absolute;
-        left: 12px;
-        bottom: 40px;
-        font-size: 13px;
-        background: #e96969;
-        padding: 0 9px;
-        color: #fff;
-        font-weight: 600; }
-    #carouselSlider .item .inner-item:hover a.hover-posts {
-      visibility: visible;
-      transform: scale(1); }
-    #carouselSlider .item .inner-item:hover .item-title {
-      transform: translateY(100px); }
-
-/* ==========================================================================
-	11- off canvas menu
+	10- off canvas menu
    ========================================================================== */
 .light-off-menu {
   background: #fff;
@@ -2076,7 +2004,7 @@ footer {
     background: #444444; }
 
 /* ==========================================================================
-	12- open heading
+	11- open heading
    ========================================================================== */
 .open-heading {
   margin-bottom: 30px; }
@@ -2121,7 +2049,7 @@ footer {
         margin-right: 0; }
 
 /* ==========================================================================
-	14- vertical thumb slider
+	13- vertical thumb slider
    ========================================================================== */
 #verticalSlider {
   background: #303030;
@@ -2222,7 +2150,7 @@ footer {
   border-bottom: 1px solid #ececec; }
 
 /* ==========================================================================
-	15- Single Video Post
+	14- Single Video Post
    ========================================================================== */
 .breadcrumb-video-2 {
   margin-bottom: 30px; }
@@ -2579,7 +2507,7 @@ footer {
         padding-right: 5px; }
   .main-comment .media-object .comment-desc .comment-text p {
     margin-bottom: 30px;
-    color: #8e8e8e;
+    color: #aaaaaa;
     font-size: 13px; }
   .main-comment .media-object .comment-desc .comment-btns {
     padding-bottom: 15px;
@@ -2624,7 +2552,7 @@ footer {
     padding-bottom: 48.2%; }
 
 /* ==========================================================================
-	16- Profile Page
+	15- Profile Page
    ========================================================================== */
 .topProfile-inner {
   position: relative; }
@@ -2662,14 +2590,11 @@ footer {
       line-height: 40px;
       font-weight: 600;
       font-size: 13px; }
-	.topProfile-inner .upload-bg .btn-upload span:hover{
-		background: #e96969;
-	}
 
 .topProfile {
   position: relative;
   height: 350px;
-  background: url("/static-assets/images/profile-bg.png") no-repeat;
+  background: url("../images/profile-bg.png") no-repeat;
   background-size: cover;
   width: 100%;
   margin-bottom: 90px; }
@@ -2729,9 +2654,6 @@ footer {
         margin-left: -4px;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px; }
-        .topProfile .profile-stats .profile-subscribe button:hover{
-        	background: #e96969;
-        }
     .topProfile .profile-stats .profile-share {
       padding: 10px;
       display: inline-block;
@@ -2794,17 +2716,14 @@ footer {
           height: 30px;
           line-height: 30px;
           font-weight: 600;
-          font-size: 8px; }.
-		.topProfile .profile-stats .profile-author-img .btn-upload span:hover{
-			background: #e96969;
-		}
-
+          font-size: 8px; }
     .topProfile .profile-stats .profile-author-name {
       margin-left: 160px; }
       .topProfile .profile-stats .profile-author-name h4 {
         margin: 0 0 9px 0;
         line-height: 18px; }
       .topProfile .profile-stats .profile-author-name p {
+        font-weight: bold;
         line-height: 11px;
         font-size: 11px;
         color: #6c6c6c;
@@ -3064,13 +2983,9 @@ footer {
     .profile-settings .setting-form .setting-form-inner .button {
       background: #61ca37;
       border-bottom: 3px solid #53ac2f; }
-	.profile-settings .setting-form .setting-form-inner .button:hover{
-		background: #79d255;
-	}
-
 
 /* ==========================================================================
-	17- Submit Post
+	16- Submit Post
    ========================================================================== */
 .submit-post {
   margin-bottom: 30px;
@@ -3180,7 +3095,7 @@ footer {
       outline: 0;
       width: 64px;
       height: 56px;
-      background-image: url("/static-assets/images/sprite-bottle-3g.png");
+      background-image: url("../images/sprite-bottle-3g.png");
       background-repeat: no-repeat;
       background-position: 0 0;
       text-indent: -99999px; }
@@ -3192,7 +3107,7 @@ footer {
       outline: 0;
       width: 64px;
       height: 56px;
-      background-image: url("/static-assets/images/sprite-bottle-3g.png");
+      background-image: url("../images/sprite-bottle-3g.png");
       background-repeat: no-repeat;
       background-position: 0 -57px;
       text-indent: -99999px; }
@@ -3372,7 +3287,7 @@ footer {
     font-size: 13px; }
 
 /* ==========================================================================
-	19- pagination
+	17- pagination
    ========================================================================== */
 .pagination {
   text-align: center;
@@ -3476,7 +3391,7 @@ article.page-content {
         font-weight: bold; }
 
 /* ==========================================================================
-	21- blog
+	18- blog
    ========================================================================== */
 .blog-post {
   margin-bottom: 15px; }
@@ -3682,7 +3597,7 @@ article.page-content {
     color: #aaaaaa; }
 
 /* ==========================================================================
-	22- 404 error page
+	19- 404 error page
    ========================================================================== */
 .error-page {
   margin-bottom: 30px; }
@@ -3722,28 +3637,34 @@ article.page-content {
 .flash {
   -webkit-animation: flash 0.3s infinite;
   animation: flash 0.3s infinite; }
-.tab-content {
-  display:none;
-  clear:both;
-}
-.tab-content.active {
-  display:block;
-}
 
 /* ==========================================================================
-	Crafter Custom
+	20- Live Video
    ========================================================================== */
-.singlePostDescription .description .tags {
-	padding-bottom:15px;
-}
+.post-thumb figcaption {
+  font-weight: bold;
+  position: absolute;
+  z-index: 3;
+  bottom: -4px;
+  width: 100%;
+  padding: 20px; }
+  .post-thumb figcaption .icon-broadcast {
+    width: 32px !important;
+    height: 32px !important;
+    background-color: red;
+    padding: 4px;
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75); }
+.post-thumb #hover-circle {
+  text-align: right;
+  top: 35%;
+  right: 10px;
+  width: 10%;
+  height: 100%; }
+.post-thumb #icon-circle {
+  font-size: 32px !important;
+  color: white !important; }
 
-
-.social-share .post-like-btn a.primary,
-.social-share .post-like-btn a:hover,
-.social-share .post-like-btn a:focus {
-	background-color: #444;
-}
-
-.social-share .post-like-btn a.selected{
-	background-color: #e96969;	
-}
+/*# sourceMappingURL=theme.css.map */

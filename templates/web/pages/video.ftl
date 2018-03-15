@@ -43,7 +43,7 @@
 											<div class="post-title">
 												<h3>${video.title_s}</h3>
 												<p>
-													<span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span>
+													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
 													<span><i class="fa fa-eye"></i>${viewCount}</span>
 													<span><i class="fa fa-thumbs-o-up"></i>${likeCount}</span>
 													<span><i class="fa fa-thumbs-o-down"></i>${dislikeCount}</span>
@@ -125,10 +125,10 @@
 											<div class="post-des">
 												<h6><a href="#">${relatedVideo.title_s}</a></h6>
 												<div class="post-stats clearfix">
-													<p class="pull-left">
+													<#-- <p class="pull-left">
 														<i class="fa fa-clock-o"></i>
 														<span>${relatedVideo.date_dt?date("MM/dd/yyyy")?date}</span>
-													</p>
+													</p> -->
 													<p class="pull-left">
 														<i class="fa fa-eye"></i>
 														<span>${relatedVideo.viewCount}</span>
@@ -146,7 +146,7 @@
 													<p>${relatedVideo.summary_s}</p>
 												</div>
 												<div class="post-button">
-													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i>watch video</a>
+													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
 												</div>
 											</div>
 										</div>

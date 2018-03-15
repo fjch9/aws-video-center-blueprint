@@ -68,8 +68,11 @@
 										<div class="author-des clearfix" style="border-bottom: 0">
 											<div class="post-title">
 												<h3>${video.title_s}</h3>
+												<#setting datetime_format = "EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'">
 												<p>
-													<span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span>
+													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
+													<span><i class="fa fa-clock-o"></i> Start time: ${video.startDate_dt?datetime}</span> <br>
+													<span><i class="fa fa-clock-o"></i> End time: ${video.endDate_dt?datetime}</span> <br>	
 													<span><i class="fa fa-eye"></i>${viewCount}</span>
 													<span><i class="fa fa-thumbs-o-up"></i>${likeCount}</span>
 													<span><i class="fa fa-thumbs-o-down"></i>${dislikeCount}</span>
@@ -144,16 +147,16 @@
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
 												<a href="${relatedVideoUrl}" class="hover-posts">
-													<span><i class="fa fa-play"></i>Watch Video</span>
+													<span><i class="fa fa-play"></i>Watch</span>
 												</a>
 											</div>
 											<div class="post-des">
 												<h6><a href="#">${relatedVideo.title_s}</a></h6>
 												<div class="post-stats clearfix">
-													<p class="pull-left">
+													<#-- <p class="pull-left">
 														<i class="fa fa-clock-o"></i>
 														<span>${relatedVideo.date_dt?date("MM/dd/yyyy")?date}</span>
-													</p>
+													</p> -->
 													<p class="pull-left">
 														<i class="fa fa-eye"></i>
 														<span>${relatedVideo.viewCount}</span>
@@ -171,7 +174,7 @@
 													<p>${relatedVideo.summary_s}</p>
 												</div>
 												<div class="post-button">
-													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i>watch video</a>
+													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
 												</div>
 											</div>
 										</div>
