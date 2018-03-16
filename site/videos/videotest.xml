@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/video</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>3b19</objectGroupId>
+	<objectId>3b1988cd-f3a5-eebc-f275-97eee3a8921e</objectId>
+	<internal-name>videotest</internal-name>
+	<title_s tokenized="true">VideoTest</title_s>
+	<file-name>videotest.xml</file-name>
+	<folder-name/>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<summary_s>lorem test video</summary_s>
+	<thumbnail>/static-assets/images/videos/0b12b392-5928-5cf9-6c05-8d1d35f1aa0c/stsci.png</thumbnail>
+	<description_html>&lt;p&gt;lorem test Description&lt;/p&gt;</description_html>
+	<video>	<item>	<job_id>1521230607335-yg035x</job_id>
+	<output_bucket>use1-crafter-videocenter-out</output_bucket>
+	<base_key>small/c7acd37e-ea1e-4402-aa02-a10e28127488</base_key>
+	</item></video>
+	<createdDate>2018-03-16T20:00:27.286Z</createdDate>
+	<createdDate_dt>2018-03-16T20:00:27.286Z</createdDate_dt>
+	<lastModifiedDate>2018-03-16T20:00:27.286Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-16T20:00:27.286Z</lastModifiedDate_dt>
+	<date_dt>2018-03-16T04:00:00.000Z</date_dt>
+</component>
