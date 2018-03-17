@@ -432,7 +432,7 @@
 						</property>
 						<property>
 							<name>allowPastDate</name>
-							<value>true</value>
+							<value>false</value>
 							<type>boolean</type>
 						</property>
 						<property>
@@ -500,7 +500,7 @@
 						</property>
 						<property>
 							<name>allowPastDate</name>
-							<value>true</value>
+							<value>false</value>
 							<type>boolean</type>
 						</property>
 						<property>
