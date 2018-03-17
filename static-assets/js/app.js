@@ -154,9 +154,16 @@ jQuery(document).ready(function(jQuery){
 
 });
 
+function getDate(videoDate){
+	var formatedStartDate = moment(videoDate);
+	var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
+	return formatedStartDate.format('lll')+" "+currentTimeZone
+}
+
 var renderVideoItem = function(video){
 	var url = `/live?id=${video.id}`;
-	//hover-posts
+	var startDate = new Date(video.startDate_dt);
+
 	return `  
 	<div id="video-${video.id}" class="item large-4 medium-6 columns grid-medium">
 			<div class="post thumb-border">
@@ -164,7 +171,7 @@ var renderVideoItem = function(video){
 					<img src="${video.thumbnail}">
 					<div class="tag-live hide">
 						<figcaption>
-						<img class="icon-broadcast" src='/static-assets/images/broadcast.png'>
+							<p class="live-text">Live</p>
 						</figcaption>
 					</div>
 					<a href="${url}" id="hover-circle" class="hover-posts">
@@ -175,21 +182,26 @@ var renderVideoItem = function(video){
 				<h6><a href="${url}">${video.title_s}</a></h6>
 				<div class="post-stats clearfix">
 				<p class="pull-left">
-					<span><i class="fa fa-clock-o"></i> Start time: ${new Date(video.startDate_dt)}</span> <br>
-					<span><i class="fa fa-clock-o"></i> Start end: ${new Date(video.endDate_dt)}</span> <br>
+					<span><i class="fa fa-clock-o"></i> Start time: ${getDate(video.startDate_dt)}</span> <br>
+					<span><i class="fa fa-clock-o"></i> End time: ${getDate(video.endDate_dt)}</span> <br>
 				</p>
-				<p class="pull-left">
-					<i class="fa fa-eye"></i>
-					<span>${video.viewCount}</span>
-				</p>
-				<p class="pull-left">
-					<i class="fa fa-thumbs-o-up"></i>
-					<span>${video.likeCount}</span>
-				</p>
-				<p class="pull-left">
-					<i class="fa fa-thumbs-o-down"></i>
-					<span>${video.dislikeCount}</span>
-				</p>
+				<br>
+				<div class="clearfix content-popular-icons">
+					<p class="pull-left">
+						<i class="fa fa-eye"></i>
+						<span>${video.viewCount}</span>
+					</p>
+					<p class="pull-left">
+						<i class="fa fa-thumbs-o-up"></i>
+						<span>${video.likeCount}</span>
+					</p>
+					<p class="pull-left">
+						<i class="fa fa-thumbs-o-down"></i>
+						<span>${video.dislikeCount}</span>
+					</p>
+				</div>
+			
+				
 			</div>
 			<div class="post-summary">
 				<p>${video.summary_s}</p>
@@ -201,24 +213,62 @@ var renderVideoItem = function(video){
 }
 
 var loadVideos = function(){
-	jQuery.ajax({
+    jQuery.ajax({
         url: "/api/1/streams.json?limit=5",
         dataType: "json",
         success: function(data){
-        	jQuery('.video-list').empty();
-        	jQuery.each(data, function(index, element) {
+            jQuery('.video-list').empty();
+            jQuery.each(data, function(index, element) {
             jQuery('.video-list').append(renderVideoItem(element));
-            	if(element.liveNow){
-            		jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
-	            }
-        	});
+                if(element.liveNow){
+                    jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
+                }
+            });
         }
     });
 };
 
+function refreshVideos(){
+	jQuery.ajax({
+        url: "/api/1/streams.json?limit=5",
+        dataType: "json",
+        success: function(data){
+            jQuery.each(data, function(index, element) {
+            	var domElement = document.getElementById("video-"+element.id)
+            	if (domElement) {
+            	
+            		if(element.liveNow){
+                    	jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
+                	}
+                	//update labels
+            	} else {
+            		jQuery('.video-list').append(renderVideoItem(element));
+            	}
+            });
+
+           jQuery('div[id^="video-"]').each(function(i, element) {
+           		var videoId = element.id.substring('#video-'.length - 1);
+           		var found = false;
+           		for(var i =0; i< data.length; i++) {
+           			if(data[i].id === videoId){
+           				found = true;
+           				break; 
+           			}
+           		}
+           		if(!found) {
+           			document.getElementById(element.id).remove()
+           		}
+           		
+           })
+          
+        }
+    });
+}
+
 jQuery(document).ready(function() {
     loadVideos();
+
     window.setInterval(function(){
-        loadVideos();	
+        refreshVideos();	
     },5000);
 });

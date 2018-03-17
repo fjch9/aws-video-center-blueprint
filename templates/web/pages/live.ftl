@@ -9,7 +9,9 @@
 <body>
 	<#assign inverted = false>
 	<#include "/templates/web/components/persistent-nav.ftl">
+
 <div class="off-canvas-wrapper">
+	
 	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 		<@renderComponent component = contentModel.mobileNavigation.item />
 		<div class="off-canvas-content" data-off-canvas-content>
@@ -17,10 +19,12 @@
 
             <@macros.breadcrumb addMargin = false />
 
-			<!-- full width Video -->
+			<!-- full width Video ?start=${startTimestamp?c}-->
 			<#if streamStatus = "live">
-				<#assign videoSource = "${endpoints[0].url}?start=${startTimestamp?c}"/>
+				<#assign completeUrl = "${endpoints[0].url}?=start${startTimestamp?c}">
+				<#assign videoSource = "${completeUrl}"/>
 				<#assign videoType = "${endpoints[0].encoding}"/>
+
 				<section class="fullwidth-single-video">
 						<!-- The site theme is breaking videojs styles -->
 						<!-- <div class="row"> -->
@@ -68,7 +72,9 @@
 										<div class="author-des clearfix" style="border-bottom: 0">
 											<div class="post-title">
 												<h3>${video.title_s}</h3>
+												<#setting time_zone='CST'>
 												<#setting datetime_format = "EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'">
+												
 												<p>
 													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
 													<span><i class="fa fa-clock-o"></i> Start time: ${video.startDate_dt?datetime}</span> <br>
@@ -147,7 +153,7 @@
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
 												<a href="${relatedVideoUrl}" class="hover-posts">
-													<span><i class="fa fa-play"></i>Watch</span>
+													<span><i class="fa fa-play-circle"></i>Watch</span>
 												</a>
 											</div>
 											<div class="post-des">
@@ -250,9 +256,23 @@
 				countdown: true
 			});
 		<#elseif streamStatus = "live">
-			var player = videojs('example-video');
-			player.play();
+			 if (Hls.isSupported()) {
+ 	    		var video = document.getElementById('example-video');
+ 	    		var hls = new Hls();
+ 	    		// bind them together
+				hls.attachMedia(video);
+				// MEDIA_ATTACHED event is fired by hls object once MediaSource is ready
+				hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+		        console.log("video and hls.js are now bound together !");
+		        hls.loadSource("${videoSource}");
+		        hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+		          console.log("manifest loaded, found " + data.levels.length + " quality level");
+		        });
+		      });
+			    video.play();
+    		}
 		</#if>
+
 	});
 </script>  
 <@studio.toolSupport />
