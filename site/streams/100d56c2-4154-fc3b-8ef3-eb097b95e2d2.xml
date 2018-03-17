@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>100d</objectGroupId>
+	<objectId>100d56c2-4154-fc3b-8ef3-eb097b95e2d2</objectId>
+	<file-name>100d56c2-4154-fc3b-8ef3-eb097b95e2d2.xml</file-name>
+	<summary_s>test45</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<internal-name>test45</internal-name>
+	<title_s tokenized="true">test45</title_s>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/08aab291-432d-b1a8-fcc6-4a49743897c5/Leadership Short - Secretary of The Air Force - A Bomber For The 21st Century.jpg</thumbnail>
+	<description_html>&lt;p&gt;test45&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-17T00:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-17T23:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-17T04:12:53.385Z</createdDate>
+	<createdDate_dt>2018-03-17T04:12:53.385Z</createdDate_dt>
+	<lastModifiedDate>2018-03-17T04:12:53.385Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-17T04:12:53.385Z</lastModifiedDate_dt>
+	<date_dt>2018-03-17T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT+12</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT+12</endDate_dt_tz>
+</component>
