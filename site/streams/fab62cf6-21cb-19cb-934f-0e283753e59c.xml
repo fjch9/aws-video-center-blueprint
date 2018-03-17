@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>fab6</objectGroupId>
+	<objectId>fab62cf6-21cb-19cb-934f-0e283753e59c</objectId>
+	<file-name>fab62cf6-21cb-19cb-934f-0e283753e59c.xml</file-name>
+	<internal-name>funka5</internal-name>
+	<title_s tokenized="true">funka5</title_s>
+	<summary_s>funka</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/0a4fbd5f-d0ed-7351-eb00-0375deb3aa01/Jungle Warfare School.jpg</thumbnail>
+	<description_html>&lt;p&gt;funka5&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-17T05:16:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-18T11:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-17T05:13:33.349Z</createdDate>
+	<createdDate_dt>2018-03-17T05:13:33.349Z</createdDate_dt>
+	<lastModifiedDate>2018-03-17T05:13:33.349Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-17T05:13:33.349Z</lastModifiedDate_dt>
+	<date_dt>2018-03-17T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>America/Guatemala</startDate_dt_tz>
+	<endDate_dt_tz>America/Guatemala</endDate_dt_tz>
+</component>
