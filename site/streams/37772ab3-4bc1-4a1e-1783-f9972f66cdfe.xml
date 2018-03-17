@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>3777</objectGroupId>
+	<objectId>37772ab3-4bc1-4a1e-1783-f9972f66cdfe</objectId>
+	<file-name>37772ab3-4bc1-4a1e-1783-f9972f66cdfe.xml</file-name>
+	<summary_s>streamPRUBEA</summary_s>
+	<internal-name>streamPRUBEA</internal-name>
+	<title_s tokenized="true">streamPRUBEA</title_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/08aab291-432d-b1a8-fcc6-4a49743897c5/Leadership Short - Secretary of The Air Force - A Bomber For The 21st Century.jpg</thumbnail>
+	<description_html>&lt;p&gt;streamPRUBEA&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-17T00:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-31T00:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-17T04:29:22.760Z</createdDate>
+	<createdDate_dt>2018-03-17T04:29:22.760Z</createdDate_dt>
+	<lastModifiedDate>2018-03-17T04:29:22.760Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-17T04:29:22.760Z</lastModifiedDate_dt>
+	<date_dt>2018-03-17T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT+12</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT+12</endDate_dt_tz>
+</component>
