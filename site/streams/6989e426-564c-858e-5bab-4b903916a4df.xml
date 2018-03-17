@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>6989</objectGroupId>
+	<objectId>6989e426-564c-858e-5bab-4b903916a4df</objectId>
+	<file-name>6989e426-564c-858e-5bab-4b903916a4df.xml</file-name>
+	<internal-name>works</internal-name>
+	<title_s tokenized="true">works</title_s>
+	<summary_s>works</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/0a4fbd5f-d0ed-7351-eb00-0375deb3aa01/Jungle Warfare School.jpg</thumbnail>
+	<description_html>&lt;p&gt;works&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-17T00:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-23T00:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-17T04:47:50.365Z</createdDate>
+	<createdDate_dt>2018-03-17T04:47:50.365Z</createdDate_dt>
+	<lastModifiedDate>2018-03-17T04:47:50.365Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-17T04:47:50.365Z</lastModifiedDate_dt>
+	<date_dt>2018-03-17T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT+12</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT+12</endDate_dt_tz>
+</component>
