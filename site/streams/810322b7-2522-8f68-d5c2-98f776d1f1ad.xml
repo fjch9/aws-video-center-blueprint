@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>8103</objectGroupId>
+	<objectId>810322b7-2522-8f68-d5c2-98f776d1f1ad</objectId>
+	<file-name>810322b7-2522-8f68-d5c2-98f776d1f1ad.xml</file-name>
+	<internal-name>funka7</internal-name>
+	<title_s tokenized="true">funka7</title_s>
+	<summary_s>funka7</summary_s>
+	<categories>	<item>	<key>people</key>
+	<value_smv>People</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/29a909a1-652a-64f9-dfe1-3defddff8a26/2017 MCAS Miramar Air Show- Blue Angels.jpg</thumbnail>
+	<description_html>&lt;p&gt;funka7&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-17T02:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-18T04:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-17T05:47:22.979Z</createdDate>
+	<createdDate_dt>2018-03-17T05:47:22.979Z</createdDate_dt>
+	<lastModifiedDate>2018-03-17T05:47:22.979Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-17T05:47:22.979Z</lastModifiedDate_dt>
+	<date_dt>2018-03-17T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT+12</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT+12</endDate_dt_tz>
+</component>
