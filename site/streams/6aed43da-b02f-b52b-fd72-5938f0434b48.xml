@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>6aed</objectGroupId>
+	<objectId>6aed43da-b02f-b52b-fd72-5938f0434b48</objectId>
+	<file-name>6aed43da-b02f-b52b-fd72-5938f0434b48.xml</file-name>
+	<internal-name>funka6</internal-name>
+	<title_s tokenized="true">funka6</title_s>
+	<summary_s>funka6</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/0b12b392-5928-5cf9-6c05-8d1d35f1aa0c/stsci.png</thumbnail>
+	<description_html>&lt;p&gt;funka6&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-17T05:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-18T05:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-17T05:44:51.341Z</createdDate>
+	<createdDate_dt>2018-03-17T05:44:51.341Z</createdDate_dt>
+	<lastModifiedDate>2018-03-17T05:44:51.341Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-17T05:44:51.341Z</lastModifiedDate_dt>
+	<date_dt>2018-03-17T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT+12</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT+12</endDate_dt_tz>
+</component>
