@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>d467</objectGroupId>
+	<objectId>d46756d5-8f44-cada-2462-f1098fedf1fe</objectId>
+	<file-name>d46756d5-8f44-cada-2462-f1098fedf1fe.xml</file-name>
+	<internal-name>funka3</internal-name>
+	<title_s tokenized="true">funka3</title_s>
+	<summary_s>funka3</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/5b9ef8a4-2b41-f941-116c-1ad519ef290a.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/811bc11d-9519-2ae6-a139-d4f01aa85aec/New test dummies join Army team.jpg</thumbnail>
+	<description_html>&lt;p&gt;funka3&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-23T00:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-23T00:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-17T05:00:24.269Z</createdDate>
+	<createdDate_dt>2018-03-17T05:00:24.269Z</createdDate_dt>
+	<lastModifiedDate>2018-03-17T05:00:24.269Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-17T05:00:24.269Z</lastModifiedDate_dt>
+	<date_dt>2018-03-17T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>Etc/GMT+12</startDate_dt_tz>
+	<endDate_dt_tz>Etc/GMT+12</endDate_dt_tz>
+</component>
