@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>0429</objectGroupId>
+	<objectId>0429ad70-57ed-72ee-97c6-1207c21ff16c</objectId>
+	<file-name>0429ad70-57ed-72ee-97c6-1207c21ff16c.xml</file-name>
+	<internal-name>video-test</internal-name>
+	<title_s tokenized="true">Lorem Ipsum</title_s>
+	<summary_s>Lorem ipsum</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<endpoint>	<item>	<key>/site/endpoints/33dc5e8e-97f1-c835-bb8b-9d45f8f5f0f0.xml</key>
+	<value>video-test</value>
+	<include>/site/endpoints/33dc5e8e-97f1-c835-bb8b-9d45f8f5f0f0.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></endpoint>
+	<thumbnail>/static-assets/images/videos/29a909a1-652a-64f9-dfe1-3defddff8a26/2017 MCAS Miramar Air Show- Blue Angels.jpg</thumbnail>
+	<description_html>&lt;p&gt;Lorem Ipsum&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-19T19:00:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-20T02:00:00.000Z</endDate_dt>
+	<createdDate>2018-03-19T14:46:12.407Z</createdDate>
+	<createdDate_dt>2018-03-19T14:46:12.407Z</createdDate_dt>
+	<lastModifiedDate>2018-03-19T14:46:12.407Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-19T14:46:12.407Z</lastModifiedDate_dt>
+	<date_dt>2018-03-19T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>America/Guatemala</startDate_dt_tz>
+	<endDate_dt_tz>America/Guatemala</endDate_dt_tz>
+</component>
