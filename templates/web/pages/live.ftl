@@ -201,14 +201,37 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 <script>
-	function getDate(videoDate){
-		var formatedStartDate = moment(videoDate);
-		var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
-		return formatedStartDate.format('lll')+" "+currentTimeZone
-	}
+	// function getDate(videoDate){
+	// 	var formatedStartDate = moment(videoDate);
+	// 	var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
+	// 	return formatedStartDate.format('lll')+" "+currentTimeZone
+	// }
 
-	function getTimeZone(){
-		return Intl.DateTimeFormat().resolvedOptions().timeZone;
+	// function getTimeZone(){
+	// 	return Intl.DateTimeFormat().resolvedOptions().timeZone;
+	// }
+
+	function daysBetween(setDate, today){
+		//Get 1 day in milliseconds
+  		var one_day=1000*60*60*24;
+
+  		var date1_ms = today.getTime();
+  		var date2_ms = setDate.getTime();
+  		console.log('estoy en la funcion db: '+date1_ms +' - ' + date2_ms);
+  		var difference_ms = date2_ms - date1_ms;
+  		console.log('Diferencia entre los dos: '+difference_ms);
+		//take out milliseconds
+	  //take out milliseconds
+    //take out milliseconds
+	  	difference_ms = difference_ms/1000;
+	  	var seconds = Math.floor(difference_ms % 60);
+	  	difference_ms = difference_ms/60; 
+	  	var minutes = Math.floor(difference_ms % 60);
+	  	difference_ms = difference_ms/60; 
+	  	var hours = Math.floor(difference_ms % 24);  
+	  	var days = Math.floor(difference_ms/24);
+
+	  	console.log(days + ' days, ' + hours + ' hours, ' + minutes + ' minutes, and ' + seconds + ' seconds');
 	}
 
 	jQuery(document).ready(function() {
@@ -280,17 +303,24 @@
    //              	}
    //          	}
 			// });
+			
+			var startDate = new Date('${video.startDate_dt?datetime?string}').getTime();
+		    var today = new Date().getTime();
+		    var difference_ms = startDate - today;
+		    console.log(difference_ms);
+		    difference_ms = difference_ms/1000;
+		  	var seconds = Math.floor(difference_ms % 60);
+		  	difference_ms = difference_ms/60; 
+		  	var minutes = Math.floor(difference_ms % 60);
+		  	difference_ms = difference_ms/60; 
+		  	var hours = Math.floor(difference_ms % 24);  
+		  	var days = Math.floor(difference_ms/24);
 
-			var startDate = new Date('${video.startDate_dt?datetime?string}')
-		    var today = new Date();
-		    
-		    console.log(startDate, today)
-		    
-		    var dif = startDate.getTime() - today.getTime();
-		    
-		    var timeLeft = Math.abs(dif/1000)/60;
-		    
-		    var clock = jQuery('#countdown').FlipClock(timeLeft,{
+		  	console.log(days + ' days, ' + hours + ' hours, ' + minutes + ' minutes, and ' + seconds + ' seconds');
+		    //daysBetween(startDate, today);
+		    //console.log('ya acabe');
+
+		     var clock = jQuery('#countdown').FlipClock(difference_ms,{
 		        autoStart: false,
 		        clockFace: 'DailyCounter',
 		        countdown: true
@@ -298,6 +328,7 @@
 		    
 		   // clock.setTime(timeLeft);
 		    clock.start();   
+		       
 
 
 		<#elseif streamStatus == "live">
