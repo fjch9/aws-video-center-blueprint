@@ -1,16 +1,7 @@
 <style>
-body { padding-top: 46px !important }
 #left-rail .toggle { top: 50px }
 .ui.menu .item { border-bottom: none !important }
 </style>
-
-<div class="ui top fixed <#if inverted!false>inverted</#if> menu">
-  <div class="ui container">
-    <a class="header item" href="${model.backLink}">
-      &laquo; Launcher
-    </a>
-  </div>
-</div>
 
 <style>
   @import url('/static-assets/css/google-fonts-lato.css');
