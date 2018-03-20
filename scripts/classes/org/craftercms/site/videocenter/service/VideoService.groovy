@@ -182,9 +182,9 @@ class VideoService {
     } else {
       video.viewCount = 0
     }
-    
-    video.likeCount = profileService.getProfileCountByQuery("default", "{ \"attributes.likedVideos\":\"${video.id}\"  }")
-    video.dislikeCount = profileService.getProfileCountByQuery("default", "{ \"attributes.dislikedVideos\":\"${video.id}\"  }")
+    def tenantName = tenantsResolver.tenants[0]
+    video.likeCount = profileService.getProfileCountByQuery(tenantName, "{ \"attributes.likedVideos\":\"${video.id}\"  }")
+    video.dislikeCount = profileService.getProfileCountByQuery(tenantName, "{ \"attributes.dislikedVideos\":\"${video.id}\"  }")
     
     return video
   }

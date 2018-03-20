@@ -53,9 +53,9 @@
 										<#if profile??>
 										<div class="social-share">
 											<div class="post-like-btn clearfix">
-												<a href="#" id="fav-button" class="button tiny <#if isFavorite>selected</#if>"><i class="fa fa-heart"></i></a>
-												<a href="#" id="like-button" class="button tiny <#if isLiked>selected</#if>"><i class="fa fa-thumbs-o-up"></i></a>
-												<a href="#" id="dislike-button" class="button tiny <#if isDisliked>selected</#if>"><i class="fa fa-thumbs-o-down"></i></a>
+												<a href="#" id="fav-button" class="button tiny <#if isFavorite>alert</#if>"><i class="fa fa-heart"></i></a>
+												<a href="#" id="like-button" class="button tiny <#if isLiked>alert</#if>"><i class="fa fa-thumbs-o-up"></i></a>
+												<a href="#" id="dislike-button" class="button tiny <#if isDisliked>alert</#if>"><i class="fa fa-thumbs-o-down"></i></a>
 											</div>
 										</div>
 										</#if>
@@ -206,10 +206,10 @@
         
             jQuery.get(url, { id: "${requestParameters["id"]}" }, function(res) {
                 if("fav-button" === id){
-                    jQuery(element).toggleClass("selected");	
+                    jQuery(element).toggleClass("alert");	
                 }else{
-					jQuery('.social-share .post-like-btn a:not("#fav-button, #' + id + '")').removeClass('selected primary');
-                    jQuery(element).toggleClass("selected");	
+					jQuery('.social-share .post-like-btn a:not("#fav-button, #' + id + '")').removeClass('alert primary');
+                    jQuery(element).toggleClass("alert");	
                 }
             });
         })
