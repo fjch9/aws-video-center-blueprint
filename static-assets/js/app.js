@@ -179,25 +179,30 @@ var renderVideoItem = function(video){
 					</a>
 				</div>
 			<div class="post-des">
-				<h6><a href="${url}">${video.title_s}</a></h6>
+				<h6 class="video-title"><a href="${url}">${video.title_s}</a></h6>
 				<div class="post-stats clearfix">
 				<p class="pull-left">
-					<span><i class="fa fa-clock-o"></i> Start time: ${getDate(video.startDate_dt)}</span> <br>
-					<span><i class="fa fa-clock-o"></i> End time: ${getDate(video.endDate_dt)}</span> <br>
+					<span>
+                    	<i class="fa fa-clock-o"></i>Start time: <span class="start-time">${getDate(video.startDate_dt)}</span>
+                    </span>
+                    <br>
+					<span>
+                    	<i class="fa fa-clock-o"></i>End time: <span class="end-time">${getDate(video.endDate_dt)}</span>
+                     </span> <br>
 				</p>
 				<br>
 				<div class="clearfix content-popular-icons">
 					<p class="pull-left">
 						<i class="fa fa-eye"></i>
-						<span>${video.viewCount}</span>
+						<span class="view-count">${video.viewCount}</span>
 					</p>
 					<p class="pull-left">
 						<i class="fa fa-thumbs-o-up"></i>
-						<span>${video.likeCount}</span>
+						<span class="like-count">${video.likeCount}</span>
 					</p>
 					<p class="pull-left">
 						<i class="fa fa-thumbs-o-down"></i>
-						<span>${video.dislikeCount}</span>
+						<span class="dislike-count">${video.dislikeCount}</span>
 					</p>
 				</div>
 			
@@ -236,11 +241,20 @@ function refreshVideos(){
             jQuery.each(data, function(index, element) {
             	var domElement = document.getElementById("video-"+element.id)
             	if (domElement) {
-            	
             		if(element.liveNow){
                     	jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
                 	}
-                	//update labels
+                    domElement.querySelector('.video-title').querySelector('a').innerHTML = element.title_s;
+                    domElement.querySelector('.post-summary').querySelector('p').innerHTML = element.summary_s;
+                    domElement.querySelector('.like-count').innerHTML = element.likeCount;
+                    domElement.querySelector('.dislike-count').innerHTML = element.dislikeCount;
+                    domElement.querySelector('.view-count').innerHTML = element.viewCount;
+                    
+                    if(element.type === 'stream') {
+                      domElement.querySelector('.start-time').innerHTML = getDate(element.startDate_dt);
+                      domElement.querySelector('.end-time').innerHTML = getDate(element.endDate_dt);
+                    }
+                    
             	} else {
             		jQuery('.video-list').append(renderVideoItem(element));
             	}
@@ -265,10 +279,20 @@ function refreshVideos(){
     });
 }
 
+function renderDates(){
+	jQuery('[data-format-date]').each(function(index, el) {
+		var $el = jQuery(el);
+		var date = $el.attr('data-format-date');
+		$el.text(getDate(date));
+	});
+}
+
 jQuery(document).ready(function() {
     loadVideos();
 
     window.setInterval(function(){
         refreshVideos();	
     },5000);
+
+    renderDates();
 });

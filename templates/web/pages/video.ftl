@@ -119,7 +119,7 @@
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
 												<a href="${relatedVideoUrl}" class="hover-posts">
-													<span><i class="fa fa-play"></i>Watch</span>
+													<span><i class="fa fa-play"></i></span>
 												</a>
 											</div>
 											<div class="post-des">
@@ -146,7 +146,7 @@
 													<p>${relatedVideo.summary_s}</p>
 												</div>
 												<div class="post-button">
-													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
+													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i></a>
 												</div>
 											</div>
 										</div>

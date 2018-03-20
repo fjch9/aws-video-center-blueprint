@@ -68,7 +68,7 @@
                     <div class="post thumb-border">
                             <div class="post-thumb">
                                 <img src="{{:thumbnail}}" alt="new video">
-                                <div class="tag-live">
+                                <div class="tag-live {{if liveNow == false}}hide{{/if}}">
                                     <figcaption>
                                         <p class="live-text">Live</p>
                                     </figcaption>

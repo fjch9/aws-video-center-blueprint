@@ -24,7 +24,7 @@
 				<#assign completeUrl = "${endpoints[0].url}?=start${startTimestamp?c}">
 				<#assign videoSource = "${completeUrl}"/>
 				<#assign videoType = "${endpoints[0].encoding}"/>
-
+				
 				<section class="fullwidth-single-video">
 						<!-- The site theme is breaking videojs styles -->
 						<!-- <div class="row"> -->
@@ -71,14 +71,13 @@
 									<div class="media-object-section object-second">
 										<div class="author-des clearfix" style="border-bottom: 0">
 											<div class="post-title">
+												
 												<h3>${video.title_s}</h3>
-												<#setting time_zone='CST'>
-												<#setting datetime_format = "EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'">
 												
 												<p>
 													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
-													<span><i class="fa fa-clock-o"></i> Start time: ${video.startDate_dt?datetime}</span> <br>
-													<span><i class="fa fa-clock-o"></i> End time: ${video.endDate_dt?datetime}</span> <br>	
+													<span><i class="fa fa-clock-o"></i> Start time: <span data-format-date="${video.startDate_dt?datetime?iso_utc}"></span></span> <br>
+													<span><i class="fa fa-clock-o"></i> End time: <span data-format-date="${video.endDate_dt?datetime?iso_utc}"></span></span> <br>	
 													<span><i class="fa fa-eye"></i>${viewCount}</span>
 													<span><i class="fa fa-thumbs-o-up"></i>${likeCount}</span>
 													<span><i class="fa fa-thumbs-o-down"></i>${dislikeCount}</span>
@@ -153,7 +152,7 @@
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
 												<a href="${relatedVideoUrl}" class="hover-posts">
-													<span><i class="fa fa-play-circle"></i>Watch</span>
+													<span><i class="fa fa-play-circle"></i></span>
 												</a>
 											</div>
 											<div class="post-des">
@@ -180,7 +179,7 @@
 													<p>${relatedVideo.summary_s}</p>
 												</div>
 												<div class="post-button">
-													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
+													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i></a>
 												</div>
 											</div>
 										</div>
@@ -202,6 +201,16 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 <script>
+	function getDate(videoDate){
+		var formatedStartDate = moment(videoDate);
+		var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
+		return formatedStartDate.format('lll')+" "+currentTimeZone
+	}
+
+	function getTimeZone(){
+		return Intl.DateTimeFormat().resolvedOptions().timeZone;
+	}
+
 	jQuery(document).ready(function() {
 		/*jQuery("#fav-button").click(function(e){
 			e.preventDefault();
@@ -250,12 +259,48 @@
         
         <#include "/templates/web/components/analytics.ftl"/>
 		
-		<#if streamStatus = "waiting">
+		<#if streamStatus == "waiting">
+
+			// var startDate = new Date('${video.startDate_dt?datetime?string}')
+			// // var startDate = new Date('${video.startDate_dt?datetime?string}')
+			// var diffDate = new Date();
+			
+			
+			// diffDate.setSeconds(diffDate.getSeconds() + 40);
+			
+			// var clock = jQuery('#countdown').FlipClock(startDate, {
+			// 	countdown: true,
+			// 	callbacks: {
+   //              stop: function() {
+   //                  // Do whatever you want to do here,
+   //                  // that may include hiding the clock 
+   //                  // or displaying the image you mentioned
+   //                  location.reload();
+               
+   //              	}
+   //          	}
+			// });
+
 			var startDate = new Date('${video.startDate_dt?datetime?string}')
-			var clock = jQuery('#countdown').FlipClock(startDate, {
-				countdown: true
-			});
-		<#elseif streamStatus = "live">
+		    var today = new Date();
+		    
+		    console.log(startDate, today)
+		    
+		    var dif = startDate.getTime() - today.getTime();
+		    
+		    var timeLeft = Math.abs(dif/1000)/60;
+		    
+		    var clock = jQuery('#countdown').FlipClock(timeLeft,{
+		        autoStart: false,
+		        clockFace: 'DailyCounter',
+		        countdown: true
+		    });
+		    
+		   // clock.setTime(timeLeft);
+		    clock.start();   
+
+
+		<#elseif streamStatus == "live">
 			 if (Hls.isSupported()) {
  	    		var video = document.getElementById('example-video');
  	    		var hls = new Hls();

@@ -64,7 +64,7 @@
                         <div class="post thumb-border">
                             <div class="post-thumb">
                                 <img src="{{:thumbnail}}">
-                                <div class="tag-live {{if liveNow == true}}hide{{/if}}">
+                                <div class="tag-live {{if liveNow == false}}hide{{/if}}">
                                     <figcaption>
                                         <p class="live-text">Live</p>
                                     </figcaption>
