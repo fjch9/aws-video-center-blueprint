@@ -10,7 +10,7 @@
 				<div class="recent-img">
 					<img src= "${video.thumbnail}">
 					<a href="${videoUrl}" class="hover-posts">
-						<span><i class="fa fa-play"></i></span>
+						<span><i class="fa fa-play-circle"></i></span>
 					</a>
 				</div>
 			</div>

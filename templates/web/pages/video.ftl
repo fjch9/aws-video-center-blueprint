@@ -43,7 +43,7 @@
 											<div class="post-title">
 												<h3>${video.title_s}</h3>
 												<p>
-													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
+													<span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span>
 													<span><i class="fa fa-eye"></i>${viewCount}</span>
 													<span><i class="fa fa-thumbs-o-up"></i>${likeCount}</span>
 													<span><i class="fa fa-thumbs-o-down"></i>${dislikeCount}</span>
@@ -119,7 +119,7 @@
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
 												<a href="${relatedVideoUrl}" class="hover-posts">
-													<span><i class="fa fa-play"></i>Watch Video</span>
+													<span><i class="fa fa-play"></i>Watch</span>
 												</a>
 											</div>
 											<div class="post-des">

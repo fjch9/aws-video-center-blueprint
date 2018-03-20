@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<div class="text-center row-btn">
-				<a class="button radius" href="${contentModel.allVideosUrl}">View All Events</a>
+				<a class="button radius" href="${contentModel.allVideosUrl}">View All</a>
 			</div>
 		</div>
 	</div>

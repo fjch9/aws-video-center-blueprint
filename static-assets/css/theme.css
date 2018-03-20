@@ -127,10 +127,10 @@ img {
   z-index: 5;
   top: 0;
   text-align: center;
-  transform: scale(0); }
+  transition: none; }
   .hover-posts span {
     position: absolute;
-    top: 50%;
+    top: 84%;
     transform: translateY(-50%);
     left: 0;
     right: 0;
@@ -142,7 +142,8 @@ img {
       color: #fff;
       font-size: 36px;
       display: block;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      color: white !important; }
 
 .padding-14 {
   padding: 14px 0; }
@@ -1149,7 +1150,7 @@ input[type=checkbox]:checked + .customLabel:before {
 .content .list-group .item {
   margin-bottom: 30px; }
   .content .list-group .item .post .post-thumb .hover-posts span i {
-    font-size: 18px !important; }
+    font-size: 18px; }
 .content .list-group .grid-medium {
   width: 33.3333333333%; }
   .content .list-group .grid-medium .post-thumb {
@@ -3645,26 +3646,55 @@ article.page-content {
   font-weight: bold;
   position: absolute;
   z-index: 3;
-  bottom: -4px;
-  width: 100%;
+  bottom: -16px;
   padding: 20px; }
   .post-thumb figcaption .icon-broadcast {
     width: 32px !important;
     height: 32px !important;
-    background-color: red;
+    background-color: #e96969;
     padding: 4px;
     border-radius: 15px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75); }
-.post-thumb #hover-circle {
+    -webkit-box-shadow: 10px 10px 5px 0px #303030;
+    -moz-box-shadow: 10px 10px 5px 0px #303030;
+    box-shadow: 3px 3px 5px 0px #303030; }
+  .post-thumb figcaption .live-text {
+    color: white;
+    font-size: 18px;
+    padding: 3px;
+    background-color: #e96969;
+    -webkit-box-shadow: 10px 10px 5px 0px #303030;
+    -moz-box-shadow: 10px 10px 5px 0px #303030;
+    box-shadow: 3px 3px 5px 0px #303030; }
+.post-thumb .hover-posts {
   text-align: right;
-  top: 35%;
   right: 10px;
-  width: 10%;
-  height: 100%; }
+  width: 100%;
+  height: 100%;
+  transform: scale(1); }
+  .post-thumb .hover-posts span i {
+    transition: none; }
 .post-thumb #icon-circle {
-  font-size: 32px !important;
+  font-size: 36px !important;
   color: white !important; }
+
+video#example-video {
+  width: auto;
+  height: auto; }
+
+.icons-popular {
+  display: inline-flex; }
+
+.icon-circle {
+  font-size: 36px !important;
+  color: white !important; }
+
+fa-play-circle-o:before {
+  color: white; }
+
+.content-popular-icons {
+  width: 50%; }
+
+.column.end:last-child:last-child, .end.columns:last-child:last-child {
+  float: left; }
 
 /*# sourceMappingURL=theme.css.map */
