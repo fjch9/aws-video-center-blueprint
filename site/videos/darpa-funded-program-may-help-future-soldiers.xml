@@ -15,7 +15,6 @@
 	</item>	<item>	<key>news</key>
 	<value_smv>News</value_smv>
 	</item></categories>
-	<featured>true</featured>
 	<thumbnail>/static-assets/images/videos/96f7c4e6-98de-d1bf-165f-ebb24b2808aa//DARPA-funded program may help future Soldier.jpg</thumbnail>
 	<video>	<item>	<job_id>1507233983709-y0vmzh</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>
