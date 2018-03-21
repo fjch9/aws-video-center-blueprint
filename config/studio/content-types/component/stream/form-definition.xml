@@ -541,9 +541,9 @@
 			<fields>
 				<field>
 					<type>node-selector</type>
-					<id>endpoint</id>
+					<id>origin</id>
 					<iceId></iceId>
-					<title>Endpoint</title>
+					<title>Origin</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
@@ -560,7 +560,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value>endpoints</value>
+							<value>origins</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -684,23 +684,23 @@
 				</datasource>
 				<datasource>
 					<type>child-content</type>
-					<id>endpoints</id>
-					<title>Endpoints</title>
+					<id>origins</id>
+					<title>Origins</title>
 					<interface>item</interface>
 					<properties>
 						<property>
 							<name>repoPath</name>
-							<value>/site/endpoints</value>
+							<value>/site/origins</value>
 								<type>undefined</type>
 						</property>
 						<property>
 							<name>browsePath</name>
-							<value>/site/endpoints</value>
+							<value>/site/origins</value>
 								<type>undefined</type>
 						</property>
 						<property>
 							<name>type</name>
-							<value>/component/stream-endpoint</value>
+							<value>/component/stream-origin</value>
 								<type>undefined</type>
 						</property>
 					</properties>

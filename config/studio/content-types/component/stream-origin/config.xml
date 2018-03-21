@@ -1,6 +1,6 @@
-<content-type name="/component/stream-endpoint" is-wcm-type="true">
-	<label>Stream Endpoint</label>
-	<form>/component/stream-endpoint</form>
+<content-type name="/component/stream-origin" is-wcm-type="true">
+	<label>Stream Origin</label>
+	<form>/component/stream-origin</form>
 	<form-path>simple</form-path>
 	<model-instance-path>NOT-USED-BY-SIMPLE-FORM-ENGINE</model-instance-path>
 	<file-extension>xml</file-extension>
@@ -10,7 +10,7 @@
 	<image-thumbnail></image-thumbnail>
 	<paths>
 		<includes>
-			<pattern>^/site/endpoints/.*</pattern>
+			<pattern>^/site/origins/.*</pattern>
 		</includes>
 	</paths>
 </content-type>
