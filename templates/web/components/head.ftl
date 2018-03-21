@@ -22,6 +22,6 @@
 		<link href='/static-assets/css/google-font-open-sans.css' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="/static-assets/layerslider/css/layerslider.css">
 		<link rel="stylesheet" href="/static-assets/css/responsive.css">
-		<link rel="stylesheet" href="/static-assets/css/flipclock.css">
-		<link rel="stylesheet" href="/static-assets/videojs/video-js.css">
+		<link rel="stylesheet" href="/static-assets/css/timeTo.css">
+
 </head>

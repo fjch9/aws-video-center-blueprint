@@ -24,13 +24,17 @@
 				<#assign completeUrl = "${endpoints[0].url}?=start${startTimestamp?c}">
 				<#assign videoSource = "${completeUrl}"/>
 				<#assign videoType = "${endpoints[0].encoding}"/>
-
+				
 				<section class="fullwidth-single-video">
 						<!-- The site theme is breaking videojs styles -->
 						<!-- <div class="row"> -->
 								<!-- <div class="large-12 columns"> -->
 									<!-- <div class="flex-video widescreen"> -->
-											<video id="example-video" class="video-js large-centered" controls>
+											<div id="img-loading" class="show">
+												<img src="/static-assets/images/loading.gif">
+											</div>
+											<video id="example-video" class="video-js large-centered hide" controls>
+
 												<source src="${videoSource}" type="${videoType}"/>
 											</video>
 									<!-- </div> -->
@@ -53,7 +57,7 @@
 						<div class="row">
 							<section>
 								<h2>This live stream will start in</h2>
-								<div id="countdown"></div>
+								<div id="countdown2"></div>
 							</section>
 						</div>
 					</div>
@@ -71,14 +75,13 @@
 									<div class="media-object-section object-second">
 										<div class="author-des clearfix" style="border-bottom: 0">
 											<div class="post-title">
+												
 												<h3>${video.title_s}</h3>
-												<#setting time_zone='CST'>
-												<#setting datetime_format = "EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'">
 												
 												<p>
 													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
-													<span><i class="fa fa-clock-o"></i> Start time: ${video.startDate_dt?datetime}</span> <br>
-													<span><i class="fa fa-clock-o"></i> End time: ${video.endDate_dt?datetime}</span> <br>	
+													<span><i class="fa fa-clock-o"></i> Start time: <span data-format-date="${video.startDate_dt?datetime?iso_utc}"></span></span> <br>
+													<span><i class="fa fa-clock-o"></i> End time: <span data-format-date="${video.endDate_dt?datetime?iso_utc}"></span></span> <br>	
 													<span><i class="fa fa-eye"></i>${viewCount}</span>
 													<span><i class="fa fa-thumbs-o-up"></i>${likeCount}</span>
 													<span><i class="fa fa-thumbs-o-down"></i>${dislikeCount}</span>
@@ -153,7 +156,7 @@
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
 												<a href="${relatedVideoUrl}" class="hover-posts">
-													<span><i class="fa fa-play-circle"></i>Watch</span>
+													<span><i class="fa fa-play-circle"></i></span>
 												</a>
 											</div>
 											<div class="post-des">
@@ -180,7 +183,7 @@
 													<p>${relatedVideo.summary_s}</p>
 												</div>
 												<div class="post-button">
-													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
+													<a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i></a>
 												</div>
 											</div>
 										</div>
@@ -202,6 +205,7 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 <script>
+	
 	jQuery(document).ready(function() {
 		/*jQuery("#fav-button").click(function(e){
 			e.preventDefault();
@@ -250,27 +254,45 @@
         
         <#include "/templates/web/components/analytics.ftl"/>
 		
-		<#if streamStatus = "waiting">
-			var startDate = new Date('${video.startDate_dt?datetime?string}')
-			var clock = jQuery('#countdown').FlipClock(startDate, {
-				countdown: true
-			});
-		<#elseif streamStatus = "live">
-			 if (Hls.isSupported()) {
- 	    		var video = document.getElementById('example-video');
- 	    		var hls = new Hls();
+		<#if streamStatus == "waiting">
+			
+			var startDate = new Date('${video.startDate_dt?datetime?iso_utc}');
+	
+		    jQuery('#countdown2').timeTo({
+            timeTo: new Date(startDate),
+            displayDays: 2,
+            theme: "black",
+            displayCaptions: true,
+            fontSize: 32,
+            captionSize: 14
+        	},function(){ 
+        		setTimeout(function(){
+        			location.reload();
+        		},1000); 
+        	});  
+
+		<#elseif streamStatus == "live">
+		if (Hls.isSupported()) {
+			var video = document.getElementById('example-video');
+			var hls = new Hls();
  	    		// bind them together
-				hls.attachMedia(video);
+ 	    		hls.attachMedia(video);
 				// MEDIA_ATTACHED event is fired by hls object once MediaSource is ready
 				hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-		        console.log("video and hls.js are now bound together !");
-		        hls.loadSource("${videoSource}");
-		        hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
-		          console.log("manifest loaded, found " + data.levels.length + " quality level");
-		        });
-		      });
-			    video.play();
-    		}
+					
+					hls.loadSource("${videoSource}");
+					hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+						
+					});
+				});
+
+				video.oncanplay = function() {
+					jQuery('#img-loading').addClass('hide');
+				    jQuery('#example-video').removeClass('hide');
+				    video.play();
+				};
+				
+			}
 		</#if>
 
 	});

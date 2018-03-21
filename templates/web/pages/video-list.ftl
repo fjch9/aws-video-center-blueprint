@@ -64,7 +64,7 @@
                         <div class="post thumb-border">
                             <div class="post-thumb">
                                 <img src="{{:thumbnail}}">
-                                <div class="tag-live {{if liveNow == true}}hide{{/if}}">
+                                <div class="tag-live {{if liveNow == false}}hide{{/if}}">
                                     <figcaption>
                                         <p class="live-text">Live</p>
                                     </figcaption>
@@ -76,7 +76,7 @@
                             <div class="post-des">
                                 <h6><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h6>
                                 <div class="post-stats clearfix">
-                                    <p class="pull-left">
+                                    <p class="video-list-start-end">
                                         <i class="fa fa-clock-o"></i>
                                         <span>Start time: {{:~getDate(startDate_dt)}}</span>
                                         <br>
@@ -116,7 +116,7 @@
                             <div class="post-des">
                                 <h6><a href="{{:~videoUrl(id)}}">{{:title_s}}</a></h6>
                                 <div class="post-stats clearfix content-popular-icons">
-                                    <p class="pull-left">
+                                    <p class="">
                                         <i class="fa fa-clock-o"></i>
                                         <span>{{:~getDate(date_dt)}}</span>
                                     </p>
