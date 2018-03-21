@@ -24,7 +24,7 @@
                     <div class="row secBg">
                         <div class="large-12 columns">
                             <div class="profile-author-img">
-                                <img src="/api/1/profile/avatar" alt="profile author img">
+                                <img src="/api/1/profile/avatar" onerror="this.src='/static-assets/images/avatar.jpg'" alt="profile image">
                             </div>
                             <div class="clearfix">
                                 <div class="profile-author-name float-left">
