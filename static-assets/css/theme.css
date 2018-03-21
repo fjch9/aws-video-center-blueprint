@@ -2194,7 +2194,8 @@ footer {
 .fullwidth-single-video {
   background: #303030;
   padding: 25px 0;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  text-align: center; }
   .fullwidth-single-video .flex-video {
     margin-bottom: 0; }
     .fullwidth-single-video .flex-video.widescreen {
@@ -3694,9 +3695,21 @@ fa-play-circle-o:before {
   color: white; }
 
 .content-popular-icons {
-  width: 60%; }
+  width: 100%; }
 
 .column.end:last-child:last-child, .end.columns:last-child:last-child {
   float: left; }
+
+#countdown2 {
+  height: auto; }
+
+.timeTo ul {
+  top: -56px !important; }
+
+.video-list-start-end {
+  margin-right: 0 !important; }
+
+#img-loading {
+  padding-top: 10px; }
 
 /*# sourceMappingURL=theme.css.map */

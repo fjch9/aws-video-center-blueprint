@@ -30,7 +30,11 @@
 						<!-- <div class="row"> -->
 								<!-- <div class="large-12 columns"> -->
 									<!-- <div class="flex-video widescreen"> -->
-											<video id="example-video" class="video-js large-centered" controls>
+											<div id="img-loading" class="show">
+												<img src="/static-assets/images/loading.gif">
+											</div>
+											<video id="example-video" class="video-js large-centered hide" controls>
+
 												<source src="${videoSource}" type="${videoType}"/>
 											</video>
 									<!-- </div> -->
@@ -53,7 +57,7 @@
 						<div class="row">
 							<section>
 								<h2>This live stream will start in</h2>
-								<div id="countdown"></div>
+								<div id="countdown2"></div>
 							</section>
 						</div>
 					</div>
@@ -201,39 +205,7 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 <script>
-	// function getDate(videoDate){
-	// 	var formatedStartDate = moment(videoDate);
-	// 	var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
-	// 	return formatedStartDate.format('lll')+" "+currentTimeZone
-	// }
-
-	// function getTimeZone(){
-	// 	return Intl.DateTimeFormat().resolvedOptions().timeZone;
-	// }
-
-	function daysBetween(setDate, today){
-		//Get 1 day in milliseconds
-  		var one_day=1000*60*60*24;
-
-  		var date1_ms = today.getTime();
-  		var date2_ms = setDate.getTime();
-  		console.log('estoy en la funcion db: '+date1_ms +' - ' + date2_ms);
-  		var difference_ms = date2_ms - date1_ms;
-  		console.log('Diferencia entre los dos: '+difference_ms);
-		//take out milliseconds
-	  //take out milliseconds
-    //take out milliseconds
-	  	difference_ms = difference_ms/1000;
-	  	var seconds = Math.floor(difference_ms % 60);
-	  	difference_ms = difference_ms/60; 
-	  	var minutes = Math.floor(difference_ms % 60);
-	  	difference_ms = difference_ms/60; 
-	  	var hours = Math.floor(difference_ms % 24);  
-	  	var days = Math.floor(difference_ms/24);
-
-	  	console.log(days + ' days, ' + hours + ' hours, ' + minutes + ' minutes, and ' + seconds + ' seconds');
-	}
-
+	
 	jQuery(document).ready(function() {
 		/*jQuery("#fav-button").click(function(e){
 			e.preventDefault();
@@ -283,70 +255,44 @@
         <#include "/templates/web/components/analytics.ftl"/>
 		
 		<#if streamStatus == "waiting">
-
-			// var startDate = new Date('${video.startDate_dt?datetime?string}')
-			// // var startDate = new Date('${video.startDate_dt?datetime?string}')
-			// var diffDate = new Date();
 			
-			
-			// diffDate.setSeconds(diffDate.getSeconds() + 40);
-			
-			// var clock = jQuery('#countdown').FlipClock(startDate, {
-			// 	countdown: true,
-			// 	callbacks: {
-   //              stop: function() {
-   //                  // Do whatever you want to do here,
-   //                  // that may include hiding the clock 
-   //                  // or displaying the image you mentioned
-   //                  location.reload();
-               
-   //              	}
-   //          	}
-			// });
-			
-			var startDate = new Date('${video.startDate_dt?datetime?string}').getTime();
-		    var today = new Date().getTime();
-		    var difference_ms = startDate - today;
-		    console.log(difference_ms);
-		    difference_ms = difference_ms/1000;
-		  	var seconds = Math.floor(difference_ms % 60);
-		  	difference_ms = difference_ms/60; 
-		  	var minutes = Math.floor(difference_ms % 60);
-		  	difference_ms = difference_ms/60; 
-		  	var hours = Math.floor(difference_ms % 24);  
-		  	var days = Math.floor(difference_ms/24);
-
-		  	console.log(days + ' days, ' + hours + ' hours, ' + minutes + ' minutes, and ' + seconds + ' seconds');
-		    //daysBetween(startDate, today);
-		    //console.log('ya acabe');
-
-		     var clock = jQuery('#countdown').FlipClock(difference_ms,{
-		        autoStart: false,
-		        clockFace: 'DailyCounter',
-		        countdown: true
-		    });
-		    
-		   // clock.setTime(timeLeft);
-		    clock.start();   
-		       
-
+			var startDate = new Date('${video.startDate_dt?datetime?iso_utc}');
+	
+		    jQuery('#countdown2').timeTo({
+            timeTo: new Date(startDate),
+            displayDays: 2,
+            theme: "black",
+            displayCaptions: true,
+            fontSize: 32,
+            captionSize: 14
+        	},function(){ 
+        		setTimeout(function(){
+        			location.reload();
+        		},1000); 
+        	});  
 
 		<#elseif streamStatus == "live">
-			 if (Hls.isSupported()) {
- 	    		var video = document.getElementById('example-video');
- 	    		var hls = new Hls();
+		if (Hls.isSupported()) {
+			var video = document.getElementById('example-video');
+			var hls = new Hls();
  	    		// bind them together
-				hls.attachMedia(video);
+ 	    		hls.attachMedia(video);
 				// MEDIA_ATTACHED event is fired by hls object once MediaSource is ready
 				hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-		        console.log("video and hls.js are now bound together !");
-		        hls.loadSource("${videoSource}");
-		        hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
-		          console.log("manifest loaded, found " + data.levels.length + " quality level");
-		        });
-		      });
-			    video.play();
-    		}
+					
+					hls.loadSource("${videoSource}");
+					hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+						
+					});
+				});
+
+				video.oncanplay = function() {
+					jQuery('#img-loading').addClass('hide');
+				    jQuery('#example-video').removeClass('hide');
+				    video.play();
+				};
+				
+			}
 		</#if>
 
 	});

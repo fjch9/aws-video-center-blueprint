@@ -119,7 +119,7 @@
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
 												<a href="${relatedVideoUrl}" class="hover-posts">
-													<span><i class="fa fa-play"></i></span>
+													<span><i class="fa fa-play-circle"></i></span>
 												</a>
 											</div>
 											<div class="post-des">

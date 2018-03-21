@@ -181,16 +181,15 @@ var renderVideoItem = function(video){
 			<div class="post-des">
 				<h6 class="video-title"><a href="${url}">${video.title_s}</a></h6>
 				<div class="post-stats clearfix">
-				<p class="pull-left">
+				<p class="">
 					<span>
-                    	<i class="fa fa-clock-o"></i>Start time: <span class="start-time">${getDate(video.startDate_dt)}</span>
+                    	<i class="fa fa-clock-o"></i> Start time: <span class="start-time">${getDate(video.startDate_dt)}</span>
                     </span>
                     <br>
 					<span>
-                    	<i class="fa fa-clock-o"></i>End time: <span class="end-time">${getDate(video.endDate_dt)}</span>
-                     </span> <br>
+                    	<i class="fa fa-clock-o"></i> End time: <span class="end-time">${getDate(video.endDate_dt)}</span>
+                     </span> 
 				</p>
-				<br>
 				<div class="clearfix content-popular-icons">
 					<p class="pull-left">
 						<i class="fa fa-eye"></i>
