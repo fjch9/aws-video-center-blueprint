@@ -8,14 +8,16 @@
 	<folder-name/>
 	<internal-name>Most Viewed Videos Section</internal-name>
 	<title_s>Most Viewed Videos</title_s>
-	<maxVideosToDisplay>4</maxVideosToDisplay>
+	<maxVideosToDisplay>50</maxVideosToDisplay>
 	<videoLandingUrl>/video</videoLandingUrl>
 	<scripts>	<item>	<key>/scripts/components/most-viewed-videos.groovy</key>
 	<value>most-viewed-videos.groovy</value>
+	<disableFlattening>false</disableFlattening>
 	</item></scripts>
 	<createdDate>2017-9-7T0:19:38.000Z</createdDate>
 	<createdDate_dt>2017-9-7T0:19:38.000Z</createdDate_dt>
-	<lastModifiedDate>2017-9-13T22:14:10.000Z</lastModifiedDate>
-	<lastModifiedDate_dt>2017-9-13T22:14:10.000Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-21T16:21:20.157Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-21T16:21:20.157Z</lastModifiedDate_dt>
 	<allVideosUrl>/all-videos</allVideosUrl>
+	<refreshUrl/>
 </component>
