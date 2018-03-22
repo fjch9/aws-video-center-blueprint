@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream-endpoint</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>26d8</objectGroupId>
+	<objectId>26d85811-46f1-850c-e9ad-2dee89a0db1b</objectId>
+	<file-name>26d85811-46f1-850c-e9ad-2dee89a0db1b.xml</file-name>
+	<internal-name>video-test</internal-name>
+	<url>https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/c62eb38c2e4b4bcf87fc7514bc85a75c/index.m3u8</url>
+	<encoding>application/x-mpegURL</encoding>
+	<createdDate>2018-03-21T14:39:58.307Z</createdDate>
+	<createdDate_dt>2018-03-21T14:39:58.307Z</createdDate_dt>
+	<lastModifiedDate>2018-03-21T14:39:58.307Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-21T14:39:58.307Z</lastModifiedDate_dt>
+</component>
