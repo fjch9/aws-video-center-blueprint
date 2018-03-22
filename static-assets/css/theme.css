@@ -2846,13 +2846,48 @@ footer {
       .profile-inner .profile-videos .profile-video .media-object .media-img-content {
         padding-right: 0; }
       .profile-inner .profile-videos .profile-video .media-object .video-img {
-        width: 170px;
-        height: 150px;
+        width: 177px;
+        height: 177px;
         padding: 10px;
         border-right: 1px solid #ececec; }
         .profile-inner .profile-videos .profile-video .media-object .video-img img {
           width: 100%;
           height: 100%; }
+        .profile-inner .profile-videos .profile-video .media-object .video-img .live-icon {
+          width: 100%;
+          height: 100%;
+          position: relative; }
+          .profile-inner .profile-videos .profile-video .media-object .video-img .live-icon figcaption {
+            font-weight: bold;
+            position: absolute;
+            z-index: 3;
+            bottom: -5px;
+            left: 15px; }
+            .profile-inner .profile-videos .profile-video .media-object .video-img .live-icon figcaption .icon-broadcast {
+              width: 32px !important;
+              height: 32px !important;
+              background-color: #e96969;
+              padding: 4px;
+              border-radius: 15px;
+              -webkit-box-shadow: 10px 10px 5px 0px #303030;
+              -moz-box-shadow: 10px 10px 5px 0px #303030;
+              box-shadow: 3px 3px 5px 0px #303030; }
+            .profile-inner .profile-videos .profile-video .media-object .video-img .live-icon figcaption .live-text {
+              color: white;
+              font-size: 12px;
+              padding: 3px;
+              background-color: #e96969;
+              -webkit-box-shadow: 10px 10px 5px 0px #303030;
+              -moz-box-shadow: 10px 10px 5px 0px #303030;
+              box-shadow: 3px 3px 5px 0px #303030; }
+          .profile-inner .profile-videos .profile-video .media-object .video-img .live-icon .hover-posts {
+            text-align: right;
+            right: 10px;
+            width: 100%;
+            height: 100%;
+            transform: scale(1); }
+            .profile-inner .profile-videos .profile-video .media-object .video-img .live-icon .hover-posts span i {
+              transition: none; }
       .profile-inner .profile-videos .profile-video .media-object .video-content {
         width: 100%;
         padding-left: 15px;
@@ -2870,7 +2905,7 @@ footer {
       .profile-inner .profile-videos .profile-video .media-object .video-detail {
         padding-left: 15px; }
         .profile-inner .profile-videos .profile-video .media-object .video-detail .video-stats {
-          display: inline-block;
+          display: inherit;
           width: 50%; }
           .profile-inner .profile-videos .profile-video .media-object .video-detail .video-stats span {
             font-size: 12px;
@@ -2883,8 +2918,10 @@ footer {
               display: inline-block;
               color: #6c6c6c;
               margin-right: 5px; }
-            .profile-inner .profile-videos .profile-video .media-object .video-detail .video-stats span:first-of-type i {
-              color: #61ca37; }
+          .profile-inner .profile-videos .profile-video .media-object .video-detail .video-stats .start-time {
+            color: #61ca37 !important; }
+          .profile-inner .profile-videos .profile-video .media-object .video-detail .video-stats .end-time {
+            color: #FF0000 !important; }
       .profile-inner .profile-videos .profile-video .media-object .video-btns {
         width: 49%;
         display: inline-block;
@@ -2939,6 +2976,40 @@ footer {
             color: #fff; }
             .profile-inner .profile-videos .profile-video .media-object .video-btns button[type="submit"]:hover i {
               color: #fff; }
+      .profile-inner .profile-videos .profile-video .media-object .video-stream .post-thumb figcaption {
+        font-weight: bold;
+        position: absolute;
+        z-index: 3;
+        bottom: -16px;
+        padding: 20px; }
+        .profile-inner .profile-videos .profile-video .media-object .video-stream .post-thumb figcaption .icon-broadcast {
+          width: 32px !important;
+          height: 32px !important;
+          background-color: #e96969;
+          padding: 4px;
+          border-radius: 15px;
+          -webkit-box-shadow: 10px 10px 5px 0px #303030;
+          -moz-box-shadow: 10px 10px 5px 0px #303030;
+          box-shadow: 3px 3px 5px 0px #303030; }
+        .profile-inner .profile-videos .profile-video .media-object .video-stream .post-thumb figcaption .live-text {
+          color: white;
+          font-size: 18px;
+          padding: 3px;
+          background-color: #e96969;
+          -webkit-box-shadow: 10px 10px 5px 0px #303030;
+          -moz-box-shadow: 10px 10px 5px 0px #303030;
+          box-shadow: 3px 3px 5px 0px #303030; }
+      .profile-inner .profile-videos .profile-video .media-object .video-stream .post-thumb .hover-posts {
+        text-align: right;
+        right: 10px;
+        width: 100%;
+        height: 100%;
+        transform: scale(1); }
+        .profile-inner .profile-videos .profile-video .media-object .video-stream .post-thumb .hover-posts span i {
+          transition: none; }
+      .profile-inner .profile-videos .profile-video .media-object .video-stream .post-thumb #icon-circle {
+        font-size: 36px !important;
+        color: white !important; }
 
 .profile-settings {
   margin-bottom: 30px; }
@@ -3709,7 +3780,27 @@ fa-play-circle-o:before {
 .video-list-start-end {
   margin-right: 0 !important; }
 
-#img-loading {
-  padding-top: 10px; }
+.img-loading {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #e96969;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 0 auto; }
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=theme.css.map */
