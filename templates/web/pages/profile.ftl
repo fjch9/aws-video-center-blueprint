@@ -227,6 +227,44 @@
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
 {{for items}}
+{{if type == 'stream'}}
+<div class="profile-video">
+    <div class="media-object stack-for-small">
+        <div class="media-object-section media-img-content">
+            <div class="video-img">
+                <div class="live-icon">
+                    <img src="{{:thumbnail}}" alt="new video">
+                    <div class="tag-live {{if liveNow == false}}hide{{/if}}">
+                        <figcaption>
+                            <p class="live-text">Live</p>
+                        </figcaption>
+                    </div>
+                    <a href="{{:~getStreamUrl(id)}}}" class="hover-posts">
+                        <span><i class="fa fa-play-circle icon-circle"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="media-object-section media-video-content">
+            <div class="video-content">
+                <h5><a href="{{:~getStreamUrl(id)}}}">{{:title_s}}</a></h5>
+                <p>{{:summary_s}}</p>
+            </div>
+            <div class="video-detail clearfix">
+                <div class="video-stats">
+                    <span><i class="fa fa-clock-o start-time"></i>Start time: {{:~getDate(startDate_dt)}}</span>
+                    <span><i class="fa fa-clock-o end-time"></i>End time: {{:~getDate(endDate_dt)}}</span>
+                    <br>
+                    <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
+                </div>
+                <div class="video-btns">
+                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i>Unfavorite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{else type == 'video'}}
 <div class="profile-video">
     <div class="media-object stack-for-small">
         <div class="media-object-section media-img-content">
@@ -251,6 +289,7 @@
         </div>
     </div>
 </div>
+{{/if}}
 {{/for}}
 </script>
 <script>
@@ -265,7 +304,15 @@
 	jQuery.views.helpers({
 		videoUrl: function(id) {
 			return '${contentModel.videoLandingURL}?id=' + id;
-		}
+		},
+        getDate: function (date) {
+             var formatedStartDate = moment(date);
+             var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
+            return formatedStartDate.format('lll')+" "+currentTimeZone
+        },
+        getStreamUrl: function(id){
+            return "/live?id="+id
+        }
 	});
 
     jQuery(document).ready(function(){
