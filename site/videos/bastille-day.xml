@@ -13,7 +13,6 @@
 	</item>	<item>	<key>news</key>
 	<value_smv>News</value_smv>
 	</item></categories>
-	<featured>false</featured>
 	<thumbnail>/static-assets/images/videos/9689975d-f44c-595c-60de-03c709edc152//Bastille Day .jpg</thumbnail>
 	<video>	<item>	<job_id>1507232691423-jsv7pf</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>

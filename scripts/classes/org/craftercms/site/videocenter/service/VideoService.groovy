@@ -102,16 +102,6 @@ class VideoService {
     return resolveVideosFromSearchResults(results)
   }
     
-  def searchFeaturedVideos(rows) {
-    def q = '(content-type:"/component/video" AND featured:"true") OR ' +
-      '(content-type:"/component/stream" AND startDate_dt:[* TO NOW] AND endDate_dt:[NOW TO *])^100'
-    def query = buildSolrQuery(q, rows)
-    
-    def results = searchService.search(query)
-    
-    resolveVideosFromSearchResults(results)
-  }
-    
   def searchRelatedVideos(video, rows) {
     def categories = video.queryValues("//categories/item/key")
     def categoriesStr = StringUtils.join(categories, " OR ")
@@ -155,6 +145,9 @@ class VideoService {
   def resolveVideosFromIds(ids) {
     ids.collect { videoId ->
       def item = siteItemService.getSiteItem("/site/videos/${videoId}.xml")
+      if(!item) {
+        item = siteItemService.getSiteItem("/site/streams/${videoId}.xml")
+      }
       return processItem(item)
     }
   }

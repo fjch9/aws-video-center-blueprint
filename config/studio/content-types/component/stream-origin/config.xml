@@ -1,6 +1,6 @@
-<content-type name="/component/video-carousel" is-wcm-type="true">
-	<label>Component - Video Carousel</label>
-	<form>/component/video-carousel</form>
+<content-type name="/component/stream-origin" is-wcm-type="true">
+	<label>Stream Origin</label>
+	<form>/component/stream-origin</form>
 	<form-path>simple</form-path>
 	<model-instance-path>NOT-USED-BY-SIMPLE-FORM-ENGINE</model-instance-path>
 	<file-extension>xml</file-extension>
@@ -10,7 +10,7 @@
 	<image-thumbnail></image-thumbnail>
 	<paths>
 		<includes>
-			<pattern>^/site/components/carousels/.*</pattern>
+			<pattern>^/site/origins/.*</pattern>
 		</includes>
 	</paths>
 </content-type>

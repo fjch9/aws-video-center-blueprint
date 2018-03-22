@@ -14,7 +14,6 @@
 	</item>	<item>	<key>historical</key>
 	<value_smv>Historical</value_smv>
 	</item></categories>
-	<featured>true</featured>
 	<thumbnail>/static-assets/images/videos/fcef6742-dbda-f71f-3f92-fb62bf99155b/Changing of the Guard Ceremony.jpg</thumbnail>
 	<video>	<item>	<job_id>1507232836648-sbp1b5</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>

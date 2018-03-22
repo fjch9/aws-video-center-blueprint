@@ -7,7 +7,7 @@
 	<file-name>streams-section.xml</file-name>
 	<folder-name/>
 	<internal-name>Streams Section</internal-name>
-	<title_s>Live Events</title_s>
+	<title_s>Events</title_s>
 	<maxVideosToDisplay>4</maxVideosToDisplay>
 	<videoLandingUrl>/video</videoLandingUrl>
 	<scripts>	<item>	<key>/scripts/components/streams.groovy</key>
@@ -16,8 +16,8 @@
 	</item></scripts>
 	<createdDate>2017-9-7T0:19:38.000Z</createdDate>
 	<createdDate_dt>2017-9-7T0:19:38.000Z</createdDate_dt>
-	<lastModifiedDate>2018-03-12T21:26:51.628Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-12T21:26:51.628Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-22T17:06:50.264Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-22T17:06:50.264Z</lastModifiedDate_dt>
 	<allVideosUrl>/all-videos</allVideosUrl>
 	<refreshUrl>/api/1/streams.json</refreshUrl>
 </component>

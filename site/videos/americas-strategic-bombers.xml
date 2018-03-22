@@ -21,7 +21,6 @@
 	</item>	<item>	<value_smv>Bomber</value_smv>
 	</item>	<item>	<value_smv>US Air Force</value_smv>
 	</item></tags>
-	<featured>false</featured>
 	<thumbnail>/static-assets/images/videos/5ab5c9e9-f09e-8d49-efc2-a81db35ba8e2//America's Strategic Bombers.jpg</thumbnail>
 	<video>	<item>	<job_id>1507232451280-keydeb</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>

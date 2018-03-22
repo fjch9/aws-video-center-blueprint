@@ -12,7 +12,7 @@ if (videoId) {
     if (video) {
       templateModel.video = video
       templateModel.startTimestamp = video.startDate_dt.time / 1000 as int
-      templateModel.endpoints = video.endpoint.item.collect { siteItemService.getSiteItem(it.key.text) }
+      templateModel.origins = video.origin.item.collect { siteItemService.getSiteItem(it.key.text) }
     } else {
     	throw new HttpStatusCodeException(404, "Video ${videoId} not found")
     }

@@ -12,7 +12,6 @@
 	<categories>	<item>	<key>entertainment</key>
 	<value_smv>Entertainment</value_smv>
 	</item></categories>
-	<featured>true</featured>
 	<thumbnail>/static-assets/images/videos/29a909a1-652a-64f9-dfe1-3defddff8a26//2017 MCAS Miramar Air Show- Blue Angels.jpg</thumbnail>
 	<video>	<item>	<job_id>1507230927131-aw9igh</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>
