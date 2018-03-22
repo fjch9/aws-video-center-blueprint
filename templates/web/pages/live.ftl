@@ -30,11 +30,8 @@
 						<!-- <div class="row"> -->
 								<!-- <div class="large-12 columns"> -->
 									<!-- <div class="flex-video widescreen"> -->
-											<div id="img-loading" class="show">
-												<img src="/static-assets/images/loading.gif">
-											</div>
-											<video id="example-video" class="video-js large-centered hide" controls>
-
+											<div class="img-loading show"></div>
+											<video id="example-video" class="video-js large-centered hide" preload="true" controls="true" autoplay>
 												<source src="${videoSource}" type="${videoType}"/>
 											</video>
 									<!-- </div> -->
@@ -287,8 +284,10 @@
 				});
 
 				video.oncanplay = function() {
-					jQuery('#img-loading').addClass('hide');
+					jQuery('.img-loading').addClass('hide');
 				    jQuery('#example-video').removeClass('hide');
+				    video.muted = false;
+				    video.autoplay = true;
 				    video.play();
 				};
 				

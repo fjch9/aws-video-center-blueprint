@@ -145,6 +145,9 @@ class VideoService {
   def resolveVideosFromIds(ids) {
     ids.collect { videoId ->
       def item = siteItemService.getSiteItem("/site/videos/${videoId}.xml")
+      if(!item) {
+        item = siteItemService.getSiteItem("/site/streams/${videoId}.xml")
+      }
       return processItem(item)
     }
   }
