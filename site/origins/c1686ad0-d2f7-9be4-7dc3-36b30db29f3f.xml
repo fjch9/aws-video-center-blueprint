@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream-origin</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>c168</objectGroupId>
+	<objectId>c1686ad0-d2f7-9be4-7dc3-36b30db29f3f</objectId>
+	<file-name>c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</file-name>
+	<internal-name>Test Origin</internal-name>
+	<url>https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/c62eb38c2e4b4bcf87fc7514bc85a75c/index.m3u8</url>
+	<encoding>application/x-mpegURL</encoding>
+	<createdDate>2018-03-22T20:08:28.434Z</createdDate>
+	<createdDate_dt>2018-03-22T20:08:28.434Z</createdDate_dt>
+	<lastModifiedDate>2018-03-22T20:08:28.434Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-22T20:08:28.434Z</lastModifiedDate_dt>
+</component>
