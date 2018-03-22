@@ -2394,6 +2394,7 @@ footer{
 						}
 						a.hover-posts{
 							span{
+								top:50%;
 								i{
 									font-size: 18px;
 								}
@@ -3076,7 +3077,7 @@ footer{
 			padding-bottom: 42.74%;
 		}
 	}
-
+	text-align: center;
 }
 
 //post stats
@@ -4882,6 +4883,8 @@ article.page-content{
 }
 
 video#example-video {
+    // width: auto;
+    // height: auto;
     width: auto;
     height: auto;
 }
@@ -4900,9 +4903,27 @@ fa-play-circle-o:before{
 }
 
 .content-popular-icons{
-	width: 50%;
+	width: 100%;
 }
 
 .column.end:last-child:last-child, .end.columns:last-child:last-child {
     float: left; }
 
+#countdown2{
+	height: auto;
+}
+
+.timeTo {
+	ul{
+		top: -56px !important;
+	}
+}
+
+//Fix small spacing in video list for the start and end dates
+.video-list-start-end{
+	margin-right: 0 !important;
+}
+
+#img-loading{
+	padding-top: 10px;
+}
