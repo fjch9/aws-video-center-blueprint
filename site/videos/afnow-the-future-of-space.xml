@@ -14,7 +14,6 @@
 	</item>	<item>	<key>news</key>
 	<value_smv>News</value_smv>
 	</item></categories>
-	<featured>false</featured>
 	<thumbnail>/static-assets/images/videos/ba5e4927-bec6-cc24-1cc7-2c4c301e7c5f//AFNow the Future of Space.jpg</thumbnail>
 	<video>	<item>	<job_id>1507231300122-h5xxjb</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>

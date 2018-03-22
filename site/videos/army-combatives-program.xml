@@ -14,7 +14,6 @@
 	</item>	<item>	<key>sports</key>
 	<value_smv>Sports</value_smv>
 	</item></categories>
-	<featured>false</featured>
 	<thumbnail>/static-assets/images/videos/e2b71846-73e5-93ed-05b7-e1c9e6a3bdaa//Army Combatives Program.jpg</thumbnail>
 	<video>	<item>	<job_id>1507232513568-kv40xb</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>

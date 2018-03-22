@@ -14,7 +14,6 @@
 	</item>	<item>	<key>news</key>
 	<value_smv>News</value_smv>
 	</item></categories>
-	<featured>true</featured>
 	<thumbnail>/static-assets/images/videos/811bc11d-9519-2ae6-a139-d4f01aa85aec//New test dummies join Army team.jpg</thumbnail>
 	<video>	<item>	<job_id>1507234391197-38i7tb</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>

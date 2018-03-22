@@ -15,7 +15,6 @@
 	</item>	<item>	<key>science</key>
 	<value_smv>Science &amp; Technology</value_smv>
 	</item></categories>
-	<featured>false</featured>
 	<thumbnail>/static-assets/images/videos/844db908-c0ff-675f-3832-271030e34140//Immersive Virtual Shipboard Environment Trains Sailors.jpg</thumbnail>
 	<video>	<item>	<job_id>1507234037297-5h30wj</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>
