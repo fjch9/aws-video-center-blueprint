@@ -47,6 +47,9 @@ img {
   object-fit: cover;
   -o-object-fit: cover; }
 
+.row {
+  max-width: 85rem; }
+
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   border-style: none !important; }
 
@@ -434,17 +437,22 @@ input[type=checkbox]:checked + .customLabel:before {
   background: #fff;
   position: relative;
   z-index: 6; }
+  #navBar .sticky-container {
+    height: 70px !important; }
   #navBar .top-bar {
-    padding: 0; }
+    padding: 0;
+    height: 70px; }
     #navBar .top-bar .menu-text {
-      padding: 20px 0 !important;
+      padding: 10px 0 !important;
       margin: 0 !important; }
+      #navBar .top-bar .menu-text .main-logo {
+        width: 88px; }
     #navBar .top-bar .menu > li {
       padding-left: 30px; }
     #navBar .top-bar .menu > li > a {
       padding: 0; }
     #navBar .top-bar .menu > li:not(.menu-text) > a {
-      padding: 32px 0;
+      padding: 25px 0;
       font-size: 13px;
       border-bottom: 2px solid transparent;
       text-transform: uppercase;
@@ -2905,7 +2913,7 @@ footer {
       .profile-inner .profile-videos .profile-video .media-object .video-detail {
         padding-left: 15px; }
         .profile-inner .profile-videos .profile-video .media-object .video-detail .video-stats {
-          display: inherit;
+          display: inline-block;
           width: 50%; }
           .profile-inner .profile-videos .profile-video .media-object .video-detail .video-stats span {
             font-size: 12px;
@@ -3802,5 +3810,10 @@ fa-play-circle-o:before {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+.icon-start-time {
+  color: #61ca37 !important; }
+
+.icon-end-time {
+  color: #FF0000 !important; }
 
 /*# sourceMappingURL=theme.css.map */

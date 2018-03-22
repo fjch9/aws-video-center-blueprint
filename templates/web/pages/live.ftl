@@ -77,8 +77,8 @@
 												
 												<p>
 													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
-													<span><i class="fa fa-clock-o"></i> Start time: <span data-format-date="${video.startDate_dt?datetime?iso_utc}"></span></span> <br>
-													<span><i class="fa fa-clock-o"></i> End time: <span data-format-date="${video.endDate_dt?datetime?iso_utc}"></span></span> <br>	
+													<span><i class="fa fa-clock-o icon-start-time"></i> Start time: <span data-format-date="${video.startDate_dt?datetime?iso_utc}"></span></span> <br>
+													<span><i class="fa fa-clock-o icon-end-time"></i> End time: <span data-format-date="${video.endDate_dt?datetime?iso_utc}"></span></span> <br>	
 													<span><i class="fa fa-eye"></i>${viewCount}</span>
 													<span><i class="fa fa-thumbs-o-up"></i>${likeCount}</span>
 													<span><i class="fa fa-thumbs-o-down"></i>${dislikeCount}</span>
