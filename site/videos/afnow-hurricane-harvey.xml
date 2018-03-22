@@ -14,7 +14,6 @@
 	</item>	<item>	<key>news</key>
 	<value_smv>News</value_smv>
 	</item></categories>
-	<featured>true</featured>
 	<thumbnail>/static-assets/images/videos/a81c34fd-98c4-4c67-5bf0-66b74673d276//AFNow Hurricane Harvey.jpg</thumbnail>
 	<video>	<item>	<job_id>1507231174415-3sxwct</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>
