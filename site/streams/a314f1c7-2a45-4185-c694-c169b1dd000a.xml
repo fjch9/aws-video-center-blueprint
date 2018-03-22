@@ -11,20 +11,20 @@
 	<categories>	<item>	<key>live</key>
 	<value_smv>Live</value_smv>
 	</item></categories>
-	<endpoint>	<item>	<key>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</key>
-	<value>Testing Stream</value>
-	<include>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></endpoint>
 	<thumbnail>/static-assets/images/videos/08aab291-432d-b1a8-fcc6-4a49743897c5/Leadership Short - Secretary of The Air Force - A Bomber For The 21st Century.jpg</thumbnail>
 	<description_html>&lt;p&gt;Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;</description_html>
 	<startDate_dt>2018-03-13T01:00:00.000Z</startDate_dt>
 	<endDate_dt>2018-03-24T01:00:00.000Z</endDate_dt>
 	<createdDate>2018-03-13T14:06:00.068Z</createdDate>
 	<createdDate_dt>2018-03-13T14:06:00.068Z</createdDate_dt>
-	<lastModifiedDate>2018-03-20T14:41:34.598Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-20T14:41:34.598Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-22T20:08:50.123Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-22T20:08:50.123Z</lastModifiedDate_dt>
 	<date_dt>2018-03-13T04:00:00.000Z</date_dt>
 	<startDate_dt_tz>Etc/GMT</startDate_dt_tz>
 	<endDate_dt_tz>Etc/GMT</endDate_dt_tz>
+	<origin>	<item>	<key>/site/origins/c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</key>
+	<value>Test Origin</value>
+	<include>/site/origins/c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></origin>
 </component>
