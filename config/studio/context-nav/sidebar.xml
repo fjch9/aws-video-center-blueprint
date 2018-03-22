@@ -81,13 +81,13 @@
                                     </params>
                                 </modulehook>
                                 
-                                <!-- Endpoints -->
+                                <!-- Origins -->
                                 <modulehook>
                                     <name>wcm-root-folder</name>
                                     <showDivider>true</showDivider>
                                     <params>
-                                        <label>Endpoints</label>
-                                        <path>/site/endpoints</path>
+                                        <label>Origins</label>
+                                        <path>/site/origins</path>
                                         <showRootItem>true</showRootItem>
                                     </params>
                                 </modulehook>
