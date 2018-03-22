@@ -8,11 +8,6 @@
 	<title_s tokenized="true">Test Event</title_s>
 	<file-name>40a221f3-48d5-abd8-9e87-eff8e41c549c.xml</file-name>
 	<summary_s>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</summary_s>
-	<endpoint>	<item>	<key>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</key>
-	<value>Testing Stream</value>
-	<include>/site/endpoints/6f7fd61f-9efc-a7d9-c68e-d1d3c670a4cd.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></endpoint>
 	<categories>	<item>	<key>live</key>
 	<value_smv>Live</value_smv>
 	</item></categories>
@@ -22,9 +17,14 @@
 	<endDate_dt>2018-03-21T20:43:00.000Z</endDate_dt>
 	<createdDate>2018-03-15T20:26:44.655Z</createdDate>
 	<createdDate_dt>2018-03-15T20:26:44.655Z</createdDate_dt>
-	<lastModifiedDate>2018-03-20T14:48:48.773Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-20T14:48:48.773Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-22T20:09:21.179Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-22T20:09:21.179Z</lastModifiedDate_dt>
 	<date_dt>2018-03-15T04:00:00.000Z</date_dt>
 	<startDate_dt_tz>America/Guatemala</startDate_dt_tz>
 	<endDate_dt_tz>America/Guatemala</endDate_dt_tz>
+	<origin>	<item>	<key>/site/origins/c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</key>
+	<value>Test Origin</value>
+	<include>/site/origins/c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></origin>
 </component>
