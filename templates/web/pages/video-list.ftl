@@ -28,6 +28,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div data-limit-video="${contentModel.videoPageSize}"></div>
                             <div id="results" class="row secBg">
                             </div>
                         </section>
@@ -77,10 +78,10 @@
                                 <h6><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h6>
                                 <div class="post-stats clearfix">
                                     <p class="video-list-start-end">
-                                        <i class="fa fa-clock-o"></i>
+                                        <i class="fa fa-clock-o icon-start-time"></i>
                                         <span>Start time: {{:~getDate(startDate_dt)}}</span>
                                         <br>
-                                        <i class="fa fa-clock-o"></i>
+                                        <i class="fa fa-clock-o icon-end-time"></i>
                                         <span>End time: {{:~getDate(endDate_dt)}}</span>
                                     </p>
                                     <div class="clearfix content-popular-icons">

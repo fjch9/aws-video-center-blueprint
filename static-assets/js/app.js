@@ -181,13 +181,13 @@ var renderVideoItem = function(video){
 			<div class="post-des">
 				<h6 class="video-title"><a href="${url}">${video.title_s}</a></h6>
 				<div class="post-stats clearfix">
-				<p class="">
+				<p>
 					<span>
-                    	<i class="fa fa-clock-o"></i> Start time: <span class="start-time">${getDate(video.startDate_dt)}</span>
+                    	<i class="fa fa-clock-o icon-start-time"></i> Start time: <span class="start-time">${getDate(video.startDate_dt)}</span>
                     </span>
                     <br>
 					<span>
-                    	<i class="fa fa-clock-o"></i> End time: <span class="end-time">${getDate(video.endDate_dt)}</span>
+                    	<i class="fa fa-clock-o icon-end-time"></i> End time: <span class="end-time">${getDate(video.endDate_dt)}</span>
                      </span> 
 				</p>
 				<div class="clearfix content-popular-icons">
@@ -217,8 +217,10 @@ var renderVideoItem = function(video){
 }
 
 var loadVideos = function(){
+	var limit = limitVideos();
+	var url_video = "/api/1/streams.json?limit="+limit;
     jQuery.ajax({
-        url: "/api/1/streams.json?limit=5",
+        url: url_video,
         dataType: "json",
         success: function(data){
             jQuery('.video-list').empty();
@@ -233,8 +235,10 @@ var loadVideos = function(){
 };
 
 function refreshVideos(){
+	var limit = limitVideos();
+	var url_video = "/api/1/streams.json?limit="+limit;
 	jQuery.ajax({
-        url: "/api/1/streams.json?limit=5",
+        url: url_video,
         dataType: "json",
         success: function(data){
             jQuery.each(data, function(index, element) {
@@ -286,12 +290,23 @@ function renderDates(){
 	});
 }
 
+function limitVideos(){
+	var limit
+	jQuery('[data-limit-video]').each(function(index, el) {
+		var $el = jQuery(el);
+		limit = $el.attr('data-limit-video');
+	});
+	return limit;
+}
+
 jQuery(document).ready(function() {
-    loadVideos();
+	if (typeof(limitVideos()) !== "undefined") {
+    	loadVideos();
 
-    window.setInterval(function(){
-        refreshVideos();	
-    },5000);
+	    window.setInterval(function(){
+	        refreshVideos();	
+	    },5000);
+	}
 
-    renderDates();
+	renderDates();
 });
