@@ -21,6 +21,7 @@
 					<a class="secondary-button list" href="#"><i class="fa fa-th-list"></i></a>
 				</div>
 			</div>
+			<div data-limit-video="${contentModel.maxVideosToDisplay}"></div>
 			<div class="tabs-content" data-tabs-content="${videoSectionId}">
 				<div class="tabs-panel is-active" id="new-all">
 					<div class="row list-group video-list">

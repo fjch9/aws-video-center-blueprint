@@ -42,6 +42,11 @@ img{
 	object-fit: cover;
 	-o-object-fit: cover;
 }
+
+.row{
+	max-width: 85rem;
+}
+
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
 	border-style: none !important;
 }
@@ -514,11 +519,19 @@ input[type=checkbox]:checked + .customLabel:before {
 	background: #fff;
 	position: relative;
 	z-index: 6;
+	.sticky-container{
+		height: 70px !important;
+	}
 	.top-bar{
 		padding: 0;
+		height: 70px;
 		.menu-text{
-			padding: 20px 0 !important;
+			padding: 10px 0 !important;
 			margin: 0 !important;
+
+			.main-logo{
+				width: 88px;
+			}
 		}
 		.menu > li{
 			padding-left: 30px;
@@ -527,7 +540,7 @@ input[type=checkbox]:checked + .customLabel:before {
 			padding: 0;
 		}
 		.menu > li:not(.menu-text) > a{
-			padding: 32px 0;
+			padding: 25px 0;
 			font-size: 13px;
 			border-bottom: 2px solid transparent;
 			text-transform: uppercase;
@@ -3957,7 +3970,7 @@ footer{
 				.video-detail{
 					padding-left: 15px;
 					.video-stats{
-						display: inherit;
+						display: inline-block;;
 						width: 50%;
 						span{
 							font-size: 12px;
@@ -5047,3 +5060,12 @@ fa-play-circle-o:before{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.icon-start-time{
+	color: #61ca37 !important;
+}
+
+.icon-end-time{
+	color: #FF0000 !important;
+}
+

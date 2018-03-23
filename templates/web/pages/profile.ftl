@@ -38,7 +38,7 @@
                                                 <i class="fa fa-heart"></i>
                                             </div>
                                             <div class="li-text float-left">
-                                                <p class="number-text">${favoriteVideos?size}</p>
+                                                <p class="number-text" data-favorites="${favoriteVideos?size}">${favoriteVideos?size}</p>
                                                 <span>favorites</span>
                                             </div>
                                         </li>
@@ -63,7 +63,7 @@
                                     <div class="widgetContent">
                                         <ul class="profile-overview">
                                             <li data-tab-profile="description" class="clearfix"><a class="active" href="#"><i class="fa fa-user"></i>about me</a></li>
-                                            <li data-tab-profile="favorites" class="clearfix"><a href="#"><i class="fa fa-heart"></i>Favorite Videos<span class="float-right">${favoriteVideos?size}</span></a></li>
+                                            <li data-tab-profile="favorites" class="clearfix"><a href="#"><i class="fa fa-heart"></i>Favorite Videos<span class="float-right" data-favorites="${favoriteVideos?size}" >${favoriteVideos?size}</span></a></li>
                                             <li data-tab-profile="settings" class="clearfix"><a href="#"><i class="fa fa-gears"></i>Profile Settings</a></li>
                                             <li class="clearfix"><a href="/crafter-security-logout"><i class="fa fa-sign-out"></i>Logout</a></li>
                                         </ul>
@@ -247,7 +247,7 @@
         </div>
         <div class="media-object-section media-video-content">
             <div class="video-content">
-                <h5><a href="{{:~getStreamUrl(id)}}}">{{:title_s}}</a></h5>
+                <h5><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h5>
                 <p>{{:summary_s}}</p>
             </div>
             <div class="video-detail clearfix">
@@ -258,7 +258,7 @@
                     <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
                 </div>
                 <div class="video-btns">
-                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i>Unfavorite</a>
+                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
                 </div>
             </div>
         </div>
@@ -283,7 +283,7 @@
                     <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
                 </div>
                 <div class="video-btns">
-                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i>Unfavorite</a>
+                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
                 </div>
             </div>
         </div>
@@ -296,6 +296,7 @@
     function loadResults(params) {
         jQuery.get('/api/1/profile/favorites.json', params, function(res){
             if(res.items) {
+                updatedCountVideos(res.total);
                 jQuery('#fav-list').html(jQuery.templates('#favoritesTemplate').render(res));
             }
         });
@@ -315,6 +316,14 @@
         }
 	});
 
+    function updatedCountVideos(count){
+        jQuery('[data-favorites]').each(function(index, el) {
+            var $el = jQuery(el);
+            var count_videos = $el.attr('data-favorites');
+            $el.text(count);
+        });
+    }
+
     jQuery(document).ready(function(){
         loadResults({});
         jQuery("body").on("click", ".unfav-button", function(evt){
@@ -330,6 +339,7 @@
             jQuery('[data-content=' + jQuery(this).data('tab-profile') + ']').removeClass('hide').siblings('[data-content]').addClass('hide');
             e.preventDefault();
         });
+
     });
 </script>
 <@studio.toolSupport />
