@@ -10,8 +10,8 @@
 	<landingPageUrl>/category</landingPageUrl>
 	<createdDate>2017-8-31T16:32:51.000Z</createdDate>
 	<createdDate_dt>2017-8-31T16:32:51.000Z</createdDate_dt>
-	<lastModifiedDate>2018-03-12T19:06:58.395Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-12T19:06:58.395Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-23T16:55:52.182Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-23T16:55:52.182Z</lastModifiedDate_dt>
 	<categories>	<item>	<key>entertainment</key>
 	<value_smv>Entertainment</value_smv>
 	</item>	<item>	<key>science</key>
@@ -24,7 +24,7 @@
 	<value_smv>Historical</value_smv>
 	</item>	<item>	<key>news</key>
 	<value_smv>News</value_smv>
-	</item>	<item>	<key>live</key>
-	<value_smv>Live</value_smv>
+	</item>	<item>	<key>event</key>
+	<value_smv>Event</value_smv>
 	</item></categories>
 </component>
