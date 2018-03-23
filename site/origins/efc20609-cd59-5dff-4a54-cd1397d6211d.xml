@@ -6,10 +6,10 @@
 	<objectId>efc20609-cd59-5dff-4a54-cd1397d6211d</objectId>
 	<file-name>efc20609-cd59-5dff-4a54-cd1397d6211d.xml</file-name>
 	<internal-name>video-test2</internal-name>
-	<url>http://streambox.fr/mse/hls.js-0.8.4/demo/?src=https%3A%2F%2F547f72e6652371c3.mediapackage.us-east-1.amazonaws.com%2Fout%2Fv1%2Fc62eb38c2e4b4bcf87fc7514bc85a75c%2Findex.m3u8&amp;enableStreaming=true&amp;autoRecoverError=true&amp;enableWorker=true&amp;dumpfMP4=false&amp;</url>
+	<url>https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/c62eb38c2e4b4bcf87fc7514bc85a75c/index.m3u8</url>
 	<encoding>application/x-mpegURL</encoding>
 	<createdDate>2018-03-23T15:00:20.053Z</createdDate>
 	<createdDate_dt>2018-03-23T15:00:20.053Z</createdDate_dt>
-	<lastModifiedDate>2018-03-23T15:00:20.053Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-23T15:00:20.053Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-23T15:02:49.542Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-23T15:02:49.542Z</lastModifiedDate_dt>
 </component>
