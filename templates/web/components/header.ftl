@@ -45,7 +45,7 @@
 							<div class="top-bar-left">
 								<ul class="menu">
 									<li class="menu-text">
-										<a href="index.html"><img src="${contentModel.logo}" alt="${contentModel.logoAltText}"></a>
+										<a href="index.html"><img class="main-logo"src="${contentModel.logo}" alt="${contentModel.logoAltText}"></a>
 									</li>
 								</ul>
 							</div>

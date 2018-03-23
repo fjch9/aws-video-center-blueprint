@@ -1,8 +1,8 @@
 <form>
-	<title>Stream Endpoint</title>
+	<title>Stream Origin</title>
 	<description></description>
 	<objectType>component</objectType>
-	<content-type>/component/stream-endpoint</content-type>
+	<content-type>/component/stream-origin</content-type>
 	<imageThumbnail>undefined</imageThumbnail>
 	<properties>		<property>
 			<name>display-template</name>
@@ -18,7 +18,7 @@
 		</property>
 	</properties>
 	<sections>		<section>
-			<title>Stream Endpoint Properties</title>
+			<title>Stream Origin Properties</title>
 			<description></description>
 			<defaultOpen>true</defaultOpen>
 			<fields>

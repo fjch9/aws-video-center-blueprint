@@ -21,20 +21,17 @@
 
 			<!-- full width Video ?start=${startTimestamp?c}-->
 			<#if streamStatus = "live">
-				<#assign completeUrl = "${endpoints[0].url}?=start${startTimestamp?c}">
+				<#assign completeUrl = "${origins[0].url}?=start${startTimestamp?c}">
 				<#assign videoSource = "${completeUrl}"/>
-				<#assign videoType = "${endpoints[0].encoding}"/>
+				<#assign videoType = "${origins[0].encoding}"/>
 				
 				<section class="fullwidth-single-video">
 						<!-- The site theme is breaking videojs styles -->
 						<!-- <div class="row"> -->
 								<!-- <div class="large-12 columns"> -->
 									<!-- <div class="flex-video widescreen"> -->
-											<div id="img-loading" class="show">
-												<img src="/static-assets/images/loading.gif">
-											</div>
-											<video id="example-video" class="video-js large-centered hide" controls>
-
+											<div class="img-loading show"></div>
+											<video id="example-video" class="video-js large-centered hide" preload="true" controls="true" autoplay>
 												<source src="${videoSource}" type="${videoType}"/>
 											</video>
 									<!-- </div> -->
@@ -80,8 +77,8 @@
 												
 												<p>
 													<#-- <span><i class="fa fa-clock-o"></i>${video.date_dt?date?string("MM/dd/yy")}</span> -->
-													<span><i class="fa fa-clock-o"></i> Start time: <span data-format-date="${video.startDate_dt?datetime?iso_utc}"></span></span> <br>
-													<span><i class="fa fa-clock-o"></i> End time: <span data-format-date="${video.endDate_dt?datetime?iso_utc}"></span></span> <br>	
+													<span><i class="fa fa-clock-o icon-start-time"></i> Start time: <span data-format-date="${video.startDate_dt?datetime?iso_utc}"></span></span> <br>
+													<span><i class="fa fa-clock-o icon-end-time"></i> End time: <span data-format-date="${video.endDate_dt?datetime?iso_utc}"></span></span> <br>	
 													<span><i class="fa fa-eye"></i>${viewCount}</span>
 													<span><i class="fa fa-thumbs-o-up"></i>${likeCount}</span>
 													<span><i class="fa fa-thumbs-o-down"></i>${dislikeCount}</span>
@@ -287,8 +284,10 @@
 				});
 
 				video.oncanplay = function() {
-					jQuery('#img-loading').addClass('hide');
+					jQuery('.img-loading').addClass('hide');
 				    jQuery('#example-video').removeClass('hide');
+				    video.muted = false;
+				    video.autoplay = true;
 				    video.play();
 				};
 				

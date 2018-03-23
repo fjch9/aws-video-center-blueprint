@@ -38,7 +38,7 @@
                                                 <i class="fa fa-heart"></i>
                                             </div>
                                             <div class="li-text float-left">
-                                                <p class="number-text">${favoriteVideos?size}</p>
+                                                <p class="number-text" data-favorites="${favoriteVideos?size}">${favoriteVideos?size}</p>
                                                 <span>favorites</span>
                                             </div>
                                         </li>
@@ -63,7 +63,7 @@
                                     <div class="widgetContent">
                                         <ul class="profile-overview">
                                             <li data-tab-profile="description" class="clearfix"><a class="active" href="#"><i class="fa fa-user"></i>about me</a></li>
-                                            <li data-tab-profile="favorites" class="clearfix"><a href="#"><i class="fa fa-heart"></i>Favorite Videos<span class="float-right">${favoriteVideos?size}</span></a></li>
+                                            <li data-tab-profile="favorites" class="clearfix"><a href="#"><i class="fa fa-heart"></i>Favorite Videos<span class="float-right" data-favorites="${favoriteVideos?size}" >${favoriteVideos?size}</span></a></li>
                                             <li data-tab-profile="settings" class="clearfix"><a href="#"><i class="fa fa-gears"></i>Profile Settings</a></li>
                                             <li class="clearfix"><a href="/crafter-security-logout"><i class="fa fa-sign-out"></i>Logout</a></li>
                                         </ul>
@@ -227,6 +227,44 @@
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
 {{for items}}
+{{if type == 'stream'}}
+<div class="profile-video">
+    <div class="media-object stack-for-small">
+        <div class="media-object-section media-img-content">
+            <div class="video-img">
+                <div class="live-icon">
+                    <img src="{{:thumbnail}}" alt="new video">
+                    <div class="tag-live {{if liveNow == false}}hide{{/if}}">
+                        <figcaption>
+                            <p class="live-text">Live</p>
+                        </figcaption>
+                    </div>
+                    <a href="{{:~getStreamUrl(id)}}}" class="hover-posts">
+                        <span><i class="fa fa-play-circle icon-circle"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="media-object-section media-video-content">
+            <div class="video-content">
+                <h5><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h5>
+                <p>{{:summary_s}}</p>
+            </div>
+            <div class="video-detail clearfix">
+                <div class="video-stats">
+                    <span><i class="fa fa-clock-o start-time"></i>Start time: {{:~getDate(startDate_dt)}}</span>
+                    <span><i class="fa fa-clock-o end-time"></i>End time: {{:~getDate(endDate_dt)}}</span>
+                    <br>
+                    <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
+                </div>
+                <div class="video-btns">
+                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{else type == 'video'}}
 <div class="profile-video">
     <div class="media-object stack-for-small">
         <div class="media-object-section media-img-content">
@@ -245,18 +283,20 @@
                     <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
                 </div>
                 <div class="video-btns">
-                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i>Unfavorite</a>
+                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{{/if}}
 {{/for}}
 </script>
 <script>
     function loadResults(params) {
         jQuery.get('/api/1/profile/favorites.json', params, function(res){
             if(res.items) {
+                updatedCountVideos(res.total);
                 jQuery('#fav-list').html(jQuery.templates('#favoritesTemplate').render(res));
             }
         });
@@ -265,8 +305,24 @@
 	jQuery.views.helpers({
 		videoUrl: function(id) {
 			return '${contentModel.videoLandingURL}?id=' + id;
-		}
+		},
+        getDate: function (date) {
+             var formatedStartDate = moment(date);
+             var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
+            return formatedStartDate.format('lll')+" "+currentTimeZone
+        },
+        getStreamUrl: function(id){
+            return "/live?id="+id
+        }
 	});
+
+    function updatedCountVideos(count){
+        jQuery('[data-favorites]').each(function(index, el) {
+            var $el = jQuery(el);
+            var count_videos = $el.attr('data-favorites');
+            $el.text(count);
+        });
+    }
 
     jQuery(document).ready(function(){
         loadResults({});
@@ -283,6 +339,7 @@
             jQuery('[data-content=' + jQuery(this).data('tab-profile') + ']').removeClass('hide').siblings('[data-content]').addClass('hide');
             e.preventDefault();
         });
+
     });
 </script>
 <@studio.toolSupport />

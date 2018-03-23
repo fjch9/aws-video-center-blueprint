@@ -7,7 +7,7 @@
 	<file-name>streams-section.xml</file-name>
 	<folder-name/>
 	<internal-name>Streams Section</internal-name>
-	<title_s>Live Events</title_s>
+	<title_s>Events</title_s>
 	<maxVideosToDisplay>4</maxVideosToDisplay>
 	<videoLandingUrl>/video</videoLandingUrl>
 	<scripts>	<item>	<key>/scripts/components/streams.groovy</key>

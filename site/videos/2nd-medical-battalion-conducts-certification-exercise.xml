@@ -12,7 +12,6 @@
 	<categories>	<item>	<key>people</key>
 	<value_smv>People</value_smv>
 	</item></categories>
-	<featured>false</featured>
 	<thumbnail>/static-assets/images/videos/a00067ab-5a1a-fc8b-55a6-2b2091869672//2nd Medical Battalion conducts certification exercise.jpg</thumbnail>
 	<video>	<item>	<job_id>1507231067927-ub6ogj</job_id>
 	<output_bucket>use1-crafter-videocenter-out</output_bucket>
