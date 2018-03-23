@@ -16,14 +16,14 @@
 	<value>Historical</value>
 	</item>	<item>	<key>news</key>
 	<value>News</value>
-	</item>	<item>	<key>live</key>
-	<value>Live</value>
+	</item>	<item>	<key>event</key>
+	<value>Event</value>
 	</item></items>
 	<file-name>categories.xml</file-name>
 	<folder-name/>
 	<internal-name>Categories</internal-name>
 	<createdDate>2017-8-25T16:11:38.000Z</createdDate>
 	<createdDate_dt>2017-8-25T16:11:38.000Z</createdDate_dt>
-	<lastModifiedDate>2018-03-12T19:05:36.279Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-12T19:05:36.279Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-23T16:27:01.763Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-23T16:27:01.763Z</lastModifiedDate_dt>
 </component>
