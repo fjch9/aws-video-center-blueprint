@@ -37,7 +37,6 @@
     </div>
     <div class="top-button">
         <ul class="menu">
-        	<!--
             <#if !profile??>
             <li>
                 <a href="/register">Register</a>
@@ -53,7 +52,6 @@
                 <a href="/crafter-security-logout">Logout</a>
             </li>
             </#if>
-            -->
         </ul>
     </div>
 </div>
