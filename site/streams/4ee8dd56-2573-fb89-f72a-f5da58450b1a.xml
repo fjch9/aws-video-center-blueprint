@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>4ee8</objectGroupId>
+	<objectId>4ee8dd56-2573-fb89-f72a-f5da58450b1a</objectId>
+	<file-name>4ee8dd56-2573-fb89-f72a-f5da58450b1a.xml</file-name>
+	<internal-name>video-test</internal-name>
+	<title_s tokenized="true">video-test</title_s>
+	<summary_s>video-test</summary_s>
+	<categories>	<item>	<key>entertainment</key>
+	<value_smv>Entertainment</value_smv>
+	</item></categories>
+	<origin>	<item>	<key>/site/origins/efc20609-cd59-5dff-4a54-cd1397d6211d.xml</key>
+	<value>video-test2</value>
+	<include>/site/origins/efc20609-cd59-5dff-4a54-cd1397d6211d.xml</include>
+	<disableFlattening>false</disableFlattening>
+	</item></origin>
+	<thumbnail>/static-assets/images/videos/3fc660f7-4f81-92a1-c94e-f21d97d4cef9/D-Day to V-E Day.jpg</thumbnail>
+	<description_html>&lt;p&gt;video-test&lt;/p&gt;</description_html>
+	<startDate_dt>2018-03-24T03:56:00.000Z</startDate_dt>
+	<endDate_dt>2018-03-24T03:57:00.000Z</endDate_dt>
+	<createdDate>2018-03-24T03:53:41.032Z</createdDate>
+	<createdDate_dt>2018-03-24T03:53:41.032Z</createdDate_dt>
+	<lastModifiedDate>2018-03-24T03:53:41.032Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-24T03:53:41.032Z</lastModifiedDate_dt>
+	<date_dt>2018-03-23T04:00:00.000Z</date_dt>
+	<startDate_dt_tz>America/Guatemala</startDate_dt_tz>
+	<endDate_dt_tz>America/Guatemala</endDate_dt_tz>
+</component>
