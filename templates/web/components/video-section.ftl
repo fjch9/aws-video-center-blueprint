@@ -12,26 +12,29 @@
 			</div>
 		</div>
 	</div>
+	<div data-json-video="${contentModel.refreshUrl}"></div>
+	<div data-limit-video="${contentModel.maxVideosToDisplay}"></div>
 	<div class="row">
 		<div class="large-12 columns">
+			<h3 id="message-no-video" class="text-center hide">${contentModel.emptyMessage}</h3>
+		</div>
+		<div class="large-12 columns">
 			<div class="row column head-text clearfix">
-				<div class="grid-system pull-right show-for-large">
+				<div id="stream-live-secction" class="grid-system pull-right show-for-large">
 					<a class="secondary-button grid-default" href="#"><i class="fa fa-th"></i></a>
 					<a class="secondary-button current grid-medium" href="#"><i class="fa fa-th-large"></i></a>
 					<a class="secondary-button list" href="#"><i class="fa fa-th-list"></i></a>
 				</div>
 			</div>
-			<div data-limit-video="${contentModel.maxVideosToDisplay}"></div>
-			<div class="tabs-content" data-tabs-content="${videoSectionId}">
+			<div id="stream-section" class="tabs-content" data-tabs-content="${videoSectionId}">
 				<div class="tabs-panel is-active" id="new-all">
 					<div class="row list-group video-list">
-						
 					</div>
 				</div>
 			</div>
-			<div class="text-center row-btn">
+			<#-- <div class="text-center row-btn">
 				<a class="button radius" href="${contentModel.allVideosUrl}">View All</a>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
@@ -57,7 +60,7 @@
 						<a class="secondary-button list" href="#"><i class="fa fa-th-list"></i></a>
 					</div>
 				</div>
-				<div class="tabs-content" data-tabs-content="${videoSectionId}">
+				<div id="${videoSectionId}" class="tabs-content" data-tabs-content="${videoSectionId}">
 					<div class="tabs-panel is-active" id="new-all">
 						<div class="row list-group">
 							<#list videos as video>
@@ -100,9 +103,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="text-center row-btn">
+			<#-- 	<div class="text-center row-btn">
 					<a class="button radius" href="${contentModel.allVideosUrl}">View All</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>

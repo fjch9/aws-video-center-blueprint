@@ -50,6 +50,7 @@ jQuery(document).ready(function(jQuery){
 			jQuery('.grid-system > a').removeClass("current");
 			jQuery(this).addClass("current");
 		}
+		newOrder();
 	});
 
 	//back to top
@@ -216,31 +217,43 @@ var renderVideoItem = function(video){
 	`
 }
 
+var json_video = urlVideos();
+
 var loadVideos = function(){
 	var limit = limitVideos();
-	var url_video = "/api/1/streams.json?limit="+limit;
+	let url_video = urlVideos()+"?limit="+limit;
+	//urlVideos()+"?limit="+limit;
     jQuery.ajax({
         url: url_video,
         dataType: "json",
         success: function(data){
-            jQuery('.video-list').empty();
-            jQuery.each(data, function(index, element) {
-            jQuery('.video-list').append(renderVideoItem(element));
-                if(element.liveNow){
-                    jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
-                }
-            });
-        }
-    });
+        	if(data.length===0){
+        		jQuery('#message-no-video').removeClass('hide');
+        		jQuery('#stream-live-secction').addClass('hide');
+        	}else{
+        		jQuery('.video-list').empty();
+        		jQuery.each(data, function(index, element) {
+        			jQuery('.video-list').append(renderVideoItem(element));
+	        			if(element.liveNow){
+	        				jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
+	        			}
+        			});
+        		}
+        	}
+    	});
 };
 
 function refreshVideos(){
 	var limit = limitVideos();
-	var url_video = "/api/1/streams.json?limit="+limit;
+	let url_video = "/api/1/streams.json?limit="+limit;
 	jQuery.ajax({
         url: url_video,
         dataType: "json",
         success: function(data){
+        	if(data.length===0){
+        		jQuery('#message-no-video').removeClass('hide');
+        		jQuery('#stream-live-secction').addClass('hide');
+        	} 
             jQuery.each(data, function(index, element) {
             	var domElement = document.getElementById("video-"+element.id)
             	if (domElement) {
@@ -299,7 +312,57 @@ function limitVideos(){
 	return limit;
 }
 
-jQuery(document).ready(function() {
+function urlVideos(){
+	var urlJson
+	jQuery('[data-json-video]').each(function(index, el) {
+		var $el = jQuery(el);
+		urlJson = $el.attr('data-json-video');
+	});
+	return urlJson;
+}
+
+function newOrder(){
+	var mostViewed = jQuery('#most-viewed-videos-section').find('div.item');
+	var newestVideos = jQuery('#newest-videos-section').find('div.item');
+	var streamVideos = jQuery('#stream-section').find('div.item');
+
+	if(mostViewed.length % 2 == 1){
+		var a =jQuery('#most-viewed-videos-section').find('div.item:last-child');
+		a.addClass('medium-offset-3');
+		if(a.hasClass('list')){
+			a.removeClass('medium-offset-3');
+		}
+		if(a.hasClass('grid-default')){
+			a.removeClass('medium-offset-3');
+		}
+	} 
+
+	if(newestVideos.length % 2 == 1){
+		var a =jQuery('#newest-videos-section').find('div.item:last-child');
+		a.addClass('medium-offset-3');
+		if(a.hasClass('list')){
+			a.removeClass('medium-offset-3');
+		}
+		if(a.hasClass('grid-default')){
+			a.removeClass('medium-offset-3');
+		}
+	}
+
+	if(streamVideos.length % 2 == 1){
+		var a =jQuery('#stream-section').find('div.item:last-child');
+		a.addClass('medium-offset-3');
+		if(a.hasClass('list')){
+			a.removeClass('medium-offset-3');
+		}
+		if(a.hasClass('grid-default')){
+			a.removeClass('medium-offset-3');
+		}
+	}
+}
+
+
+jQuery(document).ready(function() { 
+	newOrder();
 	if (typeof(limitVideos()) !== "undefined") {
     	loadVideos();
 
