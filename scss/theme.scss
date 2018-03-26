@@ -5000,8 +5000,11 @@ article.page-content{
 }
 
 video#example-video {
-    width: auto;
+    width: 50%;
     height: auto;
+    @media screen and (max-width: 992px){
+    	width: 90%;
+    }
 }
 
 .icons-popular{
@@ -5022,7 +5025,10 @@ fa-play-circle-o:before{
 }
 
 .column.end:last-child:last-child, .end.columns:last-child:last-child {
-    float: left; }
+    // float: left; 
+    // position: relative;
+    // left: 25%;
+}
 
 #countdown2{
 	height: auto;

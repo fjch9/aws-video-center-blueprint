@@ -166,6 +166,26 @@
             res.page = page
             jQuery('#results').html(jQuery.templates('#resultsTemplate').render(res));
             jQuery('.tabs-content .item').matchHeight();
+            var totalVideos = jQuery('.tabs-content .item').matchHeight();
+            console.log(totalVideos.length);
+            if(totalVideos.length % 2 == 1){
+                totalVideos.last().addClass('medium-offset-3');
+                jQuery('.grid-medium').on('click', function(event) {
+                event.preventDefault();
+                totalVideos.last().addClass('medium-offset-3');
+                });
+                
+                jQuery('.list').on('click', function(event) {
+                    event.preventDefault();
+                    totalVideos.last().removeClass('medium-offset-3');
+                });
+
+                jQuery('.grid-default').on('click', function(event) {
+                    event.preventDefault();
+                    totalVideos.last().removeClass('medium-offset-3');
+                });
+            }
+            
         });
     }
     function loadPage() {
@@ -189,6 +209,11 @@
 			return "/live?id="+id
 		}
     });
+
+    function newOrderAllVideos(){
+        
+    }
+
     jQuery(document).ready(function(){
         loadResults({
             q: '${q}',
@@ -211,6 +236,7 @@
             page++;
             loadPage()
         });
+        newOrderAllVideos();
     });
 </script>
 <@studio.toolSupport />

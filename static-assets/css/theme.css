@@ -3760,8 +3760,11 @@ article.page-content {
   color: white !important; }
 
 video#example-video {
-  width: auto;
+  width: 50%;
   height: auto; }
+  @media screen and (max-width: 992px) {
+    video#example-video {
+      width: 90%; } }
 
 .icons-popular {
   display: inline-flex; }
@@ -3775,9 +3778,6 @@ fa-play-circle-o:before {
 
 .content-popular-icons {
   width: 100%; }
-
-.column.end:last-child:last-child, .end.columns:last-child:last-child {
-  float: left; }
 
 #countdown2 {
   height: auto; }
