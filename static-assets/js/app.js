@@ -47,7 +47,7 @@ jQuery(document).ready(function(jQuery){
 		// Match the height of the items
 		jQuery(selector).matchHeight();
 		jQuery(this).addClass("current");
-		newOrder();
+		formatVideoSections();
 	});
 
 	//back to top
@@ -239,7 +239,7 @@ var loadVideos = function(){
         				jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
         			}
         		});
-				newOrder();
+				formatVideoSections();
         	}
         }
     });
@@ -277,7 +277,7 @@ function refreshVideos(){
             		jQuery('.video-list').append(renderVideoItem(jQuery('.video-list'), element));
             	}
             });
-			newOrder();
+			formatVideoSections();
 
            jQuery('div[id^="video-"]').each(function(i, element) {
            		var videoId = element.id.substring('#video-'.length - 1);
@@ -324,43 +324,20 @@ function urlVideos(){
 	return urlJson;
 }
 
-function newOrder(){
-	var mostViewed = jQuery('#most-viewed-videos-section').find('div.item');
-	var newestVideos = jQuery('#newest-videos-section').find('div.item');
-	var streamVideos = jQuery('#stream-section').find('div.item');
+function formatVideoSections(){
+	['most-viewed-videos-section', 'newest-videos-section', 'stream-section', 'results'].forEach(function(id) {
+		items = jQuery('#' + id).find('div.item');
 
-	if(mostViewed.length % 2 == 1){
-		var a =jQuery('#most-viewed-videos-section').find('div.item:last-child');
-		prefixClass(a, 'medium-offset-3');
-		if(a.hasClass('list')){
-			a.removeClass('medium-offset-3');
+		if(items.length % 2 == 1) {
+			var className = 'medium-offset-3';
+			var item = items.last();
+			if(item.hasClass('list') || item.hasClass('grid-default')) {
+				item.removeClass(className)
+			} else if(!item.hasClass(className)) {
+		    	item.attr('class', className + ' ' + items.last().attr('class'));
+		    }
 		}
-		if(a.hasClass('grid-default')){
-			a.removeClass('medium-offset-3');
-		}
-	}
-
-	if(newestVideos.length % 2 == 1){
-		var a =jQuery('#newest-videos-section').find('div.item:last-child');
-		prefixClass(a, 'medium-offset-3');
-		if(a.hasClass('list')){
-			a.removeClass('medium-offset-3');
-		}
-		if(a.hasClass('grid-default')){
-			a.removeClass('medium-offset-3');
-		}
-	}
-
-	if(streamVideos.length % 2 == 1){
-		var a =jQuery('#stream-section').find('div.item:last-child');
-		prefixClass(a, 'medium-offset-3');
-		if(a.hasClass('list')){
-			a.removeClass('medium-offset-3');
-		}
-		if(a.hasClass('grid-default')){
-			a.removeClass('medium-offset-3');
-		}
-	}
+	});
 }
 
 /* prevent side effects to grid system */
