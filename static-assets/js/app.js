@@ -38,18 +38,15 @@ jQuery(document).ready(function(jQuery){
 		var selector = jQuery(this).parent().parent().next().find('div.item');
 		var classStr = jQuery(selector).attr('class'),
 				lastClass = classStr.substr(classStr.lastIndexOf(' ') + 1);
+		jQuery('.grid-system > a').removeClass("current");
 		jQuery(selector)
 			// Remove last class
 			.removeClass(lastClass)
 			// Put back .item class + the clicked elements class with the added prefix "group-item-".
-			.addClass('item group-item-' + jQuery(this).attr('class'));
+			.addClass(getGridSystemClasses(jQuery(this)));
 		// Match the height of the items
 		jQuery(selector).matchHeight();
-		if(jQuery(this).hasClass("current")!== true)
-		{
-			jQuery('.grid-system > a').removeClass("current");
-			jQuery(this).addClass("current");
-		}
+		jQuery(this).addClass("current");
 		newOrder();
 	});
 
@@ -161,12 +158,16 @@ function getDate(videoDate){
 	return formatedStartDate.format('lll')+" "+currentTimeZone
 }
 
-var renderVideoItem = function(video){
+var getGridSystemClasses = function(gridSystemItem) {
+	return 'item group-item-' + gridSystemItem.attr('class');
+}
+
+var renderVideoItem = function(parent, video){
 	var url = `/live?id=${video.id}`;
-	var startDate = new Date(video.startDate_dt);
+	var classNames = getGridSystemClasses(parent.parent().parent().parent().find('.grid-system > .current'))
 
 	return `  
-	<div id="video-${video.id}" class="item large-4 medium-6 columns grid-medium">
+	<div id="video-${video.id}" class="${classNames}">
 			<div class="post thumb-border">
 				<div class="post-thumb">
 					<img src="${video.thumbnail}">
@@ -233,14 +234,15 @@ var loadVideos = function(){
         	}else{
         		jQuery('.video-list').empty();
         		jQuery.each(data, function(index, element) {
-        			jQuery('.video-list').append(renderVideoItem(element));
-	        			if(element.liveNow){
-	        				jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
-	        			}
-        			});
-        		}
+        			jQuery('.video-list').append(renderVideoItem(jQuery('.video-list'), element));
+        			if(element.liveNow){
+        				jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
+        			}
+        		});
+				newOrder();
         	}
-    	});
+        }
+    });
 };
 
 function refreshVideos(){
@@ -272,9 +274,10 @@ function refreshVideos(){
                     }
                     
             	} else {
-            		jQuery('.video-list').append(renderVideoItem(element));
+            		jQuery('.video-list').append(renderVideoItem(jQuery('.video-list'), element));
             	}
             });
+			newOrder();
 
            jQuery('div[id^="video-"]').each(function(i, element) {
            		var videoId = element.id.substring('#video-'.length - 1);
@@ -328,18 +331,18 @@ function newOrder(){
 
 	if(mostViewed.length % 2 == 1){
 		var a =jQuery('#most-viewed-videos-section').find('div.item:last-child');
-		a.addClass('medium-offset-3');
+		prefixClass(a, 'medium-offset-3');
 		if(a.hasClass('list')){
 			a.removeClass('medium-offset-3');
 		}
 		if(a.hasClass('grid-default')){
 			a.removeClass('medium-offset-3');
 		}
-	} 
+	}
 
 	if(newestVideos.length % 2 == 1){
 		var a =jQuery('#newest-videos-section').find('div.item:last-child');
-		a.addClass('medium-offset-3');
+		prefixClass(a, 'medium-offset-3');
 		if(a.hasClass('list')){
 			a.removeClass('medium-offset-3');
 		}
@@ -350,7 +353,7 @@ function newOrder(){
 
 	if(streamVideos.length % 2 == 1){
 		var a =jQuery('#stream-section').find('div.item:last-child');
-		a.addClass('medium-offset-3');
+		prefixClass(a, 'medium-offset-3');
 		if(a.hasClass('list')){
 			a.removeClass('medium-offset-3');
 		}
@@ -360,14 +363,19 @@ function newOrder(){
 	}
 }
 
+/* prevent side effects to grid system */
+function prefixClass(item, className) {
+	if(!item.hasClass(className)) {
+    	item.attr('class', className + ' ' + item.attr('class'));
+    }
+}
 
 jQuery(document).ready(function() { 
-	newOrder();
-	if (typeof(limitVideos()) !== "undefined") {
+	if (typeof(urlVideos()) !== "undefined") {
     	loadVideos();
 
 	    window.setInterval(function(){
-	        refreshVideos();	
+	        refreshVideos();
 	    },5000);
 	}
 
