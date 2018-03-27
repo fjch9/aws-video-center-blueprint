@@ -167,7 +167,7 @@ var renderVideoItem = function(parent, video){
 	var classNames = getGridSystemClasses(parent.parent().parent().parent().find('.grid-system > .current'))
 
 	return `  
-	<div id="video-${video.id}" class="${classNames}">
+	<div id="video-${video.id}" class="large-4 medium-6 columns ${classNames}">
 			<div class="post thumb-border">
 				<div class="post-thumb">
 					<img src="${video.thumbnail}">
