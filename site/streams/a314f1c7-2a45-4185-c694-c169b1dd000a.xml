@@ -17,14 +17,14 @@
 	<endDate_dt>2018-03-30T01:00:00.000Z</endDate_dt>
 	<createdDate>2018-03-13T14:06:00.068Z</createdDate>
 	<createdDate_dt>2018-03-13T14:06:00.068Z</createdDate_dt>
-	<lastModifiedDate>2018-03-26T20:08:55.239Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-26T20:08:55.239Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-28T18:25:14.381Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-28T18:25:14.381Z</lastModifiedDate_dt>
 	<date_dt>2018-03-13T04:00:00.000Z</date_dt>
 	<startDate_dt_tz>Etc/GMT</startDate_dt_tz>
 	<endDate_dt_tz>Etc/GMT</endDate_dt_tz>
-	<origin>	<item>	<key>/site/origins/c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</key>
-	<value>Test Origin</value>
-	<include>/site/origins/c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</include>
+	<origin>	<item>	<key>/site/origins/712a50e2-abcf-63dd-6698-b7d010e172ed.xml</key>
+	<value>Media Live Sample</value>
+	<include>/site/origins/712a50e2-abcf-63dd-6698-b7d010e172ed.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></origin>
 	<tags>	<item>	<value_smv>event</value_smv>
