@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream-origin</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>712a</objectGroupId>
+	<objectId>712a50e2-abcf-63dd-6698-b7d010e172ed</objectId>
+	<file-name>712a50e2-abcf-63dd-6698-b7d010e172ed.xml</file-name>
+	<internal-name>Media Live Sample</internal-name>
+	<url>https://cf98fa7b2ee4450e.mediapackage.us-east-1.amazonaws.com/out/v1/c864ef00ae0a48728e0e4827e80190e6/index.m3u8</url>
+	<encoding>application/x-mpegURL</encoding>
+	<createdDate>2018-03-28T18:24:54.673Z</createdDate>
+	<createdDate_dt>2018-03-28T18:24:54.673Z</createdDate_dt>
+	<lastModifiedDate>2018-03-28T18:24:54.673Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-28T18:24:54.673Z</lastModifiedDate_dt>
+</component>
