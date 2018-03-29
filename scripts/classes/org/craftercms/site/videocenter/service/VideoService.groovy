@@ -43,17 +43,15 @@ class VideoService {
     
     def mostViews = db.videoViews.find().limit(limit).sort(count: -1)
     if (mostViews) {
-      mostViews.each {singleVideoViews ->
+      mostViews.each { singleVideoViews ->
         def videoId = singleVideoViews.videoId
-        def videoPath = "/site/videos/${videoId}.xml"
-        def videoItem = siteItemService.getSiteItem(videoPath)
+        def videoItem = resolveVideoFromId(videoId)
         
-        if (videoItem) {
-          def video = [:]
+        if (!videoItem) {
+          log.warn("Video ${videoPath} not found")
+        }	else if (videoItem.type == "video") {
           videos << processItem(videoItem)
-          }	else {
-            log.warn("Video ${videoPath} not found")
-          }
+        }
       }
     }
       
@@ -144,12 +142,16 @@ class VideoService {
   
   def resolveVideosFromIds(ids) {
     ids.collect { videoId ->
-      def item = siteItemService.getSiteItem("/site/videos/${videoId}.xml")
-      if(!item) {
-        item = siteItemService.getSiteItem("/site/streams/${videoId}.xml")
-      }
-      return processItem(item)
+      return resolveVideoFromId(videoId)
     }
+  }
+
+  def resolveVideoFromId(id) {
+    def item = siteItemService.getSiteItem("/site/videos/${id}.xml")
+    if(!item) {
+      item = siteItemService.getSiteItem("/site/streams/${id}.xml")
+    }
+    return item ? processItem(item) : null
   }
   
   def processItem(videoItem) {
