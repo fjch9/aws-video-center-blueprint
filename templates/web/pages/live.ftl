@@ -21,7 +21,7 @@
 
 			<!-- full width Video ?start=${startTimestamp?c}-->
 			<#if streamStatus = "live">
-				<#assign completeUrl = "${origins[0].url}?=start${startTimestamp?c}">
+				<#assign completeUrl = "${origins[0].url}?start=${startTimestamp?c}">
 				<#assign videoSource = "${completeUrl}"/>
 				<#assign videoType = "${origins[0].encoding}"/>
 				
