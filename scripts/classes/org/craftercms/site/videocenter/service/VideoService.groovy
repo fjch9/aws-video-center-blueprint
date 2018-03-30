@@ -48,9 +48,9 @@ class VideoService {
         def videoItem = resolveVideoFromId(videoId)
         
         if (!videoItem) {
-          log.warn("Video ${videoPath} not found")
+          log.warn("Video ID ${videoId} not found")
         }	else if (videoItem.type == "video") {
-          videos << processItem(videoItem)
+          videos << videoItem
         }
       }
     }
@@ -132,7 +132,7 @@ class VideoService {
         if (videoItem) {
           videos << processItem(videoItem)
         }	else {
-          log.warn("Video ${url} not found")
+          log.warn("Video Item ${url} not found")
         }
       }
     }
