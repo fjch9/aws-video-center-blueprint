@@ -84,7 +84,7 @@
 					<properties>
 						<property>
 							<name>size</name>
-							<value>50</value>
+							<value>100</value>
 							<type>int</type>
 						</property>
 						<property>
