@@ -19,12 +19,7 @@
 
             <@macros.breadcrumb addMargin = false />
 
-			<!-- full width Video ?start=${startTimestamp?c}-->
-			<#if streamStatus = "live">
-				<#assign completeUrl = "${origins[0].url}?start=${startTimestamp?c}&end=${endTimestamp?c}">
-				<#assign videoSource = "${completeUrl}"/>
-				<#assign videoType = "${origins[0].encoding}"/>
-				
+			<#if streamStatus = "live">				
 				<section class="fullwidth-single-video">
 						<!-- The site theme is breaking videojs styles -->
 						<!-- <div class="row"> -->
