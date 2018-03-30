@@ -29,6 +29,6 @@
 	</item></recentVideosWidget>
 	<logoAltText>footer logo</logoAltText>
 	<copyrightText>2017 © Crafter Software Corporation</copyrightText>
-	<logo>/static-assets/images/footerlogo.png</logo>
+	<logo>/static-assets/images/aws-elemental-video-center-logo-small.png</logo>
 	<aboutTitle>About Crafter Video Center</aboutTitle>
 </component>
