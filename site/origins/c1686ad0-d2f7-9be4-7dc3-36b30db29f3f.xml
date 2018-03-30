@@ -5,11 +5,13 @@
 	<objectGroupId>c168</objectGroupId>
 	<objectId>c1686ad0-d2f7-9be4-7dc3-36b30db29f3f</objectId>
 	<file-name>c1686ad0-d2f7-9be4-7dc3-36b30db29f3f.xml</file-name>
-	<internal-name>Dog Park Loop</internal-name>
-	<url>https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/c62eb38c2e4b4bcf87fc7514bc85a75c/index.m3u8</url>
+	<internal-name>Test Origin</internal-name>
+	<url>https://cf98fa7b2ee4450e.mediapackage.us-east-1.amazonaws.com/out/v1/c864ef00ae0a48728e0e4827e80190e6/index.m3u8</url>
 	<encoding>application/x-mpegURL</encoding>
 	<createdDate>2018-03-22T20:08:28.434Z</createdDate>
 	<createdDate_dt>2018-03-22T20:08:28.434Z</createdDate_dt>
-	<lastModifiedDate>2018-03-28T18:24:40.989Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-28T18:24:40.989Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-30T16:56:40.962Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-30T16:56:40.962Z</lastModifiedDate_dt>
+	<segmentSize>6</segmentSize>
+	<playlistDuration>60</playlistDuration>
 </component>

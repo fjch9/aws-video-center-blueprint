@@ -11,8 +11,6 @@ if (videoId) {
     video = siteItemService.getSiteItem("/site/streams/${videoId}.xml")
     if (video) {
       templateModel.video = video
-      templateModel.startTimestamp = video.startDate_dt.time / 1000 as int
-      templateModel.origins = video.origin.item.collect { siteItemService.getSiteItem(it.key.text) }
     } else {
     	throw new HttpStatusCodeException(404, "Video ${videoId} not found")
     }
@@ -20,8 +18,27 @@ if (videoId) {
 	throw new HttpStatusCodeException(400, "No param 'id' provided in request")
 }
 
+def streamStatus = videoService.getStreamStatus(video)
+templateModel.streamStatus = streamStatus
 
-templateModel.streamStatus = videoService.getStreamStatus(video)
+def origin = siteItemService.getSiteItem(video.origin.item.key.text)
+templateModel.videoSource = origin.url.text
+templateModel.videoType = origin.encoding.text
+
+def getEpochSeconds(Date date) {
+  return date.time / 1000 as int
+}
+def hasPassed(int timestamp, origin) {
+  return getEpochSeconds(new Date()) > timestamp + (origin.segmentSize.text as int) + (origin.playlistDuration.text as int)
+}
+def startTimestamp = getEpochSeconds(video.startDate_dt)
+def endTimestamp = getEpochSeconds(video.endDate_dt)
+if ((streamStatus == "live" && hasPassed(startTimestamp, origin)) || streamStatus == "finished") {
+  templateModel.videoSource += "?start=" + (startTimestamp as String)
+}
+if (streamStatus == "finished" && hasPassed(endTimestamp, origin)) {
+  templateModel.videoSource += "&end=" + (endTimestamp as String)
+}
 
 def views = videoService.updateVideoViewCount(videoId)
 if (views) {
