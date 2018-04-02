@@ -9,11 +9,10 @@
 	<internal-name>Global Header</internal-name>
 	<createdDate>2017-8-24T17:46:54.000Z</createdDate>
 	<createdDate_dt>2017-8-24T17:46:54.000Z</createdDate_dt>
-	<lastModifiedDate>2017-10-30T21:49:38.731Z</lastModifiedDate>
-	<lastModifiedDate_dt>2017-10-30T21:49:38.731Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-03-30T21:57:51.047Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-03-30T21:57:51.047Z</lastModifiedDate_dt>
 	<logoAltText>logo</logoAltText>
-	<logo>/static-assets/images/aws-elemental-video-center-logo.png</logo>
-	<smallLogo>/static-assets/images/aws-elemental-video-center-logo-small.png</smallLogo>
+	<logo>/static-assets/images/logo.svg</logo>
 	<socialMediaLinks>	<item>	<key>/site/components/social-media-links/global-social-media-links.xml</key>
 	<value>Global Social Media Links</value>
 	<include>/site/components/social-media-links/global-social-media-links.xml</include>
