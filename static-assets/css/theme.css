@@ -541,7 +541,7 @@ input[type=checkbox]:checked + .customLabel:before {
   height: 70px;
 }
 #navBar .top-bar .menu-text {
-  padding: 10px 0 !important;
+  padding: 5px 0 !important;
   margin: 0 !important;
 }
 #navBar .top-bar .menu-text .main-logo {
