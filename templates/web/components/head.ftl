@@ -17,11 +17,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Crafter Video Center</title>
 		<link rel="stylesheet" href="/static-assets/css/app.css">
-		<link rel="stylesheet" href="/static-assets/css/theme.css">
+		<link rel="stylesheet" href="/static-assets/css/theme-min.css">
 		<link rel="stylesheet" href="/static-assets/css/font-awesome.min.css">
 		<link href='/static-assets/css/google-font-open-sans.css' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="/static-assets/layerslider/css/layerslider.css">
-		<link rel="stylesheet" href="/static-assets/css/responsive.css">
-		<link rel="stylesheet" href="/static-assets/css/timeTo.css">
+		<link rel="stylesheet" href="/static-assets/css/responsive-min.css">
+		<link rel="stylesheet" href="/static-assets/css/timeTo-min.css">
 
 </head>

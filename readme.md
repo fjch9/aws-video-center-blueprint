@@ -9,5 +9,6 @@ To update styles you need to run the following command and then change the corre
 **Example:**
 
 ```
-sass --watch scss/theme.scss:static-assets/css/theme.css
+sass sources/scss/theme.scss static-assets/css/theme-min.css -s compressed
+sass sources/css/responsive.css static-assets/css/responsive-min.css -s compressed
 ```
