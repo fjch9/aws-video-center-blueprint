@@ -23,5 +23,6 @@
 		<link rel="stylesheet" type="text/css" href="/static-assets/layerslider/css/layerslider.css">
 		<link rel="stylesheet" href="/static-assets/css/responsive-min.css">
 		<link rel="stylesheet" href="/static-assets/css/timeTo-min.css">
+        <link rel="stylesheet" href="/static-assets/css/nav-min.css">
 
 </head>
