@@ -533,8 +533,8 @@ input[type=checkbox]:checked + .customLabel:before {
   height: 70px !important;
 }
 #navBar .sticky-container .title-bar-title img {
-  max-height: 40px;
-  max-width: 350px;
+  object-fit: contain;
+  height: 40px;
 }
 #navBar .top-bar {
   padding: 0;
@@ -545,9 +545,8 @@ input[type=checkbox]:checked + .customLabel:before {
   margin: 0 !important;
 }
 #navBar .top-bar .menu-text .main-logo {
-  height: 50px;
-  max-width: 350px;
-  width: 100%;
+  object-fit: contain;
+  height: 60px;
 }
 #navBar .top-bar .menu > li {
   padding-left: 30px;
