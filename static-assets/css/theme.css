@@ -547,6 +547,7 @@ input[type=checkbox]:checked + .customLabel:before {
 #navBar .top-bar .menu-text .main-logo {
   max-height: 50px;
   max-width: 350px;
+  width: 100%;
 }
 #navBar .top-bar .menu > li {
   padding-left: 30px;
