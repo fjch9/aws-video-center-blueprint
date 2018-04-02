@@ -532,6 +532,10 @@ input[type=checkbox]:checked + .customLabel:before {
 #navBar .sticky-container {
   height: 70px !important;
 }
+#navBar .sticky-container .title-bar-title img {
+  max-height: 40px;
+  max-width: 350px;
+}
 #navBar .top-bar {
   padding: 0;
   height: 70px;
@@ -539,6 +543,11 @@ input[type=checkbox]:checked + .customLabel:before {
 #navBar .top-bar .menu-text {
   padding: 10px 0 !important;
   margin: 0 !important;
+}
+#navBar .top-bar .menu-text .main-logo {
+  max-height: 50px;
+  max-width: 350px;
+  width: 100%;
 }
 #navBar .top-bar .menu > li {
   padding-left: 30px;

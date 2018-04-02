@@ -38,14 +38,14 @@
 					<div class="large-12 columns">
 						<div class="title-bar" data-responsive-toggle="beNav" data-hide-for="large">
 							<button class="menu-icon" type="button" data-toggle="offCanvas-responsive"></button>
-							<div class="title-bar-title"><img src="${contentModel.smallLogo}" alt="${contentModel.logoAltText}"></div>
+							<div class="title-bar-title"><img src="${contentModel.logo}" alt="${contentModel.logoAltText}"></div>
 						</div>
 
 						<div class="top-bar show-for-large" id="beNav" style="width: 100%;">
 							<div class="top-bar-left">
 								<ul class="menu">
 									<li class="menu-text">
-										<a href="index.html"><img class="main-logo"src="${contentModel.logo}" alt="${contentModel.logoAltText}"></a>
+										<a href="index.html"><img class="main-logo "src="${contentModel.logo}" alt="${contentModel.logoAltText}"></a>
 									</li>
 								</ul>
 							</div>
