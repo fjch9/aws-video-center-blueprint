@@ -1,7 +1,11 @@
 <#macro breadcrumb addMargin = true>
 <!--breadcrumbs-->
 <#if !breadcrumbs??>
-	<#assign breadcrumbs = navBreadcrumbBuilder.getBreadcrumb(contentModel.storeUrl, "")/>
+	<#if contentModel??>
+		<#assign breadcrumbs = navBreadcrumbBuilder.getBreadcrumb(contentModel.storeUrl, "") />
+	<#else>
+		<#assign breadcrumbs = [{"url":"/","label":"home"}, {"url":"#","label":"page not found"}] />
+	</#if>
 </#if>
 <section id="breadcrumb" <#if addMargin>class="breadMargin"</#if>>
 		<div class="row">

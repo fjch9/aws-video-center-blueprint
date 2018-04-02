@@ -1,3 +1,5 @@
+<#import "/templates/web/lib/macros.ftl" as macros />
+
 <#assign contentModel = siteItemService.getSiteItem("/site/website/index.xml") />
 <!doctype html>
 <html class="no-js" lang="en">
@@ -10,21 +12,7 @@
       <@renderComponent component = contentModel.mobileNavigation.item />
       <div class="off-canvas-content" data-off-canvas-content>
         <@renderComponent component = contentModel.header.item />
-        <!--breadcrumbs-->
-        <section id="breadcrumb" class="breadMargin">
-          <div class="row">
-            <div class="large-12 columns">
-              <nav aria-label="You are here:" role="navigation">
-                <ul class="breadcrumbs">
-                  <li><i class="fa fa-home"></i><a href="#">Home</a></li>
-                  <li>
-                    <span class="show-for-sr">Current: </span> page not found
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </section><!--end breadcrumbs-->
+        <@macros.breadcrumb addMargin = true />
         <section class="error-page">
           <div class="row secBg">
             <div class="large-8 large-centered columns">
@@ -36,7 +24,7 @@
                   </div>
                 </div>
                 <h1>Page Not Found</h1>
-                <a href="index.html" class="button">Go Back Home Page</a>
+                <a href="/" class="button">Go Back Home Page</a>
               </div>
             </div>
           </div>
