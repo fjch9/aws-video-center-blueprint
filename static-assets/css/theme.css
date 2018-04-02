@@ -1551,10 +1551,6 @@ input[type=checkbox]:checked + .customLabel:before {
   visibility: hidden !important;
   transform: scale(0);
 }
-.content.content-with-sidebar .list-group .group-item-grid-default {
-  width: 32.6% !important;
-  padding-right: 0;
-}
 .content.content-with-sidebar .list-group .grid-default {
   width: 32.6% !important;
   padding-right: 0;
