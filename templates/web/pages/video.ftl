@@ -1,6 +1,6 @@
 <#import "/templates/system/common/cstudio-support.ftl" as studio />
 <#import "/templates/web/lib/macros.ftl" as macros />
-<#import "/templates/web/lib/video-macros.ftl" as videoMacros />
+<#import "/templates/web/lib/video-player-macros.ftl" as videoMacros />
 
 <!doctype html>
 <html class="no-js" lang="en">
