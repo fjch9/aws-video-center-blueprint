@@ -9,7 +9,7 @@
 	<internal-name>Streams Section</internal-name>
 	<title_s>Events</title_s>
 	<maxVideosToDisplay>4</maxVideosToDisplay>
-	<videoLandingUrl>/video</videoLandingUrl>
+	<videoLandingUrl>/live</videoLandingUrl>
 	<scripts>	<item>	<key>/scripts/components/streams.groovy</key>
 	<value>streams.groovy</value>
 	<disableFlattening>false</disableFlattening>
