@@ -25,9 +25,7 @@
 		</div-->
 		<div class="large-6 columns">
 			<div class="widgetBox">
-				<div class="widgetTitle">
-					<h5>We’re a Social Bunch</h5>
-				</div>
+				<div class="widgetTitle"></div>
 				<div class="widgetContent">
 					<div class="social-links">
 						<@renderComponent component = contentModel.socialMediaLinks.item />
