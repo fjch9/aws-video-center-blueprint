@@ -24,4 +24,5 @@
 		<link rel="stylesheet" href="/static-assets/css/responsive.css">
 		<link rel="stylesheet" href="/static-assets/css/timeTo.css">
 
+        <script src="/static-assets/bower_components/jquery/dist/jquery.js"></script>
 </head>
