@@ -17,7 +17,6 @@
 			<div class="media-object-section">
 				<div class="media-content">
 					<h6><a href="${videoUrl}">${video.title_s}</a></h6>
-					<#-- <p><i class="fa fa-clock-o"></i><span>${video.date_dt?date("MM/dd/yyyy")?string.short}</span></p> -->
 				</div>
 			</div>
 		</div>
