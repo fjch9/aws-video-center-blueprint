@@ -86,8 +86,6 @@
 	    window.setInterval(function() {
 	    		loadVideos("${contentModel.refreshUrl}", ${contentModel.maxVideosToDisplay}, "${videoSectionId}", "${videoBaseUrl}")
 	    	}, 5000);
-
-		renderDates();
 	});
 </script>
 </#if>
