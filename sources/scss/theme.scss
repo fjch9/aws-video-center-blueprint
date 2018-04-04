@@ -367,12 +367,12 @@ input[type=checkbox]:checked + .customLabel:before {
 				a{
 					background: $primary;
 					&:hover{
-						background: #e95252;
+						background: #FFB139;
 					}
 				}
 			}
 			a.active{
-				background: #e95252;
+				background: #FFB139;
 			}
 			a{
 				display: inline-block;
@@ -1126,7 +1126,7 @@ input[type=checkbox]:checked + .customLabel:before {
 				}
 				li.search-active{
 					i{
-						background: #e96969;
+						background: #FE9A00;
 					}
 				}
 			}
@@ -1513,7 +1513,7 @@ input[type=checkbox]:checked + .customLabel:before {
 		.head-title{
 			i{
 				display: inline-block;
-				color: #e96969;
+				color: #FE9A00;
 				margin-right: 11px;
 			}
 			h4{
@@ -3043,7 +3043,7 @@ footer{
 		left: 12px;
 		bottom: 40px;
 		font-size: 13px;
-		background: #e96969;
+		background: #FE9A00;
 		padding: 0 9px;
 		color: #fff;
 		font-weight: 600; }
@@ -3630,7 +3630,7 @@ footer{
 		h1{
 			display: inline-block;
 			margin: 0;
-			background: #e96969;
+			background: #FE9A00;
 			line-height: 36px;
 			padding: 7px 10px;
 			color: $white;
@@ -3936,7 +3936,7 @@ footer{
 							.icon-broadcast{
 								width: 32px !important;
 								height: 32px !important;
-								background-color: #e96969;
+								background-color: #FE9A00;
 								padding: 4px;
 								border-radius: 15px;
 								-webkit-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
@@ -3948,7 +3948,7 @@ footer{
 								color: white;
 								font-size: 12px; 
 								padding: 3px;
-								background-color: #e96969;
+								background-color: #FE9A00;
 								-webkit-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 								-moz-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 								box-shadow: 3px 3px 5px 0px rgba(48,48,48,1)
@@ -4092,7 +4092,7 @@ footer{
 							.icon-broadcast{
 								width: 32px !important;
 								height: 32px !important;
-								background-color: #e96969;
+								background-color: #FE9A00;
 								padding: 4px;
 								border-radius: 15px;
 								-webkit-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
@@ -4104,7 +4104,7 @@ footer{
 								color: white;
 								font-size: 18px; 
 								padding: 3px;
-								background-color: #e96969;
+								background-color: #FE9A00;
 								-webkit-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 								-moz-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 								box-shadow: 3px 3px 5px 0px rgba(48,48,48,1)
@@ -4990,7 +4990,7 @@ article.page-content{
     		.icon-broadcast{
     			width: 32px !important;
 			    height: 32px !important;
-			    background-color: #e96969;
+			    background-color: #FE9A00;
 			    padding: 4px;
 			    border-radius: 15px;
 			    -webkit-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
@@ -5002,7 +5002,7 @@ article.page-content{
     			color: white;
     			font-size: 18px; 
     			padding: 3px;
-    			background-color: #e96969;
+    			background-color: #FE9A00;
     			-webkit-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 				-moz-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 				box-shadow: 3px 3px 5px 0px rgba(48,48,48,1)
@@ -5077,7 +5077,7 @@ fa-play-circle-o:before{
 .img-loading{
 	border: 16px solid #f3f3f3;
 	 border-radius: 50%;
-	 border-top: 16px solid #e96969;
+	 border-top: 16px solid #FE9A00;
 	 width: 120px;
 	 height: 120px;
 	 -webkit-animation: spin 2s linear infinite; /* Safari */
