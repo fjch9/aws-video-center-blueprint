@@ -64,10 +64,6 @@
         width: 100% !important;
         padding: 10px;
     }
-    .content.content-with-sidebar .list-group .group-item-grid-default{
-        width: 100% !important;
-        padding: 10px;
-    }
     .content.content-with-sidebar .list-group .grid-medium{
         width: 100% !important;
         padding: 10px;
@@ -341,10 +337,6 @@
     }
     /* content with sidebar */
     .content.content-with-sidebar .list-group .grid-default{
-        width: 50% !important;
-        padding: 10px;
-    }
-    .content.content-with-sidebar .list-group .group-item-grid-default{
         width: 50% !important;
         padding: 10px;
     }

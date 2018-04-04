@@ -5,7 +5,6 @@
 <#include "/templates/web/components/head.ftl" />
 <body>
     <#assign inverted = false>
-    <#include "/templates/web/components/persistent-nav.ftl">
 <div class="off-canvas-wrapper">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <@renderComponent component = contentModel.mobileNavigation.item />
@@ -51,9 +50,9 @@
         <div class="row column head-text clearfix">
             <p class="pull-left">Videos : <span>{{:total}}</span></p>
             <div class="grid-system pull-right show-for-large">
-            <a class="secondary-button grid-default {{if layout == 'grid-default'}}current{{/if}}" href="#"><i class="fa fa-th"></i></a>
-            <a class="secondary-button grid-medium {{if layout == 'grid-medium'}}current{{/if}}" href="#"><i class="fa fa-th-large"></i></a>
-            <a class="secondary-button list {{if layout == 'list'}}current{{/if}}" href="#"><i class="fa fa-th-list"></i></a>
+            <a class="secondary-button grid-default {{if layout == 'grid-default'}}current{{/if}}" href="#" data-class="grid-default"><i class="fa fa-th"></i></a>
+            <a class="secondary-button grid-medium {{if layout == 'grid-medium'}}current{{/if}}" href="#" data-class="grid-medium"><i class="fa fa-th-large"></i></a>
+            <a class="secondary-button list {{if layout == 'list'}}current{{/if}}" href="#" data-class="list"><i class="fa fa-th-list"></i></a>
             </div>
         </div>
         <div class="tabs-content" data-tabs-content="videos">
@@ -171,7 +170,7 @@
     }
 
     function loadPage() {
-        layout = jQuery(".grid-system > .current").attr('class').split(' ')[1];
+        layout = jQuery(".grid-system > .current").data('class');
         loadResults({
             q: '${q}',
             start: (page - 1) * ${rows},

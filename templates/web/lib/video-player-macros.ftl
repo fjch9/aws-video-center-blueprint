@@ -1,6 +1,5 @@
 <#macro header>
     <#assign inverted = false>
-    <#include "/templates/web/components/persistent-nav.ftl">
     <div class="off-canvas-wrapper">
         <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
             <@renderComponent component = contentModel.mobileNavigation.item />

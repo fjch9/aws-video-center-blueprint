@@ -36,16 +36,15 @@ jQuery(document).ready(function(jQuery){
 	jQuery(document).on("click", ".grid-system > a", function(event){
 		event.preventDefault();
 		var selector = jQuery(this).parent().parent().next().find('div.item');
-		var classStr = jQuery(selector).attr('class'),
-				lastClass = classStr.substr(classStr.lastIndexOf(' ') + 1);
+
+        // replace previous class
+        jQuery(selector)
+            .removeClass(jQuery(this).parent().find('a.current').data('class'))
+            .addClass(jQuery(this).data('class'))
+            .matchHeight();
+
+        // mark the current grid system
 		jQuery(this).parent().children('a').removeClass("current");
-		jQuery(selector)
-			// Remove last class
-			.removeClass(lastClass)
-			// Put back .item class + the clicked elements class with the added prefix "group-item-".
-			.addClass(getGridSystemClasses(jQuery(this)));
-		// Match the height of the items
-		jQuery(selector).matchHeight();
 		jQuery(this).addClass("current");
 		formatVideoSections();
 	});
@@ -158,16 +157,12 @@ function getDate(videoDate){
 	return formatedStartDate.format('lll')+" "+currentTimeZone;
 }
 
-var getGridSystemClasses = function(gridSystemItem) {
-	return 'item group-item-' + gridSystemItem.attr('class');
-}
-
 var renderVideoItem = function(parent, video, videoBaseUrl){
-	var url = videoBaseUrl + video.id;
-	var classNames = getGridSystemClasses(parent.parent().parent().parent().find('.grid-system > .current'));
+    var url = videoBaseUrl + video.id;
+	var className = parent.parent().parent().parent().find('.grid-system > .current').data('class')
 
 	return `  
-	<div id="video-${video.id}" data-video-id="${video.id}" class="large-4 medium-6 columns ${classNames}">
+	<div id="video-${video.id}" data-video-id="${video.id}" class="item large-4 medium-6 columns ${className}">
 			<div class="post thumb-border">
 				<div class="post-thumb">
 					<img src="${video.thumbnail}">
@@ -214,8 +209,7 @@ var renderVideoItem = function(parent, video, videoBaseUrl){
 			</div>
 		</div>
 		</div>
-	</div>
-	`;
+	</div>`;
 }
 
 var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
@@ -289,15 +283,8 @@ function formatVideoSections(){
 		if(items.length % 2 == 1) {
 			var item = items.last();
 			if(item.hasClass('grid-medium') && !item.hasClass(className)) {
-		    	item.attr('class', className + ' ' + items.last().attr('class'));
+                item.addClass(className);
 		    }
 		}
 	});
-}
-
-/* prevent side effects to grid system */
-function prefixClass(item, className) {
-	if(!item.hasClass(className)) {
-    	item.attr('class', className + ' ' + item.attr('class'));
-    }
 }
