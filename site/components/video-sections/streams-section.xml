@@ -19,5 +19,4 @@
 	<lastModifiedDate>2018-03-23T16:28:24.961Z</lastModifiedDate>
 	<lastModifiedDate_dt>2018-03-23T16:28:24.961Z</lastModifiedDate_dt>
 	<refreshUrl>/api/1/streams.json</refreshUrl>
-	<emptyMessage>There Are No Upcoming Events At The Moment</emptyMessage>
 </component>

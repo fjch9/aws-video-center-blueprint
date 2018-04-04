@@ -2,7 +2,7 @@
 <#assign refreshes = contentModel.refreshUrl?? && contentModel.refreshUrl != "">
 <#assign videoBaseUrl = "${contentModel.videoLandingUrl}?id=" />
 
-<section class="content content-with-sidebar">
+<section class="content content-with-sidebar" id="${videoSectionId}-section">
 	<!-- newest video -->
 	<div class="main-heading borderBottom">
 		<div class="row padding-14 ">
@@ -15,15 +15,9 @@
 		</div>
 	</div>
 	<div class="row">
-		<#if refreshes>
-			<div class="large-12 columns">
-				<h3 id="${videoSectionId}-message-no-video" class="text-center hide">${contentModel.emptyMessage}</h3>
-			</div>
-		</#if>
-
 		<div class="large-12 columns">
 			<div class="row column head-text clearfix">
-				<div id="${videoSectionId}-grid-system" class="grid-system pull-right show-for-large">
+				<div class="grid-system pull-right show-for-large">
 					<a class="secondary-button grid-default" href="#" data-class="grid-default"><i class="fa fa-th"></i></a>
 					<a class="secondary-button current grid-medium" href="#" data-class="grid-medium"><i class="fa fa-th-large"></i></a>
 					<a class="secondary-button list" href="#" data-class="list"><i class="fa fa-th-list"></i></a>
