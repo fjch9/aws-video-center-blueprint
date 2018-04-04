@@ -220,9 +220,9 @@ var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
         dataType: "json",
         success: function(data) {
         	if(data.length===0) {
-        		jQuery('#' + idPrefix + '-message-no-video').removeClass('hide');
-        		jQuery('#' + idPrefix + '-grid-system').addClass('hide');
-        	} else {
+               jQuery('#' + idPrefix + '-section').addClass('hide');
+            } else {
+                jQuery('#' + idPrefix + '-section').removeClass('hide');
                 jQuery.each(data, function(index, element) {
                     var domElement = document.getElementById("video-"+element.id);
                     var liveText = jQuery('#video-'+element.id+' > div > div > .tag-live')
