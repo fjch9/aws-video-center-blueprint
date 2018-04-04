@@ -15,5 +15,6 @@
 	<lastModifiedDate>2017-9-13T0:15:17.000Z</lastModifiedDate>
 	<lastModifiedDate_dt>2017-9-13T0:15:17.000Z</lastModifiedDate_dt>
 	<maxVideosToDisplay>5</maxVideosToDisplay>
-	<videoLandingURL>/video</videoLandingURL>
+	<videoLandingUrl>/video</videoLandingUrl>
+	<streamLandingUrl>/live</streamLandingUrl>
 </page>

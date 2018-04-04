@@ -10,24 +10,9 @@
 				</div>
 			</div>
 		</div>
-		<!--div class="large-3 medium-6 columns">
-			<@renderComponent component = contentModel.recentVideosWidget.item />
-		</div>
-		<div class="large-3 medium-6 columns">
-			<div class="widgetBox">
-				<div class="widgetTitle">
-					<h5>Tags</h5>
-				</div>
-				<div class="tagcloud">
-					<@renderComponent component = contentModel.tags.item />
-				</div>
-			</div>
-		</div-->
 		<div class="large-6 columns">
 			<div class="widgetBox">
-				<div class="widgetTitle">
-					<h5>We’re a Social Bunch</h5>
-				</div>
+				<div class="widgetTitle"></div>
 				<div class="widgetContent">
 					<div class="social-links">
 						<@renderComponent component = contentModel.socialMediaLinks.item />

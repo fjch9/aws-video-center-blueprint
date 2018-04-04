@@ -8,6 +8,7 @@
 	<folder-name>tag</folder-name>
 	<internal-name>Tag Landing</internal-name>
 	<videoLandingUrl>/video</videoLandingUrl>
+	<streamLandingUrl>/live</streamLandingUrl>
 	<videoPageSize>6</videoPageSize>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>

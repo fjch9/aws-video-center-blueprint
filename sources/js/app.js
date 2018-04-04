@@ -39,12 +39,12 @@ jQuery(document).ready(function(jQuery){
 
         // replace previous class
         jQuery(selector)
-            .removeClass(jQuery('.grid-system > a.current').data('class'))
+            .removeClass(jQuery(this).parent().find('a.current').data('class'))
             .addClass(jQuery(this).data('class'))
             .matchHeight();
 
         // mark the current grid system
-		jQuery('.grid-system > a').removeClass("current");
+		jQuery(this).parent().children('a').removeClass("current");
 		jQuery(this).addClass("current");
 		formatVideoSections();
 	});
@@ -154,15 +154,15 @@ jQuery(document).ready(function(jQuery){
 function getDate(videoDate){
 	var formatedStartDate = moment(videoDate);
 	var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
-	return formatedStartDate.format('lll')+" "+currentTimeZone
+	return formatedStartDate.format('lll')+" "+currentTimeZone;
 }
 
-var renderVideoItem = function(parent, video){
-	var url = `/live?id=${video.id}`;
+var renderVideoItem = function(parent, video, videoBaseUrl){
+    var url = videoBaseUrl + video.id;
 	var className = parent.parent().parent().parent().find('.grid-system > .current').data('class')
 
 	return `  
-	<div id="video-${video.id}" class="item large-4 medium-6 columns ${className}">
+	<div id="video-${video.id}" data-video-id="${video.id}" class="item large-4 medium-6 columns ${className}">
 			<div class="post thumb-border">
 				<div class="post-thumb">
 					<img src="${video.thumbnail}">
@@ -209,89 +209,61 @@ var renderVideoItem = function(parent, video){
 			</div>
 		</div>
 		</div>
-	</div>
-	`
+	</div>`;
 }
 
-var json_video = urlVideos();
-
-var loadVideos = function(){
-	var limit = limitVideos();
-	let url_video = urlVideos()+"?limit="+limit;
-	//urlVideos()+"?limit="+limit;
+var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
+	let url_video = refreshUrl + "?limit=" + retrieveLimit;
+    video_selector = '#' + idPrefix + '-videos';
     jQuery.ajax({
         url: url_video,
         dataType: "json",
-        success: function(data){
-        	if(data.length===0){
-        		jQuery('#message-no-video').removeClass('hide');
-        		jQuery('#stream-live-secction').addClass('hide');
-        	}else{
-        		jQuery('.video-list').empty();
-        		jQuery.each(data, function(index, element) {
-        			jQuery('.video-list').append(renderVideoItem(jQuery('.video-list'), element));
-        			if(element.liveNow){
-        				jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
-        			}
-        		});
-				formatVideoSections();
+        success: function(data) {
+        	if(data.length===0) {
+        		jQuery('#' + idPrefix + '-message-no-video').removeClass('hide');
+        		jQuery('#' + idPrefix + '-grid-system').addClass('hide');
+        	} else {
+                jQuery.each(data, function(index, element) {
+                    var domElement = document.getElementById("video-"+element.id);
+                    var liveText = jQuery('#video-'+element.id+' > div > div > .tag-live')
+                    if(domElement) {
+                        //update existing
+                        domElement.querySelector('.video-title').querySelector('a').innerHTML = element.title_s;
+                        domElement.querySelector('.post-summary').querySelector('p').innerHTML = element.summary_s;
+                        domElement.querySelector('.like-count').innerHTML = element.likeCount;
+                        domElement.querySelector('.dislike-count').innerHTML = element.dislikeCount;
+                        domElement.querySelector('.view-count').innerHTML = element.viewCount;
+                        if(element.type === 'stream') {
+                          domElement.querySelector('.start-time').innerHTML = getDate(element.startDate_dt);
+                          domElement.querySelector('.end-time').innerHTML = getDate(element.endDate_dt);
+                        }
+                        liveText.addClass('hide');
+                    } else {
+                        //append new
+                        jQuery(video_selector).append(renderVideoItem(jQuery(video_selector), element, videoBaseUrl));
+                    }
+
+                    if(element.liveNow) {
+                        liveText.removeClass('hide');
+                    }
+                });
+
+                dataIds = jQuery.map(data, function(e) {
+                    return e.id;
+                });
+                jQuery('div[data-video-id]').each(function(i, element) {
+                    videoId = jQuery(this).data('video-id');
+                    if(dataIds.indexOf(videoId) < 0) {
+                        //remove completed
+                        document.getElementById(element.id).remove();
+                    }
+                })
+
+                formatVideoSections();
         	}
         }
     });
 };
-
-function refreshVideos(){
-	var limit = limitVideos();
-	let url_video = "/api/1/streams.json?limit="+limit;
-	jQuery.ajax({
-        url: url_video,
-        dataType: "json",
-        success: function(data){
-        	if(data.length===0){
-        		jQuery('#message-no-video').removeClass('hide');
-        		jQuery('#stream-live-secction').addClass('hide');
-        	} 
-            jQuery.each(data, function(index, element) {
-            	var domElement = document.getElementById("video-"+element.id)
-            	if (domElement) {
-            		if(element.liveNow){
-                    	jQuery('#video-'+element.id+' > div > div > .tag-live').removeClass('hide')
-                	}
-                    domElement.querySelector('.video-title').querySelector('a').innerHTML = element.title_s;
-                    domElement.querySelector('.post-summary').querySelector('p').innerHTML = element.summary_s;
-                    domElement.querySelector('.like-count').innerHTML = element.likeCount;
-                    domElement.querySelector('.dislike-count').innerHTML = element.dislikeCount;
-                    domElement.querySelector('.view-count').innerHTML = element.viewCount;
-                    
-                    if(element.type === 'stream') {
-                      domElement.querySelector('.start-time').innerHTML = getDate(element.startDate_dt);
-                      domElement.querySelector('.end-time').innerHTML = getDate(element.endDate_dt);
-                    }
-                    
-            	} else {
-            		jQuery('.video-list').append(renderVideoItem(jQuery('.video-list'), element));
-            	}
-            });
-			formatVideoSections();
-
-           jQuery('div[id^="video-"]').each(function(i, element) {
-           		var videoId = element.id.substring('#video-'.length - 1);
-           		var found = false;
-           		for(var i =0; i< data.length; i++) {
-           			if(data[i].id === videoId){
-           				found = true;
-           				break; 
-           			}
-           		}
-           		if(!found) {
-           			document.getElementById(element.id).remove()
-           		}
-           		
-           })
-          
-        }
-    });
-}
 
 function renderDates(){
 	jQuery('[data-format-date]').each(function(index, el) {
@@ -301,48 +273,18 @@ function renderDates(){
 	});
 }
 
-function limitVideos(){
-	var limit
-	jQuery('[data-limit-video]').each(function(index, el) {
-		var $el = jQuery(el);
-		limit = $el.attr('data-limit-video');
-	});
-	return limit;
-}
-
-function urlVideos(){
-	var urlJson
-	jQuery('[data-json-video]').each(function(index, el) {
-		var $el = jQuery(el);
-		urlJson = $el.attr('data-json-video');
-	});
-	return urlJson;
-}
-
 function formatVideoSections(){
-	['most-viewed-videos-section', 'newest-videos-section', 'stream-section', 'results'].forEach(function(id) {
+	['most-viewed-videos-section', 'newest-videos-section', 'streams-section', 'results'].forEach(function(id) {
+        className = 'medium-offset-3';
 		items = jQuery('#' + id).find('div.item');
 
+        items.removeClass(className);
+
 		if(items.length % 2 == 1) {
-			var className = 'medium-offset-3';
 			var item = items.last();
-			if(item.hasClass('list') || item.hasClass('grid-default')) {
-				item.removeClass(className)
-			} else if(!item.hasClass(className)) {
-		    	item.addClass(className);
+			if(item.hasClass('grid-medium') && !item.hasClass(className)) {
+                item.addClass(className);
 		    }
 		}
 	});
 }
-
-jQuery(document).ready(function() { 
-	if (typeof(urlVideos()) !== "undefined") {
-    	loadVideos();
-
-	    window.setInterval(function(){
-	        refreshVideos();
-	    },5000);
-	}
-
-	renderDates();
-});
