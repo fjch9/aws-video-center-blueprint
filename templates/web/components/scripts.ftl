@@ -1,4 +1,3 @@
-<script src="/static-assets/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/static-assets/bower_components/what-input/what-input.min.js"></script>
 <script src="/static-assets/bower_components/foundation-sites/dist/foundation.min.js"></script>
 <script src="/static-assets/js/jquery.showmore.src-min.js" type="text/javascript"></script>
