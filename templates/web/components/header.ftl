@@ -41,7 +41,7 @@
 							<div class="title-bar-title"><a href="/"><img src="${contentModel.logo}" alt="${contentModel.logoAltText}"><a href="/"></div>
 						</div>
 
-						<div class="top-bar show-for-large" id="beNav" style="width: 100%;">
+						<div class="top-bar show-for-large" id="beNav">
 							<div class="top-bar-left">
 								<ul class="menu">
 									<li class="menu-text">
