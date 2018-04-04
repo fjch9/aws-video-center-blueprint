@@ -1,10 +1,17 @@
-<style>
 #left-rail .toggle { top: 50px }
-.ui.menu .item { border-bottom: none !important }
-</style>
 
-<style>
-  @import url('/static-assets/css/google-fonts-lato.css');
+.ui.menu .item { border-bottom: none !important }
+
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'),
+       url('/static-assets/fonts/lato/lato-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/static-assets/fonts/lato/lato-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
   /*
  * # Semantic - Menu
  * http://github.com/semantic-org/semantic-ui/
@@ -2004,4 +2011,3 @@
   .ui.massive.vertical.menu {
     width: 25rem;
   }
-</style>
