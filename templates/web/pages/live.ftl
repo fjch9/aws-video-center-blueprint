@@ -8,7 +8,6 @@
 
 <body>
 	<#assign inverted = false>
-	<#include "/templates/web/components/persistent-nav.ftl">
 
 <div class="off-canvas-wrapper">
 	
