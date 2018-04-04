@@ -1705,10 +1705,6 @@ input[type=checkbox]:checked + .customLabel:before {
 	//content with sidebar
 	&.content-with-sidebar{
 		.list-group{
-			.group-item-grid-default{
-				width: 32.6% !important;
-				padding-right: 0;
-			}
 			.grid-default{
 				width: 32.6% !important;
 				padding-right: 0;

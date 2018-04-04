@@ -141,7 +141,7 @@
 								<div class="row list-group">
 									<#list relatedVideos as relatedVideo>
 									<#assign relatedVideoUrl = "${request.requestURI}?id=${relatedVideo.id}" />
-									<div class="item large-4 columns <#if relatedVideo?is_last>end</#if> group-item-grid-default" data-mh="related-videos">
+									<div class="item large-4 columns <#if relatedVideo?is_last>end</#if> grid-default" data-mh="related-videos">
 										<div class="post thumb-border">
 											<div class="post-thumb">
 												<img src="${relatedVideo.thumbnail}">
