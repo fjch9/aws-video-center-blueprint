@@ -1512,40 +1512,42 @@ input[type=checkbox]:checked + .customLabel:before {
 				.head-title{
 					white-space: nowrap;
 					padding-bottom: 14px;
-					i{
-						display: inline-block;
-						color: #FE9A00;
-						margin-right: 11px;
-					}
-					h4{
-						display: inline-block;
-						margin: 0;
-					}
 				}
-				.head-text{
-					flex-grow: 1;
-					p{
-						margin: 0;
-						span{
-							color: #aaaaaa;
-							font-size: 12px;
-						}
-					}
-					h4{
-						color: #444444;
-						i{
-							display: inline-block;
-							color: $primary;
-							margin-right: 12px;
-						}
-					}
-					.grid-system{
-						a.current{
-							background: $primary;
-							i{
-								color: $white;
-							}
-						}
+			}
+		}
+		.head-title{
+			i{
+				display: inline-block;
+				color: #FE9A00;
+				margin-right: 11px;
+			}
+			h4{
+				display: inline-block;
+				margin: 0;
+			}
+		}
+		.head-text{
+			flex-grow: 1;
+			p{
+				margin: 0;
+				span{
+					color: #aaaaaa;
+					font-size: 12px;
+				}
+			}
+			h4{
+				color: #444444;
+				i{
+					display: inline-block;
+					color: $primary;
+					margin-right: 12px;
+				}
+			}
+			.grid-system{
+				a.current{
+					background: $primary;
+					i{
+						color: $white;
 					}
 				}
 			}
