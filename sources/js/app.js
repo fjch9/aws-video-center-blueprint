@@ -156,9 +156,9 @@ function getDate(videoDate){
 	return formatedStartDate.format('lll')+" "+currentTimeZone;
 }
 
-var renderEventItem = function(parent, video, videoBaseUrl){
+var renderEventItem = function(parentId, video, videoBaseUrl){
     var url = videoBaseUrl + video.id;
-	var className = parent.parent().parent().parent().find('.grid-system > .current').data('class')
+	var className = jQuery(parentId).parent().parent().parent().find('.grid-system > .current').data('class')
 
 	return `  
 	<div id="video-${video.id}" data-video-id="${video.id}" class="item large-4 medium-6 columns ${className}">
@@ -211,17 +211,17 @@ var renderEventItem = function(parent, video, videoBaseUrl){
 	</div>`;
 }
 
-var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
+var loadVideos = function(refreshUrl, retrieveLimit, parentId, videoBaseUrl) {
 	let url_video = refreshUrl + "?limit=" + retrieveLimit;
-    video_selector = '#' + idPrefix + '-videos';
+    video_selector = '#' + parentId + '-videos';
     jQuery.ajax({
         url: url_video,
         dataType: "json",
         success: function(data) {
         	if(data.length===0) {
-               jQuery('#' + idPrefix + '-section').addClass('hide');
+               jQuery('#' + parentId + '-section').addClass('hide');
             } else {
-                jQuery('#' + idPrefix + '-section').removeClass('hide');
+                jQuery('#' + parentId + '-section').removeClass('hide');
                 jQuery.each(data, function(index, element) {
                     var domElement = document.getElementById("video-"+element.id);
                     var liveText = jQuery('#video-'+element.id+' > div > div > .tag-live')
@@ -239,7 +239,7 @@ var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
                         liveText.addClass('hide');
                     } else {
                         //append new
-                        jQuery(video_selector).append(renderEventItem(jQuery(video_selector), element, videoBaseUrl));
+                        jQuery(video_selector).append(renderEventItem(parentId, element, videoBaseUrl));
                     }
 
                     if(element.liveNow) {
