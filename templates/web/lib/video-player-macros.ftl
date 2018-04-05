@@ -6,7 +6,7 @@
             <div class="off-canvas-content" data-off-canvas-content>
                 <@renderComponent component = contentModel.header.item additionalModel = { 'currentPage' : model.storeUrl, 'backLink' : model.backLink } />
 
-                <@macros.breadcrumb addMargin = false />
+                <@macros.breadcrumb />
 </#macro>
 
 <#macro startVideoSection>

@@ -1,4 +1,4 @@
-<#macro breadcrumb addMargin = true>
+<#macro breadcrumb>
 <!--breadcrumbs-->
 <#if !breadcrumbs??>
 	<#if contentModel??>
@@ -7,7 +7,7 @@
 		<#assign breadcrumbs = [{"url":"/","label":"home"}, {"url":"#","label":"page not found"}] />
 	</#if>
 </#if>
-<section id="breadcrumb" <#if addMargin>class="breadMargin"</#if>>
+<section id="breadcrumb">
 		<div class="row">
 				<div class="large-12 columns">
 						<nav aria-label="You are here:" role="navigation">
