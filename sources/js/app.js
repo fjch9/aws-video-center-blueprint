@@ -35,10 +35,9 @@ jQuery(document).ready(function(jQuery){
 	//grid system
 	jQuery(document).on("click", ".grid-system > a", function(event){
 		event.preventDefault();
-		var selector = jQuery(this).parent().parent().next().find('div.item');
 
         // replace previous class
-        jQuery(selector)
+        jQuery('#' + jQuery(this).parent().data('id')).find('div.item')
             .removeClass(jQuery(this).parent().find('a.current').data('class'))
             .addClass(jQuery(this).data('class'))
             .matchHeight();

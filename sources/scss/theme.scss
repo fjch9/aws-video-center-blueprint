@@ -1510,87 +1510,54 @@ input[type=checkbox]:checked + .customLabel:before {
 	}
 	.main-heading{
 		margin-bottom: 10px;
-		.head-title{
-			i{
-				display: inline-block;
-				color: #FE9A00;
-				margin-right: 11px;
-			}
-			h4{
-				display: inline-block;
-				margin: 0;
-			}
-		}
-		.tabs{
-			border: none;
-			li.tabs-title{
-				margin-left: 5px;
-				a{
-					color: $body-color;
-					width: 30px;
-					height: 30px;
-					text-align: center;
-					padding: 0;
-					line-height: 30px;
-					border-radius: 3px;
-					background: $offwhite;
-					font-size: 13px;
-					text-transform: capitalize;
-					@extend .transition;
-					&:hover{
-						background: $primary;
-						color: $white;
+		.header-container-wrapper{
+			width: 100%;
+			.head-container{
+				display: inline-flex;
+				width: 100%;
+				.head-title{
+					white-space: nowrap;
+					padding-bottom: 14px;
+					i{
+						display: inline-block;
+						color: #FE9A00;
+						margin-right: 11px;
+					}
+					h4{
+						display: inline-block;
+						margin: 0;
 					}
 				}
-				&:last-of-type{
-					a{
-						font-weight: bold;
-						font-style: italic;
-						text-transform: uppercase;
-						color: #444;
-						@extend .transition;
-						&:hover{
+				.head-text{
+					flex-grow: 1;
+					p{
+						margin: 0;
+						span{
+							color: #aaaaaa;
+							font-size: 12px;
+						}
+					}
+					h4{
+						color: #444444;
+						i{
+							display: inline-block;
+							color: $primary;
+							margin-right: 12px;
+						}
+					}
+					.grid-system{
+						a.current{
 							background: $primary;
-							color: $white;
+							i{
+								color: $white;
+							}
 						}
 					}
 				}
 			}
-			.tabs-title > a:focus, .tabs-title > a[aria-selected="true"]{
-				background: $primary;
-				color: $white !important;
-			}
 		}
 	}
 
-	.head-text{
-		border-bottom: 1px solid $border-color;
-		padding: 14px 0;
-		margin-bottom: 30px;
-		p{
-			margin: 0;
-			span{
-				color: #aaaaaa;
-				font-size: 12px;
-			}
-		}
-		h4{
-			color: #444444;
-			i{
-				display: inline-block;
-				color: $primary;
-				margin-right: 12px;
-			}
-		}
-		.grid-system{
-			a.current{
-				background: $primary;
-				i{
-					color: $white;
-				}
-			}
-		}
-	}
 	.tabs-content {
 		border: none;
 		.tabs-panel {

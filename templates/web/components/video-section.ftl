@@ -1,28 +1,14 @@
+<#import "/templates/web/lib/video-list-macros.ftl" as resultsMacros />
+
 <#assign videoSectionId = contentModel["file-name"]?keep_before(".xml") />
 <#assign refreshes = contentModel.refreshUrl?? && contentModel.refreshUrl != "">
 <#assign videoBaseUrl = "${contentModel.videoLandingUrl}?id=" />
 
 <section class="content content-with-sidebar" id="${videoSectionId}-section">
-	<!-- newest video -->
-	<div class="main-heading borderBottom">
-		<div class="row padding-14 ">
-			<div class="medium-8 small-8 columns">
-				<div class="head-title">
-					<i class="fa fa-film"></i>
-					<h4>${contentModel.title_s}</h4>
-				</div>
-			</div>
-		</div>
-	</div>
+	<@resultsMacros.heading id="${videoSectionId}" title="${contentModel.title_s}" />
+
 	<div class="row">
 		<div class="large-12 columns">
-			<div class="row column head-text clearfix">
-				<div class="grid-system pull-right show-for-large">
-					<a class="secondary-button grid-default" href="#" data-class="grid-default"><i class="fa fa-th"></i></a>
-					<a class="secondary-button current grid-medium" href="#" data-class="grid-medium"><i class="fa fa-th-large"></i></a>
-					<a class="secondary-button list" href="#" data-class="list"><i class="fa fa-th-list"></i></a>
-				</div>
-			</div>
 			<div id="${videoSectionId}" class="tabs-content" data-tabs-content="${videoSectionId}">
 				<div class="tabs-panel is-active" id="new-all">
 					<div class="row list-group" id="${videoSectionId}-videos">
