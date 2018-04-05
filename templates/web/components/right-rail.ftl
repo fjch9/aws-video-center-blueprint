@@ -1,8 +1,5 @@
-<#if contentModel.whiteBackground?? && contentModel.whiteBackground == "true">
-	<#assign backgroundClass = "secBg"/>
-</#if>
 <div class="large-4 columns">
-	<aside class="${backgroundClass!""} sidebar">
+	<aside class="sidebar">
 		<div class="row">
 			<!-- search Widget -->
 			<div class="large-12 medium-7 medium-centered columns">
