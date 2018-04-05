@@ -141,7 +141,7 @@ class VideoService {
   }
   
   def resolveVideosFromIds(ids) {
-    ids.collect { videoId ->
+    ids.findResults { videoId ->
       return resolveVideoFromId(videoId)
     }
   }
