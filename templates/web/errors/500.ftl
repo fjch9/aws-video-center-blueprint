@@ -12,9 +12,9 @@
       <@renderComponent component = contentModel.mobileNavigation.item />
       <div class="off-canvas-content" data-off-canvas-content>
         <@renderComponent component = contentModel.header.item />
-        <@macros.breadcrumb addMargin = true />
+        <@macros.breadcrumb />
         <section class="error-page">
-          <div class="row secBg">
+          <div class="row">
             <div class="large-8 large-centered columns">
               <div class="error-page-content text-center">
                 <h1>Unexpected Error</h1>
