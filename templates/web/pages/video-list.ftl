@@ -5,6 +5,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <#include "/templates/web/components/head.ftl" />
+<#assign resultsId = "results">
 <body>
     <#assign inverted = false>
 <div class="off-canvas-wrapper">
@@ -19,7 +20,7 @@
                     <div class="large-8 columns">
                         <section class="content content-with-sidebar">
                             <div data-limit-video="${contentModel.videoPageSize}"></div>
-                            <div id="results" class="row secBg"></div>
+                            <div id="${resultsId}" class="row secBg"></div>
                         </section>
                     </div><!-- end left side content area -->
                     <@renderComponent component = contentModel.rightRail.item />
@@ -32,95 +33,61 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 <script src="/static-assets/js/jsrender.js"></script>
-<#assign resultsId = "video-list">
 <script id="resultsTemplate" type="text/x-jsrender">
     <@resultsMacros.heading id="${resultsId}" title="${title}" subtext="{{:total}} videos" />
-    <div id="${resultsId}" class="tabs-content" data-tabs-content="videos">
+    <div class="tabs-content" data-tabs-content="videos">
         <div class="tabs-panel is-active" id="new-all">
             <div class="row list-group">
                 {{for items ~size=items.length}}
-                <div class="item large-4 medium-6 columns {{if #index + 1 == ~size}}end{{/if}} columns grid-medium">
-                  {{if type == 'stream'}}
-                    <div class="post thumb-border">
-                        <div class="post-thumb">
-                            <img src="{{:thumbnail}}">
-                            <div class="tag-live {{if liveNow == false}}hide{{/if}}">
-                                <figcaption>
-                                    <p class="live-text">Live</p>
-                                </figcaption>
-                            </div>
-                            <a href="{{:~getStreamUrl(id)}}" class="hover-posts">
-                                <span><i class="fa fa-play-circle icon-circle"></i></span>
-                            </a>
-                        </div>
-                        <div class="post-des">
-                            <h6><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h6>
-                            <div class="post-stats clearfix">
-                                <p class="video-list-start-end">
-                                    <i class="fa fa-clock-o icon-start-time"></i>
-                                    <span>Start time: {{:~getDate(startDate_dt)}}</span>
-                                    <br>
-                                    <i class="fa fa-clock-o icon-end-time"></i>
-                                    <span>End time: {{:~getDate(endDate_dt)}}</span>
-                                </p>
-                                <div class="clearfix content-popular-icons">
-                                    <p class="pull-left">
-                                    <i class="fa fa-eye"></i>
-                                    <span>{{:viewCount}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-thumbs-o-up"></i>
-                                        <span>{{:likeCount}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-thumbs-o-down"></i>
-                                        <span>{{:dislikeCount}}</span>
-                                    </p>
+                    {{if type == 'stream'}}
+                        <div class="item large-4 medium-6 columns {{if #index + 1 == ~size}}end{{/if}} columns grid-medium">
+                            <div class="post thumb-border">
+                                <div class="post-thumb">
+                                    <img src="{{:thumbnail}}">
+                                    <div class="tag-live {{if liveNow == false}}hide{{/if}}">
+                                        <figcaption>
+                                            <p class="live-text">Live</p>
+                                        </figcaption>
+                                    </div>
+                                    <a href="{{:~getStreamUrl(id)}}" class="hover-posts">
+                                        <span><i class="fa fa-play-circle icon-circle"></i></span>
+                                    </a>
                                 </div>
-                                
-                            </div>
-                            <div class="post-summary">
-                                <p>{{:summary_s}}</p>
+                                <div class="post-des">
+                                    <h6><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h6>
+                                    <div class="post-stats clearfix">
+                                        <p class="video-list-start-end">
+                                            <i class="fa fa-clock-o icon-start-time"></i>
+                                            <span>Start time: {{:~getDate(startDate_dt)}}</span>
+                                            <br>
+                                            <i class="fa fa-clock-o icon-end-time"></i>
+                                            <span>End time: {{:~getDate(endDate_dt)}}</span>
+                                        </p>
+                                        <div class="clearfix content-popular-icons">
+                                            <p class="pull-left">
+                                            <i class="fa fa-eye"></i>
+                                            <span>{{:viewCount}}</span>
+                                            </p>
+                                            <p class="pull-left">
+                                                <i class="fa fa-thumbs-o-up"></i>
+                                                <span>{{:likeCount}}</span>
+                                            </p>
+                                            <p class="pull-left">
+                                                <i class="fa fa-thumbs-o-down"></i>
+                                                <span>{{:dislikeCount}}</span>
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="post-summary">
+                                        <p>{{:summary_s}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
                     {{else type == 'video'}}
-                        <div class="post thumb-border">
-                        <div class="post-thumb">
-                            <img src="{{:thumbnail}}">
-                            <a href="{{:~videoUrl(id)}}" class="hover-posts">
-                                <span><i class="fa fa-play-circle icon-circle"></i></span>
-                            </a>
-                        </div>
-                        <div class="post-des">
-                            <h6><a href="{{:~videoUrl(id)}}">{{:title_s}}</a></h6>
-                            <div class="post-stats clearfix content-popular-icons">
-                                <p class="">
-                                    <i class="fa fa-clock-o"></i>
-                                    <span>{{:~getDate(date_dt)}}</span>
-                                </p>
-                                <p class="pull-left">
-                                    <i class="fa fa-eye"></i>
-                                    <span>{{:viewCount}}</span>
-                                </p>
-                                <p class="pull-left">
-                                    <i class="fa fa-thumbs-o-up"></i>
-                                    <span>{{:likeCount}}</span>
-                                </p>
-                                <p class="pull-left">
-                                    <i class="fa fa-thumbs-o-down"></i>
-                                    <span>{{:dislikeCount}}</span>
-                                </p>
-                            </div>
-                            <div class="post-summary">
-                                <p>{{:summary_s}}</p>
-                            </div>
-                        </div>
-                    </div>
-  
-                {{/if}}
-                </div>
+                        <@resultsMacros.video id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" summary="{{:summary_s}}" date="{{:~getDate(date_dt)}}" viewCount="{{:viewCount}}" likeCount="{{:likeCount}}" dislikeCount="{{:dislikeCount}}" parentId="${resultsId}" baseUrl="${contentModel.videoLandingUrl}?id=" />
+                    {{/if}}
                 {{/for}}
             </div>
         </div>
@@ -155,9 +122,6 @@
     }
 
     jQuery.views.helpers({
-        videoUrl: function(id) {
-            return '${contentModel.videoLandingUrl}?id=' + id;
-        },
 		getDate: function (date) {
             return getDate(date);
 		},

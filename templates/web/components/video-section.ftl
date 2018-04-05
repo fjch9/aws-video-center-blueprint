@@ -14,41 +14,7 @@
 					<div class="row list-group" id="${videoSectionId}-videos">
 						<#if !refreshes>
 							<#list videos as video>
-								<#assign videoUrl = "${videoBaseUrl}${video.id}" />
-								<div class="item large-4 medium-6 columns <#if video?is_last>end</#if> grid-medium" data-mh="${videoSectionId}">
-									<div class="post thumb-border">
-										<div class="post-thumb">
-											<img src="${video.thumbnail}">
-											<a href="${videoUrl}" class="hover-posts">
-												<span><i id="icon-circle" class="fa fa-play-circle"></i></span>
-											</a>
-										</div>
-										<div class="post-des">
-											<h6><a href="${videoUrl}">${video.title_s}</a></h6>
-											<div class="post-stats clearfix">
-												<p class="pull-left">
-													<i class="fa fa-clock-o"></i>
-													<span>${video.date_dt?date("MM/dd/yyyy")?string.short}</span>
-												</p>
-												<p class="pull-left">
-													<i class="fa fa-eye"></i>
-													<span>${video.viewCount}</span>
-												</p>
-												<p class="pull-left">
-													<i class="fa fa-thumbs-o-up"></i>
-													<span>${video.likeCount}</span>
-												</p>
-												<p class="pull-left">
-													<i class="fa fa-thumbs-o-down"></i>
-													<span>${video.dislikeCount}</span>
-												</p>
-											</div>
-											<div class="post-summary">
-												<p>${video.summary_s}</p>
-											</div>
-										</div>
-									</div>
-								</div>
+								<@resultsMacros.video id=video.id thumbnail=video.thumbnail title=video.title_s summary=video.summary_s date=video.date_dt?date("MM/dd/yyyy")?string.short viewCount=video.viewCount likeCount=video.likeCount dislikeCount=video.dislikeCount parentId="${videoSectionId}" baseUrl="${videoBaseUrl}" />
 							</#list>
 						</#if>
 					</div>

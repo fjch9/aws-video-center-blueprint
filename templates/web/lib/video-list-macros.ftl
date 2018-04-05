@@ -20,3 +20,60 @@
         </div>
     </div>
 </#macro>
+
+<#macro videoThumbnail id thumbnail title baseUrl>
+    <img src="${thumbnail}" alt="${title}">
+    <a href="${baseUrl}${id}" class="hover-posts">
+        <span><i class="fa fa-play-circle icon-circle"></i></span>
+    </a>
+</#macro>
+
+<#macro videoTitle id title baseUrl>
+    <h6><a href="${baseUrl}${id}">${title}</a></h6>
+</#macro>
+
+<#macro videoDate date>
+    <i class="fa fa-clock-o"></i>
+    <span>${date}</span>
+</#macro>
+
+<#macro videoViews viewCount>
+    <i class="fa fa-eye"></i>
+    <span>${viewCount}</span>
+</#macro>
+
+<#macro videoSummary summary>
+    <p>${summary}</p>
+</#macro>
+
+<#macro video id thumbnail title summary date viewCount likeCount dislikeCount parentId baseUrl gridStyle='grid-medium'>
+    <div class="item large-4 medium-6 columns ${gridStyle}" data-mh="${parentId}">
+        <div class="post thumb-border">
+            <div class="post-thumb">
+                <@videoThumbnail id=id thumbnail=thumbnail title=title baseUrl=baseUrl />
+            </div>
+            <div class="post-des">
+                <@videoTitle id=id title=title baseUrl=baseUrl />
+                <div class="post-stats clearfix">
+                    <p class="pull-left">
+                        <@videoDate date=date />
+                    </p>
+                    <p class="pull-left">
+                        <@videoViews viewCount=viewCount />
+                    </p>
+                    <p class="pull-left">
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <span>${likeCount}</span>
+                    </p>
+                    <p class="pull-left">
+                        <i class="fa fa-thumbs-o-down"></i>
+                        <span>${dislikeCount}</span>
+                    </p>
+                </div>
+                <div class="post-summary">
+                    <@videoSummary summary=summary />
+                </div>
+            </div>
+        </div>
+    </div>
+</#macro>

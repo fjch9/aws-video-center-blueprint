@@ -132,17 +132,11 @@ img{
 	display: block;
 	width: 100%;
 	height: 100%;
-	// background: rgba(#000, 0.7);
 	position: absolute;
 	z-index: 5;
 	top:0;
 	text-align: center;
-	// transform: scale(0);
 	transition: none;
-	// text-align: right;
-	// top: 37.2%;
-	// right: 10px;
-	// transform: scale(1);
 	@extend .transition;
 
 
@@ -1572,7 +1566,6 @@ input[type=checkbox]:checked + .customLabel:before {
 						.hover-posts{
 							span{
 								i{
-									// font-size: 18px !important;
 									font-size: 18px;
 								}
 							}
@@ -1586,9 +1579,9 @@ input[type=checkbox]:checked + .customLabel:before {
 					height: 218px !important;
 					.hover-posts{
 						span{
-						i{
-							font-size: 14px;
-						}
+							i{
+								font-size: 14px;
+							}
 						}
 					}
 
@@ -3881,8 +3874,8 @@ footer{
 				.video-img{
 					width: 177px;
 					height: 177px;
-					padding: 10px;
 					border-right: 1px solid $border-color;
+					position: relative;
 					img{
 						width: 100%;
 						height: 100%;
@@ -3921,7 +3914,6 @@ footer{
 								box-shadow: 3px 3px 5px 0px rgba(48,48,48,1)
 							}
 						}
-
 						.hover-posts{
 							text-align: right;
 							right: 10px;
@@ -3934,14 +3926,19 @@ footer{
 								}
 							}
 						}
-
+					}
+					&:hover{
+						a.hover-posts{
+							visibility: visible;
+							transform: scale(1);
+						}
 					}
 				}
 				.video-content{
 					width: 100%;
 					padding-left: 15px;
 					border-bottom: 1px solid $border-color;
-					h5{
+					h6{
 						margin: 15px 0;
 						line-height: 16px;
 						a{
@@ -4089,11 +4086,6 @@ footer{
 									transition: none;
 								}
 							}
-						}
-
-						#icon-circle{
-							font-size: 36px !important;
-							color: white !important;
 						}
 					}
 				}
@@ -4987,11 +4979,6 @@ article.page-content{
 				transition: none;
 			}
 		}
-	}
-
-	#icon-circle{
-		font-size: 36px !important;
-		color: white !important;
 	}
 }
 

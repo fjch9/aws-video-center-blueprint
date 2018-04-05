@@ -156,7 +156,7 @@ function getDate(videoDate){
 	return formatedStartDate.format('lll')+" "+currentTimeZone;
 }
 
-var renderVideoItem = function(parent, video, videoBaseUrl){
+var renderEventItem = function(parent, video, videoBaseUrl){
     var url = videoBaseUrl + video.id;
 	var className = parent.parent().parent().parent().find('.grid-system > .current').data('class')
 
@@ -171,7 +171,7 @@ var renderVideoItem = function(parent, video, videoBaseUrl){
 						</figcaption>
 					</div>
 					<a href="${url}" id="hover-circle" class="hover-posts">
-						<span><i id="icon-circle" class="fa fa-play-circle"></i></span>
+						<span><i class="fa fa-play-circle icon-circle"></i></span>
 					</a>
 				</div>
 			<div class="post-des">
@@ -239,7 +239,7 @@ var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
                         liveText.addClass('hide');
                     } else {
                         //append new
-                        jQuery(video_selector).append(renderVideoItem(jQuery(video_selector), element, videoBaseUrl));
+                        jQuery(video_selector).append(renderEventItem(jQuery(video_selector), element, videoBaseUrl));
                     }
 
                     if(element.liveNow) {
