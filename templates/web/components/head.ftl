@@ -25,5 +25,5 @@
 		<link rel="stylesheet" href="/static-assets/css/timeTo-min.css">
         <link rel="stylesheet" href="/static-assets/css/nav-min.css">
 
-        <script src="/static-assets/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/static-assets/bower_components/jquery/dist/jquery.min.js"></script>
 </head>
