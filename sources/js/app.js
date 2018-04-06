@@ -129,7 +129,6 @@ jQuery(document).ready(function(jQuery){
 	var thumb = jQuery('.thumb-slider .thumbs').find('.ver-thumbnail');
 	jQuery(thumb).on('click', function(){
 		var id = jQuery(this).attr('id');
-		//alert(id);
 		jQuery('.image').eq(0).show();
 		jQuery('.image').hide();
 		jQuery('.'+id).fadeIn();
@@ -166,11 +165,11 @@ var renderEventItemLiveText = function(isLive){
 
 var renderEventItemDates = function(startDate, endDate){
     return `<span>
-            <i class="fa fa-clock-o icon-start-time"></i> Start time: <span>${getDate(startDate)}</span>
+            <i class="fa fa-clock-o icon-start-time"></i> Start time: <span class='start-time'>${getDate(startDate)}</span>
         </span>
         <br/>
         <span>
-            <i class="fa fa-clock-o icon-end-time"></i> End time: <span>${getDate(endDate)}</span>
+            <i class="fa fa-clock-o icon-end-time"></i> End time: <span class='end-time'>${getDate(endDate)}</span>
         </span> `;
 }
 
