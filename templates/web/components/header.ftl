@@ -3,7 +3,7 @@
 <header>
 	<section id="top" class="topBar topBarBlack show-for-large">
 		<div class="row">
-			<@macros.topButtons />
+			<@macros.topButtons contactUsUrl=contentModel.contactUsURL />
 		</div>
 	</section>
 

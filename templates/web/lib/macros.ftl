@@ -25,7 +25,7 @@
 </section><!--end breadcrumbs-->
 </#macro>
 
-<#macro topButtons sidebar = false>
+<#macro topButtons contactUsUrl sidebar = false>
 <#if !sidebar><div class="medium-6 columns"></#if>
 	<div class="<#if sidebar>off-social<#else>socialLinks</#if>">
 		<#if sidebar><h6>Get Social</h6></#if>
@@ -36,7 +36,7 @@
 	<div class="top-button">
 		<ul class="menu <#if !sidebar>float-right</#if>">
             <li>
-                <a href="${contentModel.contactUsURL}">Contact Us</a>
+                <a href="${contactUsUrl}">Contact Us</a>
             </li>
 			<#if !profile??>
     			<li>

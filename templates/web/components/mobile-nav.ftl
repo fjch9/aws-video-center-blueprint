@@ -20,5 +20,5 @@
         </form>
     </div>
 
-    <@macros.topButtons sidebar = true />
+    <@macros.topButtons contactUsUrl=contentModel.contactUsURL sidebar = true />
 </div>
