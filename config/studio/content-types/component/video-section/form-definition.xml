@@ -380,7 +380,7 @@
 						</property>
 						<property>
 							<name>componentPath</name>
-							<value></value>
+							<value>/site/taxonomies/grid-styles.xml</value>
 								<type>undefined</type>
 						</property>
 					</properties>
