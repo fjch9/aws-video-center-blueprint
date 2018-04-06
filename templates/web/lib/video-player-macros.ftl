@@ -1,3 +1,5 @@
+<#import "/templates/web/lib/video-list-macros.ftl" as resultsMacros />
+
 <#macro header>
     <#assign inverted = false>
     <div class="off-canvas-wrapper">
@@ -93,40 +95,7 @@
 
                         <div class="row list-group">
                             <#list relatedVideos as relatedVideo>
-                            <#assign relatedVideoUrl = "${request.requestURI}?id=${relatedVideo.id}" />
-                            <div class="item large-4 columns <#if relatedVideo?is_last>end</#if> group-item-grid-default">
-                                <div class="post thumb-border" data-mh="related-videos">
-                                    <div class="post-thumb">
-                                        <img src="${relatedVideo.thumbnail}">
-                                        <a href="${relatedVideoUrl}" class="hover-posts">
-                                            <span><i class="fa fa-play-circle"></i></span>
-                                        </a>
-                                    </div>
-                                    <div class="post-des">
-                                        <h6><a href="#">${relatedVideo.title_s}</a></h6>
-                                        <div class="post-stats clearfix">
-                                            <p class="pull-left">
-                                                <i class="fa fa-eye"></i>
-                                                <span>${relatedVideo.viewCount}</span>
-                                            </p>
-                                            <p class="pull-left">
-                                                <i class="fa fa-thumbs-o-up"></i>
-                                                <span>${relatedVideo.likeCount}</span>
-                                            </p>
-                                            <p class="pull-left">
-                                                <i class="fa fa-thumbs-o-down"></i>
-                                                <span>${relatedVideo.dislikeCount}</span>
-                                            </p>
-                                        </div>
-                                        <div class="post-summary">
-                                            <p>${relatedVideo.summary_s}</p>
-                                        </div>
-                                        <div class="post-button">
-                                            <a href="${relatedVideoUrl}" class="secondary-button"><i class="fa fa-play-circle"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <@resultsMacros.video id=relatedVideo.id thumbnail=relatedVideo.thumbnail title=relatedVideo.title_s summary=relatedVideo.summary_s date='' viewCount=relatedVideo.viewCount likeCount=relatedVideo.likeCount dislikeCount=relatedVideo.dislikeCount parentId="related-videos" baseUrl="${request.requestURI}?id=" gridStyle='group-item-grid-default' />  
                             </#list>
                         </div>
                     </div>
