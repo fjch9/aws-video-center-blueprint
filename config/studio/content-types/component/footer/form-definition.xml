@@ -139,12 +139,12 @@
 					<properties>
 						<property>
 							<name>width</name>
-							<value>50</value>
+							<value></value>
 							<type>int</type>
 						</property>
 						<property>
 							<name>height</name>
-							<value>5</value>
+							<value>100</value>
 							<type>int</type>
 						</property>
 						<property>
@@ -274,12 +274,12 @@
 					<properties>
 						<property>
 							<name>width</name>
-							<value>50</value>
+							<value></value>
 							<type>int</type>
 						</property>
 						<property>
 							<name>height</name>
-							<value>5</value>
+							<value>100</value>
 							<type>int</type>
 						</property>
 						<property>
