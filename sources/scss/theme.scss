@@ -568,7 +568,8 @@ input[type=checkbox]:checked + .customLabel:before {
 			padding: 0;
 		}
 		.menu > li:not(.menu-text) > a{
-			padding: 25px 0;
+			padding-top: 30px;
+			padding-bottom: 15px;
 			font-size: 13px;
 			border-bottom: 2px solid transparent;
 			text-transform: uppercase;
