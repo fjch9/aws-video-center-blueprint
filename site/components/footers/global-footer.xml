@@ -16,7 +16,7 @@
 	<createdDate_dt>2017-8-25T19:1:5.000Z</createdDate_dt>
 	<lastModifiedDate>2018-03-30T21:44:23.937Z</lastModifiedDate>
 	<lastModifiedDate_dt>2018-03-30T21:44:23.937Z</lastModifiedDate_dt>
-	<aboutText>Crafter Video Center on AWS is a demo site built using Crafter CMS and Amazon Web Services including EC2, S3, Elemental and CloudFront.</aboutText>
-	<copyrightText>2017 © Crafter Software Corporation</copyrightText>
-	<aboutTitle>About Crafter Video Center</aboutTitle>
+	<aboutText>AWS Elemental Video Center on Crafter CMS is a demo site built using Crafter CMS and Amazon Web Services including EC2, S3, MediaLive and MediaPackage.</aboutText>
+	<copyrightText>2018 © Rivet Logic Corporation</copyrightText>
+	<aboutTitle>About AWS Elemental Video Center</aboutTitle>
 </component>
