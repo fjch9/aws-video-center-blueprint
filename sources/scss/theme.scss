@@ -352,7 +352,6 @@ input[type=checkbox]:checked + .customLabel:before {
 			}
 		}
 	}
-
 }
 .top-button{
 	.menu{
@@ -506,6 +505,19 @@ input[type=checkbox]:checked + .customLabel:before {
 						color: #aaaaaa;
 					}
 				}
+			}
+		}
+	}
+}
+.off-canvas{
+	.top-button{
+		padding-left: 16px;
+		li{
+			display: block;
+			padding-bottom: 8px;
+			width: 80px;
+			a{
+				width: 100px;
 			}
 		}
 	}
