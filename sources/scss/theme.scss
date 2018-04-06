@@ -2130,7 +2130,6 @@ footer{
 .sidebar{
 	margin-bottom: 30px;
 	padding-top: 24px;
-	padding-bottom: 60px;
 	position: relative;
 	z-index: 2;
 	.widgetBox{
@@ -2650,12 +2649,15 @@ footer{
 		}
 	}
 }
-.sidebarBg{
-	background: $offwhite;
-	position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
+.sidebarContainer{
+	overflow-x: hidden;
+	.sidebarBg{
+		background: $offwhite;
+		position: absolute;
+	    height: 100%;
+	    width: 100%;
+	    top: 0;
+	}
 }
 
 /* ==========================================================================
@@ -3010,6 +3012,9 @@ footer{
 #breadcrumb{
 	background: #444;
 	padding: 10px;
+	.breadcrumbContainer{
+		padding-left: 5px;
+	}
 	.breadcrumbs{
 		margin: 0;
 		li{
@@ -3050,7 +3055,6 @@ footer{
 .fullwidth-single-video{
 	background: #303030;
 	padding: 25px 0;
-	margin-bottom: 30px;
 	.flex-video{
 		margin-bottom: 0;
 		&.widescreen {
@@ -4132,6 +4136,9 @@ footer{
 		}
 	}
 }
+.profileBg{
+	background: $offwhite;
+}
 
 /* ==========================================================================
 	16- Submit Post
@@ -4290,7 +4297,6 @@ footer{
    ========================================================================== */
 .registration{
 	background: $offwhite;
-	margin: 30px 0;
 	.borderBottom{
 		padding: 0 15px;
 		margin-bottom: 50px;

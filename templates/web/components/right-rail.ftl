@@ -1,4 +1,4 @@
-<div class="large-4 columns">
+<div class="large-4 columns sidebarContainer">
 	<aside class="sidebar">
 		<div class="row">
 			<!-- search Widget -->

@@ -40,7 +40,7 @@ jQuery(document).ready(function(jQuery){
         jQuery('#' + jQuery(this).parent().data('id')).find('div.item')
             .removeClass(jQuery(this).parent().find('a.current').data('class'))
             .addClass(jQuery(this).data('class'))
-            .matchHeight();
+            .find('[data-mh]').matchHeight();
 
         // mark the current grid system
 		jQuery(this).parent().children('a').removeClass("current");
@@ -287,3 +287,11 @@ function formatVideoSections(){
 		}
 	});
 }
+
+jQuery(document).ready(function(){
+    // recompute size for cross browse compatibility
+    setTimeout(function() {
+        sidebarBackground = jQuery('.sidebarBg');
+        sidebarBackground.css('width', sidebarBackground.css('width'));
+    }, 250);
+});

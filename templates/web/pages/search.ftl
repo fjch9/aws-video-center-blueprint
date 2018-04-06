@@ -17,12 +17,12 @@
 
             <@macros.breadcrumb/>
 
-            <section class="category-content">
+            <section class="category-content mainSection">
                 <div class="row">
                     <!-- left side content area -->
                     <div class="large-8 columns">
                         <section class="content content-with-sidebar">
-                            <div id="${resultsId}" class="row secBg"></div>
+                            <div id="${resultsId}"></div>
                         </section>
                     </div><!-- end left side content area -->
                     <!-- sidebar -->
@@ -38,7 +38,7 @@
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="resultsTemplate" type="text/x-jsrender">
     <@resultsMacros.heading id="${resultsId}" title="Search Results for \"${userQuery}\"" subtext="{{:total}} matching found" layout='list' icon='fa-search' />
-    <div class="large-12 columns">
+    <div class="large-12">
         <div class="tabs-content" data-tabs-content="newVideos">
             <div class="tabs-panel is-active" id="new-all">
                 <div class="row list-group">
@@ -110,7 +110,7 @@
         jQuery.get('/api/1/search.json', params, function(res){
             jQuery('#results').html(jQuery.templates('#resultsTemplate').render(res));
 
-            jQuery('.tabs-content .item').matchHeight();
+            jQuery('.tabs-content .item [data-mh]').matchHeight();
         });
     }
 

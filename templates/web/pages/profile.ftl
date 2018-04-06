@@ -14,7 +14,7 @@
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <!--header-->
         <@renderComponent component = contentModel.mobileNavigation.item />
-        <div class="off-canvas-content" data-off-canvas-content>
+        <div class="off-canvas-content profileBg" data-off-canvas-content>
             <@renderComponent component = contentModel.header.item additionalModel = { 'currentPage' : model.storeUrl, 'backLink' : model.backLink } />
             <!--breadcrumbs-->
             <@macros.breadcrumb/>
@@ -299,6 +299,8 @@
             if(res.items) {
                 updatedCountVideos(res.total);
                 jQuery('#fav-list').html(jQuery.templates('#favoritesTemplate').render(res));
+
+                jQuery('#fav-list .item [data-mh]').matchHeight();
             }
         });
     }

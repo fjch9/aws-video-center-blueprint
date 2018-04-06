@@ -10,13 +10,13 @@
 </#macro>
 
 <#macro startVideoSection>
-    <div class="row">
+    <div class="row mainSection">
         <!-- left side content area -->
         <div class="large-8 columns">
             <!-- single post stats -->
             <section class="SinglePostStats">
                 <!-- newest video -->
-                <div class="row secBg">
+                <div class="row">
                     <div class="large-12 columns">
                         <div class="media-object stack-for-small">
                             <div class="media-object-section object-second">
@@ -47,7 +47,7 @@
 
             <!-- single post description -->
             <section class="singlePostDescription">
-                <div class="row secBg">
+                <div class="row">
                     <div class="large-12 columns">
                         <div class="heading">
                             <h5>Description</h5>
@@ -78,8 +78,8 @@
             
             <!-- related Posts -->
             <section class="content content-with-sidebar related">
-                <div class="row secBg">
-                    <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-12 columns" id='related-videos'>
                         <div class="main-heading borderBottom">
                             <div class="row padding-14">
                                 <div class="medium-12 small-12 columns">
@@ -94,8 +94,8 @@
                         <div class="row list-group">
                             <#list relatedVideos as relatedVideo>
                             <#assign relatedVideoUrl = "${request.requestURI}?id=${relatedVideo.id}" />
-                            <div class="item large-4 columns <#if relatedVideo?is_last>end</#if> group-item-grid-default" data-mh="related-videos">
-                                <div class="post thumb-border">
+                            <div class="item large-4 columns <#if relatedVideo?is_last>end</#if> group-item-grid-default">
+                                <div class="post thumb-border" data-mh="related-videos">
                                     <div class="post-thumb">
                                         <img src="${relatedVideo.thumbnail}">
                                         <a href="${relatedVideoUrl}" class="hover-posts">

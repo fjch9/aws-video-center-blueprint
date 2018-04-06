@@ -22,7 +22,7 @@
                     <section class="content content-with-sidebar">
                         <!-- newest video -->
                         <div class="main-heading removeMargin">
-                            <div class="row secBg padding-14 removeBorderBottom">
+                            <div class="row padding-14 removeBorderBottom">
                                 <div class="medium-8 small-8 columns">
                                     <div class="head-title">
                                         <#if contentModel.icon?has_content><i class="fa ${contentModel.icon}"></i></#if>
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row secBg">
+                        <div class="row">
                             <div class="large-12 columns">
                                 <article class="page-content">
                                     ${contentModel.body_html}

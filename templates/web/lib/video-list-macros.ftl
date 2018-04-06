@@ -47,8 +47,8 @@
 </#macro>
 
 <#macro video id thumbnail title summary date viewCount likeCount dislikeCount parentId baseUrl gridStyle='grid-medium'>
-    <div class="item large-4 medium-6 columns ${gridStyle}" data-mh="${parentId}">
-        <div class="post thumb-border">
+    <div class="item large-4 medium-6 columns ${gridStyle}">
+        <div class="post thumb-border" data-mh="${parentId}">
             <div class="post-thumb">
                 <@videoThumbnail id=id thumbnail=thumbnail title=title baseUrl=baseUrl />
             </div>

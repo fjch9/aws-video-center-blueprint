@@ -9,7 +9,7 @@
 </#if>
 <section id="breadcrumb">
 		<div class="row">
-				<div class="large-12 columns">
+				<div class="large-12 breadcrumbContainer">
 						<nav aria-label="You are here:" role="navigation">
 								<ul class="breadcrumbs">
 										<#list breadcrumbs as item>

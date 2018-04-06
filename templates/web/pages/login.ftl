@@ -18,7 +18,7 @@
 
             <!-- registration -->
             <section class="registration">
-                <div class="row secBg">
+                <div class="row">
                     <div class="large-12 columns">
                         <div class="login-register-content">
                             <div class="row collapse borderBottom">

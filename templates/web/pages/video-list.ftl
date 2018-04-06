@@ -17,10 +17,10 @@
             <section class="category-content mainSection">
                 <div class="row">
                     <!-- left side content area -->
-                    <div class="large-8 columns mainColumn">
+                    <div class="large-8 columns">
                         <section class="content content-with-sidebar">
                             <div data-limit-video="${contentModel.videoPageSize}"></div>
-                            <div id="${resultsId}" class="row"></div>
+                            <div id="${resultsId}"></div>
                         </section>
                     </div><!-- end left side content area -->
                     <@renderComponent component = contentModel.rightRail.item />
@@ -108,7 +108,7 @@
         jQuery.get('/api/1/search.json', params, function(res){
             res.page = page
             jQuery('#results').html(jQuery.templates('#resultsTemplate').render(res));
-            jQuery('.tabs-content .item').matchHeight();
+            jQuery('.tabs-content .item [data-mh]').matchHeight();
             formatVideoSections();
         });
     }
