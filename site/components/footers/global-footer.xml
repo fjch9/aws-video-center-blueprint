@@ -14,9 +14,9 @@
 	</item></socialMediaLinks>
 	<createdDate>2017-8-25T19:1:5.000Z</createdDate>
 	<createdDate_dt>2017-8-25T19:1:5.000Z</createdDate_dt>
-	<lastModifiedDate>2018-03-30T21:44:23.937Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-03-30T21:44:23.937Z</lastModifiedDate_dt>
-	<aboutText>AWS Elemental Video Center on Crafter CMS is a demo site built using Crafter CMS and Amazon Web Services including EC2, S3, MediaLive and MediaPackage.</aboutText>
-	<copyrightText>2018 © Rivet Logic Corporation</copyrightText>
+	<lastModifiedDate>2018-04-06T18:16:04.099Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-04-06T18:16:04.099Z</lastModifiedDate_dt>
+	<aboutText>&lt;p&gt;AWS Elemental Video Center on &lt;a href="http://craftersoftware.com" target="_self"&gt;Crafter CMS&lt;/a&gt; is a demo site built using &lt;a href="http://craftersoftware.com" target="_self"&gt;Crafter CMS&lt;/a&gt; and Amazon Web Services including EC2, S3, MediaLive and MediaPackage.&lt;/p&gt;</aboutText>
+	<copyrightText>&lt;p&gt;2018 &amp;copy; &lt;a href="http://rivetlogic.com" title="Rivet Logic Corporation" target="_self"&gt;Rivet Logic Corporation&lt;/a&gt;&lt;/p&gt;</copyrightText>
 	<aboutTitle>About AWS Elemental Video Center</aboutTitle>
 </component>
