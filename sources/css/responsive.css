@@ -391,6 +391,12 @@
         display: none;
     }
 }
+@media screen and (max-width: 1024px) {
+    .sidebarContainer{
+        position: relative;
+        padding-left: 0px;
+    }
+}
 
 @media screen and (min-width: 320px) and (max-width: 320px){
     .error-page .error-page-content .error-img .spark{

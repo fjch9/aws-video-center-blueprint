@@ -1,5 +1,6 @@
 <#import "/templates/system/common/cstudio-support.ftl" as studio />
 <#import "/templates/web/lib/macros.ftl" as macros />
+<#import "/templates/web/lib/video-list-macros.ftl" as resultsMacros />
 
 <#assign favoriteVideos = (profile.attributes.favoriteVideos)![] />
 
@@ -7,13 +8,14 @@
 <html class="no-js" lang="en">
 
 <#include "/templates/web/components/head.ftl" />
+
 <body>
 	<#assign inverted = false>
 <div class="off-canvas-wrapper">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <!--header-->
         <@renderComponent component = contentModel.mobileNavigation.item />
-        <div class="off-canvas-content" data-off-canvas-content>
+        <div class="off-canvas-content profileBg" data-off-canvas-content>
             <@renderComponent component = contentModel.header.item additionalModel = { 'currentPage' : model.storeUrl, 'backLink' : model.backLink } />
             <!--breadcrumbs-->
             <@macros.breadcrumb/>
@@ -23,7 +25,7 @@
                     <div class="row secBg">
                         <div class="large-12 columns">
                             <div class="profile-author-img">
-                                <img src="/api/1/profile/avatar" onerror="this.src='/static-assets/images/avatar.jpg'" alt="profile image">
+                                <img src="/api/1/profile/avatar.json" onerror="this.src='/static-assets/images/avatar.jpg'" alt="profile image">
                             </div>
                             <div class="clearfix">
                                 <div class="profile-author-name float-left">
@@ -221,98 +223,69 @@
         </div><!--end off canvas content-->
     </div><!--end off canvas wrapper inner-->
 </div><!--end off canvas wrapper-->
+
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
+
+<#assign videoBaseUrl = "${contentModel.videoLandingURL}?id=" />
+<#assign streamBaseUrl = "${contentModel.streamLandingUrl}?id=" />
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
-{{for items}}
-{{if type == 'stream'}}
-<div class="profile-video">
-    <div class="media-object stack-for-small">
-        <div class="media-object-section media-img-content">
-            <div class="video-img">
-                <div class="live-icon">
-                    <img src="{{:thumbnail}}" alt="new video">
-                    <div class="tag-live {{if liveNow == false}}hide{{/if}}">
-                        <figcaption>
-                            <p class="live-text">Live</p>
-                        </figcaption>
+    {{for items}}
+        {{* baseUrl = type == 'stream' ? "${streamBaseUrl}" : "${videoBaseUrl}"}}
+        <div class="profile-video">
+            <div class="media-object stack-for-small">
+                <div class="media-object-section media-img-content">
+                    <div class="video-img post-thumb">
+                        <div class="live-icon">
+                            {{if type == 'stream'}}
+                                {{:~renderEventItemLiveText(liveNow)}}
+                            {{/if}}
+                            <@resultsMacros.videoThumbnail id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" baseUrl="{{:baseUrl}}" />
+                        </div>
                     </div>
-                    <a href="{{:~getStreamUrl(id)}}}" class="hover-posts">
-                        <span><i class="fa fa-play-circle icon-circle"></i></span>
-                    </a>
+                </div>
+                <div class="media-object-section media-video-content">
+                    <div class="video-content">
+                        <@resultsMacros.videoTitle id="{{:id}}" title="{{:title_s}}" baseUrl="{{:baseUrl}}" />
+                        <@resultsMacros.videoSummary summary="{{:summary_s}}" />
+                    </div>
+                    <div class="video-detail clearfix">
+                        <div class="video-stats">
+                            {{if type == 'stream'}}
+                                {{:~renderEventItemDates(startDate_dt, endDate_dt)}}
+                                <br/>
+                            {{else}}
+                                <@resultsMacros.videoDate date="{{:date_dt}}" />
+                            {{/if}}
+                            <@resultsMacros.videoViews viewCount="{{:viewCount}}" />
+                        </div>
+                        <div class="video-btns">
+                            <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="media-object-section media-video-content">
-            <div class="video-content">
-                <h5><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h5>
-                <p>{{:summary_s}}</p>
-            </div>
-            <div class="video-detail clearfix">
-                <div class="video-stats">
-                    <span><i class="fa fa-clock-o start-time"></i>Start time: {{:~getDate(startDate_dt)}}</span>
-                    <span><i class="fa fa-clock-o end-time"></i>End time: {{:~getDate(endDate_dt)}}</span>
-                    <br>
-                    <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
-                </div>
-                <div class="video-btns">
-                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{else type == 'video'}}
-<div class="profile-video">
-    <div class="media-object stack-for-small">
-        <div class="media-object-section media-img-content">
-            <div class="video-img">
-                <img src="{{:thumbnail}}" alt="{{:title_s}}">
-            </div>
-        </div>
-        <div class="media-object-section media-video-content">
-            <div class="video-content">
-                <h5><a href="{{:~videoUrl(id)}}">{{:title_s}}</a></h5>
-                <p>{{:summary_s}}</p>
-            </div>
-            <div class="video-detail clearfix">
-                <div class="video-stats">
-                    <span><i class="fa fa-clock-o"></i>{{:date_dt}}</span>
-                    <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
-                </div>
-                <div class="video-btns">
-                    <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/if}}
-{{/for}}
+    {{/for}}
 </script>
+
 <script>
     function loadResults(params) {
         jQuery.get('/api/1/profile/favorites.json', params, function(res){
             if(res.items) {
                 updatedCountVideos(res.total);
                 jQuery('#fav-list').html(jQuery.templates('#favoritesTemplate').render(res));
+
+                jQuery('#fav-list .item [data-mh]').matchHeight();
             }
         });
     }
 
 	jQuery.views.helpers({
-		videoUrl: function(id) {
-			return '${contentModel.videoLandingURL}?id=' + id;
-		},
-        getDate: function (date) {
-             var formatedStartDate = moment(date);
-             var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
-            return formatedStartDate.format('lll')+" "+currentTimeZone
-        },
-        getStreamUrl: function(id){
-            return "/live?id="+id
-        }
+        getDate: getDate,
+        renderEventItemLiveText: renderEventItemLiveText,
+        renderEventItemDates: renderEventItemDates
 	});
 
     function updatedCountVideos(count){
@@ -338,7 +311,6 @@
             jQuery('[data-content=' + jQuery(this).data('tab-profile') + ']').removeClass('hide').siblings('[data-content]').addClass('hide');
             e.preventDefault();
         });
-
     });
 </script>
 <@studio.toolSupport />

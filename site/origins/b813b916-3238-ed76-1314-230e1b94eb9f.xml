@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/stream-origin</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>b813</objectGroupId>
+	<objectId>b813b916-3238-ed76-1314-230e1b94eb9f</objectId>
+	<file-name>b813b916-3238-ed76-1314-230e1b94eb9f.xml</file-name>
+	<internal-name>Sample Conference Room Camera</internal-name>
+	<url>https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8</url>
+	<segmentSize>6</segmentSize>
+	<playlistDuration>60</playlistDuration>
+	<encoding>application/x-mpegURL</encoding>
+	<createdDate>2018-04-06T13:25:04.325Z</createdDate>
+	<createdDate_dt>2018-04-06T13:25:04.325Z</createdDate_dt>
+	<lastModifiedDate>2018-04-06T13:25:04.325Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-04-06T13:25:04.325Z</lastModifiedDate_dt>
+</component>

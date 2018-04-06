@@ -21,7 +21,6 @@
 	<createdDate_dt>2017-8-25T19:32:56.000Z</createdDate_dt>
 	<lastModifiedDate>2017-9-13T22:54:7.000Z</lastModifiedDate>
 	<lastModifiedDate_dt>2017-9-13T22:54:7.000Z</lastModifiedDate_dt>
-	<whiteBackground>true</whiteBackground>
 	<recentVideosWidget>	<item>	<key>/site/components/video-widgets/recent-videos-widget.xml</key>
 	<value>Recent Videos Widget</value>
 	<include>/site/components/video-widgets/recent-videos-widget.xml</include>

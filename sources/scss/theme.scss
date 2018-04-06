@@ -57,7 +57,7 @@ img{
 }
 .off-canvas-content,
 .off-canvas-content{
-	background: #f6f6f6;
+	background: $white;
 }
 .object-fit_fill {
 	-o-object-fit: fill;
@@ -132,17 +132,11 @@ img{
 	display: block;
 	width: 100%;
 	height: 100%;
-	// background: rgba(#000, 0.7);
 	position: absolute;
 	z-index: 5;
 	top:0;
 	text-align: center;
-	// transform: scale(0);
 	transition: none;
-	// text-align: right;
-	// top: 37.2%;
-	// right: 10px;
-	// transform: scale(1);
 	@extend .transition;
 
 
@@ -532,7 +526,7 @@ input[type=checkbox]:checked + .customLabel:before {
 			padding-left: 15px;
 			.menu-icon{
 				height: 16px;
-				margin: 12px 0 12px 0;
+				margin: 12px 12px 12px 0;
 			}
 			.title-bar-title img{
 				object-fit: contain;
@@ -1351,21 +1345,8 @@ input[type=checkbox]:checked + .customLabel:before {
 /* ==========================================================================
 	6 - Main Content
    ========================================================================== */
-.mainContentv3{
-	background: #fff;
-}
-//landing page content
-.parentbg{
+.mainSection{
 	position: relative;
-	.sidebarBg{
-		position: absolute;
-		left:102%;
-		top:0;
-		height: 100%;
-		width: 100vw;
-		background: $offwhite;
-		z-index: 1;
-	}
 }
 .mainContentLanding{
 	background: $white;
@@ -1510,6 +1491,17 @@ input[type=checkbox]:checked + .customLabel:before {
 	}
 	.main-heading{
 		margin-bottom: 10px;
+		.header-container-wrapper{
+			width: 100%;
+			.head-container{
+				display: inline-flex;
+				width: 100%;
+				.head-title{
+					white-space: nowrap;
+					padding-bottom: 14px;
+				}
+			}
+		}
 		.head-title{
 			i{
 				display: inline-block;
@@ -1521,76 +1513,34 @@ input[type=checkbox]:checked + .customLabel:before {
 				margin: 0;
 			}
 		}
-		.tabs{
-			border: none;
-			li.tabs-title{
-				margin-left: 5px;
-				a{
-					color: $body-color;
-					width: 30px;
-					height: 30px;
-					text-align: center;
-					padding: 0;
-					line-height: 30px;
-					border-radius: 3px;
-					background: $offwhite;
-					font-size: 13px;
-					text-transform: capitalize;
-					@extend .transition;
-					&:hover{
-						background: $primary;
+		.head-text{
+			flex-grow: 1;
+			p{
+				margin: 0;
+				span{
+					color: #aaaaaa;
+					font-size: 12px;
+				}
+			}
+			h4{
+				color: #444444;
+				i{
+					display: inline-block;
+					color: $primary;
+					margin-right: 12px;
+				}
+			}
+			.grid-system{
+				a.current{
+					background: $primary;
+					i{
 						color: $white;
 					}
 				}
-				&:last-of-type{
-					a{
-						font-weight: bold;
-						font-style: italic;
-						text-transform: uppercase;
-						color: #444;
-						@extend .transition;
-						&:hover{
-							background: $primary;
-							color: $white;
-						}
-					}
-				}
-			}
-			.tabs-title > a:focus, .tabs-title > a[aria-selected="true"]{
-				background: $primary;
-				color: $white !important;
 			}
 		}
 	}
 
-	.head-text{
-		border-bottom: 1px solid $border-color;
-		padding: 14px 0;
-		margin-bottom: 30px;
-		p{
-			margin: 0;
-			span{
-				color: #aaaaaa;
-				font-size: 12px;
-			}
-		}
-		h4{
-			color: #444444;
-			i{
-				display: inline-block;
-				color: $primary;
-				margin-right: 12px;
-			}
-		}
-		.grid-system{
-			a.current{
-				background: $primary;
-				i{
-					color: $white;
-				}
-			}
-		}
-	}
 	.tabs-content {
 		border: none;
 		.tabs-panel {
@@ -1605,7 +1555,6 @@ input[type=checkbox]:checked + .customLabel:before {
 						.hover-posts{
 							span{
 								i{
-									// font-size: 18px !important;
 									font-size: 18px;
 								}
 							}
@@ -1619,9 +1568,9 @@ input[type=checkbox]:checked + .customLabel:before {
 					height: 218px !important;
 					.hover-posts{
 						span{
-						i{
-							font-size: 14px;
-						}
+							i{
+								font-size: 14px;
+							}
 						}
 					}
 
@@ -2178,22 +2127,11 @@ footer{
 /* ==========================================================================
 	9- sidebar
    ========================================================================== */
-
 .sidebar{
 	margin-bottom: 30px;
 	padding-top: 24px;
-	padding-bottom: 60px;
 	position: relative;
 	z-index: 2;
-	.sidebarBg{
-		position: absolute;
-		left:0;
-		top:0;
-		height: 100%;
-		width: 100vw;
-		background: $offwhite;
-		z-index: -1;
-	}
 	.widgetBox{
 		margin-bottom: 40px;
 		padding: 0 30px;
@@ -2711,6 +2649,16 @@ footer{
 		}
 	}
 }
+.sidebarContainer{
+	overflow-x: hidden;
+	.sidebarBg{
+		background: $offwhite;
+		position: absolute;
+	    height: 100%;
+	    width: 100%;
+	    top: 0;
+	}
+}
 
 /* ==========================================================================
 	10- off canvas menu
@@ -3064,6 +3012,9 @@ footer{
 #breadcrumb{
 	background: #444;
 	padding: 10px;
+	.breadcrumbContainer{
+		padding-left: 5px;
+	}
 	.breadcrumbs{
 		margin: 0;
 		li{
@@ -3104,7 +3055,6 @@ footer{
 .fullwidth-single-video{
 	background: #303030;
 	padding: 25px 0;
-	margin-bottom: 30px;
 	.flex-video{
 		margin-bottom: 0;
 		&.widescreen {
@@ -3914,25 +3864,21 @@ footer{
 				.video-img{
 					width: 177px;
 					height: 177px;
-					padding: 10px;
 					border-right: 1px solid $border-color;
+					position: relative;
 					img{
 						width: 100%;
 						height: 100%;
 					}
-
 					.live-icon{
 						width: 100%;
 						height: 100%;
 						position: relative;
-
 						figcaption {
 							font-weight: bold;
 							position: absolute;
 							z-index: 3;
 							bottom: -5px;
-    						left: 15px;
-
 							.icon-broadcast{
 								width: 32px !important;
 								height: 32px !important;
@@ -3943,10 +3889,9 @@ footer{
 								-moz-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 								box-shadow: 3px 3px 5px 0px rgba(48,48,48,1);
 							}
-
 							.live-text{
 								color: white;
-								font-size: 12px; 
+								font-size: 12px;
 								padding: 3px;
 								background-color: #FE9A00;
 								-webkit-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
@@ -3954,7 +3899,6 @@ footer{
 								box-shadow: 3px 3px 5px 0px rgba(48,48,48,1)
 							}
 						}
-
 						.hover-posts{
 							text-align: right;
 							right: 10px;
@@ -3967,14 +3911,19 @@ footer{
 								}
 							}
 						}
-
+					}
+					&:hover{
+						a.hover-posts{
+							visibility: visible;
+							transform: scale(1);
+						}
 					}
 				}
 				.video-content{
 					width: 100%;
 					padding-left: 15px;
 					border-bottom: 1px solid $border-color;
-					h5{
+					h6{
 						margin: 15px 0;
 						line-height: 16px;
 						a{
@@ -3994,12 +3943,15 @@ footer{
 					.video-stats{
 						display: inline-block;;
 						width: 50%;
+						line-height: 1.25;
+						vertical-align: middle;
 						span{
 							font-size: 12px;
 							color: #aaaaaa;
 							display: inline-block;
 							margin-right: 15px;
 							text-transform: capitalize;
+							white-space: nowrap;
 							i{
 								font-size: 14px;
 								display: inline-block;
@@ -4007,17 +3959,8 @@ footer{
 								margin-right: 5px;
 							}
 						}
-
-						.start-time{
-							color: #61ca37 !important;
-						}
-
-						.end-time{
-							color: #FF0000 !important;
-						}
 					}
 				}
-
 				.video-btns{
 					width: 49%;
 					display: inline-block;
@@ -4079,7 +4022,6 @@ footer{
 						}
 					}
 				}
-
 				.video-stream{
 					.post-thumb {
 						figcaption {
@@ -4099,7 +4041,6 @@ footer{
 								-moz-box-shadow: 10px 10px 5px 0px rgba(48,48,48,1);
 								box-shadow: 3px 3px 5px 0px rgba(48,48,48,1);
 							}
-
 							.live-text{
 								color: white;
 								font-size: 18px; 
@@ -4110,7 +4051,6 @@ footer{
 								box-shadow: 3px 3px 5px 0px rgba(48,48,48,1)
 							}
 						}
-
 						.hover-posts{
 							text-align: right;
 							right: 10px;
@@ -4122,11 +4062,6 @@ footer{
 									transition: none;
 								}
 							}
-						}
-
-						#icon-circle{
-							font-size: 36px !important;
-							color: white !important;
 						}
 					}
 				}
@@ -4186,6 +4121,9 @@ footer{
 			}
 		}
 	}
+}
+.profileBg{
+	background: $offwhite;
 }
 
 /* ==========================================================================
@@ -4345,7 +4283,6 @@ footer{
    ========================================================================== */
 .registration{
 	background: $offwhite;
-	margin: 30px 0;
 	.borderBottom{
 		padding: 0 15px;
 		margin-bottom: 50px;
@@ -5020,11 +4957,6 @@ article.page-content{
 				transition: none;
 			}
 		}
-	}
-
-	#icon-circle{
-		font-size: 36px !important;
-		color: white !important;
 	}
 }
 

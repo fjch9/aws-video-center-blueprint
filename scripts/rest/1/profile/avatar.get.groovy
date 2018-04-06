@@ -12,7 +12,4 @@ if(avatarInfo.id) {
 	response.setHeader("content-length", avatarInfo.fileSizeBytes as String)
 	IOUtils.copy(avatar, response.outputStream)
 	IOUtils.closeQuietly(avatar)
-	return
 }
-
-throw new HttpStatusCodeException(404, "Avatar not found")

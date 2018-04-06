@@ -6,7 +6,7 @@ class TagsService {
   
   def searchAllTags() {
     def query = searchService.createQuery()
-    query.query = 'content-type:"/component/video"'
+    query.query = 'content-type:"/component/video" OR content-type:"/component/stream"'
     query.fieldsToReturn = [ "tags.item.value_smv" ] as String[]
     query.setParam("facet", "on")
     query.setParam("facet.field", "tags.item.value_smv")

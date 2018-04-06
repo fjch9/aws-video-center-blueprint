@@ -1,10 +1,13 @@
 <#import "/templates/system/common/cstudio-support.ftl" as studio />
 <#import "/templates/web/lib/macros.ftl" as macros />
+<#import "/templates/web/lib/video-list-macros.ftl" as resultsMacros />
 
 <!doctype html>
 <html class="no-js" lang="en">
 
 <#include "/templates/web/components/head.ftl" />
+<#assign resultsId = "results">
+
 <body>
     <#assign inverted = false>
 <div class="off-canvas-wrapper">
@@ -15,24 +18,12 @@
 
             <@macros.breadcrumb/>
 
-            <section class="category-content">
+            <section class="category-content mainSection">
                 <div class="row">
                     <!-- left side content area -->
                     <div class="large-8 columns">
                         <section class="content content-with-sidebar">
-                            <!-- newest video -->
-                            <div class="main-heading removeMargin">
-                                <div class="row secBg padding-14 removeBorderBottom">
-                                    <div class="medium-8 small-12 columns">
-                                        <div class="head-title">
-                                            <i class="fa fa-search"></i>
-                                            <h4>Search Results for "${userQuery}"</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="results" class="row secBg">
-                            </div>
+                            <div id="${resultsId}"></div>
                         </section>
                     </div><!-- end left side content area -->
                     <!-- sidebar -->
@@ -43,111 +34,37 @@
         </div>
     </div><!--end off canvas wrapper inner-->
 </div><!--end off canvas wrapper-->
+
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
+
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="resultsTemplate" type="text/x-jsrender">
-    <div class="large-12 columns">
-        <div class="row column head-text clearfix">
-            <p class="pull-left">Search Results :<span> {{:total}} matching ${userQuery} found</span></p>
-            <div class="grid-system pull-right show-for-large">
-                <a class="secondary-button grid-default {{if layout == 'grid-default'}}current{{/if}}" href="#" data-class="grid-default"><i class="fa fa-th"></i></a>
-                <a class="secondary-button grid-medium {{if layout == 'grid-medium'}}current{{/if}}" href="#" data-class="grid-medium"><i class="fa fa-th-large"></i></a>
-                <a class="secondary-button list {{if layout == 'list'}}current{{/if}}" href="#" data-class="list"><i class="fa fa-th-list"></i></a>
-            </div>
-        </div>
+    <@resultsMacros.heading id="${resultsId}" title="Search Results for \"${userQuery}\"" subtext="{{:total}} matching found" layout='list' icon='fa-search' />
+    <div class="large-12">
         <div class="tabs-content" data-tabs-content="newVideos">
             <div class="tabs-panel is-active" id="new-all">
                 <div class="row list-group">
-                    {{for items ~size=items.length}}
-                    <div class="item large-4 medium-6 {{if #index + 1 == ~size}}end{{/if}} columns {{:~root.layout}}">
-                    
-                    {{if type == 'stream'}}
-                    
-                    <div class="post thumb-border">
-                            <div class="post-thumb">
-                                <img src="{{:thumbnail}}" alt="new video">
-                                <div class="tag-live {{if liveNow == false}}hide{{/if}}">
-                                    <figcaption>
-                                        <p class="live-text">Live</p>
-                                    </figcaption>
-                                </div>
-                                <a href="{{:~getStreamUrl(id)}}}" class="hover-posts">
-                                    <span><i class="fa fa-play-circle icon-circle"></i></span>
-                                </a>
-                            </div>
-                            <div class="post-des">
-                                <h6><a href="{{:~getStreamUrl(id)}}}">{{:title_s}}</a></h6>
-                                <div class="post-stats clearfix">
-                                    <p class="clearfix content-popular-icons">
-                                        <i class="fa fa-clock-o icon-start-time"></i>
-                                        <span>Start time: {{:~getDate(startDate_dt)}}</span>
-                                        <br>
-                                        <i class="fa fa-clock-o icon-end-time"></i>
-                                        <span>End time: {{:~getDate(endDate_dt)}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-eye"></i>
-                                        <span>{{:viewCount}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-thumbs-o-up"></i>
-                                        <span>{{:likeCount}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-thumbs-o-down"></i>
-                                        <span>{{:dislikeCount}}</span>
-                                    </p>
-                                </div>
-                                <div class="post-summary">
-                                    <p>{{:summary_s}}</p>
-                                </div>
-                                <div class="post-button">
-                                    <a href="{{:~videoUrl(id)}}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    {{else type == 'video'}}
-                        <div class="post thumb-border">
-                            <div class="post-thumb">
-                                <img src="{{:thumbnail}}" alt="new video">
-                                <a href="{{:~videoUrl(id)}}" class="hover-posts">
-                                    <span><i class="fa fa-play-circle icon-circle"></i></span>
-                                </a>
-                            </div>
-                            <div class="post-des">
-                                <h6><a href="{{:~videoUrl(id)}}">{{:title_s}}</a></h6>
-                                <div class="post-stats clearfix">
-                                    <p class="clearfix content-popular-icons">
-                                        <i class="fa fa-clock-o"></i>
-                                        <span>{{:~getDate(date_dt)}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-eye"></i>
-                                        <span>{{:viewCount}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-thumbs-o-up"></i>
-                                        <span>{{:likeCount}}</span>
-                                    </p>
-                                    <p class="pull-left">
-                                        <i class="fa fa-thumbs-o-down"></i>
-                                        <span>{{:dislikeCount}}</span>
-                                    </p>
-                                </div>
-                                <div class="post-summary">
-                                    <p>{{:summary_s}}</p>
-                                </div>
-                                <div class="post-button">
-                                    <a href="{{:~videoUrl(id)}}" class="secondary-button"><i class="fa fa-play-circle"></i>watch</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    
-                    {{/if}}
-                    </div>
+                    {{for items ~size=items.length}}                    
+                        {{if type == 'stream'}}
+                        {{:~renderEventItem({
+                                "id": id,
+                                "thumbnail": thumbnail,
+                                "title_s": title_s,
+                                "startDate_dt": startDate_dt,
+                                "endDate_dt": endDate_dt,
+                                "viewCount": viewCount,
+                                "likeCount": likeCount,
+                                "dislikeCount": dislikeCount,
+                                "summary_s": summary_s,
+                                "liveNow": liveNow
+                            },
+                            "${contentModel.streamLandingUrl}?id=",
+                            "${resultsId}",
+                            'list')}}
+                        {{else type == 'video'}}
+                            <@resultsMacros.video id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" summary="{{:summary_s}}" date="{{:~getDate(date_dt)}}" viewCount="{{:viewCount}}" likeCount="{{:likeCount}}" dislikeCount="{{:dislikeCount}}" parentId="${resultsId}" baseUrl="${contentModel.videoLandingUrl}?id=" gridStyle='list' />                       
+                        {{/if}}
                     {{/for}}
                 </div>
             </div>
@@ -159,32 +76,20 @@
         {{/if}}
     </div>
 </script>
+
 <script>
     var rows = ${rows}, times = 1;
-    var layout = "list";
 
     function loadResults(params) {
         jQuery.get('/api/1/search.json', params, function(res){
-            res.layout = layout;
-
             jQuery('#results').html(jQuery.templates('#resultsTemplate').render(res));
-
-            jQuery('.tabs-content .item').matchHeight();
+            jQuery('.tabs-content .item [data-mh]').matchHeight();
         });
     }
 
     jQuery.views.helpers({
-        videoUrl: function(id) {
-            return '${contentModel.videoLandingURL}?id=' + id;
-        },
-        getDate: function (date) {
-             var formatedStartDate = moment(date);
-             var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
-            return formatedStartDate.format('lll')+" "+currentTimeZone
-        },
-        getStreamUrl: function(id){
-            return "/live?id="+id
-        }
+        getDate: getDate,
+        renderEventItem: renderEventItem
     });
 
     jQuery(document).ready(function(){
@@ -196,7 +101,6 @@
 
         jQuery(document).on('click', '#btn-load-more', function(){
             times++;
-            layout = jQuery(".grid-system > .current").data('class');
 
             loadResults({
                 q: '${q}',

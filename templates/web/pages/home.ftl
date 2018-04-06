@@ -11,12 +11,10 @@
       <@renderComponent component = contentModel.mobileNavigation.item />
 			<div class="off-canvas-content" data-off-canvas-content>
 				<@renderComponent component = contentModel.header.item additionalModel = { 'currentPage' : model.storeUrl, 'backLink' : model.backLink } />
-				<section class="mainContentv3">
+				<section class="mainSection">
 					<div class="row">
 						<!-- left side content area -->
-						<div class="large-8 columns parentbg">
-							<div class="sidebarBg"></div>
-
+						<div class="large-8 columns">
 							<#list contentModel.videoSections.item as videoSection>
 								<@renderComponent component = videoSection />
 							</#list>

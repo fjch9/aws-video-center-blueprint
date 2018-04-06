@@ -13,4 +13,6 @@
 	<createdDate_dt>2017-9-19T17:20:23.000Z</createdDate_dt>
 	<lastModifiedDate>2017-9-19T17:20:23.000Z</lastModifiedDate>
 	<lastModifiedDate_dt>2017-9-19T17:20:23.000Z</lastModifiedDate_dt>
+	<videoLandingUrl>/video</videoLandingUrl>
+	<streamLandingUrl>/live</streamLandingUrl>
 </page>

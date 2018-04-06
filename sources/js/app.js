@@ -35,13 +35,12 @@ jQuery(document).ready(function(jQuery){
 	//grid system
 	jQuery(document).on("click", ".grid-system > a", function(event){
 		event.preventDefault();
-		var selector = jQuery(this).parent().parent().next().find('div.item');
 
         // replace previous class
-        jQuery(selector)
+        jQuery('#' + jQuery(this).parent().data('id')).find('div.item')
             .removeClass(jQuery(this).parent().find('a.current').data('class'))
             .addClass(jQuery(this).data('class'))
-            .matchHeight();
+            .find('[data-mh]').matchHeight();
 
         // mark the current grid system
 		jQuery(this).parent().children('a').removeClass("current");
@@ -157,75 +156,78 @@ function getDate(videoDate){
 	return formatedStartDate.format('lll')+" "+currentTimeZone;
 }
 
-var renderVideoItem = function(parent, video, videoBaseUrl){
-    var url = videoBaseUrl + video.id;
-	var className = parent.parent().parent().parent().find('.grid-system > .current').data('class')
+var renderEventItemLiveText = function(isLive){
+    return `<div class="tag-live ${isLive ? '' : 'hide'}">
+            <figcaption>
+                <p class="live-text">Live</p>
+            </figcaption>
+        </div>`;
+}
 
-	return `  
-	<div id="video-${video.id}" data-video-id="${video.id}" class="item large-4 medium-6 columns ${className}">
-			<div class="post thumb-border">
+var renderEventItemDates = function(startDate, endDate){
+    return `<span>
+            <i class="fa fa-clock-o icon-start-time"></i> Start time: <span>${getDate(startDate)}</span>
+        </span>
+        <br/>
+        <span>
+            <i class="fa fa-clock-o icon-end-time"></i> End time: <span>${getDate(endDate)}</span>
+        </span> `;
+}
+
+var renderEventItem = function(video, videoBaseUrl, parentId, itemGridClass='grid-medium'){
+    var url = videoBaseUrl + video.id,
+        liveText = renderEventItemLiveText(video.liveNow),
+        eventDates = renderEventItemDates(video.startDate_dt, video.endDate_dt);
+
+	return `<div id="video-${video.id}" data-video-id="${video.id}" class="item large-4 medium-6 columns ${itemGridClass}">
+			<div class="post thumb-border" data-mh="${parentId}">
 				<div class="post-thumb">
+                    ${liveText}
 					<img src="${video.thumbnail}">
-					<div class="tag-live hide">
-						<figcaption>
-							<p class="live-text">Live</p>
-						</figcaption>
-					</div>
 					<a href="${url}" id="hover-circle" class="hover-posts">
-						<span><i id="icon-circle" class="fa fa-play-circle"></i></span>
+						<span><i class="fa fa-play-circle icon-circle"></i></span>
 					</a>
 				</div>
 			<div class="post-des">
 				<h6 class="video-title"><a href="${url}">${video.title_s}</a></h6>
 				<div class="post-stats clearfix">
-				<p>
-					<span>
-                    	<i class="fa fa-clock-o icon-start-time"></i> Start time: <span class="start-time">${getDate(video.startDate_dt)}</span>
-                    </span>
-                    <br>
-					<span>
-                    	<i class="fa fa-clock-o icon-end-time"></i> End time: <span class="end-time">${getDate(video.endDate_dt)}</span>
-                     </span> 
-				</p>
-				<div class="clearfix content-popular-icons">
-					<p class="pull-left">
-						<i class="fa fa-eye"></i>
-						<span class="view-count">${video.viewCount}</span>
-					</p>
-					<p class="pull-left">
-						<i class="fa fa-thumbs-o-up"></i>
-						<span class="like-count">${video.likeCount}</span>
-					</p>
-					<p class="pull-left">
-						<i class="fa fa-thumbs-o-down"></i>
-						<span class="dislike-count">${video.dislikeCount}</span>
-					</p>
-				</div>
-			
-				
-			</div>
-			<div class="post-summary">
-				<p>${video.summary_s}</p>
-			</div>
-		</div>
+				    <p>${eventDates}</p>
+    				<div class="clearfix content-popular-icons">
+    					<p class="pull-left">
+    						<i class="fa fa-eye"></i>
+    						<span class="view-count">${video.viewCount}</span>
+    					</p>
+    					<p class="pull-left">
+    						<i class="fa fa-thumbs-o-up"></i>
+    						<span class="like-count">${video.likeCount}</span>
+    					</p>
+    					<p class="pull-left">
+    						<i class="fa fa-thumbs-o-down"></i>
+    						<span class="dislike-count">${video.dislikeCount}</span>
+    					</p>
+    				</div>
+			     </div>
+    			<div class="post-summary">
+    				<p>${video.summary_s}</p>
+    			</div>
+            </div>
 		</div>
 	</div>`;
 }
 
-var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
+var loadVideos = function(refreshUrl, retrieveLimit, parentId, videoBaseUrl, itemGridClass) {
 	let url_video = refreshUrl + "?limit=" + retrieveLimit;
-    video_selector = '#' + idPrefix + '-videos';
+    video_selector = '#' + parentId + '-videos';
     jQuery.ajax({
         url: url_video,
         dataType: "json",
         success: function(data) {
         	if(data.length===0) {
-               jQuery('#' + idPrefix + '-section').addClass('hide');
+               jQuery('#' + parentId + '-section').addClass('hide');
             } else {
-                jQuery('#' + idPrefix + '-section').removeClass('hide');
+                jQuery('#' + parentId + '-section').removeClass('hide');
                 jQuery.each(data, function(index, element) {
                     var domElement = document.getElementById("video-"+element.id);
-                    var liveText = jQuery('#video-'+element.id+' > div > div > .tag-live')
                     if(domElement) {
                         //update existing
                         domElement.querySelector('.video-title').querySelector('a').innerHTML = element.title_s;
@@ -237,14 +239,15 @@ var loadVideos = function(refreshUrl, retrieveLimit, idPrefix, videoBaseUrl) {
                           domElement.querySelector('.start-time').innerHTML = getDate(element.startDate_dt);
                           domElement.querySelector('.end-time').innerHTML = getDate(element.endDate_dt);
                         }
-                        liveText.addClass('hide');
+                        var liveText = jQuery('#video-'+element.id+' > div > div > .tag-live');
+                        if(element.liveNow) {
+                            liveText.removeClass('hide');
+                        } else {
+                            liveText.addClass('hide');
+                        }
                     } else {
                         //append new
-                        jQuery(video_selector).append(renderVideoItem(jQuery(video_selector), element, videoBaseUrl));
-                    }
-
-                    if(element.liveNow) {
-                        liveText.removeClass('hide');
+                        jQuery(video_selector).append(renderEventItem(element, videoBaseUrl, parentId, itemGridClass));
                     }
                 });
 
@@ -288,3 +291,11 @@ function formatVideoSections(){
 		}
 	});
 }
+
+jQuery(document).ready(function(){
+    // recompute size for cross browse compatibility
+    setTimeout(function() {
+        sidebarBackground = jQuery('.sidebarBg');
+        sidebarBackground.css('width', sidebarBackground.css('width'));
+    }, 250);
+});
