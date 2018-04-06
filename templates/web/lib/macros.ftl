@@ -39,9 +39,11 @@
                 <a href="${contactUsUrl}">Contact Us</a>
             </li>
 			<#if !profile??>
+<!-- disabled for demo
     			<li>
     				<a href="/register">Register</a>
     			</li>
+-->
     			<li <#if sidebar>class="dropdown-login"</#if>>
     				<a href="/login">Login</a>
     			</li>
