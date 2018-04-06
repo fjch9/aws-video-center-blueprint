@@ -8,6 +8,7 @@
 	<folder-name>all-videos</folder-name>
 	<internal-name>View All </internal-name>
 	<videoLandingUrl>/video</videoLandingUrl>
+	<streamLandingUrl>/live</streamLandingUrl>
 	<videoPageSize>6</videoPageSize>
 	<placeInNav>true</placeInNav>
 	<orderDefault_f>2000</orderDefault_f>

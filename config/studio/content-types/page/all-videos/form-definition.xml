@@ -380,6 +380,49 @@
 				</field>
 				<field>
 					<type>input</type>
+					<id>streamLandingUrl</id>
+					<iceId></iceId>
+					<title>Stream Landing URL</title>
+					<description></description>
+					<defaultValue></defaultValue>
+					<help></help>
+					<properties>
+						<property>
+							<name>size</name>
+							<value>75</value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>maxlength</name>
+							<value>150</value>
+							<type>int</type>
+						</property>
+						<property>
+							<name>readonly</name>
+							<value></value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>tokenize</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+					</properties>
+					<constraints>
+						<constraint>
+							<name>required</name>
+							<value><![CDATA[true]]></value>
+							<type>boolean</type>
+						</constraint>
+						<constraint>
+							<name>pattern</name>
+							<value><![CDATA[]]></value>
+							<type>string</type>
+						</constraint>
+					</constraints>
+				</field>
+				<field>
+					<type>input</type>
 					<id>videoPageSize</id>
 					<iceId></iceId>
 					<title>Video Page Size</title>
