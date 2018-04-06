@@ -4,8 +4,10 @@
 
 <!doctype html>
 <html class="no-js" lang="en">
+
 <#include "/templates/web/components/head.ftl" />
 <#assign resultsId = "results">
+
 <body>
     <#assign inverted = false>
 <div class="off-canvas-wrapper">
@@ -13,7 +15,9 @@
         <@renderComponent component = contentModel.mobileNavigation.item />
         <div class="off-canvas-content" data-off-canvas-content>
             <@renderComponent component = contentModel.header.item additionalModel = { 'currentPage' : model.storeUrl, 'backLink' : model.backLink } />
+
             <@macros.breadcrumb/>
+
             <section class="category-content mainSection">
                 <div class="row">
                     <!-- left side content area -->
@@ -30,8 +34,10 @@
         </div><!--end off canvas content-->
     </div><!--end off canvas wrapper inner-->
 </div><!--end off canvas wrapper-->
+
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
+
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="resultsTemplate" type="text/x-jsrender">
     <@resultsMacros.heading id="${resultsId}" title="${title}" subtext="{{:total}} videos" />
@@ -71,8 +77,10 @@
     </div>
     {{/if}}
 </script>
+
 <script>
     var start = 0, rows = ${rows}, page = 1;
+    
     function loadResults(params) {
         jQuery.get('/api/1/search.json', params, function(res){
             res.page = page

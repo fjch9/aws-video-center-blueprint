@@ -8,6 +8,7 @@
 <html class="no-js" lang="en">
 
 <#include "/templates/web/components/head.ftl" />
+
 <body>
 	<#assign inverted = false>
 <div class="off-canvas-wrapper">
@@ -222,10 +223,12 @@
         </div><!--end off canvas content-->
     </div><!--end off canvas wrapper inner-->
 </div><!--end off canvas wrapper-->
+
 <!-- script files -->
+<#include "/templates/web/components/scripts.ftl" />
+
 <#assign videoBaseUrl = "${contentModel.videoLandingURL}?id=" />
 <#assign streamBaseUrl = "${contentModel.streamLandingUrl}?id=" />
-<#include "/templates/web/components/scripts.ftl" />
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
     {{for items}}
@@ -266,6 +269,7 @@
         </div>
     {{/for}}
 </script>
+
 <script>
     function loadResults(params) {
         jQuery.get('/api/1/profile/favorites.json', params, function(res){
@@ -307,7 +311,6 @@
             jQuery('[data-content=' + jQuery(this).data('tab-profile') + ']').removeClass('hide').siblings('[data-content]').addClass('hide');
             e.preventDefault();
         });
-
     });
 </script>
 <@studio.toolSupport />
