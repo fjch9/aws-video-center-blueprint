@@ -10,7 +10,7 @@
 	<image-thumbnail></image-thumbnail>
 	<paths>
 		<includes>
-			<pattern>^/site/website/taxonomies/.*</pattern>
+			<pattern>^/site/taxonomies/.*</pattern>
 		</includes>
 	</paths>
 </content-type>
