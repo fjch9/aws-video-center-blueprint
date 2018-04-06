@@ -227,7 +227,7 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 
-<#assign videoBaseUrl = "${contentModel.videoLandingURL}?id=" />
+<#assign videoBaseUrl = "${contentModel.videoLandingUrl}?id=" />
 <#assign streamBaseUrl = "${contentModel.streamLandingUrl}?id=" />
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">

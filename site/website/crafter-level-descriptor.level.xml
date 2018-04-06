@@ -30,7 +30,7 @@
 	<include>/site/components/headers/mobile-navigation.xml</include>
 	<disableFlattening>false</disableFlattening>
 	</item></mobileNavigation>
-	<videoLandingURL>/video</videoLandingURL>
+	<contactUsURL>http://rivetlogic.com/about/contact-us</contactUsURL>
 	<trackingId>UA-108108926-1</trackingId>
 	<backLink>http://craftertv.craftercloud.io</backLink>
 </component>

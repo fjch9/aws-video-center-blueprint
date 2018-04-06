@@ -35,20 +35,23 @@
 <div class="medium-6 columns"></#if>
 	<div class="top-button">
 		<ul class="menu <#if !sidebar>float-right</#if>">
+            <li>
+                <a href="${contentModel.contactUsURL}">Contact Us</a>
+            </li>
 			<#if !profile??>
-			<li>
-				<a href="/register">Register</a>
-			</li>
-			<li <#if sidebar>class="dropdown-login"</#if>>
-				<a href="/login">Login</a>
-			</li>
+    			<li>
+    				<a href="/register">Register</a>
+    			</li>
+    			<li <#if sidebar>class="dropdown-login"</#if>>
+    				<a href="/login">Login</a>
+    			</li>
 			<#else>
-			<li>
-				<a href="/account">My Profile</a>
-			</li>
-			<li>
-				<a href="/crafter-security-logout">Logout</a>
-			</li>
+    			<li>
+    				<a href="/account">My Profile</a>
+    			</li>
+    			<li>
+    				<a href="/crafter-security-logout">Logout</a>
+    			</li>
 			</#if>
 		</ul>
 	</div>
