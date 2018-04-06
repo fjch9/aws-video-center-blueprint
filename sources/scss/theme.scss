@@ -2692,6 +2692,7 @@ footer{
 	z-index: 1;
 	height: 100%;
 	border: 1px solid $border-color;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .4);
 	.off-menu-close{
 		background: $primary;
 		padding: 18px 20px;
@@ -3036,6 +3037,7 @@ footer{
 #breadcrumb{
 	background: #444;
 	padding: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 	.breadcrumbContainer{
 		padding-left: 5px;
 	}
