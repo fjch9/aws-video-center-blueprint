@@ -224,73 +224,46 @@
 </div><!--end off canvas wrapper-->
 <!-- script files -->
 <#assign videoBaseUrl = "${contentModel.videoLandingURL}?id=" />
+<#assign streamBaseUrl = "${contentModel.streamLandingUrl}?id=" />
 <#include "/templates/web/components/scripts.ftl" />
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
     {{for items}}
-        {{if type == 'stream'}}
-            <div class="profile-video">
-                <div class="media-object stack-for-small">
-                    <div class="media-object-section media-img-content">
-                        <div class="video-img">
-                            <div class="live-icon">
-                                <img src="{{:thumbnail}}" alt="new video">
-                                <div class="tag-live {{if liveNow == false}}hide{{/if}}">
-                                    <figcaption>
-                                        <p class="live-text">Live</p>
-                                    </figcaption>
-                                </div>
-                                <a href="{{:~getStreamUrl(id)}}}" class="hover-posts">
-                                    <span><i class="fa fa-play-circle icon-circle"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media-object-section media-video-content">
-                        <div class="video-content">
-                            <h5><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h5>
-                            <p>{{:summary_s}}</p>
-                        </div>
-                        <div class="video-detail clearfix">
-                            <div class="video-stats">
-                                <span><i class="fa fa-clock-o start-time"></i>Start time: {{:~getDate(startDate_dt)}}</span>
-                                <span><i class="fa fa-clock-o end-time"></i>End time: {{:~getDate(endDate_dt)}}</span>
-                                <br>
-                                <span><i class="fa fa-eye"></i>{{:viewCount}}</span>
-                            </div>
-                            <div class="video-btns">
-                                <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
-                            </div>
+        {{* baseUrl = type == 'stream' ? "${streamBaseUrl}" : "${videoBaseUrl}"}}
+        <div class="profile-video">
+            <div class="media-object stack-for-small">
+                <div class="media-object-section media-img-content">
+                    <div class="video-img post-thumb">
+                        <div class="live-icon">
+                            {{if type == 'stream'}}
+                                {{:~renderEventItemLiveText(liveNow)}}
+                            {{/if}}
+                            <@resultsMacros.videoThumbnail id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" baseUrl="{{:baseUrl}}" />
                         </div>
                     </div>
                 </div>
-            </div>
-        {{else type == 'video'}}
-            <div class="profile-video">
-                <div class="media-object stack-for-small">
-                    <div class="media-object-section media-img-content">
-                        <div class="video-img post-thumb">
-                            <@resultsMacros.videoThumbnail id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" baseUrl="${videoBaseUrl}" />
-                        </div>
+                <div class="media-object-section media-video-content">
+                    <div class="video-content">
+                        <@resultsMacros.videoTitle id="{{:id}}" title="{{:title_s}}" baseUrl="{{:baseUrl}}" />
+                        <@resultsMacros.videoSummary summary="{{:summary_s}}" />
                     </div>
-                    <div class="media-object-section media-video-content">
-                        <div class="video-content">
-                            <@resultsMacros.videoTitle id="{{:id}}" title="{{:title_s}}" baseUrl="${videoBaseUrl}" />
-                            <@resultsMacros.videoSummary summary="{{:summary_s}}" />
-                        </div>
-                        <div class="video-detail clearfix">
-                            <div class="video-stats">
+                    <div class="video-detail clearfix">
+                        <div class="video-stats">
+                            {{if type == 'stream'}}
+                                {{:~renderEventItemDates(startDate_dt, endDate_dt)}}
+                                <br/>
+                            {{else}}
                                 <@resultsMacros.videoDate date="{{:date_dt}}" />
-                                <@resultsMacros.videoViews viewCount="{{:viewCount}}" />
-                            </div>
-                            <div class="video-btns">
-                                <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
-                            </div>
+                            {{/if}}
+                            <@resultsMacros.videoViews viewCount="{{:viewCount}}" />
+                        </div>
+                        <div class="video-btns">
+                            <a class="button unfav-button" data-videoId="{{:id}}"><i class="fa fa-heart-o"></i> Unfavorite</a>
                         </div>
                     </div>
                 </div>
             </div>
-        {{/if}}
+        </div>
     {{/for}}
 </script>
 <script>
@@ -306,14 +279,9 @@
     }
 
 	jQuery.views.helpers({
-        getDate: function (date) {
-             var formatedStartDate = moment(date);
-             var currentTimeZone = new Date(formatedStartDate).toString().match(/\(([A-Za-z\s].*)\)/)[1];
-            return formatedStartDate.format('lll')+" "+currentTimeZone
-        },
-        getStreamUrl: function(id){
-            return "/live?id="+id
-        }
+        getDate: getDate,
+        renderEventItemLiveText: renderEventItemLiveText,
+        renderEventItemDates: renderEventItemDates
 	});
 
     function updatedCountVideos(count){

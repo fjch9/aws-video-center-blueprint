@@ -40,51 +40,20 @@
             <div class="row list-group">
                 {{for items ~size=items.length}}
                     {{if type == 'stream'}}
-                        <div class="item large-4 medium-6 columns {{if #index + 1 == ~size}}end{{/if}} columns grid-medium">
-                            <div class="post thumb-border">
-                                <div class="post-thumb">
-                                    <img src="{{:thumbnail}}">
-                                    <div class="tag-live {{if liveNow == false}}hide{{/if}}">
-                                        <figcaption>
-                                            <p class="live-text">Live</p>
-                                        </figcaption>
-                                    </div>
-                                    <a href="{{:~getStreamUrl(id)}}" class="hover-posts">
-                                        <span><i class="fa fa-play-circle icon-circle"></i></span>
-                                    </a>
-                                </div>
-                                <div class="post-des">
-                                    <h6><a href="{{:~getStreamUrl(id)}}">{{:title_s}}</a></h6>
-                                    <div class="post-stats clearfix">
-                                        <p class="video-list-start-end">
-                                            <i class="fa fa-clock-o icon-start-time"></i>
-                                            <span>Start time: {{:~getDate(startDate_dt)}}</span>
-                                            <br>
-                                            <i class="fa fa-clock-o icon-end-time"></i>
-                                            <span>End time: {{:~getDate(endDate_dt)}}</span>
-                                        </p>
-                                        <div class="clearfix content-popular-icons">
-                                            <p class="pull-left">
-                                            <i class="fa fa-eye"></i>
-                                            <span>{{:viewCount}}</span>
-                                            </p>
-                                            <p class="pull-left">
-                                                <i class="fa fa-thumbs-o-up"></i>
-                                                <span>{{:likeCount}}</span>
-                                            </p>
-                                            <p class="pull-left">
-                                                <i class="fa fa-thumbs-o-down"></i>
-                                                <span>{{:dislikeCount}}</span>
-                                            </p>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="post-summary">
-                                        <p>{{:summary_s}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {{:~renderEventItem({
+                                "id": id,
+                                "thumbnail": thumbnail,
+                                "title_s": title_s,
+                                "startDate_dt": startDate_dt,
+                                "endDate_dt": endDate_dt,
+                                "viewCount": viewCount,
+                                "likeCount": likeCount,
+                                "dislikeCount": dislikeCount,
+                                "summary_s": summary_s,
+                                "liveNow": liveNow
+                            },
+                            "${contentModel.streamLandingUrl}?id=",
+                            "${resultsId}")}}
                     {{else type == 'video'}}
                         <@resultsMacros.video id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" summary="{{:summary_s}}" date="{{:~getDate(date_dt)}}" viewCount="{{:viewCount}}" likeCount="{{:likeCount}}" dislikeCount="{{:dislikeCount}}" parentId="${resultsId}" baseUrl="${contentModel.videoLandingUrl}?id=" />
                     {{/if}}
@@ -122,12 +91,8 @@
     }
 
     jQuery.views.helpers({
-		getDate: function (date) {
-            return getDate(date);
-		},
-		getStreamUrl: function(id){
-			return "/live?id="+id
-		}
+		getDate: getDate,
+        renderEventItem: renderEventItem
     });
 
     jQuery(document).ready(function(){

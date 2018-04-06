@@ -29,7 +29,11 @@
     	loadVideos("${contentModel.refreshUrl}", ${contentModel.maxVideosToDisplay}, "${videoSectionId}", "${videoBaseUrl}");
 
 	    window.setInterval(function() {
-	    		loadVideos("${contentModel.refreshUrl}", ${contentModel.maxVideosToDisplay}, "${videoSectionId}", "${videoBaseUrl}")
+	    		loadVideos("${contentModel.refreshUrl}",
+	    			${contentModel.maxVideosToDisplay},
+	    			"${videoSectionId}",
+	    			"${videoBaseUrl}",
+	    			jQuery("#${videoSectionId}-section").find('.grid-system > current').data('class'))
 	    	}, 5000);
 	});
 </script>
