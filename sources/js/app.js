@@ -295,6 +295,6 @@ jQuery(document).ready(function(){
     // recompute size for cross browse compatibility
     setTimeout(function() {
         sidebarBackground = jQuery('.sidebarBg');
-        sidebarBackground.css('width', sidebarBackground.css('width'));
+        sidebarBackground.css('width', '100%');
     }, 250);
 });
