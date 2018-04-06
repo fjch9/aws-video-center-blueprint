@@ -14,13 +14,13 @@
         <div class="off-canvas-content" data-off-canvas-content>
             <@renderComponent component = contentModel.header.item additionalModel = { 'currentPage' : model.storeUrl, 'backLink' : model.backLink } />
             <@macros.breadcrumb/>
-            <section class="category-content">
+            <section class="category-content mainSection">
                 <div class="row">
                     <!-- left side content area -->
-                    <div class="large-8 columns">
+                    <div class="large-8 columns mainColumn">
                         <section class="content content-with-sidebar">
                             <div data-limit-video="${contentModel.videoPageSize}"></div>
-                            <div id="${resultsId}" class="row secBg"></div>
+                            <div id="${resultsId}" class="row"></div>
                         </section>
                     </div><!-- end left side content area -->
                     <@renderComponent component = contentModel.rightRail.item />

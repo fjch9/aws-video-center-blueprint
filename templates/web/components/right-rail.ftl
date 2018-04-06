@@ -50,4 +50,5 @@
 			</div><!-- End tags -->
 		</div>
 	</aside>
+	<div class="sidebarBg"></div>
 </div><!-- end sidebar -->

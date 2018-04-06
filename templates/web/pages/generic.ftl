@@ -15,7 +15,7 @@
 
         <@macros.breadcrumb/>
 
-        <section class="category-content">
+        <section class="category-content mainSection">
             <div class="row">
                 <!-- left side content area -->
                 <div class="large-8 columns">
