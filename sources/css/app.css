@@ -2032,10 +2032,10 @@ kbd {
       background-color: #cc8b00;
       color: #fff; }
   .button.alert {
-    background-color: #ec5840;
+    background-color: #FE9A00;
     color: #fff; }
     .button.alert:hover, .button.alert:focus {
-      background-color: #da3116;
+      background-color: #FFB139;
       color: #fff; }
   .button.hollow {
     border: 1px solid #2199e8;

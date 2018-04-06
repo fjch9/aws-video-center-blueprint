@@ -7,11 +7,11 @@ var renderEventItemLiveText=function(isLive){return `<div class="tag-live ${isLi
             </figcaption>
         </div>`}
 var renderEventItemDates=function(startDate,endDate){return `<span>
-            <i class="fa fa-clock-o icon-start-time"></i> Start time: <span>${getDate(startDate)}</span>
+            <i class="fa fa-clock-o icon-start-time"></i> Start time: <span class='start-time'>${getDate(startDate)}</span>
         </span>
         <br/>
         <span>
-            <i class="fa fa-clock-o icon-end-time"></i> End time: <span>${getDate(endDate)}</span>
+            <i class="fa fa-clock-o icon-end-time"></i> End time: <span class='end-time'>${getDate(endDate)}</span>
         </span> `}
 var renderEventItem=function(video,videoBaseUrl,parentId,itemGridClass='grid-medium'){var url=videoBaseUrl+video.id,liveText=renderEventItemLiveText(video.liveNow),eventDates=renderEventItemDates(video.startDate_dt,video.endDate_dt);return `<div id="video-${video.id}" data-video-id="${video.id}" class="item large-4 medium-6 columns ${itemGridClass}">
 			<div class="post thumb-border" data-mh="${parentId}">

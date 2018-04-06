@@ -227,12 +227,11 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 
-<#assign videoBaseUrl = "${contentModel.videoLandingURL}?id=" />
+<#assign videoBaseUrl = "${contentModel.videoLandingUrl}?id=" />
 <#assign streamBaseUrl = "${contentModel.streamLandingUrl}?id=" />
 <script src="/static-assets/js/jsrender.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
     {{for items}}
-        {{* baseUrl = type == 'stream' ? "${streamBaseUrl}" : "${videoBaseUrl}"}}
         <div class="profile-video">
             <div class="media-object stack-for-small">
                 <div class="media-object-section media-img-content">
@@ -241,13 +240,13 @@
                             {{if type == 'stream'}}
                                 {{:~renderEventItemLiveText(liveNow)}}
                             {{/if}}
-                            <@resultsMacros.videoThumbnail id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" baseUrl="{{:baseUrl}}" />
+                            <@resultsMacros.videoThumbnail id="{{:id}}" thumbnail="{{:thumbnail}}" title="{{:title_s}}" baseUrl="{{if type == 'stream'}}${streamBaseUrl}{{else}}${videoBaseUrl}{{/if}}" />
                         </div>
                     </div>
                 </div>
                 <div class="media-object-section media-video-content">
                     <div class="video-content">
-                        <@resultsMacros.videoTitle id="{{:id}}" title="{{:title_s}}" baseUrl="{{:baseUrl}}" />
+                        <@resultsMacros.videoTitle id="{{:id}}" title="{{:title_s}}" baseUrl="{{if type == 'stream'}}${streamBaseUrl}{{else}}${videoBaseUrl}{{/if}}" />
                         <@resultsMacros.videoSummary summary="{{:summary_s}}" />
                     </div>
                     <div class="video-detail clearfix">

@@ -123,8 +123,7 @@
         }
         
         jQuery(".social-share .post-like-btn a").on("click", function(e){
-
-            e.preventDefault(); 
+            e.preventDefault();
         
             var element = e.target.id ? e.target : e.target.parentElement,
                 id = jQuery(element).attr("id"),
@@ -132,12 +131,13 @@
         
             jQuery.get(url, { id: "${requestParameters["id"]}" }, function(res) {
                 if("fav-button" === id){
-                    jQuery(element).toggleClass("alert");   
+                    jQuery(element).toggleClass("alert");
                 }else{
                     jQuery('.social-share .post-like-btn a:not("#fav-button, #' + id + '")').removeClass('alert primary');
-                    jQuery(element).toggleClass("alert");   
+                    jQuery(element).toggleClass("alert");
                 }
             });
+            jQuery(element).blur();
         })
         
         <#include "/templates/web/components/analytics.ftl"/>

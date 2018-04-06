@@ -25,7 +25,7 @@
 </section><!--end breadcrumbs-->
 </#macro>
 
-<#macro topButtons sidebar = false>
+<#macro topButtons contactUsUrl sidebar = false>
 <#if !sidebar><div class="medium-6 columns"></#if>
 	<div class="<#if sidebar>off-social<#else>socialLinks</#if>">
 		<#if sidebar><h6>Get Social</h6></#if>
@@ -35,20 +35,25 @@
 <div class="medium-6 columns"></#if>
 	<div class="top-button">
 		<ul class="menu <#if !sidebar>float-right</#if>">
+            <li>
+                <a href="${contactUsUrl}">Contact Us</a>
+            </li>
 			<#if !profile??>
-			<li>
-				<a href="/register">Register</a>
-			</li>
-			<li <#if sidebar>class="dropdown-login"</#if>>
-				<a href="/login">Login</a>
-			</li>
+<!-- disabled for demo
+    			<li>
+    				<a href="/register">Register</a>
+    			</li>
+-->
+    			<li <#if sidebar>class="dropdown-login"</#if>>
+    				<a href="/login">Login</a>
+    			</li>
 			<#else>
-			<li>
-				<a href="/account">My Profile</a>
-			</li>
-			<li>
-				<a href="/crafter-security-logout">Logout</a>
-			</li>
+    			<li>
+    				<a href="/account">My Profile</a>
+    			</li>
+    			<li>
+    				<a href="/crafter-security-logout">Logout</a>
+    			</li>
 			</#if>
 		</ul>
 	</div>

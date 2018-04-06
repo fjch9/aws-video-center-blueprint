@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/taxonomy</content-type>	<display-template/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>a54c</objectGroupId>
+	<objectId>a54cceab-737f-a030-80b5-2136143b5238</objectId>
+	<items>	<item>	<key>grid-default</key>
+	<value>Small</value>
+	</item>	<item>	<key>grid-medium</key>
+	<value>Medium</value>
+	</item>	<item>	<key>list</key>
+	<value>Large</value>
+	</item></items>
+	<file-name>grid-styles.xml</file-name>
+	<folder-name/>
+	<internal-name>Grid Styles</internal-name>
+	<createdDate>2018-04-06T20:34:39.751Z</createdDate>
+	<createdDate_dt>2018-04-06T20:34:39.751Z</createdDate_dt>
+	<lastModifiedDate>2018-04-06T20:34:39.751Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-04-06T20:34:39.751Z</lastModifiedDate_dt>
+</component>
