@@ -394,6 +394,7 @@
 @media screen and (max-width: 1024px) {
     .sidebarContainer{
         position: relative;
+        padding-left: 0px;
     }
 }
 
