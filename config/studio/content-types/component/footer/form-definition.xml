@@ -129,7 +129,7 @@
 					</constraints>
 				</field>
 				<field>
-					<type>textarea</type>
+					<type>rte</type>
 					<id>aboutText</id>
 					<iceId></iceId>
 					<title>About Text</title>
@@ -138,12 +138,12 @@
 					<help></help>
 					<properties>
 						<property>
-							<name>cols</name>
+							<name>width</name>
 							<value>50</value>
 							<type>int</type>
 						</property>
 						<property>
-							<name>rows</name>
+							<name>height</name>
 							<value>5</value>
 							<type>int</type>
 						</property>
@@ -158,9 +158,39 @@
 							<type>boolean</type>
 						</property>
 						<property>
-							<name>readonly</name>
-							<value></value>
+							<name>forceRootBlockPTag</name>
+							<value>true</value>
 							<type>boolean</type>
+						</property>
+						<property>
+							<name>forcePTags</name>
+							<value>true</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>forceBRTags</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>forceImageAlts</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>supportedChannels</name>
+							<value></value>
+							<type>supportedChannels</type>
+						</property>
+						<property>
+							<name>rteConfiguration</name>
+							<value>generic</value>
+							<type>string</type>
+						</property>
+						<property>
+							<name>imageManager</name>
+							<value></value>
+							<type>datasource:image</type>
 						</property>
 					</properties>
 					<constraints>
@@ -234,7 +264,7 @@
 			<defaultOpen>true</defaultOpen>
 			<fields>
 				<field>
-					<type>textarea</type>
+					<type>rte</type>
 					<id>copyrightText</id>
 					<iceId></iceId>
 					<title>Copyright Text</title>
@@ -243,12 +273,12 @@
 					<help></help>
 					<properties>
 						<property>
-							<name>cols</name>
+							<name>width</name>
 							<value>50</value>
 							<type>int</type>
 						</property>
 						<property>
-							<name>rows</name>
+							<name>height</name>
 							<value>5</value>
 							<type>int</type>
 						</property>
@@ -263,9 +293,39 @@
 							<type>boolean</type>
 						</property>
 						<property>
-							<name>readonly</name>
-							<value></value>
+							<name>forceRootBlockPTag</name>
+							<value>true</value>
 							<type>boolean</type>
+						</property>
+						<property>
+							<name>forcePTags</name>
+							<value>true</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>forceBRTags</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>forceImageAlts</name>
+							<value>false</value>
+							<type>boolean</type>
+						</property>
+						<property>
+							<name>supportedChannels</name>
+							<value></value>
+							<type>supportedChannels</type>
+						</property>
+						<property>
+							<name>rteConfiguration</name>
+							<value>generic</value>
+							<type>string</type>
+						</property>
+						<property>
+							<name>imageManager</name>
+							<value></value>
+							<type>datasource:image</type>
 						</property>
 					</properties>
 					<constraints>
@@ -279,8 +339,7 @@
 			</fields>
 		</section>
 	</sections>
-	<datasources>
-				<datasource>
+	<datasources>				<datasource>
 					<type>child-content</type>
 					<id>socialMediaLinks</id>
 					<title>Social Media Links</title>
