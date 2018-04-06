@@ -1933,6 +1933,10 @@ footer{
 		.textwidget{
 			color: #aaaaaa;
 			font-size: 13px;
+			a{
+				color: #aaaaaa;
+				text-decoration: underline;
+			}
 		}
 		//tag cloud
 		.tagcloud{
@@ -2136,6 +2140,10 @@ footer{
 			color: #aaaaaa;
 			margin: 0;
 			line-height: 14px;
+			a{
+				color: #aaaaaa;
+				text-decoration: underline;
+			}
 		}
 	}
 }
