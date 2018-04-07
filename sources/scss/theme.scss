@@ -830,13 +830,14 @@ input[type=checkbox]:checked + .customLabel:before {
 		left: 0;
 		right: 0;
 		margin: 0 auto;
-		width: 75em;
+		width: 95%;
 		border: 1px solid $border-color;
 		padding: 14px;
 		background: $white;
 		.search-input{
 			display: inline-block;
 			width: 87%;
+			padding-left: 10px;
 			input[type="search"]{
 				height: 50px;
 				font-size: 13px;
@@ -848,9 +849,11 @@ input[type=checkbox]:checked + .customLabel:before {
 		.search-btn{
 			display: inline-block;
 			width: 13%;
+			padding-left: 10px;
 			button.button{
 				margin: 0;
 				border-radius: 5px;
+        		min-width: 145px;
 			}
 		}
 	}
