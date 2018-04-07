@@ -9,10 +9,10 @@
 
 	<!--Navbar-->
 	<section id="navBar">
-		<nav class="sticky-container" data-sticky-container>
+		<nav class="sticky-container title-container" data-sticky-container>
 			<div class="sticky topnav" data-sticky data-top-anchor="navBar" data-btm-anchor="footer-bottom:bottom" data-margin-top="0" data-margin-bottom="0" style="width: 100%; background: #fff;" data-sticky-on="large">
 				<div class="row">
-					<div class="large-12 columns title-container">
+					<div class="large-12 columns">
 						<div class="title-bar" data-responsive-toggle="beNav" data-hide-for="large">
 							<button class="menu-icon" type="button" data-toggle="offCanvas-responsive"></button>
 							<div class="title-bar-title"><a href="/"><img src="${contentModel.logo}" alt="${contentModel.logoAltText}"><a href="/"></div>
