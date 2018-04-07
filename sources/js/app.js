@@ -29,7 +29,9 @@ jQuery(document).ready(function(jQuery){
 		}
 		jQuery(this).toggleClass("search-active");
 		jQuery("#search-bar").slideToggle();
-
+        if(jQuery(this).hasClass("search-active")){
+            jQuery('#popup-search-input').focus();
+        }
 	});
 
 	//grid system
