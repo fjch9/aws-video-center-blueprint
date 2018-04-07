@@ -38,7 +38,7 @@
 <!-- script files -->
 <#include "/templates/web/components/scripts.ftl" />
 
-<script src="/static-assets/js/jsrender.js"></script>
+<script src="/static-assets/js/jsrender.min.js"></script>
 <script id="resultsTemplate" type="text/x-jsrender">
     <@resultsMacros.heading id="${resultsId}" title="Search Results for \"${userQuery}\"" subtext="{{:total}} matching found" layout='list' icon='fa-search' />
     <div class="large-12">

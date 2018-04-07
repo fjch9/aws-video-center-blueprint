@@ -229,7 +229,7 @@
 
 <#assign videoBaseUrl = "${contentModel.videoLandingUrl}?id=" />
 <#assign streamBaseUrl = "${contentModel.streamLandingUrl}?id=" />
-<script src="/static-assets/js/jsrender.js"></script>
+<script src="/static-assets/js/jsrender.min.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
     {{for items}}
         <div class="profile-video">
