@@ -44,7 +44,7 @@
 				<div id="search-bar" class="clearfix search-bar-light">
 					<form method="get" action="/search">
 						<div class="search-input float-left">
-							<input type="search" name="q" placeholder="${model.searchPlaceholder}">
+							<input id='popup-search-input' type="search" name="q" placeholder="${model.searchPlaceholder}">
 						</div>
 						<div class="search-btn float-right text-right">
 							<button class="button" type="submit">search now</button>
