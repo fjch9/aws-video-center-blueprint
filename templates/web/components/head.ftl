@@ -15,7 +15,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Crafter Video Center</title>
+		<title>AWS Elemental Video Center</title>
 		<link rel="stylesheet" href="/static-assets/css/app-min.css" type='text/css'>
 		<link rel="stylesheet" href="/static-assets/css/theme-min.css" type='text/css'>
 		<link rel="stylesheet" href="/static-assets/css/font-awesome.min.css" type='text/css'>
