@@ -419,11 +419,17 @@
     #navBar .topnav .title-bar{
         display: none;
     }
+    .sticky-container{
+        height: 74px;
+    }
 }
 @media screen and (max-width: 1024px) {
     .sidebarContainer{
         position: relative;
         padding-left: 0px;
+    }
+    .sticky-container{
+        height: 56px;
     }
 }
 
