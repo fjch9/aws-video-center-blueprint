@@ -7,12 +7,12 @@
 	<file-name>global-social-media-links.xml</file-name>
 	<folder-name/>
 	<internal-name>Global Social Media Links</internal-name>
-	<socialMediaLinks>	<item>	<url>https://www.facebook.com/rivetlogic/</url>
+	<socialMediaLinks>	<item>	<url>https://www.facebook.com/CrafterSoftware/</url>
 	<socialMedia>fa-facebook</socialMedia>
 	</item>	<item>	<socialMedia>fa-twitter</socialMedia>
-	<url>https://twitter.com/rivetlogic</url>
+	<url>https://twitter.com/craftersoftware</url>
 	</item>	<item>	<socialMedia>fa-linkedin</socialMedia>
-	<url>https://www.linkedin.com/company/rivet-logic-corporation</url>
+	<url>https://www.linkedin.com/company/crafter-software</url>
 	</item></socialMediaLinks>
 	<createdDate>2017-8-31T16:25:6.000Z</createdDate>
 	<createdDate_dt>2017-8-31T16:25:6.000Z</createdDate_dt>
