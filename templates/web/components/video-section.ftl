@@ -27,7 +27,7 @@
 <#if refreshes>
 <script type="text/javascript">
 	jQuery(document).ready(function() { 
-    	loadVideos("${contentModel.refreshUrl}", ${contentModel.maxVideosToDisplay}, "${videoSectionId}", "${videoBaseUrl}", '${defaultStyle}');
+    	loadVideos("${contentModel.refreshUrl}", ${contentModel.maxVideosToDisplay}, "${videoSectionId}", "${videoBaseUrl}");
 
 	    window.setInterval(function() {
 	    		loadVideos("${contentModel.refreshUrl}",

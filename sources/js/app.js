@@ -180,7 +180,7 @@ var renderEventItem = function(video, videoBaseUrl, parentId, itemGridClass='gri
         liveText = renderEventItemLiveText(video.liveNow),
         eventDates = renderEventItemDates(video.startDate_dt, video.endDate_dt);
 
-	return `<div id="video-${video.id}" data-video-id="${video.id}" class="item large-4 medium-6 columns ${itemGridClass}">
+	return `<div id="video-${video.id}" data-video-id="${video.id}" data-video-type='stream' class="item large-4 medium-6 columns ${itemGridClass}">
 			<div class="post thumb-border" data-mh="${parentId}">
 				<div class="post-thumb">
                     ${liveText}
@@ -209,65 +209,93 @@ var renderEventItem = function(video, videoBaseUrl, parentId, itemGridClass='gri
     				</div>
 			     </div>
     			<div class="post-summary">
-    				<p>${video.summary_s}</p>
+    				<p class='video-summary'>${video.summary_s}</p>
     			</div>
             </div>
 		</div>
 	</div>`;
 }
 
-var loadVideos = function(refreshUrl, retrieveLimit, parentId, videoBaseUrl, itemGridClass) {
+var updateVideo = function(videoElement, videoData) {
+    videoElement.find('.video-title > a').text(videoData.title_s);
+    videoElement.find('.video-summary').text(videoData.summary_s);
+    videoElement.find('.like-count').text(videoData.likeCount);
+    videoElement.find('.dislike-count').text(videoData.dislikeCount);
+    videoElement.find('.view-count').text(videoData.viewCount);
+    if(videoData.type === 'stream') {
+        videoElement.find('.start-time').text(getDate(videoData.startDate_dt));
+        videoElement.find('.end-time').text(getDate(videoData.endDate_dt));
+        var liveText = videoElement.find('.tag-live');
+        if(videoData.liveNow) {
+            liveText.removeClass('hide');
+        } else {
+            liveText.addClass('hide');
+        }
+    }
+}
+
+var removeCompletedStreams = function(videos){
+    videoIds = jQuery.map(videos, function(e) {
+        return e.id;
+    });
+    jQuery('div[data-video-id][data-video-type="stream"]').each(function(i, element) {
+        videoId = jQuery(this).data('video-id');
+        if(videoIds.indexOf(videoId) < 0) {
+            //remove completed
+            document.getElementById(element.id).remove();
+        }
+    })
+
+    formatVideoSections();
+}
+
+var loadVideos = function(refreshUrl, retrieveLimit, parentId, videoBaseUrl) {
 	let url_video = refreshUrl + "?limit=" + retrieveLimit;
     video_selector = '#' + parentId + '-videos';
     jQuery.ajax({
         url: url_video,
         dataType: "json",
         success: function(data) {
+            var videoSection = jQuery('#' + parentId + '-section');
         	if(data.length===0) {
-               jQuery('#' + parentId + '-section').addClass('hide');
+               videoSection.addClass('hide');
             } else {
-                jQuery('#' + parentId + '-section').removeClass('hide');
+                videoSection.removeClass('hide');
+                var currentGridClass = videoSection.find('.grid-system a.current').data('class');
                 jQuery.each(data, function(index, element) {
-                    var domElement = document.getElementById("video-"+element.id);
-                    if(domElement) {
+                    var videoElement = jQuery("#video-"+element.id);
+                    if(videoElement.length) {
                         //update existing
-                        domElement.querySelector('.video-title').querySelector('a').innerHTML = element.title_s;
-                        domElement.querySelector('.post-summary').querySelector('p').innerHTML = element.summary_s;
-                        domElement.querySelector('.like-count').innerHTML = element.likeCount;
-                        domElement.querySelector('.dislike-count').innerHTML = element.dislikeCount;
-                        domElement.querySelector('.view-count').innerHTML = element.viewCount;
-                        if(element.type === 'stream') {
-                          domElement.querySelector('.start-time').innerHTML = getDate(element.startDate_dt);
-                          domElement.querySelector('.end-time').innerHTML = getDate(element.endDate_dt);
-                        }
-                        var liveText = jQuery('#video-'+element.id+' > div > div > .tag-live');
-                        if(element.liveNow) {
-                            liveText.removeClass('hide');
-                        } else {
-                            liveText.addClass('hide');
-                        }
+                        updateVideo(videoElement, element);
                     } else {
                         //append new
-                        jQuery(video_selector).append(renderEventItem(element, videoBaseUrl, parentId, itemGridClass));
+                        jQuery(video_selector).append(renderEventItem(element, videoBaseUrl, parentId, currentGridClass));
                     }
                 });
-
-                dataIds = jQuery.map(data, function(e) {
-                    return e.id;
-                });
-                jQuery('div[data-video-id]').each(function(i, element) {
-                    videoId = jQuery(this).data('video-id');
-                    if(dataIds.indexOf(videoId) < 0) {
-                        //remove completed
-                        document.getElementById(element.id).remove();
-                    }
-                })
-
-                formatVideoSections();
         	}
+
+            removeCompletedStreams(data);
         }
     });
 };
+
+var autoRefreshStreams = function() {
+    window.setInterval(function() {
+            jQuery.ajax({
+                url: '/api/1/streams.json',
+                dataType: "json",
+                success: function(data) {
+                        jQuery.each(data, function(index, element) {
+                            var videoElement = jQuery("#video-"+element.id);
+                            if(videoElement) {                            
+                                updateVideo(videoElement, element);
+                            }
+                        });
+                        removeCompletedStreams(data);
+                    }
+            })
+        }, 5000);
+}
 
 function renderDates(){
 	jQuery('[data-format-date]').each(function(index, el) {

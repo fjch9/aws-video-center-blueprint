@@ -108,6 +108,8 @@
                 rows: rows * times
             });
         });
+
+        autoRefreshStreams();
     });
 </script>
 <@studio.toolSupport />
