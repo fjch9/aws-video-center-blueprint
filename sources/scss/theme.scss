@@ -834,9 +834,13 @@ input[type=checkbox]:checked + .customLabel:before {
 		border: 1px solid $border-color;
 		padding: 14px;
 		background: $white;
+		form{
+			display: inline-flex;
+			width: 100%;
+		}
 		.search-input{
 			display: inline-block;
-			width: 87%;
+			flex-basis: 87%;
 			padding-left: 10px;
 			input[type="search"]{
 				height: 50px;
@@ -844,16 +848,16 @@ input[type=checkbox]:checked + .customLabel:before {
 				margin-bottom: 0;
 				border-radius: 5px;
 			}
-
 		}
 		.search-btn{
 			display: inline-block;
-			width: 13%;
+			flex-basis: 13%;
 			padding-left: 10px;
 			button.button{
+				width: 100%;
 				margin: 0;
 				border-radius: 5px;
-        		min-width: 145px;
+        		white-space: nowrap;
 			}
 		}
 	}
