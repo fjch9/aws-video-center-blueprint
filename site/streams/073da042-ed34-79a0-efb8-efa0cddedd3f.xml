@@ -7,7 +7,7 @@
 	<file-name>073da042-ed34-79a0-efb8-efa0cddedd3f.xml</file-name>
 	<internal-name>test stream</internal-name>
 	<title_s tokenized="true">test stream</title_s>
-	<summary_s>test stream</summary_s>
+	<summary_s>test stream edit</summary_s>
 	<categories>	<item>	<key>event</key>
 	<value_smv>Event</value_smv>
 	</item></categories>
@@ -22,8 +22,8 @@
 	<endDate_dt>2018-04-09T18:06:00.000Z</endDate_dt>
 	<createdDate>2018-04-09T15:20:19.371Z</createdDate>
 	<createdDate_dt>2018-04-09T15:20:19.371Z</createdDate_dt>
-	<lastModifiedDate>2018-04-09T18:03:41.509Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-04-09T18:03:41.509Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-04-09T18:04:30.845Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-04-09T18:04:30.845Z</lastModifiedDate_dt>
 	<date_dt>2018-04-09T04:00:00.000Z</date_dt>
 	<startDate_dt_tz>America/New_York</startDate_dt_tz>
 	<endDate_dt_tz>America/New_York</endDate_dt_tz>
