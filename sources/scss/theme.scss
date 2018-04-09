@@ -3097,6 +3097,9 @@ footer{
 		}
 	}
 	text-align: center;
+	.message {
+		color: $offwhite;
+	}
 }
 
 //post stats
@@ -4994,7 +4997,7 @@ article.page-content{
 	}
 }
 
-video#example-video {
+video.video-player {
     width: 50%;
     height: auto;
     @media screen and (max-width: 992px){
@@ -5025,7 +5028,7 @@ fa-play-circle-o:before{
     // left: 25%;
 }
 
-#countdown2{
+.countdown{
 	height: auto;
 }
 
