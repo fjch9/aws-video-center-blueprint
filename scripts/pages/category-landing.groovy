@@ -11,7 +11,7 @@ if (!categoryLabel) {
 }
 
 templateModel.title = categoryLabel
-templateModel.q = "(content-type:\"/component/video\" OR content-type:\"/component/stream\") AND categories.item.key:\"${categoryId}\""
+templateModel.q = "(content-type:\"/component/video\" OR (content-type:\"/component/stream\" AND endDate_dt:[NOW TO *])) AND categories.item.key:\"${categoryId}\""
 templateModel.rows = contentModel.videoPageSize.text as int
 templateModel.breadcrumbs = [
 	[url: "/", label: "Home"],

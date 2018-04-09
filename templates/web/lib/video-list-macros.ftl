@@ -29,7 +29,7 @@
 </#macro>
 
 <#macro videoTitle id title baseUrl>
-    <h6><a href="${baseUrl}${id}">${title}</a></h6>
+    <h6 class='video-title'><a href="${baseUrl}${id}">${title}</a></h6>
 </#macro>
 
 <#macro videoDate date>
@@ -39,11 +39,11 @@
 
 <#macro videoViews viewCount>
     <i class="fa fa-eye"></i>
-    <span>${viewCount}</span>
+    <span class="view-count">${viewCount}</span>
 </#macro>
 
 <#macro videoSummary summary>
-    <p>${summary}</p>
+    <p class='video-summary'>${summary}</p>
 </#macro>
 
 <#macro video id thumbnail title summary date viewCount likeCount dislikeCount parentId baseUrl gridStyle='grid-medium'>
@@ -63,11 +63,11 @@
                     </p>
                     <p class="pull-left">
                         <i class="fa fa-thumbs-o-up"></i>
-                        <span>${likeCount}</span>
+                        <span class="like-count">${likeCount}</span>
                     </p>
                     <p class="pull-left">
                         <i class="fa fa-thumbs-o-down"></i>
-                        <span>${dislikeCount}</span>
+                        <span class="dislike-count">${dislikeCount}</span>
                     </p>
                 </div>
                 <div class="post-summary">

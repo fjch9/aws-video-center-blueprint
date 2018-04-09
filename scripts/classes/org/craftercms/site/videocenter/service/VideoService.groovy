@@ -150,6 +150,9 @@ class VideoService {
     def item = siteItemService.getSiteItem("/site/videos/${id}.xml")
     if(!item) {
       item = siteItemService.getSiteItem("/site/streams/${id}.xml")
+      if(item && getStreamStatus(item) == 'finished') {
+        item = null
+      }
     }
     return item ? processItem(item) : null
   }
@@ -194,5 +197,4 @@ class VideoService {
       return "live"
     }
   }
-  
 }

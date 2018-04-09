@@ -125,6 +125,8 @@
             page++;
             loadPage()
         });
+
+        autoRefreshStreams();
     });
 </script>
 <@studio.toolSupport />

@@ -108,9 +108,6 @@
                                     <h4>My Videos</h4>
                                 </div>
                                 <div id="fav-list"></div>
-                                <div class="show-more-inner text-center">
-                                    <a href="#" class="show-more-btn">show more</a>
-                                </div>
                             </div>
                         </div>
                     </section><!-- End single post description -->
@@ -232,7 +229,7 @@
 <script src="/static-assets/js/jsrender.min.js"></script>
 <script id="favoritesTemplate" type="text/x-jsrender">
     {{for items}}
-        <div class="profile-video">
+        <div class="profile-video" id="video-{{:id}}" data-video-id="{{:id}}" data-video-type="{{:type}}">
             <div class="media-object stack-for-small">
                 <div class="media-object-section media-img-content">
                     <div class="video-img post-thumb">
@@ -310,6 +307,8 @@
             jQuery('[data-content=' + jQuery(this).data('tab-profile') + ']').removeClass('hide').siblings('[data-content]').addClass('hide');
             e.preventDefault();
         });
+
+        autoRefreshStreams();
     });
 </script>
 <@studio.toolSupport />
