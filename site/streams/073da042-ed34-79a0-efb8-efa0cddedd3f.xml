@@ -22,9 +22,11 @@
 	<endDate_dt>2018-04-09T13:00:00.000Z</endDate_dt>
 	<createdDate>2018-04-09T15:20:19.371Z</createdDate>
 	<createdDate_dt>2018-04-09T15:20:19.371Z</createdDate_dt>
-	<lastModifiedDate>2018-04-09T15:20:19.371Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-04-09T15:20:19.371Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-04-09T15:39:24.465Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-04-09T15:39:24.465Z</lastModifiedDate_dt>
 	<date_dt>2018-04-09T04:00:00.000Z</date_dt>
 	<startDate_dt_tz>America/New_York</startDate_dt_tz>
 	<endDate_dt_tz>America/New_York</endDate_dt_tz>
+	<tags>	<item>	<value_smv>Training</value_smv>
+	</item></tags>
 </component>
