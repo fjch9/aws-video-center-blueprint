@@ -3885,6 +3885,9 @@ footer{
 			margin-bottom: 20px;
 			.media-object{
 				margin: 0;
+				.media-video-content{
+					width: 100%;
+				}
 				.media-img-content{
 					padding-right: 0;
 				}
