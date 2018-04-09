@@ -12,17 +12,20 @@
 
 <#if streamStatus = "live">				
 	<section class="fullwidth-single-video">
-		<div class="img-loading show"></div>
-		<video id="example-video" class="video-js large-centered hide" preload="true" controls="true" autoplay>
+		<div id='loading' class="img-loading show"></div>
+		<video id="video-player" class="video-js large-centered hide video-player" preload="true" controls="true" autoplay>
 			<source src="${videoSource}" type="${videoType}"/>
 		</video>
+		<section id="unsupported" class="hide">
+			<h2 class="message">Your browser does not support this media type</h2>
+		</section>
 	</section>
 <#elseif streamStatus = "finished">
 	<div class="row">
 		<div class="large-12 columns text-center">
 			<div class="row">
 				<section>
-					<h2>This live stream has finished</h1>
+					<h2>This live stream has finished</h2>
 				</section>
 			</div>
 		</div>
@@ -33,7 +36,7 @@
 			<div class="row">
 				<section>
 					<h2>This live stream will start in</h2>
-					<div id="countdown2"></div>
+					<div id="countdownClock" class='countdown'></div>
 				</section>
 			</div>
 		</div>
@@ -50,46 +53,13 @@
 
 <@videoMacros.endVideoSection />
 
-<script>	
+<script type='text/javascript' src='/static-assets/js/video-player-min.js'></script>
+<script type='text/javascript'>	
 	jQuery(document).ready(function() {
 		<#if streamStatus == "waiting">
-			var startDate = new Date('${video.startDate_dt?datetime?iso_utc}');
-	
-		    jQuery('#countdown2').timeTo({
-            timeTo: new Date(startDate),
-            displayDays: 2,
-            theme: "black",
-            displayCaptions: true,
-            fontSize: 32,
-            captionSize: 14
-        	},function(){ 
-        		setTimeout(function(){
-        			location.reload();
-        		},1000); 
-        	});
+			countdown('${video.startDate_dt?datetime?iso_utc}', 'countdownClock');
 		<#elseif streamStatus == "live">
-			if (Hls.isSupported()) {
-				var video = document.getElementById('example-video');
-				var hls = new Hls();
- 	    		// bind them together
- 	    		hls.attachMedia(video);
-				// MEDIA_ATTACHED event is fired by hls object once MediaSource is ready
-				hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-					
-					hls.loadSource("${videoSource}");
-					hls.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
-						
-					});
-				});
-
-				video.oncanplay = function() {
-					jQuery('.img-loading').addClass('hide');
-				    jQuery('#example-video').removeClass('hide');
-				    video.muted = video.muted;
-				    video.autoplay = true;
-				    video.play();
-				};
-			}
+			playStream('video-player', "${videoSource}", 'loading', 'unsupported');
 		</#if>
 
 		renderDates();
