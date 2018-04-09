@@ -276,6 +276,19 @@
     .topProfile .profile-stats .profile-share{
         right: 2% !important;
     }
+    .sidebar .widgetBox .widgetContent .media-object .media-object-section .recent-img{
+        width: 80%;
+        height: 100%;
+        margin: auto;
+    }
+    .sidebar .widgetBox .widgetContent ul{
+        width: 80%;
+        margin: auto;
+    }
+    .sidebar .widgetBox .widgetContent .media-object .media-object-section h6{
+        width: 80%;
+        margin: auto;
+    }
 }
     /* tablet view */
 
@@ -383,6 +396,22 @@
     .easy-share span[data-easyshare-button-count]{
         margin: 0 10px 0 7px;
     }
+    .sidebar .widgetBox .widgetContent .media-object{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sidebar .widgetBox .widgetContent .media-object .media-object-section:first-of-type{
+        width: 70%;
+    }
+    .sidebar .widgetBox .widgetContent .media-object .media-object-section .recent-img{
+        height: 100%;
+        width: 100%;
+    }
+    .sidebar .widgetBox .widgetContent ul{
+        width: 80%;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -390,11 +419,17 @@
     #navBar .topnav .title-bar{
         display: none;
     }
+    .sticky-container{
+        height: 74px;
+    }
 }
 @media screen and (max-width: 1024px) {
     .sidebarContainer{
         position: relative;
         padding-left: 0px;
+    }
+    .sticky-container{
+        height: 56px;
     }
 }
 
