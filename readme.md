@@ -4,7 +4,7 @@ Site supporting Video on Demand and Live Streams from AWS.
 
 ## UI Styles
 
-To update styles you need to run the following command and then change the corresponding `.scss` file, which requires [Sass](https://sass-lang.com/install) to be installed.
+To update styles you, all changes should be made to the source `.scss` or `.css` file. After edits are complete, the following command(s) should be run, which requires [Sass](https://sass-lang.com/install) to be installed.
 
 **Examples:**
 
@@ -15,7 +15,7 @@ sass sources/css/responsive.css static-assets/css/responsive-min.css -s compress
 
 ## UI Scripts
 
-To update edit JavaScript files, make all changes to the source `.js` files. To minify for delivery, use a tool such as minifier.org.
+To update JavaScript files, make all changes to the source `.js` files. To minify for delivery, use a tool such as minifier.org.
 
 **Example:**
 
