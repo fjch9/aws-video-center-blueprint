@@ -14,7 +14,9 @@
 				<div class="row">
 					<div class="large-12 columns">
 						<div class="title-bar" data-responsive-toggle="beNav" data-hide-for="large">
-							<button class="menu-icon" type="button" data-toggle="offCanvas-responsive"></button>
+							<div class="menu-icon-area" data-toggle="offCanvas-responsive">
+								<button class="menu-icon" type="button"></button>
+							</div>
 							<div class="title-bar-title"><a href="/"><img src="${contentModel.logo}" alt="${contentModel.logoAltText}"><a href="/"></div>
 						</div>
 
