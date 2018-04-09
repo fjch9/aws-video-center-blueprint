@@ -534,14 +534,22 @@ input[type=checkbox]:checked + .customLabel:before {
 		box-shadow: 0 0 5px rgba(0, 0, 0, .4);
 	}
 	.sticky-container{
+		.sticky{
+			box-shadow: 0 0 5px rgba(0, 0, 0, .4);	
+		}
 		div{
 			padding-left: 0;
 		}
 		.title-bar{
-			padding-left: 15px;
-			.menu-icon{
-				height: 16px;
-				margin: 12px 12px 12px 0;
+			.menu-icon-area{
+				padding: 12px 15px 12px 20px;
+				display: inline-block;
+				float: left;
+				cursor: pointer;
+				.menu-icon{
+					height: 16px;
+					margin: 0;
+				}
 			}
 			.title-bar-title img{
 				object-fit: contain;
