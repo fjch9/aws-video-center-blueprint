@@ -6,12 +6,12 @@
 	<objectId>b813b916-3238-ed76-1314-230e1b94eb9f</objectId>
 	<file-name>b813b916-3238-ed76-1314-230e1b94eb9f.xml</file-name>
 	<internal-name>Sample Conference Room Camera</internal-name>
-	<url>http://live.alsace20.fr/live/alsace20/ngrp:alsace20_all/playlist.m3u8</url>
+	<url>https://www.cbsnews.com/common/video/dai_prod.m3u8</url>
 	<segmentSize>6</segmentSize>
 	<playlistDuration>60</playlistDuration>
 	<encoding>application/x-mpegURL</encoding>
 	<createdDate>2018-04-06T13:25:04.325Z</createdDate>
 	<createdDate_dt>2018-04-06T13:25:04.325Z</createdDate_dt>
-	<lastModifiedDate>2018-04-10T21:01:10.553Z</lastModifiedDate>
-	<lastModifiedDate_dt>2018-04-10T21:01:10.553Z</lastModifiedDate_dt>
+	<lastModifiedDate>2018-04-13T14:53:12.373Z</lastModifiedDate>
+	<lastModifiedDate_dt>2018-04-13T14:53:12.373Z</lastModifiedDate_dt>
 </component>
