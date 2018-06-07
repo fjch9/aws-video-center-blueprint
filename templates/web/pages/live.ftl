@@ -36,7 +36,7 @@
 			<div class="row">
 				<section>
 					<h2>This live stream will start in</h2>
-					<div id="countdownClock" class='countdown'></div>
+					<h1 id="countdownClock" class='countdown'></h1>
 				</section>
 			</div>
 		</div>
@@ -57,7 +57,10 @@
 <script type='text/javascript'>	
 	jQuery(document).ready(function() {
 		<#if streamStatus == "waiting">
-			countdown('${video.startDate_dt?datetime?iso_utc}', 'countdownClock');
+			countdown('${startTime?long?c}',
+				'countdownClock',
+				${video.approximateCountdown},
+				'${video.approximationEnd}');
 		<#elseif streamStatus == "live">
 			playStream('video-player', "${videoSource}", 'loading', 'unsupported');
 		</#if>

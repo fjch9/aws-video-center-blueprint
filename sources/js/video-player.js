@@ -1,16 +1,13 @@
-var countdown = function(startTime, countdownId) {
-    jQuery('#'+countdownId).timeTo({
-        timeTo: new Date(startTime),
-        displayDays: 2,
-        theme: "black",
-        displayCaptions: true,
-        fontSize: 32,
-        captionSize: 14
-        },function(){ 
-            setTimeout(function(){
-                location.reload();
-            },1000); 
-        });
+var countdown = function(startTime, countdownId, useApproximate, approximationEnd) {
+    new CountDownTimer({
+        startTime: startTime,
+        element: document.getElementById(countdownId),
+        complete: function(){ 
+            setTimeout(function(){location.reload();}, 500); 
+        },
+        approximation: useApproximate,
+        approximationEnd: approximationEnd
+    });
 }
 
 var playStream = function(videoElementId, videoSource, loadingImageId, unsupportedMessageId) {
