@@ -546,8 +546,8 @@
 					<type>checkbox</type>
 					<id>approximateCountdown</id>
 					<iceId></iceId>
-					<title>Approximate Countdown</title>
-					<description>Enables the use of an approximation time display of the event countdown timer</description>
+					<title>ApproximateCountdown</title>
+					<description></description>
 					<defaultValue>true</defaultValue>
 					<help></help>
 					<properties>
@@ -570,18 +570,18 @@
 					<id>approximationEnd</id>
 					<iceId></iceId>
 					<title>Approximation End</title>
-					<description>Seconds prior to the start time to switch from an approximation display (if enabled) to a traditional countdown timer</description>
+					<description>Seconds prior to the Start Date to switch from an approximation countdown display (if enabled) to a traditional countdown timer</description>
 					<defaultValue>3600</defaultValue>
 					<help></help>
 					<properties>
 						<property>
 							<name>size</name>
-							<value>50</value>
+							<value>10</value>
 							<type>int</type>
 						</property>
 						<property>
 							<name>maxlength</name>
-							<value>50</value>
+							<value>10</value>
 							<type>int</type>
 						</property>
 						<property>
