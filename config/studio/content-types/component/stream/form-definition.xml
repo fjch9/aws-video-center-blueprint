@@ -546,7 +546,7 @@
 					<type>checkbox</type>
 					<id>approximateCountdown</id>
 					<iceId></iceId>
-					<title>ApproximateCountdown</title>
+					<title>Approximate Countdown</title>
 					<description></description>
 					<defaultValue>true</defaultValue>
 					<help></help>
@@ -570,7 +570,7 @@
 					<id>approximationEnd</id>
 					<iceId></iceId>
 					<title>Approximation End</title>
-					<description>Seconds prior to the Start Date to switch from an approximation countdown display (if enabled) to a traditional countdown timer</description>
+					<description>Seconds prior to the Start Date to transition to a traditional countdown timer (no effect if Approximate Countdown is disabled)</description>
 					<defaultValue>3600</defaultValue>
 					<help></help>
 					<properties>
