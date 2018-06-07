@@ -32,6 +32,7 @@ def hasPassed(int timestamp, origin) {
   return getEpochSeconds(new Date()) > timestamp + (origin.segmentSize.text as int) + (origin.playlistDuration.text as int)
 }
 def startTimestamp = getEpochSeconds(video.startDate_dt)
+templateModel.startTime = startTimestamp
 def endTimestamp = getEpochSeconds(video.endDate_dt)
 if ((streamStatus == "live" && hasPassed(startTimestamp, origin)) || streamStatus == "finished") {
   templateModel.videoSource += "?start=" + (startTimestamp as String)
