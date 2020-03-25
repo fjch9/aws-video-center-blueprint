@@ -90,7 +90,7 @@
 <site>
 		<profile>
 			<api>
-				<accessTokenId>b4d44030-d0af-11e3-9c1a-0800200c9a66</accessTokenId>
+				<accessTokenId>xxxx</accessTokenId>
 			</api>
 			<verification>
 				<url>/verifyacct</url>
@@ -102,9 +102,9 @@
 			</verification>
 		</profile>
 		<aws>
-			<region>US_EAST_1</region>
-			<accessKey>AKIAJKUWYHGRJMXFKVSQ</accessKey>
-			<secretKey>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</secretKey>
+			<region>xxxx</region>
+			<accessKey>xxxx</accessKey>
+			<secretKey>xxxx</secretKey>
 			<urlExpiration>60</urlExpiration>
 		</aws>
 		<mongo>

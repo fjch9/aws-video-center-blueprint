@@ -3,11 +3,11 @@
     <profile>
         <id>elastic-transcoder-default</id>
         <credentials>
-            <accessKey>AKIAJKUWYHGRJMXFKVSQ</accessKey>
-            <secretKey>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</secretKey>
+            <accessKey>xxxx</accessKey>
+            <secretKey>xxxx</secretKey>
         </credentials>
-        <region>us-east-1</region>
-        <pipelineId>1506362170872-4fjm1z</pipelineId>
+        <region>xxxx</region>
+        <pipelineId>xxxx</pipelineId>
         <outputs>
             <output>
                 <presetId>1469045103530-uituq6</presetId>
