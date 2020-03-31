@@ -24,7 +24,7 @@
     </config>
 -->
 <config>
-	<version>2</version>
+   <version>2</version>
    <tools>
       <tool>
          <name>content-types</name>
@@ -54,6 +54,12 @@
             </control>
             <control>
                <name>rte</name>
+               <icon>
+                  <class>fa-code</class>
+               </icon>
+            </control>
+            <control>
+               <name>rte-tinymce5</name>
                <icon>
                   <class>fa-code</class>
                </icon>
