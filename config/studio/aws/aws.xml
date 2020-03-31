@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aws>
-    <profile>
-        <id>elastic-transcoder-default</id>
-        <credentials>
+   <elasticTranscoder>
+      <profile>
+         <id>elastic-transcoder-default</id>
+         <credentials>
             <accessKey>xxxx</accessKey>
             <secretKey>xxxx</secretKey>
-        </credentials>
-        <region>xxxx</region>
-        <pipelineId>xxxx</pipelineId>
-        <outputs>
+         </credentials>
+         <region>xxxx</region>
+         <pipelineId>xxxx</pipelineId>
+         <outputs>
             <output>
-                <presetId>1469045103530-uituq6</presetId>
-                <outputKeySuffix>-small.mp4</outputKeySuffix>
+               <presetId>1469045103530-uituq6</presetId>
+               <outputKeySuffix>-small.mp4</outputKeySuffix>
             </output>
             <output>
-                <presetId>1468420224698-eqnmwc</presetId>
-                <outputKeySuffix>-medium.mp4</outputKeySuffix>
+               <presetId>1468420224698-eqnmwc</presetId>
+               <outputKeySuffix>-medium.mp4</outputKeySuffix>
             </output>
             <output>
-                <presetId>1468420080538-lcq01g</presetId>
-                <outputKeySuffix>-large.mp4</outputKeySuffix>
+               <presetId>1468420080538-lcq01g</presetId>
+               <outputKeySuffix>-large.mp4</outputKeySuffix>
             </output>
-        </outputs>
-    </profile>
+         </outputs>
+      </profile>
+   </elasticTranscoder>
 </aws>
