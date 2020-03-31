@@ -195,6 +195,12 @@
             <permission>search_cmis</permission>
             <permission>clone_content_cmis</permission>
             <permission>upload_content_cmis</permission>
+            <permission>add_remote</permission>
+            <permission>list_remotes</permission>
+            <permission>pull_from_remote</permission>
+            <permission>push_to_remote</permission>
+            <permission>rebuild_database</permission>
+            <permission>remove_remote</permission>
          </allowed-permissions>
       </rule>
       <rule regex="^/(?!site/website/index\.xml)(.*)">
@@ -205,6 +211,12 @@
       <rule regex="~DASHBOARD~">
          <allowed-permissions>
             <permission>Publish</permission>
+            <permission>add_remote</permission>
+            <permission>list_remotes</permission>
+            <permission>pull_from_remote</permission>
+            <permission>push_to_remote</permission>
+            <permission>rebuild_database</permission>
+            <permission>remove_remote</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
