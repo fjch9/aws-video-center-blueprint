@@ -33,21 +33,22 @@
 
 -->
 <role-mappings>
-    <groups>
-        <group name="Admin">
-            <role>admin</role>
-        </group>
-        <group name="Developer">
-            <role>developer</role>
-        </group>
-        <group name="Author">
-            <role>author</role>
-        </group>
-        <group name="Publisher">
-            <role>publisher</role>
-        </group>
-        <group name="Reviewer">
-            <role>reviewer</role>
-        </group>
-    </groups>
+	<version>2</version>
+   <groups>
+      <group name="videocenter_admin">
+         <role>admin</role>
+      </group>
+      <group name="videocenter_developer">
+         <role>developer</role>
+      </group>
+      <group name="videocenter_author">
+         <role>author</role>
+      </group>
+      <group name="videocenter_publisher">
+         <role>publisher</role>
+      </group>
+      <group name="videocenter_reviewer">
+         <role>reviewer</role>
+      </group>
+   </groups>
 </role-mappings>
