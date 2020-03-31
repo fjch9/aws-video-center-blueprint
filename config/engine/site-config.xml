@@ -86,37 +86,36 @@
     http://docs.craftercms.org/en/3.0/site-administrators/engine/engine-site-configuration.html
 
 -->
-
 <site>
-		<profile>
-			<api>
-				<accessTokenId>xxxx</accessTokenId>
-			</api>
-			<verification>
-				<url>/verifyacct</url>
-				<email>
-					<address>noreply@example.com</address>
-					<subject>Verify Account</subject>
-					<template>/templates/mail/verify-account.ftl</template>
-				</email>
-			</verification>
-		</profile>
-		<aws>
-			<region>xxxx</region>
-			<accessKey>xxxx</accessKey>
-			<secretKey>xxxx</secretKey>
-			<urlExpiration>60</urlExpiration>
-		</aws>
-		<mongo>
-			<db>aws-video-center</db>
-			<url>mongodb://localhost:27020/aws-video-center</url>
-		</mongo>
-		<mail>
-			<host>localhost</host>
-			<port>25</port>
-			<protocol>smtp</protocol>
-			<encoding>UTF-8</encoding>
-			<auth>false</auth>
-			<secure>false</secure>
-		</mail>
+   <profile>
+      <api>
+         <accessTokenId>xxxx</accessTokenId>
+      </api>
+      <verification>
+         <url>/verifyacct</url>
+         <email>
+            <address>noreply@example.com</address>
+            <subject>Verify Account</subject>
+            <template>/templates/mail/verify-account.ftl</template>
+         </email>
+      </verification>
+   </profile>
+   <aws>
+      <region>xxxx</region>
+      <accessKey>xxxx</accessKey>
+      <secretKey>xxxx</secretKey>
+      <urlExpiration>60</urlExpiration>
+   </aws>
+   <mongo>
+      <db>aws-video-center</db>
+      <url>mongodb://localhost:27020/aws-video-center</url>
+   </mongo>
+   <mail>
+      <host>localhost</host>
+      <port>25</port>
+      <protocol>smtp</protocol>
+      <encoding>UTF-8</encoding>
+      <auth>false</auth>
+      <secure>false</secure>
+   </mail>
 </site>
