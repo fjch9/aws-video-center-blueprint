@@ -102,6 +102,8 @@
          <allowed-permissions>
             <permission>S3 Read</permission>
             <permission>S3 Write</permission>
+            <permission>webdav_read</permission>
+            <permission>webdav_write</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -148,6 +150,8 @@
          <allowed-permissions>
             <permission>S3 Read</permission>
             <permission>S3 Write</permission>
+            <permission>webdav_read</permission>
+            <permission>webdav_write</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -181,6 +185,8 @@
          <allowed-permissions>
             <permission>S3 Read</permission>
             <permission>S3 Write</permission>
+            <permission>webdav_read</permission>
+            <permission>webdav_write</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -238,6 +244,8 @@
          <allowed-permissions>
             <permission>S3 Read</permission>
             <permission>S3 Write</permission>
+            <permission>webdav_read</permission>
+            <permission>webdav_write</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -256,6 +264,7 @@
       <rule regex=".*">
          <allowed-permissions>
             <permission>S3 Read</permission>
+            <permission>webdav_read</permission>
          </allowed-permissions>
       </rule>
    </role>
@@ -268,6 +277,7 @@
       <rule regex=".*">
          <allowed-permissions>
             <permission>S3 Read</permission>
+            <permission>webdav_read</permission>
          </allowed-permissions>
       </rule>
    </role>
