@@ -87,6 +87,7 @@
 
 -->
 <site>
+	<version>2</version>
    <profile>
       <api>
          <accessTokenId>xxxx</accessTokenId>
