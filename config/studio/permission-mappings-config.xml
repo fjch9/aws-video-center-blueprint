@@ -60,7 +60,7 @@
 
 -->
 <permissions>
-	<version>2</version>
+   <version>2</version>
    <role name="author">
       <rule regex="/site/website/.*">
          <allowed-permissions>
@@ -68,6 +68,10 @@
             <permission>Write</permission>
             <permission>Create Content</permission>
             <permission>Create Folder</permission>
+            <permission>list_cmis</permission>
+            <permission>search_cmis</permission>
+            <permission>clone_content_cmis</permission>
+            <permission>upload_content_cmis</permission>
          </allowed-permissions>
       </rule>
       <rule regex="/site/components/.*">
@@ -76,6 +80,10 @@
             <permission>Write</permission>
             <permission>Create Content</permission>
             <permission>Create Folder</permission>
+            <permission>list_cmis</permission>
+            <permission>search_cmis</permission>
+            <permission>clone_content_cmis</permission>
+            <permission>upload_content_cmis</permission>
          </allowed-permissions>
       </rule>
       <rule regex="/static-assets/.*">
@@ -84,6 +92,10 @@
             <permission>Write</permission>
             <permission>Create Content</permission>
             <permission>Create Folder</permission>
+            <permission>list_cmis</permission>
+            <permission>search_cmis</permission>
+            <permission>clone_content_cmis</permission>
+            <permission>upload_content_cmis</permission>
          </allowed-permissions>
       </rule>
       <rule regex=".*">
@@ -101,6 +113,10 @@
             <permission>Create Content</permission>
             <permission>Create Folder</permission>
             <permission>Publish</permission>
+            <permission>list_cmis</permission>
+            <permission>search_cmis</permission>
+            <permission>clone_content_cmis</permission>
+            <permission>upload_content_cmis</permission>
          </allowed-permissions>
       </rule>
       <rule regex="^/site/(?!website/index\.xml)(.*)">
@@ -116,6 +132,10 @@
             <permission>Create Content</permission>
             <permission>Create Folder</permission>
             <permission>Publish</permission>
+            <permission>list_cmis</permission>
+            <permission>search_cmis</permission>
+            <permission>clone_content_cmis</permission>
+            <permission>upload_content_cmis</permission>
          </allowed-permissions>
       </rule>
       <rule regex="~DASHBOARD~">
@@ -139,6 +159,10 @@
             <permission>Create Folder</permission>
             <permission>Create Content</permission>
             <permission>Change Content Type</permission>
+            <permission>list_cmis</permission>
+            <permission>search_cmis</permission>
+            <permission>clone_content_cmis</permission>
+            <permission>upload_content_cmis</permission>
          </allowed-permissions>
       </rule>
       <rule regex="^/(?!site/website/index\.xml)(.*)">
@@ -167,6 +191,10 @@
             <permission>Create Folder</permission>
             <permission>Create Content</permission>
             <permission>Change Content Type</permission>
+            <permission>list_cmis</permission>
+            <permission>search_cmis</permission>
+            <permission>clone_content_cmis</permission>
+            <permission>upload_content_cmis</permission>
          </allowed-permissions>
       </rule>
       <rule regex="^/(?!site/website/index\.xml)(.*)">
