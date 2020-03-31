@@ -19,11 +19,26 @@
         Items that match the paths specified will be grouped together in the dashboard widget
         -->
       <folders>
-         <folder name="Pages" path="/website" read-direct-children="false" attach-root-prefix="true"/>
-         <folder name="Components" path="/components" read-direct-children="false" attach-root-prefix="true"/>
-         <folder name="Assets" path="/static-assets" read-direct-children="false" attach-root-prefix="false"/>
-         <folder name="Templates" path="/templates" read-direct-children="false" attach-root-prefix="false"/>
-         <folder name="Videos" path="/videos" read-direct-children="false" attach-root-prefix="true"/>
+         <folder name="Pages"
+                 path="/website"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
+         <folder name="Components"
+                 path="/components"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
+         <folder name="Assets"
+                 path="/static-assets"
+                 read-direct-children="false"
+                 attach-root-prefix="false"/>
+         <folder name="Templates"
+                 path="/templates"
+                 read-direct-children="false"
+                 attach-root-prefix="false"/>
+         <folder name="Videos"
+                 path="/videos"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
       </folders>
       <!-- Item Patterns -->
       <patterns>
@@ -161,6 +176,4 @@
          <!-- <publish-by-commit-required/> -->
       </comments>
    </publishing>
-   <default-encoding>UTF-8
-</default-encoding>
 </site-config>
