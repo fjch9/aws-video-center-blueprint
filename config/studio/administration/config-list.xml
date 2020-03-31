@@ -19,7 +19,7 @@
     - samplePath: the path to a sample file to help the user update the file
 -->
 <config>
-	<version>2</version>
+   <version>2</version>
    <files>
       <file>
          <path>/studio/site-config.xml</path>
@@ -134,6 +134,12 @@
          <title>Engine URL Rewrite Configuration (XML Style)</title>
          <description>Engine URL Rewrite Configuration (XML Style)</description>
          <samplePath>/studio/administration/samples/sample-urlrewrite.xml</samplePath>
+      </file>
+      <file>
+         <path>/studio/webdav/webdav.xml</path>
+         <title>WebDAV Profiles</title>
+         <description>WebDAV Profiles</description>
+         <samplePath>/studio/administration/samples/sample-webdav.xml</samplePath>
       </file>
    </files>
 </config>
