@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aws>
+<?xml version="1.0" encoding="UTF-8"?><aws>
+	<version>2</version>
    <elasticTranscoder>
       <profile>
          <id>elastic-transcoder-default</id>
