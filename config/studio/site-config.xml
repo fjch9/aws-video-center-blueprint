@@ -80,7 +80,7 @@
     <contentMonitoring>
         <monitor>
             <name>Content Expiring Tomorrow</name>
-            <query>expired_dt:[NOW/DAY+1DAY TO NOW/DAY+2DAY]</query>
+            <query>expired_dt:[now/DAY+1DAY TO now/DAY+2DAY]</query>
             <paths>
                 <path>
                     <name>All Site</name>
@@ -93,7 +93,7 @@
         </monitor>
         <monitor>
             <name>Content Expiring In One Week</name>
-            <query>expired_dt:[NOW/DAY+7DAYS TO NOW/DAY+8DAYS]</query>
+            <query>expired_dt:[now/DAY+7DAYS TO now/DAY+8DAYS]</query>
             <paths>
                 <path>
                     <name>All Site</name>
@@ -106,7 +106,7 @@
         </monitor>
         <monitor>
             <name>Content Expiring In One Month</name>
-            <query>expired_dt:[NOW/DAY+30DAYS TO NOW/DAY+32DAYS]</query>
+            <query>expired_dt:[now/DAY+30DAYS TO now/DAY+32DAYS]</query>
             <paths>
                 <path>
                     <name>All Site</name>
@@ -119,7 +119,7 @@
         </monitor>
         <monitor>
             <name>Content Expiring In Two Months</name>
-            <query>expired_dt:[NOW/DAY+60DAYS TO NOW/DAY+62DAYS]</query>
+            <query>expired_dt:[now/DAY+60DAYS TO now/DAY+62DAYS]</query>
             <paths>
                 <path>
                     <name>All Site</name>
