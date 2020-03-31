@@ -5,7 +5,7 @@
 
 -->
 <site-config>
-	<version>2</version>
+   <version>2</version>
    <wem-project>videocentercraftercloudio</wem-project>
    <display-name>videocentercraftercloudio</display-name>
    <default-timezone>EST5EDT</default-timezone>
@@ -18,11 +18,26 @@
         Items that match the paths specified will be grouped together in the dashboard widget
         -->
       <folders>
-         <folder name="Pages" path="/website" read-direct-children="false" attach-root-prefix="true"/>
-         <folder name="Components" path="/components" read-direct-children="false" attach-root-prefix="true"/>
-         <folder name="Assets" path="/static-assets" read-direct-children="false" attach-root-prefix="false"/>
-         <folder name="Templates" path="/templates" read-direct-children="false" attach-root-prefix="false"/>
-         <folder name="Videos" path="/videos" read-direct-children="false" attach-root-prefix="true"/>
+         <folder name="Pages"
+                 path="/website"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
+         <folder name="Components"
+                 path="/components"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
+         <folder name="Assets"
+                 path="/static-assets"
+                 read-direct-children="false"
+                 attach-root-prefix="false"/>
+         <folder name="Templates"
+                 path="/templates"
+                 read-direct-children="false"
+                 attach-root-prefix="false"/>
+         <folder name="Videos"
+                 path="/videos"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
       </folders>
       <!-- Item Patterns -->
       <patterns><!-- The section below helps determine the type of content based on regex. This shows up in two places:
@@ -122,5 +137,28 @@
    <!--
 	Pattern that Studio will use to load plugins from the site repository
 	Required placeholders: ${type}, ${name}
--->   <plugin-folder-pattern>/config/studio/plugins/${type}/${name}</plugin-folder-pattern>
+-->
+   <plugin-folder-pattern>/config/studio/plugins/${type}/${name}</plugin-folder-pattern>
+   <form-engine>
+<!-- Indicates if postfixes should be required for all fields -->
+      <field-name-postfix>false</field-name-postfix>
+      <!-- List of field names that should not have a postfix -->
+      <ignore-postfix-fields>
+         <field>file-name</field>
+         <field>internal-name</field>
+         <field>placeInNav</field>
+         <field>scripts</field>
+         <field>mime-type</field>
+         <field>force-https</field>
+         <field>navLabel</field>
+         <field>expired</field>
+         <field>key</field>
+         <field>value</field>
+         <field>items</field>
+         <field>redirect-url</field>
+         <field>authorizedRoles</field>
+         <field>role</field>
+         <field>disabled</field>
+      </ignore-postfix-fields>
+   </form-engine>
 </site-config>
