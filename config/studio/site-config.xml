@@ -9,7 +9,8 @@
    <wem-project>videocentercraftercloudio</wem-project>
    <display-name>videocentercraftercloudio</display-name>
    <default-timezone>EST5EDT</default-timezone>
-   <repository rootPrefix="/site"><!-- default inheritance file name -->
+   <repository rootPrefix="/site">
+<!-- default inheritance file name -->
       <level-descriptor>crafter-level-descriptor.level.xml</level-descriptor>
       <!-- The section below classifies items into folders for two dashboard widgets:
         - Items Waiting For Approval
@@ -18,14 +19,30 @@
         Items that match the paths specified will be grouped together in the dashboard widget
         -->
       <folders>
-         <folder name="Pages" path="/website" read-direct-children="false" attach-root-prefix="true"/>
-         <folder name="Components" path="/components" read-direct-children="false" attach-root-prefix="true"/>
-         <folder name="Assets" path="/static-assets" read-direct-children="false" attach-root-prefix="false"/>
-         <folder name="Templates" path="/templates" read-direct-children="false" attach-root-prefix="false"/>
-         <folder name="Videos" path="/videos" read-direct-children="false" attach-root-prefix="true"/>
+         <folder name="Pages"
+                 path="/website"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
+         <folder name="Components"
+                 path="/components"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
+         <folder name="Assets"
+                 path="/static-assets"
+                 read-direct-children="false"
+                 attach-root-prefix="false"/>
+         <folder name="Templates"
+                 path="/templates"
+                 read-direct-children="false"
+                 attach-root-prefix="false"/>
+         <folder name="Videos"
+                 path="/videos"
+                 read-direct-children="false"
+                 attach-root-prefix="true"/>
       </folders>
       <!-- Item Patterns -->
-      <patterns><!-- The section below helps determine the type of content based on regex. This shows up in two places:
+      <patterns>
+<!-- The section below helps determine the type of content based on regex. This shows up in two places:
             - The activity audit log.
             - The UI icon used for the item
             -->
@@ -146,4 +163,12 @@
          <field>disabled</field>
       </ignore-postfix-fields>
    </form-engine>
+   <publishing>
+      <comments>
+<!-- Global setting would apply to all -->         <required>false</required>
+         <!-- Additional (also optional) specific overrides -->
+         <!-- <delete-required/> -->
+         <!-- <bulk-publish-required/> -->
+         <!-- <publish-by-commit-required/> -->      </comments>
+   </publishing>
 </site-config>
