@@ -122,6 +122,7 @@
       <rule regex="^/site/(?!website/index\.xml)(.*)">
          <allowed-permissions>
             <permission>Delete</permission>
+            <permission>delete_content</permission>
          </allowed-permissions>
       </rule>
       <rule regex="/static-assets/.*">
@@ -168,6 +169,7 @@
       <rule regex="^/(?!site/website/index\.xml)(.*)">
          <allowed-permissions>
             <permission>Delete</permission>
+            <permission>delete_content</permission>
          </allowed-permissions>
       </rule>
       <rule regex="~DASHBOARD~">
@@ -212,6 +214,7 @@
       <rule regex="^/(?!site/website/index\.xml)(.*)">
          <allowed-permissions>
             <permission>Delete</permission>
+            <permission>delete_content</permission>
          </allowed-permissions>
       </rule>
       <rule regex="~DASHBOARD~">
