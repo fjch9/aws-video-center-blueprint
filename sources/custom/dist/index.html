@@ -67,7 +67,11 @@
     <script src="js/custom.js"></script>
     <script src="js/donation.js"></script>
     <script>
-        configureDonationBar(['5', '25', 'custom']);
+        var publicKey = "pk_test_eiYdPQE1kIZlYTrOSl1TnlIj00PnHtQGkB";
+        var amounts = ['5', '10', 'custom' ];
+        var currency = "usd";
+        var currencySymbol = "$";
+        configureDonationBar(amounts, currency, currencySymbol, publicKey);
     </script>
 </body>
 

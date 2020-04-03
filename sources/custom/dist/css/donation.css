@@ -31,15 +31,12 @@
   text-align: center;
   font-size: 16px;
   color: #303030;
-  padding: 3px 10px 7px; }
+  margin-bottom: 0; }
 
 .card-elements .row {
   display: flex;
   align-items: center;
   margin-left: 15px; }
-
-.card-elements .row + .row {
-  border-top: 1px solid #819efc; }
 
 .card-elements .card-only {
   display: block; }
@@ -63,12 +60,9 @@
   transition: background-color 100000000s;
   -webkit-animation: 1ms void-animation-out; }
 
-.card-elements #example4-card {
-  padding: 10px;
-  margin-bottom: 2px; }
-
 .card-elements input {
-  -webkit-animation: 1ms void-animation-out; }
+  -webkit-animation: 1ms void-animation-out;
+  border: 1px solid #cacaca; }
 
 .card-elements input::-webkit-input-placeholder {
   color: #4444; }
@@ -141,16 +135,14 @@
   margin-top: -1px;
   margin-right: 10px; }
 
-.card-elements .StripeElement {
-  width: 100%;
-  padding: 11px 15px 11px 0; }
-
 .card-elements input {
   width: 100%;
-  padding: 11px 15px 11px 0;
+  padding: 8px;
+  margin: 0;
   color: #303030;
   background-color: transparent;
-  -webkit-animation: 1ms void-animation-out; }
+  -webkit-animation: 1ms void-animation-out;
+  border-radius: 3px; }
 
 .card-elements input::-webkit-input-placeholder {
   color: #4444; }
@@ -162,13 +154,21 @@
   color: #4444; }
 
 .card-elements .row label {
-  width: 15%;
-  min-width: 85px;
+  min-width: 55px;
   padding: 11px 0;
   color: #FFB139;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
+
+.information-title {
+  font-weight: bold; }
+
+.card-element {
+  padding: 8px;
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1); }
 
 .donation-modal {
   position: fixed;
@@ -197,7 +197,9 @@
   text-align: center;
   cursor: pointer;
   color: black;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 13px;
+  line-height: unset; }
 
 .close-button:hover {
   background-color: lightgray; }
@@ -206,7 +208,8 @@
   opacity: 1;
   visibility: visible;
   transform: scale(1);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 999; }
 
 .loading-spinner {
   position: fixed;
@@ -263,7 +266,8 @@
   opacity: 1;
   visibility: visible;
   transform: scale(1);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1000; }
 
 div.donation-container {
   background: #303030;
