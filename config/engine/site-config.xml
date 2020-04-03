@@ -87,7 +87,7 @@
 
 -->
 <site>
-	<version>2</version>
+	<version>3</version>
    <profile>
       <api>
          <accessTokenId>xxxx</accessTokenId>
@@ -101,6 +101,10 @@
          </email>
       </verification>
    </profile>
+   <stripe>
+       <publicKey>xxxx</publicKey>
+       <secretKey>xxxx</secretKey>
+   </stripe>
    <aws>
       <region>xxxx</region>
       <accessKey>xxxx</accessKey>

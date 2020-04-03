@@ -434,6 +434,13 @@
          <label>Sync From Repository</label>
       </tool>
       <tool>
+            <name>repository</name>
+            <label>Remote Repositories</label>
+            <icon>
+                <class>fa-database</class>
+            </icon>
+        </tool>
+      <tool>
          <name>graphiql</name>
          <label>GraphiQL</label>
          <icon>

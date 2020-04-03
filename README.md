@@ -22,3 +22,13 @@ To update JavaScript files, make all changes to the source `.js` files. To minif
 ```
 curl -X POST -s --data-urlencode 'source@sources/js/app.js' --data-urlencode 'type=js' https://minify.minifier.org | python -c "import json,sys;print(json.load(sys.stdin)['minified'])" > static-assets/js/app-min.js
 ```
+
+## Security configuration
+
+Run this commands to prevent development files from reaching repo
+
+```
+git update-index --assume-unchanged config/studio/aws/aws.xml
+git update-index --assume-unchanged config/studio/aws/elastic-transcoder/default-profile.xml
+git update-index --assume-unchanged config/engine/site-config.xml
+```

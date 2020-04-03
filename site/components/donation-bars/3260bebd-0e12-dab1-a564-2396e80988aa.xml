@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/donationbar</content-type>
+	<display-template>/templates/web/components/donation-bar.ftl</display-template>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<no-template-required/>
+	<objectGroupId>3260</objectGroupId>
+	<objectId>3260bebd-0e12-dab1-a564-2396e80988aa</objectId>
+	<file-name>3260bebd-0e12-dab1-a564-2396e80988aa.xml</file-name>
+	<internal-name>donation-bar-default</internal-name>
+	<currency>usd</currency>
+	<currencySymbol>$</currencySymbol>
+	<enableCustom>true</enableCustom>
+	<donationAmounts item-list="true">	<item>	<amount>5</amount>
+	</item></donationAmounts>
+	<createdDate>2020-04-03T16:15:22.823Z</createdDate>
+	<createdDate_dt>2020-04-03T16:15:22.823Z</createdDate_dt>
+	<lastModifiedDate>2020-04-03T16:15:22.823Z</lastModifiedDate>
+	<lastModifiedDate_dt>2020-04-03T16:15:22.823Z</lastModifiedDate_dt>
+</component>

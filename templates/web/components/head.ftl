@@ -24,6 +24,8 @@
 		<link rel="stylesheet" href="/static-assets/css/responsive-min.css" type='text/css'>
 		<link rel="stylesheet" href="/static-assets/css/timeTo-min.css" type='text/css'>
         <link rel="stylesheet" href="/static-assets/css/nav-min.css" type='text/css'>
-
+        <!-- donation bar styles -->
+        <link rel="stylesheet" href="/static-assets/css/donation.css" type='text/css'>
+		
         <script type="text/javascript" src="/static-assets/bower_components/jquery/dist/jquery.min.js"></script>
 </head>
