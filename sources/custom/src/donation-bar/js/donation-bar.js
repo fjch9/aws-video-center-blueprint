@@ -98,7 +98,7 @@
         http.onload = ({ target }) => {
             toggleSpinner();
             if (target.status === 200) {
-                clientSecret = target.response;
+                clientSecret = JSON.parse(target.response).key;
                 initStripe(publicKey, selectedValue, clientSecret);
                 toggleModal(selectedValue, currencySymbol);
             } else {
@@ -108,6 +108,5 @@
     }
 
     setDonationButtons();
-    // setCustomInput();
     setEventsListeners();
 });
