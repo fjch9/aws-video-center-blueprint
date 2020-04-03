@@ -9,7 +9,7 @@
 	<properties>		<property>
 			<name>display-template</name>
 			<label>Display Template</label>
-			<value>/templates/web/components/analytics.ftl</value>
+			<value>/templates/web/components/donation-bar.ftl</value>
 			<type>template</type>
 		</property>
 		<property>
