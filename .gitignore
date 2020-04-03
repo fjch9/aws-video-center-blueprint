@@ -96,6 +96,6 @@ public
 
 # DynamoDB Local files
 .dynamodb/
-config/engine/site-config.xml
-config/studio/aws/elastic-transcoder/default-profile.xml
-config/studio/aws/aws.xml
+# config/engine/site-config.xml
+# config/studio/aws/elastic-transcoder/default-profile.xml
+# config/studio/aws/aws.xml
