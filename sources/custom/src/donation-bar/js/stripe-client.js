@@ -1,5 +1,5 @@
 // configure stripe and process payment
-(configureStripe = (stripe, stripeElements, selectedValue, clientSecret) => {
+(configureStripe = (stripe, stripeElements, selectedValue, clientSecret, currency) => {
   var form = document.querySelector('.card-elements');
   var error = form.querySelector('.error');
   var errorMessage = error.querySelector('.message');
@@ -36,7 +36,7 @@
    */
   var paymentRequest = stripe.paymentRequest({
     country: "US",
-    currency: "usd",
+    currency: currency,
     total: {
       amount: selectedValue * 100, // cents required so calculate amount
       label: "Total"

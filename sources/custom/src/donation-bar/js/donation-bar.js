@@ -99,7 +99,7 @@
             toggleSpinner();
             if (target.status === 200) {
                 clientSecret = JSON.parse(target.response).key;
-                initStripe(publicKey, selectedValue, clientSecret);
+                initStripe(publicKey, selectedValue, clientSecret, currency);
                 toggleModal(selectedValue, currencySymbol);
             } else {
                 alert('Server error, please try again. If the error persists contact support.');
