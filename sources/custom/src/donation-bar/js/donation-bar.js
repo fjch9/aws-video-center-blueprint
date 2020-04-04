@@ -2,7 +2,6 @@
 (configureDonationBar = (amountButtons, currency, currencySymbol, publicKey) => {
     var selectedValue = parseInt(amountButtons[1]);
     var customEnabled = false;
-
     // sets class to custom input based on selected amount
     var checkCustomInputClass = (id) => {
         if (customEnabled) {
@@ -14,9 +13,7 @@
                 customInput.classList.remove('active');
             }
         }
-
     }
-
     // dynamically add amount buttons
     var setDonationButtons = () => {
         const optionsContainer = document.querySelector('#options-container');
@@ -32,36 +29,22 @@
             }
             return `<input type="radio" class="donation__radio-input" name="donate" id="donate-${amount}" value="${amount}" ${index === 0 ? 'checked' : ''}>
         <label class="donation__label" for="donate-${amount}" >${currencySymbol}${amount}</label>`
-
         });
         optionsContainer.innerHTML = buttons.join(" ");
         if (customEnabled) {
             setCustomInput();
         }
     }
-
     var setEventsListeners = () => {
         amountButtons.forEach(amount => {
             const input = document.getElementById('donate-' + amount);
             input.addEventListener('click', checkCustomInputClass('donate-' + amount));
         });
-    }
-
-
-    //style selected custom option 
-    var setCustomInput = () => {
-        const customInput = document.querySelector("#custom-amount-input");
-        customInput.addEventListener('click', () => {
-            // customInput.classList.toggle('active')
-            if (!document.getElementById('donate-custom').checked)
-                document.getElementById('donate-custom').click();
-        });
-
         const submit = document.querySelector("#submit-btn");
-
         submit.addEventListener('click', event => {
             // set the value of the custom input to the selected option
-            document.getElementById('donate-custom').value = document.querySelector("#custom-amount-input").value;
+            if (customEnabled)
+                document.getElementById('donate-custom').value = document.querySelector("#custom-amount-input").value;
             //get selected option value
             var radios = document.getElementsByName('donate');
             var value = 0;
@@ -76,11 +59,17 @@
             } else {
                 alert('Please enter or select a valid amount');
             }
-
         });
     }
-
-
+    //style selected custom option 
+    var setCustomInput = () => {
+        const customInput = document.querySelector("#custom-amount-input");
+        customInput.addEventListener('click', () => {
+            // customInput.classList.toggle('active')
+            if (!document.getElementById('donate-custom').checked)
+                document.getElementById('donate-custom').click();
+        });
+    }
     var setPaymentIntent = () => {
         toggleSpinner();
         const http = new XMLHttpRequest();
@@ -89,24 +78,21 @@
         var clientSecret = "";
         http.open('GET', url);
         http.send();
-
         http.onerror = (error) => {
             toggleSpinner();
             alert('Failed to contact server, if the error persists contact support.');
         }
-
         http.onload = ({ target }) => {
             toggleSpinner();
             if (target.status === 200) {
                 clientSecret = JSON.parse(target.response).key;
-                initStripe(publicKey, selectedValue, clientSecret, currency);
+                initStripe(publicKey, selectedValue, clientSecret);
                 toggleModal(selectedValue, currencySymbol);
             } else {
                 alert('Server error, please try again. If the error persists contact support.');
             }
         }
     }
-
     setDonationButtons();
     setEventsListeners();
 });
